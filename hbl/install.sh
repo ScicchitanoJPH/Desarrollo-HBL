@@ -83,5 +83,8 @@ echo "Type=Application" >> /home/pi/.config/autostart/Start.desktop
 echo "Name=Start" >> /home/pi/.config/autostart/Start.desktop
 echo "Exec=sh /usr/programas/hbl/start.sh" >> /home/pi/.config/autostart/Start.desktop
 
+# Cambiar fondo de pantalla
+pcmanfm --set-wallpaper /usr/programas/FondoPantalla.jpg
+
 reboot
 EOF
