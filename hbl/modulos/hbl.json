@@ -259,7 +259,7 @@
         "activado": 1,
         "eth0": {
             "activado": 1,
-            "dhcp": 0,
+            "dhcp": 1,
             "static_ip_address": "192.168.1.2/24",
             "static_routers": "192.168.1.2",
             "metric": 0,

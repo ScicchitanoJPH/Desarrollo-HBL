@@ -17,14 +17,24 @@ apt install libtiff5 -y
 apt install git -y
 apt-get install dialog -y
 
+
+
 # Descargo la carpeta de git
 sudo git clone https://github.com/ScicchitanoJPH/Desarrollo-HBL.git /usr/programas
 
-# Descargo teamviewer
-wget https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb
-sudo dpkg -i teamviewer-host_armhf.deb
-sudo apt --fix-broken install -y
-sudo teamviewer passwd Jphlionshbl
+# Descargo teamviewer si no existe
+if [ ! -e /home/pi/teamviewer-host_armhf.deb ]; then
+    echo "----------- Instalando TeamViewer -----------"
+    wget https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb
+    sudo dpkg -i teamviewer-host_armhf.deb
+    sudo apt --fix-broken install -y
+    sudo teamviewer passwd Jphlionshbl
+    echo "----------- TeamViewer Instalado -----------"
+fi
+
+
+# Descargo Firefox
+sudo apt install firefox-esr
 
 # Configuracion POS-80
 sudo chmod a+w /dev/usb/lp0
@@ -77,11 +87,17 @@ mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
 
 
 # editar archivo inicio /home/pi/.config/autostart/Start.desktop
-mkdir /home/pi/.config/autostart
-echo "[Desktop Entry]" >> /home/pi/.config/autostart/Start.desktop
-echo "Type=Application" >> /home/pi/.config/autostart/Start.desktop
-echo "Name=Start" >> /home/pi/.config/autostart/Start.desktop
-echo "Exec=sh /usr/programas/hbl/start.sh" >> /home/pi/.config/autostart/Start.desktop
+
+if [ ! -e /home/pi/.config/autostart/Start.desktop ]; then
+    echo "----------- Creando Autostart -----------"
+    mkdir /home/pi/.config/autostart
+    echo "[Desktop Entry]" >> /home/pi/.config/autostart/Start.desktop
+    echo "Type=Application" >> /home/pi/.config/autostart/Start.desktop
+    echo "Name=Start" >> /home/pi/.config/autostart/Start.desktop
+    echo "Exec=sh /usr/programas/hbl/start.sh" >> /home/pi/.config/autostart/Start.desktop
+    echo "----------- Autostart creado -----------"
+fi
+
 
 # Cambiar fondo de pantalla
 pcmanfm --set-wallpaper /usr/programas/FondoPantalla.jpg
