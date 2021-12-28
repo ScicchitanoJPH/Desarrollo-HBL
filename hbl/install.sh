@@ -16,11 +16,24 @@ apt-get install libopenjp2-7 -y
 apt install libtiff5 -y
 apt install git -y
 apt-get install dialog -y
+
+# Descargo la carpeta de git
+sudo git clone https://github.com/ScicchitanoJPH/Desarrollo-HBL.git /usr/programas
+
+# Descargo teamviewer
 wget https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb
 sudo dpkg -i teamviewer-host_armhf.deb
 sudo apt --fix-broken install -y
 sudo teamviewer passwd Jphlionshbl
 
+# Configuracion POS-80
+sudo chmod a+w /dev/usb/lp0
+sudo apt-get install git cups
+chmod u+x /usr/programas/POS-80/install.sh
+sudo /usr/programas/POS-80/install.sh
+sudo usermod -a -G lpadmin pi
+sudo cupsctl --remote-any
+sudo /etc/init.d/cups restart
 
 timedatectl set-timezone America/Argentina/Buenos_Aires
 
@@ -60,21 +73,15 @@ dpkg-reconfigure -f noninteractive keyboard-configuration
 # Realizar un backup de la configuración original
 mv /etc/dnsmasq.conf /etc/dnsmasq.conf.orig
 
-# borrar el contenido del archivo /etc/rc.local
-cat /dev/null > /etc/rc.local
 
-# editar archivo inicio /etc/rc.local
-echo "#!/bin/sh -e" >> /etc/rc.local
-echo "#" >> /etc/rc.local
-echo "#" >> /etc/rc.local
-echo "sh /usr/programas/hbl/start.sh" >> /etc/rc.local
-echo "#" >> /etc/rc.local 
-echo "#iptables-restore < /etc/iptables.ipv4.nat" >> /etc/rc.local 
-echo "#" >> /etc/rc.local
-echo "exit 0" >> /etc/rc.local 
 
-# le doy permisos al archivo para su ejecucion
-chmod 755 /etc/rc.local
+
+# editar archivo inicio /home/pi/.config/autostart/Start.desktop
+mkdir /home/pi/.config/autostart
+echo "[Desktop Entry]" >> /home/pi/.config/autostart/Start.desktop
+echo "Type=Application" >> /home/pi/.config/autostart/Start.desktop
+echo "Name=Start" >> /home/pi/.config/autostart/Start.desktop
+echo "Exec=sh /usr/programas/hbl/start.sh" >> /home/pi/.config/autostart/Start.desktop
 
 reboot
 EOF
