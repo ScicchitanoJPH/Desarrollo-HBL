@@ -20,7 +20,15 @@ apt-get install dialog -y
 
 
 # Descargo la carpeta de git
-sudo git clone https://github.com/ScicchitanoJPH/Desarrollo-HBL.git /usr/programas
+if [ -e /home/pi/teamviewer-host_armhf.deb ]; then
+    echo "----------- Borrando repositorio local -----------"    
+    sudo rm -rfv /usr/programas  
+    echo "----------- Repositorio local borrado -----------"      
+fi
+echo "----------- Clonando repositorio -----------"
+sudo git clone https://github.com/ScicchitanoJPH/Desarrollo-HBL.git /usr/programas    
+echo "+++++++++++ Repositorio clonado ++++++++++++"
+
 
 # Descargo teamviewer si no existe
 if [ ! -e /home/pi/teamviewer-host_armhf.deb ]; then
@@ -100,7 +108,15 @@ fi
 
 
 # Cambiar fondo de pantalla
-pcmanfm --set-wallpaper /usr/programas/FondoPantalla.jpg
+if [ -e /usr/programas/FondoPantalla.jpg ]; then
+    echo "----------- JPG -----------"
+    pcmanfm --set-wallpaper /usr/programas/FondoPantalla.jpg     
+fi
+if [ -e /usr/programas/FondoPantalla.png ]; then
+    echo "----------- PNG -----------"
+    pcmanfm --set-wallpaper /usr/programas/FondoPantalla.png     
+fi
+
 
 reboot
 EOF

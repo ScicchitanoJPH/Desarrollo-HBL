@@ -21,7 +21,7 @@ import time
 import datetime 
 
 import main
-from modulos import delays as delays
+from modulos import delays as delays, kiosco
 from modulos import hbl as hbl
 from modulos import hidDevice as hidDevice
 from modulos import i2cDevice as i2cDevice
@@ -35,6 +35,7 @@ from modulos import tcp as tcp
 from modulos import redundancia as redundancia 
 from modulos import httpServer as httpServer  
 from modulos import serial as serial
+from modulos import kiosco as kiosco
 
 from modulos.decoderWiegand import Decoder
 from modulos.encoderWiegand import Encoder
@@ -131,13 +132,7 @@ if __name__ == "__main__":
    # inicializa la comunicacion TCP
    tcp.inicializacion(pi)
 
-   print("abriendo firefox")
-   os.system("xhost +SI:localuser:root")
-   os.system("xset -dpms")
-   os.system("xset s off")
-   os.system("xset s noblank")
-   os.system("XAUTHORITY=/root/Xauthority firefox -kiosk -printing -private-window 'http://172.16.23.27/kiosco/login.4.php'  -width 1280 -height 1080 &")
-   print("Listo")
+   kiosco.inicializacion()
 
    
    # heartbeat hblCore
