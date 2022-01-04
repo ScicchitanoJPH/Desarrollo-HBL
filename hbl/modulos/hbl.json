@@ -19,7 +19,7 @@
         "ejecutarComando": "1"
     },
     "funcionamiento": {
-        "modo": 9
+        "modo": 10
     },
     "wiegand": {
         "port0": {
@@ -55,7 +55,7 @@
             }
         },
         "errorCode": 99999,
-        "URL": "http://rfid-test.jphlions.com/api/rfid",
+        "URL": "http://172.16.23.27/kiosco/login.4.php",
         "URL_timeOutRequest": 5,
         "ID": "0001"
     },
@@ -209,10 +209,10 @@
         "url": "http://localhost/MockTrueFalse/validar.php"
     },
     "request": {
-        "seleccionURL": 2,
+        "seleccionURL": 3,
         "urlRequest1": "http://localhost/jphaccess/trp/alcoholemia.php?tarjeta=",
         "urlRequest2": "http://localhost/jphaccess/trp/validar.php?tarjeta=",
-        "urlRequest3": "",
+        "urlRequest3": "http://172.16.23.27/workpass/login.hk.php",
         "urlRequest4": "",
         "urlRequest5": "",
         "urlError": "http://localhost/jphaccess/error.php",
@@ -242,9 +242,9 @@
             "activado": 0,
             "modo": 1
         },
-        "serialNumber": "01c1f1cb",
-        "revision": "00b03111",
-        "MAC_ethernet": "dc:a6:32:30:d7:d2",
+        "serialNumber": "702487a0",
+        "revision": "00c03112",
+        "MAC_ethernet": "dc:a6:32:52:2d:b0",
         "NTP": "time.cloudflare.com",
         "reset": {
             "resetActivado": 0,
@@ -253,7 +253,7 @@
         "tamper": {
             "activado": 0
         },
-        "idHBL": "1"
+        "idHBL": "4"
     },
     "network": {
         "activado": 1,
