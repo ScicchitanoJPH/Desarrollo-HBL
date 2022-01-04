@@ -152,6 +152,11 @@ class Decoder:
                   if id!=hbl.WD_errorCode:
                      self.procesarID_JSON(cantidadBits, numero, numeroBinario, id, self.pi) 
 
+               # 10 : Funcionamiento de Workpass
+               elif hbl.FUNC_modo == 10:
+
+                  self.Workpass(cantidadBits, numero, numeroBinario, id, self.pi) 
+
                else:
                   pass
 
@@ -400,18 +405,22 @@ class Decoder:
  
       try:
          # path del archivo
-         datapath= '/usr/programas/NodeAPI'
+         datapath= '/var/www/html/wms'
 
          # Leo los parametros de configuracion en el JSON
-         with open(os.path.join(datapath , 'dato.json'), "r") as f:
-               dato = json.load(f)
+         #with open(os.path.join(datapath , 'dato.json'), "r") as f:
+         #      dato = json.load(f)
 
          ## grabo el id
-         dato["dni"] = str(id)
+         #dato["dni"] = str(id)
+         dato = {
+            'datos': str(id)
+         }
 
          # actualizo los parametros en el JSON
-         with open(os.path.join(datapath , 'dato.json'), "w") as f:
-               json.dump(dato, f, indent=4)   
+         with open(os.path.join(datapath , 'datos.json'), "w") as f:
+               #json.dump(dato, f, indent=4)  
+               json.dump(dato, f) 
 
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "JSON ID actualizado : " + str(id))  
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "\n") 
@@ -420,6 +429,72 @@ class Decoder:
 
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "\n")     
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "Error : Dato no actualizado") 
+
+
+   
+   def Workpass(self, cantidadBits, numero, numeroBinario, id, pi):
+      print("Modo 10")
+      print(""" escribo datos en el archivo txt """)
+      file1 = open("/var/log/wiegand/event.txt", "a")
+      file1.write(str(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')))
+      file1.write(str(" - ")) 
+      file1.write(str(id))
+      file1.write("\n")
+      file1.close()
+
+      """ Adquirir datos del archivo de configuracion """ 
+      PosicionTextoURL = -1
+      PosicionTextoHBL = -1
+
+      with open("/home/pi/Desktop/workpassHK/config.properties", 'r') as ObjFichero:
+      
+         for line in ObjFichero: 
+            PosicionTextoURL = line.find("jsonEndpointUrl =")
+            if PosicionTextoURL >= 0: 
+               LineaURL = line.replace("\n", "")               
+               TextoURL = LineaURL.split(" = ")
+               print(TextoURL[1])
+               
+            PosicionTextoHBL = line.find("HBL =")
+            if PosicionTextoHBL >= 0: 
+               LineaHBL = line.replace("\n", "")  
+               TextoHBL = LineaHBL.split(" = ")
+               print(TextoHBL[1])
+      
+      """ Armar la URL completa """   
+      try: 
+
+         URLCompleta = TextoURL[1] + "?" + "hbl=" + TextoHBL[1] + "&" + "dni=" + str(id)
+         print(URLCompleta)
+
+         #webbrowser.open(URLCompleta) 
+         x = requests.get(URLCompleta)
+                  
+         print(x.status_code)
+         
+         """ escribo el error en el archivo txt """
+         file1 = open("/var/log/wiegand/event.txt", "a")
+         file1.write(str(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')))
+         file1.write(str(" - ")) 
+         file1.write("URL OK")
+         file1.write("\n")
+         file1.close()
+         
+         log.escribeLineaLog(hbl.LOGS_hblWiegand, "URL OK \n")
+      
+      except:
+         print("Error en archivo de configuracion")
+         
+         """ escribo el error en el archivo txt """
+         #file1 = open("/home/pi/Desktop/wiegand/event.txt", "a")
+         #file1.write(str(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')))
+         #file1.write(str(" - ")) 
+         #file1.write("Error de lectura en los parametros de configuración.")
+         #file1.write("\n")
+         #file1.close()
+         log.escribeLineaLog(hbl.LOGS_hblWiegand, "Error de lectura en los parametros de configuración\n")
+               #self.procesarID_URL(cantidadBits, numero, numeroBinario, id, self.pi)
+
 
 
    """ --------------------------------------------------------------------------------------------
