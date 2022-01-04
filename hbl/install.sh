@@ -20,12 +20,13 @@ apt-get install dialog -y
 
 
 # Descargo la carpeta de git
-if [ -e /home/pi/teamviewer-host_armhf.deb ]; then
+if [ -e /usr/programas ]; then
     echo "----------- Borrando repositorio local -----------"    
     sudo rm -rfv /usr/programas  
     echo "----------- Repositorio local borrado -----------"      
 fi
 echo "----------- Clonando repositorio -----------"
+mkdir /usr/programas
 sudo git clone https://github.com/ScicchitanoJPH/Desarrollo-HBL.git /usr/programas    
 echo "+++++++++++ Repositorio clonado ++++++++++++"
 
