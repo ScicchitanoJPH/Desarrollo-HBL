@@ -286,6 +286,11 @@ def cargarParametros(archivo):
     global CACHEO_tiempoReleNegativo
     global CACHEO_repReleNegativo
 
+    global KIOSCO_activado
+    global KIOSCO_URL
+    global KIOSCO_width
+    global KIOSCO_height
+
     # ******************************************************************************************************************************************
     
 
@@ -612,6 +617,13 @@ def cargarParametros(archivo):
     CACHEO_repRelePositivo=data["cacheo"]["repRelePositivo"]
     CACHEO_tiempoReleNegativo=data["cacheo"]["tiempoReleNegativo"]
     CACHEO_repReleNegativo=data["cacheo"]["repReleNegativo"]
+
+
+    KIOSCO_activado=data["kiosco"]["activado"]
+    KIOSCO_URL=data["kiosco"]["URL"]
+    KIOSCO_width=data["kiosco"]["width"]
+    KIOSCO_height=data["kiosco"]["height"]
+
 
 
  

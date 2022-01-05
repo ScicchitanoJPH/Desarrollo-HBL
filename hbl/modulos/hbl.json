@@ -345,5 +345,11 @@
         "repRelePositivo": 2,
         "tiempoReleNegativo": 1,
         "repReleNegativo": 1
+    },
+    "kiosco": {
+        "activado": 0,
+        "URL":"http://172.16.23.27/kiosco/login.4.php",
+        "width": "1280",
+        "height": "1080"
     }
 }
