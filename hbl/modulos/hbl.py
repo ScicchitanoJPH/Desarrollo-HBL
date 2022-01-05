@@ -192,6 +192,7 @@ def cargarParametros(archivo):
     global LOGS_hblRedundancia
     global LOGS_hblSerial
     global LOGS_hblCacheo
+    global LOGS_hblKiosco
  
     global HBLCORE_hblDisplay_activado
     global HBLCORE_hblDisplay_modo 
@@ -522,6 +523,7 @@ def cargarParametros(archivo):
     LOGS_hblRedundancia=data["logs"]["hblRedundancia"] 
     LOGS_hblSerial=data["logs"]["hblSerial"]   
     LOGS_hblCacheo=data["logs"]["hblCacheo"]    
+    LOGS_hblKiosco=data["logs"]["hblKiosco"]    
 
     # hblCore
     HBLCORE_hblDisplay_activado=data["hblCore"]["hblDisplay"]["activado"]

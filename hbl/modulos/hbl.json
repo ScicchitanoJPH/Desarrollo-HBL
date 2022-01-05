@@ -235,7 +235,8 @@
         "hblFTP": "hblFTP.log",
         "hblRedundancia": "hblRedundancia.log",
         "hblSerial": "hblSerial.log",
-        "hblCacheo": "hblCacheo.log"
+        "hblCacheo": "hblCacheo.log",
+        "hblKiosco": "hblKiosco.log"
     },
     "hblCore": {
         "hblDisplay": {
