@@ -3,10 +3,8 @@ from modulos import hbl as hbl
 from modulos import log as log
 
 def inicializacion():
-    #Falta implmentar log de este modulo
-    #Implmentar Selenium
-
-    if(hbl.KIOSCO_activado):
+    
+    if hbl.KIOSCO_activado:
 
         URL = "XAUTHORITY=/root/Xauthority firefox -kiosk -printing -private-window " + "'" + hbl.KIOSCO_URL + "' " + "-width " + hbl.KIOSCO_width + " -height " + hbl.KIOSCO_height + " &"
 

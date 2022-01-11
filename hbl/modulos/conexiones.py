@@ -397,7 +397,7 @@ def escribeParametros():
             #     address 192.168.1.1
             #     netmask 255.255.255.0
             #     network 192.168.1.0
-            #     broadcast 192.168.1.255 
+            #     broadcast 192.168.1.255
 
             parametrosNet = ['allow-hotplug eth0' , 'iface eth0 inet static', '    address ' + str(hbl.NETWORK_eth0_static_ip_address), '    netmask ' + str(hbl.NETWORK_eth0_netmask), '    network ' + str(hbl.NETWORK_eth0_network), '    broadcast '+ str(hbl.NETWORK_eth0_broadcast)] 
             auxiliar.append_multiple_lines('/etc/network/interfaces', parametrosNet, "a+") 
@@ -544,7 +544,7 @@ def NetworkConfig():
     if hbl.NETWORK_activado == 1: 
 
         escribeParametros() 
- 
+
 
 def GSM_Modem_Init(): 
 

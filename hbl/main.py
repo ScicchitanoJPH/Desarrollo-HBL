@@ -36,6 +36,7 @@ from modulos import redundancia as redundancia
 from modulos import httpServer as httpServer  
 from modulos import serial as serial
 from modulos import kiosco as kiosco
+from modulos import MQTT as MQTT
 
 from modulos.decoderWiegand import Decoder
 from modulos.encoderWiegand import Encoder
@@ -134,12 +135,16 @@ if __name__ == "__main__":
 
    kiosco.inicializacion()
 
-   
+   client = MQTT.inicializacion()
+
+
    # heartbeat hblCore
    while True:
 
       hblCore.heartBeat(pi)
       hblCore.oledRefresh()   
+      MQTT.publish(client)
+      MQTT.subscribe(client,pi)
 
    w.cancel()
    pi.stop() 
