@@ -21,7 +21,7 @@ import time
 import datetime 
 
 import main
-from modulos import delays as delays, kiosco
+from modulos import Monitoreo, delays as delays, kiosco
 from modulos import hbl as hbl
 from modulos import hidDevice as hidDevice
 from modulos import i2cDevice as i2cDevice
@@ -37,6 +37,7 @@ from modulos import httpServer as httpServer
 from modulos import serial as serial
 from modulos import kiosco as kiosco
 from modulos import MQTT as MQTT
+from modulos import Monitoreo as Monitoreo
 
 from modulos.decoderWiegand import Decoder
 from modulos.encoderWiegand import Encoder
@@ -143,8 +144,11 @@ if __name__ == "__main__":
 
       hblCore.heartBeat(pi)
       hblCore.oledRefresh()   
-      MQTT.publish(client)
+      #MQTT.publish(client)
       MQTT.subscribe(client,pi)
+      Monitoreo()
+
+
 
    w.cancel()
    pi.stop() 

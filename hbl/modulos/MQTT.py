@@ -6,12 +6,10 @@ import time
 from paho.mqtt import client as mqtt_client
 from modulos import salidas as salidas
 from modulos import hbl as hbl
+import json
+import os
 
 
-broker = 'broker.mqttdashboard.com'
-port = 1883
-TopicSend = "RPI/JPH/HBL/Send"
-TopicRecv = "RPI/JPH/HBL/Recv"
 # generate client ID with pub prefix randomly
 client_id = f'python-mqtt-{random.randint(0, 1000)}'
 # username = 'emqx'
@@ -27,15 +25,13 @@ def connect_mqtt():
     client = mqtt_client.Client(client_id)
     #client.username_pw_set(username, password)
     client.on_connect = on_connect
-    client.connect(broker, port)
+    client.connect(hbl.MQTT_broker, hbl.MQTT_port)
     return client
 
 
-def publish(client):
-    msg_count = 0
+def publish(client,msg):
     time.sleep(1)
-    msg = f"messages: {msg_count}"
-    result = client.publish(TopicSend, msg)
+    result = client.publish(hbl.MQTT_TopicSend, msg)
     # result: [0, 1]
     status = result[0]
     #if status == 0:
@@ -53,10 +49,14 @@ def subscribe(client: mqtt_client,pi):
         if msg.payload.decode() == "OFF":
             pi.write(hbl.DIG_out_pin_out1, hbl.OFF)
 
-    client.subscribe(TopicRecv)
+    client.subscribe(hbl.MQTT_TopicRecv)
     client.on_message = on_message
 
 def inicializacion():
+    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__))) 
+    with open(os.path.join(__location__ , 'hbl.json'), "r") as f:
+        data = json.load(f)
     client = connect_mqtt()
     client.loop_start()
+    publish(client,json.dumps(data))
     return client

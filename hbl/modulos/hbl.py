@@ -292,6 +292,12 @@ def cargarParametros(archivo):
     global KIOSCO_width
     global KIOSCO_height
 
+    global MQTT_broker
+    global MQTT_port
+    global MQTT_TopicSend
+    global MQTT_TopicRecv
+
+
     # ******************************************************************************************************************************************
     
 
@@ -625,6 +631,11 @@ def cargarParametros(archivo):
     KIOSCO_URL=data["kiosco"]["URL"]
     KIOSCO_width=data["kiosco"]["width"]
     KIOSCO_height=data["kiosco"]["height"]
+
+    MQTT_broker=data["MQTT"]["broker"]
+    MQTT_port=data["MQTT"]["port"]
+    MQTT_TopicSend=data["MQTT"]["TopicSend"]
+    MQTT_TopicRecv=data["MQTT"]["TopicRecv"]
 
 
 

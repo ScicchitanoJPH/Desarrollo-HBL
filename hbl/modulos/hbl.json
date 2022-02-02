@@ -352,5 +352,11 @@
         "URL":"http://172.16.23.27/kiosco/login.4.php",
         "width": "1280",
         "height": "1080"
+    },
+    "MQTT": {
+        "broker": "broker.mqttdashboard.com",
+        "port":1883,
+        "TopicSend": "RPI/JPH/HBL/Send",
+        "TopicRecv": "RPI/JPH/HBL/Recv"
     }
 }
