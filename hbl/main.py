@@ -138,17 +138,23 @@ if __name__ == "__main__":
 
    client = MQTT.inicializacion()
 
+   b = datetime.datetime.now() 
+
 
    # heartbeat hblCore
    while True:
 
       hblCore.heartBeat(pi)
       hblCore.oledRefresh()   
-      #MQTT.publish(client)
+      ##MQTT.publish(client)
       MQTT.subscribe(client,pi)
-      Monitoreo()
+      a = datetime.datetime.now() 
+      
+      c = a-b
 
-
+      if c.total_seconds() >= 500:
+         Monitoreo.Control()
+         b = datetime.datetime.now() 
 
    w.cancel()
    pi.stop() 
