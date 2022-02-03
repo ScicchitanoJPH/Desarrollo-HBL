@@ -21,7 +21,7 @@ import time
 import datetime 
 
 import main
-from modulos import Monitoreo, delays as delays, kiosco
+from modulos import delays as delays
 from modulos import hbl as hbl
 from modulos import hidDevice as hidDevice
 from modulos import i2cDevice as i2cDevice
