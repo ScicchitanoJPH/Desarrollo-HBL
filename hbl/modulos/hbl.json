@@ -358,5 +358,9 @@
         "port":1883,
         "TopicSend": "RPI/JPH/HBL/Send",
         "TopicRecv": "RPI/JPH/HBL/Recv"
+    },
+    "Seguimiento": {
+        "file_path": "Segumiento.txt"
     }
+
 }

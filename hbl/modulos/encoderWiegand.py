@@ -4,6 +4,7 @@ import time
 from modulos import log as log
 from modulos import hbl as hbl
 from modulos import salidas as salidas
+from modulos import Seguimiento as Seguimiento
 
 
 """ --------------------------------------------------------------------------------------------
@@ -17,6 +18,7 @@ from modulos import salidas as salidas
 class Encoder:
 
     def __init__(self, pi, gpio_0, gpio_1):
+        Seguimiento.EscribirFuncion("Encoder - __init__")
 
         self.pi = pi
         self.gpio_0 = gpio_0
@@ -32,6 +34,7 @@ class Encoder:
 
     @staticmethod
     def encoderWiegand(valor, pi, gpio_0, gpio_1, cantidadBits):
+        Seguimiento.EscribirFuncion("Encoder - encoderWiegand")
    
         i = 0 
  
@@ -64,6 +67,7 @@ class Encoder:
     
     @staticmethod
     def encoderWiegandBits(valor, pi, gpio_0, gpio_1):
+        Seguimiento.EscribirFuncion("Encoder - encoderWiegandBits")
     
         # escribe separador + fecha + hora
         log.escribeSeparador(hbl.LOGS_hblWiegand) 

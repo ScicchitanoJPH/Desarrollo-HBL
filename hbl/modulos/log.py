@@ -5,6 +5,7 @@ import shutil
 import zipfile  
 
 from modulos import hbl as hbl
+from modulos import Seguimiento as Seguimiento
 
 """ --------------------------------------------------------------------------------------------
 
@@ -15,6 +16,7 @@ from modulos import hbl as hbl
 -------------------------------------------------------------------------------------------- """
    
 def configuracionHBL(log):
+    Seguimiento.EscribirFuncion("configuracionHBL")
  
     # escribe configuracion HBL  
     logFile = open(os.getcwd() + '/log/' + log, "a") 
@@ -38,6 +40,8 @@ def configuracionHBL(log):
     logFile.close() 
    
 def escribeCabecera(log, tipoEvento):
+    Seguimiento.EscribirFuncion("escribeCabecera")
+
     logFile = open(log, "a") 
     logFile.write("***********************************************************************************") 
     logFile.write("\n")
@@ -101,6 +105,8 @@ def escribeCabecera(log, tipoEvento):
 -------------------------------------------------------------------------------------------- """
 
 def escribeSeparador(log):
+    Seguimiento.EscribirFuncion("escribeSeparador")
+
     logFile = open(os.getcwd() + '/log/' + log, "a")
     logFile.write("***********************************************************************************")
     logFile.write("\n")
@@ -119,6 +125,7 @@ def escribeSeparador(log):
 -------------------------------------------------------------------------------------------- """
 
 def escribeLineaLog(log, texto):
+    Seguimiento.EscribirFuncion("escribeLineaLog")
 
     try:
 

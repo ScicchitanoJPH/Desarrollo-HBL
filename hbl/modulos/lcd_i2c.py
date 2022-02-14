@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+from modulos import Seguimiento as Seguimiento
 class lcd:
   
    """
@@ -56,6 +56,8 @@ class lcd:
 
    def __init__(self, pi, bus=1, addr=0x27, width=16, backlight_on=True,
                 RS=0, RW=1, E=2, BL=3, B4=4):
+                
+      Seguimiento.EscribirFuncion("lcd - __init__")
 
       self.pi = pi
       self.width = width
@@ -71,12 +73,15 @@ class lcd:
       self._init()
 
    def backlight(self, on):
+      Seguimiento.EscribirFuncion("lcd - backlight")
+
       """
       Switch backlight on (True) or off (False).
       """
       self.backlight_on = on
 
    def _init(self):
+      Seguimiento.EscribirFuncion("lcd - _init")
 
       self._inst(0x33) # Initialise 1
       self._inst(0x32) # Initialise 2
@@ -86,6 +91,7 @@ class lcd:
       self._inst(0x01) # Clear display
 
    def _byte(self, MSb, LSb):
+      Seguimiento.EscribirFuncion("lcd - _byte")
 
       if self.backlight_on:
          MSb |= self.BL
@@ -95,6 +101,7 @@ class lcd:
          [MSb | self.E, MSb & ~self.E, LSb | self.E, LSb & ~self.E])
 
    def _inst(self, bits):
+      Seguimiento.EscribirFuncion("lcd - _inst")
 
       MSN = (bits>>4) & 0x0F
       LSN = bits & 0x0F
@@ -105,6 +112,7 @@ class lcd:
       self._byte(MSb, LSb)
 
    def _data(self, bits):
+      Seguimiento.EscribirFuncion("lcd - _data")
 
       MSN = (bits>>4) & 0x0F
       LSN = bits & 0x0F
@@ -115,18 +123,24 @@ class lcd:
       self._byte(MSb, LSb)
 
    def move_to(self, row, column):
+      Seguimiento.EscribirFuncion("lcd - move_to")
+
       """
       Position cursor at row and column (0 based).
       """
       self._inst(self._LCD_ROW[row]+column)
 
    def put_inst(self, byte):
+      Seguimiento.EscribirFuncion("lcd - put_inst")
+
       """
       Write an instruction byte.
       """
       self._inst(byte)
 
    def put_symbol(self, index):
+      Seguimiento.EscribirFuncion("lcd - put_symbol")
+
       """
       Write the symbol with index at the current cursor postion
       and increment the cursor.
@@ -134,6 +148,8 @@ class lcd:
       self._data(index)
 
    def put_chr(self, char):
+      Seguimiento.EscribirFuncion("lcd - put_chr")
+
       """
       Write a character at the current cursor postion and
       increment the cursor.
@@ -141,6 +157,8 @@ class lcd:
       self._data(ord(char))
 
    def put_str(self, text):
+      Seguimiento.EscribirFuncion("lcd - put_str")
+
       """
       Write a string at the current cursor postion.  The cursor will
       end up at the character after the end of the string.
@@ -149,6 +167,8 @@ class lcd:
          self.put_chr(i)
 
    def put_line(self, row, text):
+      Seguimiento.EscribirFuncion("lcd - put_line")
+
       """
       Replace a row (0 based) of the LCD with a new string.
       """
@@ -159,6 +179,8 @@ class lcd:
       self.put_str(text)
 
    def close(self):
+      Seguimiento.EscribirFuncion("lcd - close")
+      
       """
       Close the LCD (clearing the screen) and release used resources.
       """

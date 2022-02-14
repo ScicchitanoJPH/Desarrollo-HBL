@@ -15,12 +15,14 @@ from modulos import delays as delays
 from modulos import log as log
 from modulos import i2cDevice as i2cDevice
 from modulos import variablesGlobales as variablesGlobales
+from modulos import Seguimiento as Seguimiento
 
 global pi
 
 class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
  
     def do_GET(self): 
+        Seguimiento.EscribirFuncion("do_GET")
 
         id = 0
         tiempo = 0
@@ -140,6 +142,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
 -------------------------------------------------------------------------------------------- """ 
 
 def startServer():
+    Seguimiento.EscribirFuncion("startServer")
 
     try:
 
@@ -170,6 +173,7 @@ def startServer():
 -------------------------------------------------------------------------------------------- """ 
 
 def inicializacion(pi2): 
+    Seguimiento.EscribirFuncion("inicializacion")
 
     global pi
 

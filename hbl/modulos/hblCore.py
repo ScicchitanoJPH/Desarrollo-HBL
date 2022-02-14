@@ -16,6 +16,7 @@ from modulos import delays as delays
 from modulos import conexiones as conexiones
 from modulos import auxiliar as auxiliar
 from modulos import variablesGlobales as variablesGlobales
+from modulos import Seguimiento as Seguimiento
 
 global device
 global canvas 
@@ -29,6 +30,7 @@ global canvas
 -------------------------------------------------------------------------------------------- """
 
 def inicializacionHBL():
+    Seguimiento.EscribirFuncion("inicializacionHBL")
  
     # escribe inicializacion HBL
     log.escribeSeparador(hbl.LOGS_hblCore)
@@ -82,7 +84,8 @@ def inicializacionHBL():
 -------------------------------------------------------------------------------------------- """
 
 def get_throttled():
- 
+    Seguimiento.EscribirFuncion("get_throttled")
+
     throttled = os.popen("vcgencmd get_throttled").readline()
     throttled = throttled.replace("throttled=", "")  
     throttled = throttled.replace("\n", "")  
@@ -123,6 +126,7 @@ def get_throttled():
 -------------------------------------------------------------------------------------------- """
 
 def get_throttled_bytes():
+    Seguimiento.EscribirFuncion("get_throttled_bytes")
 
     throttled = os.popen("vcgencmd get_throttled").readline()
     throttled = throttled.replace("throttled=", "")  
@@ -146,6 +150,7 @@ def get_throttled_bytes():
 -------------------------------------------------------------------------------------------- """
 
 def lecturaParametrosHBL():
+    Seguimiento.EscribirFuncion("lecturaParametrosHBL")
 
     # path del archivo
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
@@ -169,6 +174,8 @@ def lecturaParametrosHBL():
 -------------------------------------------------------------------------------------------- """
 
 def measure_temp():
+    Seguimiento.EscribirFuncion("measure_temp")
+
     temp = os.popen("vcgencmd measure_temp").readline()
     return (temp.replace("temp=", ""))
 
@@ -179,6 +186,8 @@ def measure_temp():
 -------------------------------------------------------------------------------------------- """
 
 def timeNow():
+    Seguimiento.EscribirFuncion("timeNow")
+
     return str(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'))
 
 """ --------------------------------------------------------------------------------------------
@@ -188,6 +197,7 @@ def timeNow():
 -------------------------------------------------------------------------------------------- """
 
 def getDate():
+    Seguimiento.EscribirFuncion("getDate")
 
     p = os.popen("date '+%F %T'") 
     line = p.readline() 
@@ -200,6 +210,7 @@ def getDate():
 -------------------------------------------------------------------------------------------- """
 
 def sincronizarHora():
+    Seguimiento.EscribirFuncion("sincronizarHora")
     
     try:
         # escribe en el archivo de seleccion del servidor el indicado en el json del HBL
@@ -251,16 +262,21 @@ def sincronizarHora():
 -------------------------------------------------------------------------------------------- """
 
 def leer_numero_serie():
+    Seguimiento.EscribirFuncion("leer_numero_serie")
+
     numeroSerie = os.popen("vcgencmd otp_dump | grep '28:'").readline()
     numeroSerie = numeroSerie.replace("\n", "")
     return (numeroSerie.replace("28:", ""))
 
 def leer_revision():
+    Seguimiento.EscribirFuncion("leer_revision")
+
     revision = os.popen("vcgencmd otp_dump | grep '30:'").readline()
     revision = revision.replace("\n", "")
     return (revision.replace("30:", ""))
 
 def leer_MAC_Address(interfase):
+    Seguimiento.EscribirFuncion("leer_MAC_Address")
     macAddress = os.popen("ethtool --show-permaddr " + interfase).readline()
     macAddress = macAddress.replace("\n", "")
     return (macAddress.replace("Permanent address: ", "")) 
@@ -272,6 +288,7 @@ def leer_MAC_Address(interfase):
 -------------------------------------------------------------------------------------------- """
 
 def usoCPU(numeroCPU):  
+    Seguimiento.EscribirFuncion("usoCPU")
 
     if numeroCPU == 0 : 
         line = os.popen("cat /proc/stat | grep '^cpu0'").readline() 
@@ -302,6 +319,8 @@ def usoCPU(numeroCPU):
 -------------------------------------------------------------------------------------------- """
                                                 
 def getRAMinfo():
+    Seguimiento.EscribirFuncion("getRAMinfo")
+
     p = os.popen('free')
     i = 0
     while 1:
@@ -323,6 +342,8 @@ def getRAMinfo():
 -------------------------------------------------------------------------------------------- """
 
 def getDiskSpace():
+    Seguimiento.EscribirFuncion("getDiskSpace")
+
     p = os.popen("df -h /")
     i = 0
     while 1:
@@ -342,7 +363,8 @@ def getDiskSpace():
 -------------------------------------------------------------------------------------------- """
 
 def getBootloaderVersion():
-
+    Seguimiento.EscribirFuncion("getBootloaderVersion")
+    
     try:
 
         p = os.popen("vcgencmd bootloader_version") 
@@ -368,6 +390,7 @@ def getBootloaderVersion():
 -------------------------------------------------------------------------------------------- """
 
 def getVolumeNames(drive):
+    Seguimiento.EscribirFuncion("getVolumeNames")
 
     try:
         p = os.popen("sudo lsblk -o UUID,NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL,MODEL | grep '" + drive + "'")     
@@ -393,6 +416,7 @@ def getVolumeNames(drive):
 -------------------------------------------------------------------------------------------- """
 
 def inicializaoled():
+    Seguimiento.EscribirFuncion("inicializaoled")
 
     global device
     global canvas
@@ -424,6 +448,7 @@ def inicializaoled():
 -------------------------------------------------------------------------------------------- """
  
 def oledRefresh():
+    Seguimiento.EscribirFuncion("oledRefresh")
 
     global device
     global canvas
@@ -536,6 +561,7 @@ def oledRefresh():
 -------------------------------------------------------------------------------------------- """
 
 def heartBeat(pi):
+    Seguimiento.EscribirFuncion("heartBeat")
 
     try:
         
@@ -578,6 +604,7 @@ def heartBeat(pi):
 -------------------------------------------------------------------------------------------- """
 
 def encenderLed(pi, led, tiempo):
+    Seguimiento.EscribirFuncion("encenderLed")
 
     try:
         if led == 1: 
@@ -622,6 +649,7 @@ def encenderLed(pi, led, tiempo):
 -------------------------------------------------------------------------------------------- """
 
 def checkLedsBuzzer(pi):
+    Seguimiento.EscribirFuncion("checkLedsBuzzer")
 
     try:
 

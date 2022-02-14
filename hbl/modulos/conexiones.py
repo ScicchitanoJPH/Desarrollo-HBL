@@ -12,6 +12,7 @@ from modulos import hbl as hbl
 from modulos import delays as delays
 from modulos import log as log
 from modulos import auxiliar as auxiliar
+from modulos import Seguimiento as Seguimiento
 
 global device
 
@@ -86,6 +87,7 @@ global conexionPPPActiva
 -------------------------------------------------------------------------------------------- """
 
 def cargarParametrosppp(portGSM):
+    Seguimiento.EscribirFuncion("cargarParametrosppp")
 
     with open("/etc/wvdial.conf", 'w') as ObjFichero:                
         ObjFichero.write("[Dialer Defaults]\n")
@@ -117,6 +119,7 @@ def cargarParametrosppp(portGSM):
 -------------------------------------------------------------------------------------------- """
 
 def startGSM(): 
+    Seguimiento.EscribirFuncion("startGSM")
 
     global conexionPPPActiva
 
@@ -274,6 +277,7 @@ def startGSM():
 -------------------------------------------------------------------------------------------- """
 
 def get_ip_address(ifname): 
+    Seguimiento.EscribirFuncion("get_ip_address")
 
     try:
         ipv4 = os.popen('ip addr show ' + ifname).read().split("inet ")[1].split(" ")[0]
@@ -293,7 +297,7 @@ def get_ip_address(ifname):
 -------------------------------------------------------------------------------------------- """
 
 def get_bytes_interface_rx(interface):
-
+    Seguimiento.EscribirFuncion("get_bytes_interface_rx")
     bytesRx = 0
 
     try:
@@ -303,6 +307,7 @@ def get_bytes_interface_rx(interface):
         return "0"
 
 def get_bytes_interface_tx(interface):
+    Seguimiento.EscribirFuncion("get_bytes_interface_tx")
 
     bytesTx = 0
 
@@ -313,6 +318,7 @@ def get_bytes_interface_tx(interface):
         return "0"
 
 def bytesppp0(rxtx):
+    Seguimiento.EscribirFuncion("bytesppp0")
 
     if hbl.NETWORK_ppp0_activado == 1 and conexionPPPActiva == 1:
 
@@ -346,6 +352,7 @@ def bytesppp0(rxtx):
 -------------------------------------------------------------------------------------------- """
 
 def escribeParametros():
+    Seguimiento.EscribirFuncion("escribeParametros")
  
     # agrega la cabecera de inicializacion HBL
     parametrosNet = [' ', '#Configuracion HBL', ' ']
@@ -506,6 +513,7 @@ def escribeParametros():
 -------------------------------------------------------------------------------------------- """
 
 def dataTransferLog():
+    Seguimiento.EscribirFuncion("dataTransferLog")
 
     global conexionPPPActiva
 
@@ -540,6 +548,7 @@ def dataTransferLog():
 -------------------------------------------------------------------------------------------- """
 
 def NetworkConfig():
+    Seguimiento.EscribirFuncion("NetworkConfig")
 
     if hbl.NETWORK_activado == 1: 
 
@@ -547,6 +556,7 @@ def NetworkConfig():
 
 
 def GSM_Modem_Init(): 
+    Seguimiento.EscribirFuncion("GSM_Modem_Init")
 
     if hbl.NETWORK_ppp0_activado == 1:  
 

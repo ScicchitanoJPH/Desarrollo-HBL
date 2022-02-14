@@ -2,6 +2,7 @@ import pigpio
  
 from modulos import hbl as hbl
 from modulos import delays as delays
+from modulos import Seguimiento as Seguimiento
 
 """ --------------------------------------------------------------------------------------------
 
@@ -12,6 +13,7 @@ from modulos import delays as delays
 class Salidas:
 
     def __init__(self, pi):
+        Seguimiento.EscribirFuncion("Salidas - __init__")
 
         self.pi = pi 
 
@@ -31,10 +33,12 @@ class Salidas:
             self.pi.write(hbl.DIG_out_pin_out8, hbl.OFF)
 
     def activaSalida(self, pi, pin, tiempo):
+        Seguimiento.EscribirFuncion("Salidas - activaSalida")
         self.pi.write(hbl.DIG_out_pin_out1, hbl.ON) 
         delays.ms(int(tiempo))
         self.pi.write(hbl.DIG_out_pin_out1, hbl.OFF)  
     
     def cambioEstadoSalida(self, pi, pin, estado): 
+        Seguimiento.EscribirFuncion("Salidas - cambioEstadoSalida")
         self.pi.write(pin, estado)
  

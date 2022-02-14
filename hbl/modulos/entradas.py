@@ -5,6 +5,7 @@ import datetime
 from modulos import log as log, variablesGlobales
 from modulos import hbl as hbl
 from modulos import cacheo as cacheo
+from modulos import Seguimiento as Seguimiento
  
 """ --------------------------------------------------------------------------------------------
 
@@ -17,6 +18,7 @@ from modulos import cacheo as cacheo
 class Entradas: 
 
     def __init__(self, pi, in1, in2, callback):
+        Seguimiento.EscribirFuncion("Entradas - __init__")
 
         self.pi = pi
         self.in1 = in1
@@ -37,6 +39,7 @@ class Entradas:
     # ***************************************************************************************    
     
     def callbackIN1(self, gpio, level, tick): 
+        Seguimiento.EscribirFuncion("Entradas - callbackIN1")
 
         diff = pigpio.tickDiff(variablesGlobales.pressTick, tick)
 
@@ -63,6 +66,7 @@ class Entradas:
     # ***************************************************************************************
 
     def callbackIN2(self, gpio, level, tick):  
+        Seguimiento.EscribirFuncion("Entradas - callbackIN2")
  
         diff = pigpio.tickDiff(variablesGlobales.pressTick, tick)
 
@@ -85,6 +89,8 @@ class Entradas:
 
     @staticmethod
     def readPin(pi, pin):
+        Seguimiento.EscribirFuncion("Entradas - readPin")
+        
         valorPin = pi.read(pin)
         return valorPin
 

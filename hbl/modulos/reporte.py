@@ -15,6 +15,8 @@ from modulos import redundancia as redundancia
 from modulos import hblCore as hblCore
 from modulos import log as log
 from modulos import hbl as hbl
+from modulos import Seguimiento as Seguimiento
+
 
 """ --------------------------------------------------------------------------------------------
 
@@ -27,6 +29,7 @@ from modulos import hbl as hbl
 -------------------------------------------------------------------------------------------- """
 
 def consultarToken(): 
+    Seguimiento.EscribirFuncion("consultarToken")
 
     tokenLeido = 0
 
@@ -81,6 +84,7 @@ def consultarToken():
 -------------------------------------------------------------------------------------------- """
  
 def chequearConfiguracionHBL(token):
+    Seguimiento.EscribirFuncion("chequearConfiguracionHBL")
 
     statusConnect = 0
 
@@ -253,6 +257,7 @@ def chequearConfiguracionHBL(token):
 -------------------------------------------------------------------------------------------- """
 
 def reporteInicialHBL(token):
+    Seguimiento.EscribirFuncion("reporteInicialHBL")
 
     # primero revisa si tiene el idNitro4, en el caso de que no lo tenga tiene que reportarse por
     # primera vez, sino no se reporta en esta instancia y chequeara despues por fecha si tiene que
@@ -353,6 +358,7 @@ def reporteInicialHBL(token):
 -------------------------------------------------------------------------------------------- """
 
 def ReporteHBL(token):
+    Seguimiento.EscribirFuncion("ReporteHBL")
     
     # formateo las variables para enviarlas al reporte HBL
     temperatura = hblCore.measure_temp().replace("'C", "")
@@ -413,6 +419,7 @@ def ReporteHBL(token):
 -------------------------------------------------------------------------------------------- """
 
 def startThreadReporte():
+    Seguimiento.EscribirFuncion("startThreadReporte")
   
     while True:
 
@@ -443,7 +450,7 @@ def startThreadReporte():
 -------------------------------------------------------------------------------------------- """
 
 def inicializacion():  
-
+    Seguimiento.EscribirFuncion("inicializacion")
     if hbl.REPORTE_activado == 1:
 
         reporteHBL = threading.Thread(target=startThreadReporte, name='HBLReport')

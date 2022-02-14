@@ -1,9 +1,11 @@
 import os
 from modulos import hbl as hbl
 from modulos import log as log
+from modulos import Seguimiento as Seguimiento
 
 def inicializacion():
-    
+    Seguimiento.EscribirFuncion("inicializacion")
+
     if hbl.KIOSCO_activado:
 
         URL = "XAUTHORITY=/root/Xauthority firefox -kiosk -printing -private-window " + "'" + hbl.KIOSCO_URL + "' " + "-width " + hbl.KIOSCO_width + " -height " + hbl.KIOSCO_height + " &"

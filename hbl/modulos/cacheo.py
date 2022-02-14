@@ -6,6 +6,7 @@ import random
 from modulos import hbl as hbl
 from modulos import variablesGlobales as variablesGlobales
 from modulos import log as log
+from modulos import Seguimiento as Seguimiento
 
 
 """ ******************************************************************************************
@@ -21,6 +22,7 @@ from modulos import log as log
 
 
 def aleatorioValor(cacheosPositivos, cantidadCacheos):
+    Seguimiento.EscribirFuncion("aleatorioValor")
 
     try:
 
@@ -48,6 +50,7 @@ def aleatorioValor(cacheosPositivos, cantidadCacheos):
 ****************************************************************************************** """ 
 
 def ApagaReles(pi):
+    Seguimiento.EscribirFuncion("ApagaReles")
 
     try:
 
@@ -74,6 +77,7 @@ def ApagaReles(pi):
 ****************************************************************************************** """ 
 
 def AbreBarrera(pi):
+    Seguimiento.EscribirFuncion("AbreBarrera")
    
     try:
 
@@ -97,6 +101,7 @@ def AbreBarrera(pi):
 ****************************************************************************************** """ 
 
 def CierraBarrera(pi):
+    Seguimiento.EscribirFuncion("CierraBarrera")
 
     try:
 
@@ -120,6 +125,7 @@ def CierraBarrera(pi):
 ****************************************************************************************** """ 
 
 def NoPasa(pi):
+    Seguimiento.EscribirFuncion("NoPasa")
 
     try: 
 
@@ -158,6 +164,7 @@ def NoPasa(pi):
 ****************************************************************************************** """ 
 
 def Pasa(pi):
+    Seguimiento.EscribirFuncion("Pasa")
 
     try:
 
@@ -194,6 +201,7 @@ def Pasa(pi):
 ****************************************************************************************** """ 
 
 def botonPanico(pi):
+    Seguimiento.EscribirFuncion("botonPanico")
 
     try:
  
@@ -218,6 +226,7 @@ def botonPanico(pi):
 ****************************************************************************************** """ 
 
 def procesoCacheo(pi):
+    Seguimiento.EscribirFuncion("procesoCacheo")
 
     try:
         

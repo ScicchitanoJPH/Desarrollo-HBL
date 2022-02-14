@@ -2,6 +2,9 @@
 from modulos import hbl as hbl
 from modulos import hblCore as hblCore
 from modulos import log as log
+from modulos import Seguimiento as Seguimiento
+
+
 
 
 """ --------------------------------------------------------------------------------------------
@@ -12,6 +15,7 @@ from modulos import log as log
 -------------------------------------------------------------------------------------------- """
 
 def checkNombreVolumenes():
+    Seguimiento.EscribirFuncion("checkNombreVolumenes")
 
     try:
         # Separados en log
@@ -50,6 +54,7 @@ def checkNombreVolumenes():
 -------------------------------------------------------------------------------------------- """
 
 def leerRedundancia():
+    Seguimiento.EscribirFuncion("leerRedundancia")
     try:
         # Separados en log
         log.escribeSeparador(hbl.LOGS_hblRedundancia)
@@ -90,7 +95,8 @@ def leerRedundancia():
 -------------------------------------------------------------------------------------------- """
 
 def inicializacion():  
-
+    Seguimiento.EscribirFuncion("inicializacion")
+    
     # chequeo si hay que renombrar las unidades por primera vez
     checkNombreVolumenes()
 

@@ -12,6 +12,7 @@ from modulos import tcp as tcp
 from modulos.encoderWiegand import Encoder
 from modulos.salidas import Salidas
 from modulos.entradas import Entradas
+from modulos import Seguimiento as Seguimiento
  
 
 """ --------------------------------------------------------------------------------------------
@@ -25,6 +26,8 @@ from modulos.entradas import Entradas
 class Decoder:
 
    def __init__(self, pi, gpio_0, gpio_1, callback, bit_timeout=5):
+
+      Seguimiento.EscribirFuncion("Decoder-__init__")
 
       self.pi = pi
       self.gpio_0 = gpio_0
@@ -46,6 +49,7 @@ class Decoder:
       self.cb_1 = self.pi.callback(gpio_1, pigpio.FALLING_EDGE, self._cb)
 
    def _cb(self, gpio, level, tick):
+      Seguimiento.EscribirFuncion("Decoder - _cb")
 
       """
       Acumula bits 0 y 1
@@ -170,6 +174,7 @@ class Decoder:
    -------------------------------------------------------------------------------------------- """
     
    def repetidorID(self, cantidadBits, numero, numeroBinario, id, pi):
+      Seguimiento.EscribirFuncion("Decoder - repetidorID")
       
       # escribe separador en el archivo log + la fecha actual
       log.escribeSeparador(hbl.LOGS_hblWiegand) 
@@ -194,6 +199,7 @@ class Decoder:
    -------------------------------------------------------------------------------------------- """
                
    def procesarID_Request(self, cantidadBits, numero, numeroBinario, id, pi): 
+      Seguimiento.EscribirFuncion("Decoder - procesarID_Request")
 
       # escribe separador en el archivo log + la fecha actual
       log.escribeSeparador(hbl.LOGS_hblWiegand) 
@@ -330,6 +336,8 @@ class Decoder:
    -------------------------------------------------------------------------------------------- """ 
 
    def procesarID_TCP(self, cantidadBits, numero, numeroBinario, id, pi):
+      
+      Seguimiento.EscribirFuncion("Decoder - procesarID_TCP")
  
       # escribe separador + fecha + hora
       log.escribeSeparador(hbl.LOGS_hblWiegand) 
@@ -361,6 +369,7 @@ class Decoder:
    -------------------------------------------------------------------------------------------- """ 
 
    def procesarID_URL(self, cantidadBits, numero, numeroBinario, id, pi):
+      Seguimiento.EscribirFuncion("Decoder - procesarID_URL")
  
       # escribe separador + fecha + hora
       log.escribeSeparador(hbl.LOGS_hblWiegand) 
@@ -402,6 +411,7 @@ class Decoder:
    -------------------------------------------------------------------------------------------- """ 
 
    def procesarID_JSON(self, cantidadBits, numero, numeroBinario, id, pi):
+      Seguimiento.EscribirFuncion("Decoder - procesarID_JSON")
  
       try:
          # path del archivo
@@ -433,6 +443,8 @@ class Decoder:
 
    
    def Workpass(self, cantidadBits, numero, numeroBinario, id, pi):
+      Seguimiento.EscribirFuncion("Decoder - Workpass")
+
       print("Modo 10")
       #print(""" escribo datos en el archivo txt """)
       #file1 = open("/var/log/wiegand/event.txt", "a")
@@ -521,6 +533,7 @@ class Decoder:
    -------------------------------------------------------------------------------------------- """
     
    def cancel(self):
+      Seguimiento.EscribirFuncion("Decoder - cancel")
  
       self.cb_0.cancel()
       self.cb_1.cancel()
