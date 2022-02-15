@@ -8,7 +8,7 @@ from modulos import salidas as salidas
 from modulos import hbl as hbl
 import json
 import os
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 
 # generate client ID with pub prefix randomly
@@ -17,7 +17,7 @@ client_id = f'python-mqtt-{random.randint(0, 1000)}'
 # password = 'public'
 
 def connect_mqtt():
-    Seguimiento.EscribirFuncion("connect_mqtt")
+    auxiliar.EscribirFuncion("connect_mqtt")
 
     def on_connect(client, userdata, flags, rc):
         if rc == 0:
@@ -33,7 +33,7 @@ def connect_mqtt():
 
 
 def publish(client,msg):
-    Seguimiento.EscribirFuncion("publish")
+    auxiliar.EscribirFuncion("publish")
 
     time.sleep(1)
     result = client.publish(hbl.MQTT_TopicSend, msg)
@@ -47,7 +47,7 @@ def publish(client,msg):
 
 
 def subscribe(client: mqtt_client,pi):
-    Seguimiento.EscribirFuncion("subscribe")
+    auxiliar.EscribirFuncion("subscribe")
 
     def on_message(client, userdata, msg):
         #print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
@@ -60,7 +60,7 @@ def subscribe(client: mqtt_client,pi):
     client.on_message = on_message
 
 def inicializacion():
-    Seguimiento.EscribirFuncion("inicializacion")
+    auxiliar.EscribirFuncion("inicializacion")
 
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__))) 
     with open(os.path.join(__location__ , 'hbl.json'), "r") as f:

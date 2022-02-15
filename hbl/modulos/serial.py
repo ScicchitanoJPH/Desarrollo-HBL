@@ -14,7 +14,7 @@ from modulos import log as log
 from modulos.encoderWiegand import Encoder
 from modulos import hblCore as hblCore
 from modulos import variablesGlobales as variablesGlobales
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 global pi
  
@@ -26,7 +26,7 @@ global pi
 -------------------------------------------------------------------------------------------- """
 
 def startThreadSerial(): 
-    Seguimiento.EscribirFuncion("startThreadSerial")
+    auxiliar.EscribirFuncion("startThreadSerial")
 
     global pi
 
@@ -79,7 +79,7 @@ def startThreadSerial():
 -------------------------------------------------------------------------------------------- """
 
 def inicializacion(pi2): 
-    Seguimiento.EscribirFuncion("inicializacion")
+    auxiliar.EscribirFuncion("inicializacion")
 
     global pi
  

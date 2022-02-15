@@ -6,7 +6,7 @@ import random
 from modulos import hbl as hbl
 from modulos import variablesGlobales as variablesGlobales
 from modulos import log as log
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 
 """ ******************************************************************************************
@@ -22,7 +22,7 @@ from modulos import Seguimiento as Seguimiento
 
 
 def aleatorioValor(cacheosPositivos, cantidadCacheos):
-    Seguimiento.EscribirFuncion("aleatorioValor")
+    auxiliar.EscribirFuncion("aleatorioValor")
 
     try:
 
@@ -50,7 +50,7 @@ def aleatorioValor(cacheosPositivos, cantidadCacheos):
 ****************************************************************************************** """ 
 
 def ApagaReles(pi):
-    Seguimiento.EscribirFuncion("ApagaReles")
+    auxiliar.EscribirFuncion("ApagaReles")
 
     try:
 
@@ -77,7 +77,7 @@ def ApagaReles(pi):
 ****************************************************************************************** """ 
 
 def AbreBarrera(pi):
-    Seguimiento.EscribirFuncion("AbreBarrera")
+    auxiliar.EscribirFuncion("AbreBarrera")
    
     try:
 
@@ -101,7 +101,7 @@ def AbreBarrera(pi):
 ****************************************************************************************** """ 
 
 def CierraBarrera(pi):
-    Seguimiento.EscribirFuncion("CierraBarrera")
+    auxiliar.EscribirFuncion("CierraBarrera")
 
     try:
 
@@ -125,7 +125,7 @@ def CierraBarrera(pi):
 ****************************************************************************************** """ 
 
 def NoPasa(pi):
-    Seguimiento.EscribirFuncion("NoPasa")
+    auxiliar.EscribirFuncion("NoPasa")
 
     try: 
 
@@ -164,7 +164,7 @@ def NoPasa(pi):
 ****************************************************************************************** """ 
 
 def Pasa(pi):
-    Seguimiento.EscribirFuncion("Pasa")
+    auxiliar.EscribirFuncion("Pasa")
 
     try:
 
@@ -201,7 +201,7 @@ def Pasa(pi):
 ****************************************************************************************** """ 
 
 def botonPanico(pi):
-    Seguimiento.EscribirFuncion("botonPanico")
+    auxiliar.EscribirFuncion("botonPanico")
 
     try:
  
@@ -226,7 +226,7 @@ def botonPanico(pi):
 ****************************************************************************************** """ 
 
 def procesoCacheo(pi):
-    Seguimiento.EscribirFuncion("procesoCacheo")
+    auxiliar.EscribirFuncion("procesoCacheo")
 
     try:
         

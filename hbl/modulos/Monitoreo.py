@@ -3,20 +3,20 @@ from os import system
 import time
 import subprocess
 import os
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 
 
 
 def getSize(filename):
-    Seguimiento.EscribirFuncion("getSize")
+    auxiliar.EscribirFuncion("getSize")
 
     st = os.stat(filename)
 
     return st.st_size
 
 def Control():
-    Seguimiento.EscribirFuncion("Control")
+    auxiliar.EscribirFuncion("Control")
     
     command = "vcgencmd get_throttled -"
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=None, shell=True)

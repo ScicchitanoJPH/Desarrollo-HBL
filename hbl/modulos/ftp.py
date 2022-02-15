@@ -18,7 +18,7 @@ import zipfile
 from modulos import log as log
 from modulos import hbl as hbl 
 from modulos import auxiliar as auxiliar
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 global ftp
 
@@ -48,7 +48,7 @@ global ftp
 -------------------------------------------------------------------------------------------- """
 
 def uploadLogs(): 
-    Seguimiento.EscribirFuncion("uploadLogs")
+    auxiliar.EscribirFuncion("uploadLogs")
 
     try:  
         

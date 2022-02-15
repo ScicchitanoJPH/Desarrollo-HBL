@@ -4,7 +4,7 @@ from modulos import lcd_i2c as lcd_i2c
 from modulos import hbl as hbl
 from modulos import delays as delays
 from modulos import log as log
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 
 global lcd1
@@ -13,7 +13,7 @@ global lcd3
 global lcd4
 
 def inicializacion(pi):
-    Seguimiento.EscribirFuncion("inicializacion")
+    auxiliar.EscribirFuncion("inicializacion")
 
     global lcd1
     global lcd2

@@ -15,7 +15,7 @@ from modulos import hbl as hbl
 from modulos import delays as delays
 from modulos import i2cDevice as i2cDevice
 from modulos import variablesGlobales as variablesGlobales
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 from modulos.encoderWiegand import Encoder
  
@@ -79,7 +79,7 @@ global DNICompletado
 -------------------------------------------------------------------------------------------- """
 
 def listarUSBDevices():
-    Seguimiento.EscribirFuncion("listarUSBDevices")
+    auxiliar.EscribirFuncion("listarUSBDevices")
 
     dev = usb.core.find(find_all=True)
    
@@ -96,7 +96,7 @@ def listarUSBDevices():
 -------------------------------------------------------------------------------------------- """
 
 def detachResetHID(dispositivo, numero):
-    Seguimiento.EscribirFuncion("detachResetHID")
+    auxiliar.EscribirFuncion("detachResetHID")
    
     if dispositivo[numero].is_kernel_driver_active(0):
         try:
@@ -120,7 +120,7 @@ def detachResetHID(dispositivo, numero):
 
 
 def detachHID(device):
-    Seguimiento.EscribirFuncion("detachHID")
+    auxiliar.EscribirFuncion("detachHID")
     
     for k in range(len(device)):
         detachResetHID(device, k) 
@@ -134,7 +134,7 @@ def detachHID(device):
 -------------------------------------------------------------------------------------------- """
 
 def decodificadorHID(datos):
-    Seguimiento.EscribirFuncion("decodificadorHID")
+    auxiliar.EscribirFuncion("decodificadorHID")
 
     # Caracteres numericos + Enter + Cancel
     if datos[0] == 0 and datos[2] == 30: 
@@ -293,18 +293,18 @@ def decodificadorHID(datos):
 class dispositivosHID:
 
     def __init__(self, pi):
-        Seguimiento.EscribirFuncion("dispositivosHID - __init__")
+        auxiliar.EscribirFuncion("dispositivosHID - __init__")
 
         self._running = True 
         self.pi = pi
     
     def terminate(self):
-        Seguimiento.EscribirFuncion("dispositivosHID - terminate")
+        auxiliar.EscribirFuncion("dispositivosHID - terminate")
 
         self._running = False
     
     def run(self, dispositivo, numero, bufferSize, timeout, endpoint):
-        Seguimiento.EscribirFuncion("dispositivosHID - run")
+        auxiliar.EscribirFuncion("dispositivosHID - run")
 
         stringLeido = "" 
 
@@ -536,7 +536,7 @@ class dispositivosHID:
 -------------------------------------------------------------------------------------------- """ 
 
 def threadCount():
-    Seguimiento.EscribirFuncion("threadCount")
+    auxiliar.EscribirFuncion("threadCount")
 
     global c 
     print(threading.active_count()) 
@@ -553,7 +553,7 @@ def threadCount():
 -------------------------------------------------------------------------------------------- """ 
 
 def getData(vendor_ID, product_ID, bufferSize, timeout, endpoint):
-    Seguimiento.EscribirFuncion("getData")
+    auxiliar.EscribirFuncion("getData")
 
     global c
     global pi
@@ -586,7 +586,7 @@ def getData(vendor_ID, product_ID, bufferSize, timeout, endpoint):
 -------------------------------------------------------------------------------------------- """ 
 
 def inicializacion(pi2):
-    Seguimiento.EscribirFuncion("inicializacion")
+    auxiliar.EscribirFuncion("inicializacion")
     
     global pi
  

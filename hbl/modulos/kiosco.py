@@ -1,10 +1,10 @@
 import os
 from modulos import hbl as hbl
 from modulos import log as log
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 def inicializacion():
-    Seguimiento.EscribirFuncion("inicializacion")
+    auxiliar.EscribirFuncion("inicializacion")
 
     if hbl.KIOSCO_activado:
 

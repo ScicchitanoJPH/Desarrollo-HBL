@@ -1,6 +1,6 @@
 import time
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 def ms(tiempo):
-    Seguimiento.EscribirFuncion("ms")
+    auxiliar.EscribirFuncion("ms")
     time.sleep(tiempo/1000)

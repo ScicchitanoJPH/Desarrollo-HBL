@@ -3,7 +3,6 @@ import os
 
 from modulos import log as log
 from modulos import hbl as hbl
-from modulos import Seguimiento as Seguimiento
 
 """ --------------------------------------------------------------------------------------------
  
@@ -14,6 +13,11 @@ from modulos import Seguimiento as Seguimiento
  
 -------------------------------------------------------------------------------------------- """  
 
+def EscribirFuncion(Funcion):
+    myFile = open(hbl.Seguimiento_file_path, 'w')
+    myFile.write(Funcion)
+    myFile.close()
+
 """ --------------------------------------------------------------------------------------------
 
 
@@ -23,7 +27,7 @@ from modulos import Seguimiento as Seguimiento
 -------------------------------------------------------------------------------------------- """
 
 def zipdir(path, ziph):
-    Seguimiento.EscribirFuncion("zipdir")
+    EscribirFuncion("zipdir")
 
     # ziph is zipfile handle
     for root, dirs, files in os.walk(path):
@@ -37,7 +41,7 @@ def zipdir(path, ziph):
 -------------------------------------------------------------------------------------------- """
 
 def append_multiple_lines(file_name, lines_to_append, tipoApertura):
-    Seguimiento.EscribirFuncion("append_multiple_lines")
+    EscribirFuncion("append_multiple_lines")
 
     # Open the file in append & read mode ('a+')
     with open(file_name, tipoApertura) as file_object:
@@ -67,7 +71,7 @@ def append_multiple_lines(file_name, lines_to_append, tipoApertura):
 -------------------------------------------------------------------------------------------- """
 
 def buscarTexto(file_name, textoAbuscar):
-    Seguimiento.EscribirFuncion("buscarTexto")
+    EscribirFuncion("buscarTexto")
  
     PosicionTextoURL = -1 
 
@@ -90,7 +94,7 @@ def buscarTexto(file_name, textoAbuscar):
 -------------------------------------------------------------------------------------------- """
 
 def splitDNI(dniLeido, logueo): 
-    Seguimiento.EscribirFuncion("splitDNI")
+    EscribirFuncion("splitDNI")
     
     # Parseo valor del dni en el string completo
     stringSplit=dniLeido.split('@')
@@ -123,7 +127,7 @@ def splitDNI(dniLeido, logueo):
 -------------------------------------------------------------------------------------------- """
 
 def dniToWiegandConverter(dni, bits, logueo):
-    Seguimiento.EscribirFuncion("dniToWiegandConverter")
+    EscribirFuncion("dniToWiegandConverter")
  
     # convierte el valor del dni a binario
     # y completa con 0 hasta llegar a x bits
@@ -193,3 +197,4 @@ def dniToWiegandConverter(dni, bits, logueo):
     log.escribeLineaLog(logueo,"Wiegand completo: " + str(dniToWiegand)) 
 
     return dniToWiegand
+

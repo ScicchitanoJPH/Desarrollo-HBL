@@ -11,7 +11,7 @@ from modulos import log as log
 from modulos import hbl as hbl
 from modulos import delays as delays 
 from modulos import variablesGlobales as variablesGlobales
-from modulos import Seguimiento as Seguimiento
+from modulos import auxiliar as auxiliar
 
 global sock
  
@@ -22,7 +22,7 @@ global sock
 -------------------------------------------------------------------------------------------- """
 
 def iniciarConexion():
-    Seguimiento.EscribirFuncion("iniciarConexion")
+    auxiliar.EscribirFuncion("iniciarConexion")
     
     global sock
 
@@ -79,7 +79,7 @@ def iniciarConexion():
 -------------------------------------------------------------------------------------------- """
 
 def envioTCP(id):
-    Seguimiento.EscribirFuncion("envioTCP")
+    auxiliar.EscribirFuncion("envioTCP")
 
     global sock  
 
@@ -106,7 +106,7 @@ def envioTCP(id):
 -------------------------------------------------------------------------------------------- """
 
 def startThreadTCP(): 
-    Seguimiento.EscribirFuncion("startThreadTCP")
+    auxiliar.EscribirFuncion("startThreadTCP")
 
     global pi
  
@@ -153,7 +153,7 @@ def startThreadTCP():
  
 
 def inicializacion(pi2): 
-    Seguimiento.EscribirFuncion("inicializacion tcp")
+    auxiliar.EscribirFuncion("inicializacion tcp")
 
     global pi
  
