@@ -269,12 +269,12 @@
             "broadcast": "192.168.1.255"
         },
         "wlan0": {
-            "activado": 0,
+            "activado": 1,
             "dhcp": 1,
             "static_ip_address": "192.168.1.1/24",
             "static_routers": "192.168.1.1",
-            "ssid": "",
-            "password": "",
+            "ssid": "JPH Labo 2",
+            "password": "Jphlions135",
             "metric": 201
         },
         "ppp0": {
