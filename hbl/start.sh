@@ -1,5 +1,6 @@
 #!/bin/sh
 
+sleep 4
 cd /
 cd /usr/programas
 sudo git pull origin master
