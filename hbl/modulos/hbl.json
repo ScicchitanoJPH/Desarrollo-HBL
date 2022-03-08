@@ -19,7 +19,7 @@
         "ejecutarComando": "1"
     },
     "funcionamiento": {
-        "modo": 10
+        "modo": 9
     },
     "wiegand": {
         "port0": {
@@ -361,5 +361,8 @@
     },
     "Seguimiento": {
         "file_path": "Segumiento.txt"
+    },
+    "ActualizarGit": {
+        "Activado": 1
     }
 }
