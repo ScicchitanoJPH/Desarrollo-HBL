@@ -19,12 +19,12 @@ with open(os.path.join(__location__ , file_path_JSON_new), "r") as f2:
     print("data2 : ",data2)
 
 for key in data:
-    print(key)
+    #print(key)
     if key in data2:
-        print(key," pertenece a data2")
+        #print(key," pertenece a data2")
         try:
             for key_key in data[key]:
-                print("-----",key_key)
+                #print("-----",key_key)
                 data2[key][key_key]=data[key][key_key]
         except:
             try:
@@ -32,13 +32,13 @@ for key in data:
             except:
                 a=0
             a=0 
-    else:
-        print(key," no pertenece a data2") ### Si no pertenece, tiene que aregarlo?
+    #else:
+        #print(key," no pertenece a data2") ### Si no pertenece, tiene que aregarlo?
 
 
 
 
-
+print(data2)
 myFile = open(file_path_JSON_final, 'w')
 with myFile:
     myFile.write(json.JSONEncoder(indent=2).encode(data2))
