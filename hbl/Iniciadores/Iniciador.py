@@ -1,5 +1,5 @@
 import os
-
+Folder_Iniciadores_Path  = "/usr/programas/hbl/Iniciadores/"
 while 1:
     #print(Fore.GREEN + "1) Salidas \n")
     #print(Fore.RED + "1) Salidas \n")
@@ -19,25 +19,25 @@ while 1:
      
     Test=int(input())
     if Test==1:
-        os.system("sudo sh Apagar.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "Apagar.sh")
     if Test==2:
-        os.system("sudo sh Reiniciar.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "Reiniciar.sh")
     if Test==3:
-        os.system("sudo sh ActualizarHBL.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "ActualizarHBL.sh")
     if Test==4:
-        os.system("sudo sh CPU_Info.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "CPU_Info.sh")
     if Test==5:
-        os.system("sudo sh MedirTemperatura.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "MedirTemperatura.sh")
     if Test==6:
-        os.system("sudo sh Mostrar_IP.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "Mostrar_IP.sh")
     if Test==7:
-        os.system("sudo sh Ocultar_Aviso_Baja_Tension.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "Ocultar_Aviso_Baja_Tension.sh")
     if Test==8:
-        os.system("sudo sh Particiones_Info.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "Particiones_Info.sh")
     if Test==9:
-        os.system("sudo sh RAM_Info.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "RAM_Info.sh")
     if Test==10:
-        os.system("sudo sh VerFecha.sh")
+        os.system("sudo sh " + Folder_Iniciadores_Path + "VerFecha.sh")
     if Test==11:
-        os.system("sudo sh Version_Info.sh")                     
+        os.system("sudo sh " + Folder_Iniciadores_Path + "Version_Info.sh")                     
     
