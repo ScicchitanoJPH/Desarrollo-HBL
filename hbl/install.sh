@@ -32,13 +32,15 @@ echo "+++++++++++ Repositorio clonado ++++++++++++"
 
 
 # Descargo teamviewer si no existe
-if [ ! -e /home/pi/teamviewer-host_armhf.deb ]; then
-    echo "----------- Instalando TeamViewer -----------"
+if [ ! -e /home/pi/anydesk_6.1.1-1_armhf.deb ]; then
+    echo "----------- Instalando AnyDesk -----------"
+    sudo su
     wget https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb
-    sudo dpkg -i teamviewer-host_armhf.deb
-    sudo apt --fix-broken install -y
-    sudo teamviewer passwd Jphlionshbl
-    echo "----------- TeamViewer Instalado -----------"
+    echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
+    apt update
+    apt install anydesk
+    echo Jphlionshbl | anydesk --set-password
+    echo "----------- AnyDesk Instalado -----------"
 fi
 
 

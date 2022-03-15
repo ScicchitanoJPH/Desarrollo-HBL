@@ -225,12 +225,18 @@ def botonPanico(pi):
 
 ****************************************************************************************** """ 
 
+
+"""El proceso de Cacheo consiste en hacer una listaAleatoria con hbl.CACHEO_cacheosPositivos elementos donde cada elemento son numeros del 0 a hbl.CACHEO_cantidadCacheos.
+Los numeros que contiene la listaAleatoria son los numeros que van a tener que hacer Cacheo. Es decir, supongamos que hbl.CACHEO_cacheosPositivos = 2 y hbl.CACHEO_cantidadCacheos = 10
+entonces tengo listaAleatoria = [2,6] entonces con la variable n yo voy a recorrer la lista y comparar con ubicacionCacheo con cada valor de ubicacionCacheo desde el 0 hasta
+10. Es decir que 10 veces voy a chequear si el 2 o el 6 son iguales al valor de ubicacionCacheo, osea que van a ser iguales cuando ubicacionCacheo sea igual a 2 y a 6 y en
+esos dos casos tendre cacheos positivos. Una vez recorrido la listaAleatoria 10 veces genero una nueva lista y empiezo de vuelta"""
 def procesoCacheo(pi):
     auxiliar.EscribirFuncion("procesoCacheo")
 
     try:
         
-        if variablesGlobales.ubicacionCacheo >= hbl.CACHEO_cantidadCacheos:
+        if variablesGlobales.ubicacionCacheo >= hbl.CACHEO_cantidadCacheos: # Una vez que recorrida la lista la cantidad de veces necesaria (CantidadCacheos), genero una lista nueva
             variablesGlobales.ubicacionCacheo = 0
 
         # si el valor de ubicacionCacheo es 0, significa que recien empieza el cacheo entonces
@@ -244,8 +250,9 @@ def procesoCacheo(pi):
             log.escribeLineaLog(hbl.LOGS_hblCacheo, "Cantidad de cacheos : " + str(hbl.CACHEO_cantidadCacheos)) 
             log.escribeLineaLog(hbl.LOGS_hblCacheo, "Cantidad de cacheos positivos: " + str(hbl.CACHEO_cacheosPositivos)) 
  
+        #Recorro la lista con la variable n la cual determinara las posiciones en las cuales voy a tener cacheo positivo
         for n in variablesGlobales.listaAleatoria:
-             
+            # Me fijo si en esta ubicacionCacheo tengo un cacheo positivo
             if variablesGlobales.ubicacionCacheo == n:   
                 variablesGlobales.valorEncontrado = 1
 
