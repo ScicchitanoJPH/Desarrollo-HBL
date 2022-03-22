@@ -261,12 +261,12 @@
         "eth0": {
             "activado": 1,
             "dhcp": 1,
-            "static_ip_address": "192.168.1.2/24",
-            "static_routers": "192.168.1.2",
+            "static_ip_address": "172.16.232.148/24",
+            "static_routers": "172.16.0.1",
             "metric": 0,
             "netmask": "255.255.255.0",
-            "network": "192.168.1.0",
-            "broadcast": "192.168.1.255"
+            "network": "172.16.23.30",
+            "broadcast": "8.8.8.8"
         },
         "wlan0": {
             "activado": 1,

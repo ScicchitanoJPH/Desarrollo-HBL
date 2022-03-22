@@ -1,11 +1,13 @@
 import os
+from colorama import Fore , Style
+import time
 Folder_Iniciadores_Path  = "/usr/programas/hbl/Iniciadores/"
 while 1:
     #print(Fore.GREEN + "1) Salidas \n")
     #print(Fore.RED + "1) Salidas \n")
-    print("Ingrese el numero del comando que desea ejecutar:\n")
+    print(Style.BRIGHT + Fore.GREEN + "Ingrese el numero del comando que desea ejecutar:\n")
 
-    print("1) Apagar \n")
+    print(Fore.LIGHTBLUE_EX + "1) Apagar \n")
     print("2) Reiniciar \n")
     print("3) Actualizar HBL \n")
     print("4) Informacion de CPU \n")
@@ -16,8 +18,12 @@ while 1:
     print("9) Informacion de RAM \n")
     print("10) Ver Fecha \n")
     print("11) Informacion de version \n")
-     
+
+
+         
     Test=int(input())
+
+    print(Fore.LIGHTYELLOW_EX + "\n\n\n")
     if Test==1:
         os.system("sudo sh " + Folder_Iniciadores_Path + "Apagar.sh")
     if Test==2:
@@ -39,5 +45,8 @@ while 1:
     if Test==10:
         os.system("sudo sh " + Folder_Iniciadores_Path + "VerFecha.sh")
     if Test==11:
-        os.system("sudo sh " + Folder_Iniciadores_Path + "Version_Info.sh")                     
+        os.system("sudo sh " + Folder_Iniciadores_Path + "Version_Info.sh")        
+
+    time.sleep(1)
+    print("\n\n\n")             
     

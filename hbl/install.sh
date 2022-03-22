@@ -17,6 +17,17 @@ apt install libtiff5 -y
 apt install git -y
 apt-get install dialog -y
 
+# Descargo teamviewer si no existe
+if [ ! -e /home/pi/anydesk_6.1.1-1_armhf.deb ]; then
+    echo "----------- Instalando AnyDesk -----------"
+    wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+    echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
+    apt update
+    apt install anydesk
+    echo Jphlionshbl | anydesk --set-password
+    echo "----------- AnyDesk Instalado -----------"
+fi
+
 
 
 # Descargo la carpeta de git
@@ -31,17 +42,7 @@ sudo git clone https://github.com/ScicchitanoJPH/Desarrollo-HBL.git /usr/program
 echo "+++++++++++ Repositorio clonado ++++++++++++"
 
 
-# Descargo teamviewer si no existe
-if [ ! -e /home/pi/anydesk_6.1.1-1_armhf.deb ]; then
-    echo "----------- Instalando AnyDesk -----------"
-    sudo su
-    wget https://download.teamviewer.com/download/linux/teamviewer-host_armhf.deb
-    echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
-    apt update
-    apt install anydesk
-    echo Jphlionshbl | anydesk --set-password
-    echo "----------- AnyDesk Instalado -----------"
-fi
+
 
 
 # Descargo Firefox
