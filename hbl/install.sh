@@ -16,8 +16,9 @@ apt-get install libopenjp2-7 -y
 apt install libtiff5 -y
 apt install git -y
 apt-get install dialog -y
+apt install jq  #Instala libreria para parsear el json
 
-# Descargo teamviewer si no existe
+# Descargo AnyDesk si no existe
 if [ ! -e /home/pi/anydesk_6.1.1-1_armhf.deb ]; then
     echo "----------- Instalando AnyDesk -----------"
     wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
