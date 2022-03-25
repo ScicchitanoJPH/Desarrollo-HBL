@@ -1,1 +1,1 @@
-jq . characters.json
+jq . /usr/programas/hbl/modulos/hbl.json
