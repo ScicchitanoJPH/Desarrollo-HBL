@@ -18,6 +18,7 @@ while 1:
     print("9) Informacion de RAM \n")
     print("10) Ver Fecha \n")
     print("11) Informacion de version \n")
+    print("12) Ver JSON \n")
 
 
          
@@ -45,7 +46,9 @@ while 1:
     if Test==10:
         os.system("sudo sh " + Folder_Iniciadores_Path + "VerFecha.sh")
     if Test==11:
-        os.system("sudo sh " + Folder_Iniciadores_Path + "Version_Info.sh")        
+        os.system("sudo sh " + Folder_Iniciadores_Path + "Version_Info.sh")  
+    if Test==12:
+        os.system("sudo sh " + Folder_Iniciadores_Path + "VerJSON.sh")        
 
     time.sleep(1)
     print("\n\n\n")             
