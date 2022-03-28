@@ -2,6 +2,8 @@ import os
 from tkinter import Menu
 from colorama import Fore , Style
 import time
+import json
+
 Folder_Iniciadores_Path  = "/usr/programas/hbl/Iniciadores/"
 Folder_Logs_Path  = "/usr/programas/hbl/log/"
 os.system("clear")
@@ -53,12 +55,6 @@ def MenuInformacion():
     print(Fore.LIGHTMAGENTA_EX + "\n\n\n" +"Ingrese 'ENTER' para volver al menu principal")
     input()
     os.system("clear")
-
-
-
-    
-
-
 
 def MenuComandos():
     print(Fore.MAGENTA + "********************************************")
@@ -166,11 +162,76 @@ def MenuLogs():
     os.system("clear")
 
 
-
-
-
 def MenuConfiguracion():
-    print("")
+    print(Fore.MAGENTA + "********************************************")
+    print("******     Menu de Configuracion      ******")
+    print(Fore.MAGENTA + "********************************************")
+    print("\n")
+
+
+    print(Style.BRIGHT + Fore.GREEN + "Ingrese el numero del comando que desea ejecutar:\n")
+
+    print(Fore.LIGHTBLUE_EX + "1) Setear fecha y hora RTC \n")
+    print("2) Volver al Menu Principal \n")
+
+    ConfInput=int(input())
+
+    print(Fore.LIGHTYELLOW_EX + "\n\n\n")
+    if ConfInput==1:
+        dateInput= input("Ingrese la fecha y hora como indica el siguiente ejemplo 'jan 5 2016 23:09:40' y presione 'ENTER':\n")
+        os.system("sudo date -s " + dateInput + " CLST")
+        os.system("sudo hwclock -w")
+    if ConfInput==2:
+        os.system("clear")
+        return 0
+        
+    print(Fore.LIGHTMAGENTA_EX + "\n\n\n" +"Ingrese 'ENTER' para volver al menu principal")
+    input()
+    os.system("clear")
+
+
+def MenuJSON():
+    print(Fore.MAGENTA + "********************************************")
+    print("******    Menu de Configuracion       ******")
+    print(Fore.MAGENTA + "********************************************")
+    print("\n")
+
+    file_path_JSON = '/usr/programas/hbl/modulos/hbl.json'
+    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__))) 
+    with open(os.path.join(__location__ , file_path_JSON), "r") as f:
+        data = json.load(f)
+        f.close()
+    
+    print(Style.BRIGHT + Fore.GREEN + "Ingrese el numero del comando que desea ejecutar:\n")
+
+    print(Fore.LIGHTBLUE_EX + "1) JSON Completo \n")
+    dict={}
+    i=2
+    for key in data:
+        print(str(i) + ") " + key + "\n")
+        dict[str(i)] = key
+        i=i+1
+    
+    print(str(i) + ") " + "Volver al Menu Principal \n")
+
+    ConfInput=int(input())
+
+    print(Fore.LIGHTYELLOW_EX + "\n\n\n")
+
+    if ConfInput == 1:
+        print(json.JSONEncoder(indent=2).encode(data))
+    if ConfInput>=2 and ConfInput<i:
+        print(json.JSONEncoder(indent=2).encode(data[dict[str(ConfInput)]]))
+    if ConfInput<=0 and ConfInput>=i:
+        os.system("clear")
+        return 0
+        
+    
+
+    print(Fore.LIGHTMAGENTA_EX + "\n\n\n" +"Ingrese 'ENTER' para volver al menu principal")
+    input()
+    os.system("clear")
+
 
 while 1:
     print(Fore.MAGENTA + "********************************************")
@@ -183,6 +244,7 @@ while 1:
     print("2) Comandos \n")
     print("3) Logs \n")
     print("4) Configuración \n")
+    print("5) JSON \n")
 
     MenuInput=int(input())
 
@@ -199,6 +261,8 @@ while 1:
         MenuLogs()
     if MenuInput==4:
         MenuConfiguracion()
+    if MenuInput==5:
+        MenuJSON()
 
 
 
