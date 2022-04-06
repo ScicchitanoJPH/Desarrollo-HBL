@@ -130,7 +130,7 @@ class Decoder:
                   # validos que llegan al puerto
 
                   if hbl.WD_port0_esperaSenial == 1:
-                     valorPin = Entradas.readPin(self.pi, Pin_Entrada2)
+                     valorPin = Entradas.readPin(self.pi, variablesGlobales.Pin_Entrada2)
 
                      # se activa la entrada
                      if valorPin == 0: 
@@ -185,7 +185,7 @@ class Decoder:
       
       
       # codificacion y envio del valor wiegand
-      Encoder.encoderWiegand(numero, self.pi, Pin_Port1_WD0, Pin_Port1_WD1, cantidadBits)
+      Encoder.encoderWiegand(numero, self.pi, variablesGlobales.Pin_Port1_WD0, variablesGlobales.Pin_Port1_WD1, cantidadBits)
 
       # indica status     
       log.escribeLineaLog(hbl.LOGS_hblWiegand, "Codigo Wiegand Retransmitido")    
@@ -221,7 +221,7 @@ class Decoder:
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "Retransmision activada sin request")
          # codifico el valor wiegand y envio por salida wiegand 
 
-         Encoder.encoderWiegand(numero, pi, Pin_Port1_WD0, Pin_Port1_WD1, cantidadBits)
+         Encoder.encoderWiegand(numero, pi, variablesGlobales.Pin_Port1_WD0, variablesGlobales.Pin_Port1_WD1, cantidadBits)
 
       elif hbl.REQ_modoRequest == 2 : 
          
@@ -269,8 +269,8 @@ class Decoder:
                # escribe que salidas se activan y su uso    
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Enciende Rele 1 (Luz) - Rele 2 (Sirena)") 
 
-               self.pi.write(Pin_Salida1, hbl.ON)   
-               self.pi.write(Pin_Salida2, hbl.ON)  
+               self.pi.write(variablesGlobales.Pin_Salida1, hbl.ON)   
+               self.pi.write(variablesGlobales.Pin_Salida2, hbl.ON)  
 
                # delay mantener encendido el rele                       
                time.sleep(int(hbl.DIG_out_tiempo))
@@ -278,8 +278,8 @@ class Decoder:
                # escribe que salidas se desactivan y su uso    
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Apaga Rele 1 (Luz) - Rele 2 (Sirena)")    
 
-               self.pi.write(Pin_Salida1, hbl.OFF)   
-               self.pi.write(Pin_Salida2, hbl.OFF) 
+               self.pi.write(variablesGlobales.Pin_Salida1, hbl.OFF)   
+               self.pi.write(variablesGlobales.Pin_Salida2, hbl.OFF) 
          
             elif x != -1 :
 
@@ -292,20 +292,20 @@ class Decoder:
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Enciende Rele 4 (Molinete)") 
 
                # Abre el molinete
-               self.pi.write(Pin_Salida4, hbl.ON)   
+               self.pi.write(variablesGlobales.Pin_Salida4, hbl.ON)   
 
                # delay mantener encendido el rele
                time.sleep(int(hbl.DIG_out_tiempo))
 
                # cierra molinete
-               self.pi.write(Pin_Salida4, hbl.OFF)
+               self.pi.write(variablesGlobales.Pin_Salida4, hbl.OFF)
 
                # escribe que salida se desactiva y su uso    
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Apaga Rele 4 (Molinete)") 
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Codigo Wiegand Retransmitido") 
 
                # codifico el valor wiegand y envio por salida wiegand 
-               Encoder.encoderWiegand(numero, self.pi, Pin_Port1_WD0, Pin_Port1_WD1, cantidadBits)
+               Encoder.encoderWiegand(numero, self.pi, variablesGlobales.Pin_Port1_WD0, variablesGlobales.Pin_Port1_WD1, cantidadBits)
 
          except Exception as inst: 
 

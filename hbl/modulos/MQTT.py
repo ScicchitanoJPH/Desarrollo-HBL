@@ -53,9 +53,9 @@ def subscribe(client: mqtt_client,pi):
     def on_message(client, userdata, msg):
         #print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
         if msg.payload.decode() == "ON":
-            pi.write(Pin_Salida1, hbl.ON)
+            pi.write(variablesGlobales.Pin_Salida1, hbl.ON)
         if msg.payload.decode() == "OFF":
-            pi.write(Pin_Salida1, hbl.OFF)
+            pi.write(variablesGlobales.Pin_Salida1, hbl.OFF)
 
     client.subscribe(hbl.MQTT_TopicRecv)
     client.on_message = on_message

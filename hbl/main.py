@@ -87,15 +87,15 @@ if __name__ == "__main__":
    main.Salidas(pi)
 
    # inicializa las entradas de la hbl
-   main.Entradas(pi, Pin_Entrada1, Pin_Entrada2, callback)
+   main.Entradas(pi, variablesGlobales.Pin_Entrada1, variablesGlobales.Pin_Entrada2, callback)
 
    # inicializa decoder wiegand
    if hbl.WD_port0_activado == 1:
-      w = main.Decoder(pi, Pin_Port0_WD0, Pin_Port0_WD1, callback)
+      w = main.Decoder(pi, variablesGlobales.Pin_Port0_WD0, variablesGlobales.Pin_Port0_WD1, callback)
    
    # inicializa encoder wiegand
    if hbl.WD_port1_activado == 1:
-      main.Encoder(pi, Pin_Port1_WD0, Pin_Port1_WD1)   
+      main.Encoder(pi, variablesGlobales.Pin_Port1_WD0, variablesGlobales.Pin_Port1_WD1)   
  
    # inicializa displays LCD  
    i2cDevice.inicializacion(pi)  
