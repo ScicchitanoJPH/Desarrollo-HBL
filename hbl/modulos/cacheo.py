@@ -54,10 +54,10 @@ def ApagaReles(pi):
 
     try:
 
-        pi.write(hbl.DIG_out_pin_out1, hbl.OFF)    
-        pi.write(hbl.DIG_out_pin_out2, hbl.OFF)
-        pi.write(hbl.DIG_out_pin_out3, hbl.OFF)
-        pi.write(hbl.DIG_out_pin_out4, hbl.OFF)
+        pi.write(Pin_Salida1, hbl.OFF)    
+        pi.write(Pin_Salida2, hbl.OFF)
+        pi.write(Pin_Salida3, hbl.OFF)
+        pi.write(Pin_Salida4, hbl.OFF)
 
     except Exception as e:  
 
@@ -81,7 +81,7 @@ def AbreBarrera(pi):
    
     try:
 
-        pi.write(hbl.DIG_out_pin_out4, hbl.ON)
+        pi.write(Pin_Salida4, hbl.ON)
     
     except Exception as e:  
 
@@ -105,7 +105,7 @@ def CierraBarrera(pi):
 
     try:
 
-        pi.write(hbl.DIG_out_pin_out4, hbl.OFF)
+        pi.write(Pin_Salida4, hbl.OFF)
 
     except Exception as e:  
 
@@ -132,11 +132,11 @@ def NoPasa(pi):
         contador = 0
 
         while contador < hbl.CACHEO_repRelePositivo:
-            pi.write(hbl.DIG_out_pin_out2, hbl.ON)
-            pi.write(hbl.DIG_out_pin_out3, hbl.ON)
+            pi.write(Pin_Salida2, hbl.ON)
+            pi.write(Pin_Salida3, hbl.ON)
             time.sleep(int(hbl.CACHEO_tiempoRelePositivo))
-            pi.write(hbl.DIG_out_pin_out2, hbl.OFF)
-            pi.write(hbl.DIG_out_pin_out3, hbl.OFF)
+            pi.write(Pin_Salida2, hbl.OFF)
+            pi.write(Pin_Salida3, hbl.OFF)
             time.sleep(int(hbl.CACHEO_tiempoRelePositivo))
             contador = contador + 1
         
@@ -177,9 +177,9 @@ def Pasa(pi):
         CierraBarrera(pi)  
 
         while contador < hbl.CACHEO_repReleNegativo:
-            pi.write(hbl.DIG_out_pin_out1, hbl.ON)
+            pi.write(Pin_Salida1, hbl.ON)
             time.sleep(int(hbl.CACHEO_tiempoReleNegativo))
-            pi.write(hbl.DIG_out_pin_out1, hbl.OFF)
+            pi.write(Pin_Salida1, hbl.OFF)
             time.sleep(int(hbl.CACHEO_tiempoReleNegativo))
             contador = contador + 1
     

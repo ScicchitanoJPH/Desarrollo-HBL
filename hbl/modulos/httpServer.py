@@ -91,37 +91,37 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
 
         # activa salidas segun tiempo indicado 
         if id == "1":   
-            pi.write(hbl.DIG_out_pin_out1, hbl.ON)  
+            pi.write(Pin_Salida1, hbl.ON)  
             delays.ms(int(tiempo))
-            pi.write(hbl.DIG_out_pin_out1, hbl.OFF)  
+            pi.write(Pin_Salida1, hbl.OFF)  
         elif id == "2": 
-            pi.write(hbl.DIG_out_pin_out2, hbl.ON)     
+            pi.write(Pin_Salida2, hbl.ON)     
             delays.ms(int(tiempo))
-            pi.write(hbl.DIG_out_pin_out2, hbl.OFF)  
+            pi.write(Pin_Salida2, hbl.OFF)  
         elif id == "3": 
-            pi.write(hbl.DIG_out_pin_out3, hbl.ON)     
+            pi.write(Pin_Salida3, hbl.ON)     
             delays.ms(int(tiempo))
-            pi.write(hbl.DIG_out_pin_out3, hbl.OFF) 
+            pi.write(Pin_Salida3, hbl.OFF) 
         elif id == "4": 
-            pi.write(hbl.DIG_out_pin_out4, hbl.ON)     
+            pi.write(Pin_Salida4, hbl.ON)     
             delays.ms(int(tiempo))
-            pi.write(hbl.DIG_out_pin_out4, hbl.OFF) 
+            pi.write(Pin_Salida4, hbl.OFF) 
         elif id == "5": 
-            pi.write(hbl.DIG_out_pin_out5, hbl.ON)     
+            pi.write(Pin_Salida5, hbl.ON)     
             delays.ms(int(tiempo))
-            pi.write(hbl.DIG_out_pin_out5, hbl.OFF)
+            pi.write(Pin_Salida5, hbl.OFF)
         elif id == "6": 
-            pi.write(hbl.DIG_out_pin_out6, hbl.ON)     
+            pi.write(Pin_Salida6, hbl.ON)     
             delays.ms(int(tiempo))
-            pi.write(hbl.DIG_out_pin_out6, hbl.OFF) 
+            pi.write(Pin_Salida6, hbl.OFF) 
         elif id == "7": 
-            pi.write(hbl.DIG_out_pin_out7, hbl.ON)     
+            pi.write(Pin_Salida7, hbl.ON)     
             delays.ms(int(tiempo))
-            pi.write(hbl.DIG_out_pin_out7, hbl.OFF) 
+            pi.write(Pin_Salida7, hbl.OFF) 
         elif id == "8": 
-            pi.write(hbl.DIG_out_pin_out8, hbl.ON)     
+            pi.write(Pin_Salida8, hbl.ON)     
             delays.ms(int(tiempo)) 
-            pi.write(hbl.DIG_out_pin_out8, hbl.OFF)  
+            pi.write(Pin_Salida8, hbl.OFF)  
         else:
             pass
 

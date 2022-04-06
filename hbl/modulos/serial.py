@@ -54,7 +54,7 @@ def startThreadSerial():
                 DNIWiegand = auxiliar.dniToWiegandConverter(valorDNI, 34, hbl.LOGS_hblSerial)
     
                 ### Envio codigo wiegand
-                Encoder.encoderWiegandBits(DNIWiegand, pi, hbl.WD_port1_pin_WD0, hbl.WD_port1_pin_WD1) 
+                Encoder.encoderWiegandBits(DNIWiegand, pi, Pin_Port1_WD0, Pin_Port1_WD1) 
 
                 ### Enciende led indicador
                 hblCore.encenderLed(pi, 1, int(50))

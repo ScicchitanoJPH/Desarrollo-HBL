@@ -431,7 +431,7 @@ class dispositivosHID:
                                 log.escribeLineaLog(hbl.LOGS_hblhidDevice,"WIEGAND COMPLETO: " + str(dniToWiegand)) 
 
                                 # envio codigo wiegand
-                                Encoder.encoderWiegandBits(dniToWiegand, self.pi, hbl.WD_port1_pin_WD0, hbl.WD_port1_pin_WD1) 
+                                Encoder.encoderWiegandBits(dniToWiegand, self.pi, Pin_Port1_WD0, Pin_Port1_WD1) 
 
                             except Exception as inst:
 

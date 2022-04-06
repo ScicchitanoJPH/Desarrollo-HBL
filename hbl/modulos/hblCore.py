@@ -566,9 +566,9 @@ def heartBeat(pi):
     try:
         
         # heartBeat
-        pi.write(hbl.DIG_led2, hbl.OFF)    
+        pi.write(Pin_LED2, hbl.OFF)    
         delays.ms(500)      
-        pi.write(hbl.DIG_led2, hbl.ON)  
+        pi.write(Pin_LED2, hbl.ON)  
         delays.ms(500)
 
         # chequea el valor del tamper si esta activado
@@ -610,25 +610,25 @@ def encenderLed(pi, led, tiempo):
         if led == 1: 
          
             # led rojo
-            pi.write(hbl.DIG_led1, hbl.OFF)    
+            pi.write(Pin_LED1, hbl.OFF)    
             delays.ms(tiempo) 
-            pi.write(hbl.DIG_led1, hbl.ON)    
+            pi.write(Pin_LED1, hbl.ON)    
             delays.ms(tiempo) 
         
         elif led == 2:
 
             # led azul
-            pi.write(hbl.DIG_led2, hbl.OFF)    
+            pi.write(Pin_LED2, hbl.OFF)    
             delays.ms(tiempo) 
-            pi.write(hbl.DIG_led2, hbl.ON)    
+            pi.write(Pin_LED2, hbl.ON)    
             delays.ms(tiempo) 
   
         elif led == 3:
 
             # led 
-            pi.write(hbl.DIG_led3, hbl.OFF)    
+            pi.write(Pin_LED3, hbl.OFF)    
             delays.ms(tiempo)
-            pi.write(hbl.DIG_led3, hbl.ON)    
+            pi.write(Pin_LED3, hbl.ON)    
             delays.ms(tiempo)   
 
     except Exception as e:  
@@ -654,27 +654,27 @@ def checkLedsBuzzer(pi):
     try:
 
         # Buzzer
-        pi.write(hbl.DIG_buzzer, hbl.OFF)    
+        pi.write(Pin_Buzzer, hbl.OFF)    
         delays.ms(500)  
-        pi.write(hbl.DIG_buzzer, hbl.ON)  
+        pi.write(Pin_Buzzer, hbl.ON)  
         delays.ms(500) 
 
         # led rojo
-        pi.write(hbl.DIG_led1, hbl.OFF)    
+        pi.write(Pin_LED1, hbl.OFF)    
         delays.ms(200) 
-        pi.write(hbl.DIG_led1, hbl.ON)    
+        pi.write(Pin_LED1, hbl.ON)    
         delays.ms(200) 
 
         # led azul
-        pi.write(hbl.DIG_led2, hbl.OFF)    
+        pi.write(Pin_LED2, hbl.OFF)    
         delays.ms(200) 
-        pi.write(hbl.DIG_led2, hbl.ON)    
+        pi.write(Pin_LED2, hbl.ON)    
         delays.ms(200) 
 
         # led  
-        pi.write(hbl.DIG_led3, hbl.OFF)    
+        pi.write(Pin_LED3, hbl.OFF)    
         delays.ms(200)
-        pi.write(hbl.DIG_led3, hbl.ON)    
+        pi.write(Pin_LED3, hbl.ON)    
         delays.ms(200)   
 
     except Exception as e:  
