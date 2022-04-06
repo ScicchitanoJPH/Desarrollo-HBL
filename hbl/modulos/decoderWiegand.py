@@ -13,6 +13,7 @@ from modulos.encoderWiegand import Encoder
 from modulos.salidas import Salidas
 from modulos.entradas import Entradas
 from modulos import auxiliar as auxiliar
+from modulos import variablesGlobales as variablesGlobales
  
 
 """ --------------------------------------------------------------------------------------------

@@ -3,6 +3,7 @@ import pigpio
 from modulos import hbl as hbl
 from modulos import delays as delays
 from modulos import auxiliar as auxiliar
+from modulos import variablesGlobales as variablesGlobales
 
 """ --------------------------------------------------------------------------------------------
 

@@ -9,6 +9,7 @@ from modulos import hbl as hbl
 import json
 import os
 from modulos import auxiliar as auxiliar
+from modulos import variablesGlobales as variablesGlobales
 
 
 # generate client ID with pub prefix randomly
