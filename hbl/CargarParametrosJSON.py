@@ -9,14 +9,14 @@ __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file
 with open(os.path.join(__location__ , file_path_JSON_aux), "r") as f:
     data = json.load(f)
     f.close()
-    print("data : ",data)
+    print("data : ",json.JSONEncoder(indent=2).encode(data))
 
 print("\n\n\n\n\n")
 
 with open(os.path.join(__location__ , file_path_JSON_new), "r") as f2:
     data2 = json.load(f2)
     f2.close()
-    print("data2 : ",data2)
+    print("data2 : ",json.JSONEncoder(indent=2).encode(data2))
 
 for key in data:
     #print(key)
@@ -38,7 +38,7 @@ for key in data:
 
 
 
-print(data2)
+print(json.JSONEncoder(indent=2).encode(data2))
 myFile = open(file_path_JSON_final, 'w')
 with myFile:
     myFile.write(json.JSONEncoder(indent=2).encode(data2))
