@@ -356,8 +356,6 @@ def cargarParametros(archivo):
     WD_port0_activado=data["wiegand"]["port0"]["activado"]
     WD_port0_esperaSenial=data["wiegand"]["port0"]["esperaSenial"]
     WD_port0_bits=data["wiegand"]["port0"]["bits"]
-    WD_port0_pin_WD0=data["wiegand"]["port0"]["pin"]["WD0"]
-    WD_port0_pin_WD1=data["wiegand"]["port0"]["pin"]["WD1"]
     WD_port0_delayPulso=data["wiegand"]["port0"]["delayPulso"]
     WD_port0_delayIntervalo=data["wiegand"]["port0"]["delayIntervalo"]
     WD_port0_primerBit=data["wiegand"]["port0"]["primerBit"]
@@ -367,8 +365,6 @@ def cargarParametros(archivo):
     WD_port1_activado=data["wiegand"]["port1"]["activado"]
     WD_port1_esperaSenial=data["wiegand"]["port1"]["esperaSenial"]
     WD_port1_bits=data["wiegand"]["port1"]["bits"]
-    WD_port1_pin_WD0=data["wiegand"]["port1"]["pin"]["WD0"]
-    WD_port1_pin_WD1=data["wiegand"]["port1"]["pin"]["WD1"]
     WD_port1_delayPulso=data["wiegand"]["port1"]["delayPulso"]
     WD_port1_delayIntervalo=data["wiegand"]["port1"]["delayIntervalo"]
     WD_port1_primerBit=data["wiegand"]["port1"]["primerBit"]
@@ -383,29 +379,14 @@ def cargarParametros(archivo):
     # digital
     DIG_in_pushDelay=data["digital"]["in"]["pushDelay"] 
     DIG_in_in1_activado=data["digital"]["in"]["in1"]["activado"]
-    DIG_in_in1_pin=data["digital"]["in"]["in1"]["pin"]
     DIG_in_in1_id=data["digital"]["in"]["in1"]["id"]
 
     DIG_in_in2_activado=data["digital"]["in"]["in2"]["activado"]
-    DIG_in_in2_pin=data["digital"]["in"]["in2"]["pin"]
     DIG_in_in2_id=data["digital"]["in"]["in2"]["id"]
  
     DIG_out_activado=data["digital"]["out"]["activado"]
     DIG_out_tiempo=data["digital"]["out"]["tiempo"]
     DIG_out_logica=data["digital"]["out"]["logica"]
-    DIG_out_pin_out1=data["digital"]["out"]["pin"]["out1"]
-    DIG_out_pin_out2=data["digital"]["out"]["pin"]["out2"]
-    DIG_out_pin_out3=data["digital"]["out"]["pin"]["out3"]
-    DIG_out_pin_out4=data["digital"]["out"]["pin"]["out4"]
-    DIG_out_pin_out5=data["digital"]["out"]["pin"]["out5"]
-    DIG_out_pin_out6=data["digital"]["out"]["pin"]["out6"]
-    DIG_out_pin_out7=data["digital"]["out"]["pin"]["out7"]
-    DIG_out_pin_out8=data["digital"]["out"]["pin"]["out8"]
-    
-    DIG_led1=data["digital"]["userLeds"]["led1"]["pin"]
-    DIG_led2=data["digital"]["userLeds"]["led2"]["pin"]
-    DIG_led3=data["digital"]["userLeds"]["led3"]["pin"]
-    DIG_buzzer=data["digital"]["userLeds"]["buzzer"]["pin"]
     
     # define la logica si es inversa o directa
     if DIG_out_logica == 0:

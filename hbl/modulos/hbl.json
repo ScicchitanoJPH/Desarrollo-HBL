@@ -26,10 +26,6 @@
             "activado": 1,
             "esperaSenial": 0,
             "bits": 0,
-            "pin": {
-                "WD0": 23,
-                "WD1": 24
-            },
             "delayPulso": 8e-05,
             "delayIntervalo": 0.00024,
             "primerBit": 1,
@@ -42,10 +38,6 @@
             "activado": 1,
             "esperaSenial": 0,
             "bits": 0,
-            "pin": {
-                "WD0": 17,
-                "WD1": 27
-            },
             "delayPulso": 5e-05,
             "delayIntervalo": 0.002,
             "primerBit": 9,
@@ -64,43 +56,17 @@
             "pushDelay": 500000,
             "in1": {
                 "activado": 0,
-                "pin": 21,
                 "id": "Entrada 1"
             },
             "in2": {
                 "activado": 0,
-                "pin": 20,
                 "id": "Entrada 2"
             }
         },
         "out": {
             "activado": 1,
             "tiempo": 1,
-            "logica": 1,
-            "pin": {
-                "out1": 5,
-                "out2": 6,
-                "out3": 26,
-                "out4": 16,
-                "out5": 27,
-                "out6": 17,
-                "out7": 24,
-                "out8": 23
-            }
-        },
-        "userLeds": {
-            "led1": {
-                "pin": 13
-            },
-            "led2": {
-                "pin": 19
-            },
-            "led3": {
-                "pin": 12
-            },
-            "buzzer": {
-                "pin": 18
-            }
+            "logica": 1
         }
     },
     "serial": {
