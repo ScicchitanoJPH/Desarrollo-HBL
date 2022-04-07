@@ -23,7 +23,7 @@ for key in data:
     if key in data2:
         #print(key," pertenece a data2")
         try:
-            for key_key in data[key]:
+            for key_key in data2[key]:
                 #print("-----",key_key)
                 data2[key][key_key]=data[key][key_key]
         except:
