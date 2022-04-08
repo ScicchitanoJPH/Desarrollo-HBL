@@ -18,15 +18,26 @@ with open(os.path.join(__location__ , file_path_JSON_new), "r") as f2:
     f2.close()
     print("data2 : ",json.JSONEncoder(indent=2).encode(data2))
 
+aux = {'Test':'Test'}
 for key in data:
-    #print(key)
     if key in data2:
-        #print(key," pertenece a data2")
-        try:
-            for key_key in data2[key]:
-                #print("-----",key_key)
-                data2[key][key_key]=data[key][key_key]
-        except:
+        if type(aux) == type(data2[key]):
+            for key_key in data[key]:
+                print("-----",key_key)
+                if key_key in data2[key]:
+                    if type(aux) == type(data2[key][key_key]):
+                        for key_key_key in data[key][key_key]:
+                            if key_key_key in data2[key][key_key]:
+                                if type(aux) == type(data2[key][key_key][key_key_key]):
+                                    for key_key_key_key in data[key][key_key][key_key_key]:
+                                        if key_key_key_key in data2[key][key_key][key_key_key]:
+                                            data2[key][key_key][key_key_key][key_key_key_key]=data[key][key_key][key_key_key][key_key_key_key]
+                                else:
+                                    data2[key][key_key][key_key_key]=data[key][key_key][key_key_key]
+                    else:
+                        print("Except")
+                        data2[key][key_key]=data[key][key_key]
+        else:
             try:
                 data2[key]=data[key]
             except:
