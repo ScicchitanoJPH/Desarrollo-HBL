@@ -34,7 +34,7 @@ def inicializacionHBL():
  
     # escribe inicializacion HBL
     log.escribeSeparador(hbl.LOGS_hblCore)
-    log.escribeLineaLog(hbl.LOGS_hblCore, "Inicio HBL - " + " v." + hbl.versionHBL) 
+    log.escribeLineaLog(hbl.LOGS_hblCore, "Inicio HBL - " + " v." + variablesGlobales.versionHBL) 
     log.escribeLineaLog(hbl.LOGS_hblCore, "Num. Serie : " +  leer_numero_serie()) 
     log.escribeLineaLog(hbl.LOGS_hblCore, "Revision : " +  leer_revision()) 
     log.escribeLineaLog(hbl.LOGS_hblCore, "MAC address eth0 : " + leer_MAC_Address('eth0'))  
@@ -49,7 +49,7 @@ def inicializacionHBL():
     print("   |  _  | |_) | |___    ") 
     print("   |_| |_|____/|_____|   ")  
     print("")
-    print(" v.", hbl.versionHBL)  
+    print(" v.", variablesGlobales.versionHBL)  
     print(" Num. Serie : ", leer_numero_serie())
     print(" Revision : ", leer_revision())
     print(" MAC eth0 : ", leer_MAC_Address('eth0'))
