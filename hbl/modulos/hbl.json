@@ -37,6 +37,7 @@
         }
     },
     "request": {
+        "activado":1,
         "seleccionURL": 3,
         "urlRequest1": "http://localhost/jphaccess/trp/alcoholemia.php?tarjeta=",
         "urlRequest2": "http://localhost/jphaccess/trp/validar.php?tarjeta=",
@@ -119,6 +120,7 @@
     "wiegand": {
         "W1": {
             "activado": 1,
+            "modo":"Entrada",
             "esperaSenial": 0,
             "bitsSalida": 0,
             "delayPulso": 8e-05,
@@ -127,14 +129,13 @@
         },
         "W2": {
             "activado": 1,
+            "modo":"Salida",
             "esperaSenial": 0,
             "bitsSalida": 0,
             "delayPulso": 5e-05,
             "delayIntervalo": 0.002,
             "primerBit": 9
         },
-        "URL": "http://172.16.23.27/kiosco/login.4.php",
-        "URL_timeOutRequest": 5,
         "ID": "0001"
     },
     "serial": {
@@ -146,46 +147,7 @@
         "stopbits": 1
     },
     "display": {
-        "display1": {
-            "activado": 1,
-            "width": 20,
-            "address": "0x27"
-        },
-        "display2": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x26"
-        },
-        "display3": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x25"
-        },
-        "display4": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x24"
-        },
-        "display5": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x23"
-        },
-        "display6": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x22"
-        },
-        "display7": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x21"
-        },
-        "display8": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x20"
-        }
+        "activado":"0"
     },
     "MQTT": {
         "broker": "broker.mqttdashboard.com",

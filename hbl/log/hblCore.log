@@ -333,7 +333,6 @@ Configuracion HBL :
         "pass": "Jphlions135",
         "directorio": "/usr/programas/hbl/ftp"
     },
-    "versionHBL": "1.0",
     "cacheo": {
         "activado": 0,
         "cantidadCacheos": 10,

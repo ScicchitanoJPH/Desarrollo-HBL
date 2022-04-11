@@ -209,21 +209,17 @@ class Decoder:
       log.escribeLineaLog(hbl.LOGS_hblWiegand, "ID : " + str(id))
 
 
-      # mode 0 : retransmision de dato anulada
       # mode 1 : transmision de datos sin chequeo de request
       # mode 2 : chequea el status del request para transmitir o no
 
-      if hbl.REQ_modoRequest == 0 : 
-         log.escribeLineaLog(hbl.LOGS_hblWiegand, "Request y retransmision anulada")
-
-      elif hbl.REQ_modoRequest == 1:
+      if hbl.REQ_activado == 0:
   
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "Retransmision activada sin request")
          # codifico el valor wiegand y envio por salida wiegand 
 
          Encoder.encoderWiegand(numero, pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1, cantidadBits)
 
-      elif hbl.REQ_modoRequest == 2 : 
+      else: 
          
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "Retransmision chequeada segun request")
 
@@ -386,8 +382,20 @@ class Decoder:
          newheaders = {   
             'Content-Type': 'application/json'
          }  
+
+         if hbl.REQ_seleccionURL == 1:
+            URL_POST = hbl.REQ_urlRequest1 
+         elif hbl.REQ_seleccionURL == 2:
+            URL_POST = hbl.REQ_urlRequest2 
+         elif hbl.REQ_seleccionURL == 3:
+            URL_POST = hbl.REQ_urlRequest3 
+         elif hbl.REQ_seleccionURL == 4:
+            URL_POST = hbl.REQ_urlRequest4 
+         elif hbl.REQ_seleccionURL == 5:
+            URL_POST = hbl.REQ_urlRequest5 
+      
   
-         response = requests.post(hbl.WD_URL, json = Dict, headers = newheaders, timeout=int(hbl.WD_URL_timeOutRequest))
+         response = requests.post(URL_POST, json = Dict, headers = newheaders, timeout=int(hbl.REPORTE_timeOutRequest))
 
          # response del request  
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "\n") 
@@ -442,32 +450,6 @@ class Decoder:
       auxiliar.EscribirFuncion("Decoder - Workpass")
 
       print("Modo 10")
-      #print(""" escribo datos en el archivo txt """)
-      #file1 = open("/var/log/wiegand/event.txt", "a")
-      #file1.write(str(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')))
-      #file1.write(str(" - ")) 
-      #file1.write(str(id))
-      #file1.write("\n")
-      #file1.close()
-
-      #""" Adquirir datos del archivo de configuracion """ 
-      #PosicionTextoURL = -1
-      #PosicionTextoHBL = -1
-
-      #with open("/home/pi/Desktop/workpassHK/config.properties", 'r') as ObjFichero:
-      
-       #  for line in ObjFichero: 
-        #    PosicionTextoURL = line.find("jsonEndpointUrl =")
-         #   if PosicionTextoURL >= 0: 
-         #      LineaURL = line.replace("\n", "")               
-         #      TextoURL = LineaURL.split(" = ")
-         ##      print(TextoURL[1])
-               
-         #   PosicionTextoHBL = line.find("HBL =")
-         #   if PosicionTextoHBL >= 0: 
-         #      LineaHBL = line.replace("\n", "")  
-         #      TextoHBL = LineaHBL.split(" = ")
-         #      print(TextoHBL[1])
 
       if hbl.REQ_seleccionURL == 1:
          TextoURL = hbl.REQ_urlRequest1 

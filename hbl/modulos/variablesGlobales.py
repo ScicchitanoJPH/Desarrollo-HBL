@@ -85,4 +85,6 @@ Pin_W1_WD1 = 24
 Pin_W2_WD0 = 17
 Pin_W2_WD1 = 27
 
+"""     I2C      """
+BusDisplay=3
 

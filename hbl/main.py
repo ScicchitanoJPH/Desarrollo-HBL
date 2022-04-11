@@ -90,11 +90,17 @@ if __name__ == "__main__":
 
    # inicializa decoder wiegand
    if hbl.WD_W1_activado == 1:
-      w = main.Decoder(pi, variablesGlobales.Pin_W1_WD0, variablesGlobales.Pin_W1_WD1, callback)
+      if hbl.WD_W1_modo == "Entrada":
+         w1 = main.Decoder(pi, variablesGlobales.Pin_W1_WD0, variablesGlobales.Pin_W1_WD1, callback)
+      else:
+         main.Encoder(pi, variablesGlobales.Pin_W1_WD0, variablesGlobales.Pin_W1_WD1)   
    
    # inicializa encoder wiegand
    if hbl.WD_W2_activado == 1:
-      main.Encoder(pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1)   
+      if hbl.WD_W2_modo == "Entrada":
+         w2 = main.Decoder(pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1, callback)
+      else:
+         main.Encoder(pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1)   
  
    # inicializa displays LCD  
    i2cDevice.inicializacion(pi)  

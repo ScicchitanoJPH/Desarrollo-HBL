@@ -27,6 +27,7 @@ def cargarParametros(archivo):
     global REPORTE_URLReporte
 
     global WD_W1_activado
+    global WD_W1_modo
     global WD_W1_esperaSenial
     global WD_W1_bits
     global WD_W1_delayPulso
@@ -34,6 +35,7 @@ def cargarParametros(archivo):
     global WD_W1_primerBit 
 
     global WD_W2_activado
+    global WD_W2_modo
     global WD_W2_esperaSenial
     global WD_W2_bitsSalida
     global WD_W2_delayPulso
@@ -93,38 +95,6 @@ def cargarParametros(archivo):
     global HID_device4_vendor_ID
     global HID_device4_product_ID
 
-    global DISPLAY_display1_activado 
-    global DISPLAY_display1_width
-    global DISPLAY_display1_address
-
-    global DISPLAY_display2_activado 
-    global DISPLAY_display2_width
-    global DISPLAY_display2_address
-
-    global DISPLAY_display3_activado 
-    global DISPLAY_display3_width
-    global DISPLAY_display3_address
-
-    global DISPLAY_display4_activado 
-    global DISPLAY_display4_width
-    global DISPLAY_display4_address   
-
-    global DISPLAY_display5_activado 
-    global DISPLAY_display5_width
-    global DISPLAY_display5_address
-
-    global DISPLAY_display6_activado 
-    global DISPLAY_display6_width
-    global DISPLAY_display6_address
-
-    global DISPLAY_display7_activado 
-    global DISPLAY_display7_width
-    global DISPLAY_display7_address
-
-    global DISPLAY_display8_activado 
-    global DISPLAY_display8_width
-    global DISPLAY_display8_address 
-
     global TCP_serverDefault_ip 
     global TCP_serverDefault_port 
     global TCP_serverDefault_activado 
@@ -136,6 +106,7 @@ def cargarParametros(archivo):
 
     global FUNC_modo
  
+    global REQ_activado
     global REQ_seleccionURL
     global REQ_urlRequest1
     global REQ_urlRequest2
@@ -174,6 +145,8 @@ def cargarParametros(archivo):
     global HBLCORE_tamper_activado
 
     global IDHBL
+
+    global DISPLAY_activado
 
 
     global NETWORK_activado
@@ -317,6 +290,7 @@ def cargarParametros(archivo):
     
     # wiegand
     WD_W1_activado=data["wiegand"]["W1"]["activado"]
+    WD_W1_modo=data["wiegand"]["W1"]["modo"]
     WD_W1_esperaSenial=data["wiegand"]["W1"]["esperaSenial"]
     WD_W1_bits=data["wiegand"]["W1"]["bitsSalida"]
     WD_W1_delayPulso=data["wiegand"]["W1"]["delayPulso"]
@@ -324,6 +298,7 @@ def cargarParametros(archivo):
     WD_W1_primerBit=data["wiegand"]["W1"]["primerBit"]
 
     WD_W2_activado=data["wiegand"]["W2"]["activado"]
+    WD_W2_modo=data["wiegand"]["W2"]["modo"]
     WD_W2_esperaSenial=data["wiegand"]["W2"]["esperaSenial"]
     WD_W2_bitsSalida=data["wiegand"]["W2"]["bitsSalida"]
     WD_W2_delayPulso=data["wiegand"]["W2"]["delayPulso"]
@@ -333,7 +308,7 @@ def cargarParametros(archivo):
 
     WD_URL=data["wiegand"]["URL"]
     WD_ID=data["wiegand"]["ID"]
-    WD_URL_timeOutRequest=data["wiegand"]["URL_timeOutRequest"]
+    REPORTE_timeOutRequest=data["wiegand"]["URL_timeOutRequest"]
   
     # digital
     DIG_in_pushDelay=data["digital"]["in"]["pushDelay"] 
@@ -392,39 +367,6 @@ def cargarParametros(archivo):
     HID_device4_vendor_ID=data["hidDevices"]["device4"]["vendor_ID"]
     HID_device4_product_ID=data["hidDevices"]["device4"]["product_ID"]
 
-    # displays
-    DISPLAY_display1_activado=data["display"]["display1"]["activado"]
-    DISPLAY_display1_width=data["display"]["display1"]["width"]
-    DISPLAY_display1_address=data["display"]["display1"]["address"]
-
-    DISPLAY_display2_activado=data["display"]["display2"]["activado"]
-    DISPLAY_display2_width=data["display"]["display2"]["width"]
-    DISPLAY_display2_address=data["display"]["display2"]["address"]
-
-    DISPLAY_display3_activado=data["display"]["display3"]["activado"]
-    DISPLAY_display3_width=data["display"]["display3"]["width"]
-    DISPLAY_display3_address=data["display"]["display3"]["address"]
-
-    DISPLAY_display4_activado=data["display"]["display4"]["activado"]
-    DISPLAY_display4_width=data["display"]["display4"]["width"]
-    DISPLAY_display4_address=data["display"]["display4"]["address"]
-
-    DISPLAY_display5_activado=data["display"]["display5"]["activado"]
-    DISPLAY_display5_width=data["display"]["display5"]["width"]
-    DISPLAY_display5_address=data["display"]["display5"]["address"]
-
-    DISPLAY_display6_activado=data["display"]["display6"]["activado"]
-    DISPLAY_display6_width=data["display"]["display6"]["width"]
-    DISPLAY_display6_address=data["display"]["display6"]["address"]
-
-    DISPLAY_display7_activado=data["display"]["display7"]["activado"]
-    DISPLAY_display7_width=data["display"]["display7"]["width"]
-    DISPLAY_display7_address=data["display"]["display7"]["address"]
-
-    DISPLAY_display8_activado=data["display"]["display8"]["activado"]
-    DISPLAY_display8_width=data["display"]["display8"]["width"]
-    DISPLAY_display8_address=data["display"]["display8"]["address"]
-
     # tcp 
     TCP_serverDefault_ip=data["tcp"]["serverDefault"]["ip"]
     TCP_serverDefault_port=data["tcp"]["serverDefault"]["port"]
@@ -438,6 +380,7 @@ def cargarParametros(archivo):
 
   
     # request
+    REQ_activado=data["request"]["activado"]
     REQ_seleccionURL=data["request"]["seleccionURL"] 
     REQ_urlRequest1=data["request"]["urlRequest1"] 
     REQ_urlRequest2=data["request"]["urlRequest2"] 
@@ -479,6 +422,9 @@ def cargarParametros(archivo):
     HBLCORE_tamper_activado=data["hblCore"]["tamper"]["activado"] 
 
     IDHBL=data["IDHBL"] 
+
+
+    DISPLAY_activado = data["display"]["activado"]
  
 
     # network
