@@ -42,7 +42,6 @@ def cargarParametros(archivo):
     global WD_W2_delayIntervalo
     global WD_W2_primerBit 
      
-    global WD_URL 
     global WD_ID
 
     global DIG_in_pushDelay
@@ -306,7 +305,6 @@ def cargarParametros(archivo):
     WD_W2_primerBit=data["wiegand"]["W2"]["primerBit"]
 
 
-    WD_URL=data["wiegand"]["URL"]
     WD_ID=data["wiegand"]["ID"]
     REPORTE_timeOutRequest=data["wiegand"]["URL_timeOutRequest"]
   
