@@ -1,55 +1,22 @@
 {
-    "reporte": {
-        "activado": 1,
-        "idNitro4": 2112,
-        "name": "",
-        "client": "",
-        "lastUpdate": "2021/09/20 16:53:14",
-        "tiempoUpdate": 1,
-        "timeOutRequest": 5,
-        "encodeAutorization": "lions:Jph135",
-        "URLToken": "http://hbl.jphlions.com:3600/api/login-nitro4/",
-        "URLChequeoConfiguracion": "http://hbl.jphlions.com:3600/api/hbles/",
-        "URLReporteInicial": "http://hbl.jphlions.com:3600/api/hbles/",
-        "URLReporte": "http://hbl.jphlions.com:3600/api/hblstatuses/",
-        "versionFirmware": "",
-        "comandoBash": "",
-        "readLogs": 0,
-        "borrarTemp": 0,
-        "ejecutarComando": "1"
-    },
+    "IDHBL": "3",
     "funcionamiento": {
         "modo": 9
     },
-    "wiegand": {
-        "port0": {
-            "activado": 1,
-            "esperaSenial": 0,
-            "bits": 0,
-            "delayPulso": 8e-05,
-            "delayIntervalo": 0.00024,
-            "primerBit": 1,
-            "mascara": {
-                "activada": 0,
-                "valor": "0x3FFFFFFFF"
-            }
-        },
-        "port1": {
-            "activado": 1,
-            "esperaSenial": 0,
-            "bits": 0,
-            "delayPulso": 5e-05,
-            "delayIntervalo": 0.002,
-            "primerBit": 9,
-            "mascara": {
-                "activada": 0,
-                "valor": "0x3FFFFFFFF"
-            }
-        },
-        "errorCode": 99999,
-        "URL": "http://172.16.23.27/kiosco/login.4.php",
-        "URL_timeOutRequest": 5,
-        "ID": "0001"
+    "cacheo": {
+        "activado": 1,
+        "cantidadCacheos": 10,
+        "cacheosPositivos": 2,
+        "tiempoRelePositivo": 1,
+        "repRelePositivo": 2,
+        "tiempoReleNegativo": 1,
+        "repReleNegativo": 1
+    },
+    "kiosco": {
+        "activado": 0,
+        "URL":"http://172.16.23.27/kiosco/login.4.php",
+        "width": "1280",
+        "height": "1080"
     },
     "digital": {
         "in": {
@@ -69,111 +36,6 @@
             "logica": 1
         }
     },
-    "serial": {
-        "port": "/dev/ttyS0",
-        "baudrate": 9600,
-        "bytesize": 8,
-        "parity": "N",
-        "stopbits": 1,
-        "activado": 1
-    },
-    "hidDevices": {
-        "device1": {
-            "activado": 1,
-            "bufferSize": 20,
-            "timeout": 200,
-            "endpoint": "0x81",
-            "vendor_ID": "0xb6ce",
-            "product_ID": "0x0001"
-        },
-        "device2": {
-            "activado": 0,
-            "bufferSize": 20,
-            "timeout": 20000,
-            "endpoint": "0x81",
-            "vendor_ID": "0x05e0",
-            "product_ID": "0x1200"
-        },
-        "device3": {
-            "activado": 0,
-            "bufferSize": 20,
-            "timeout": 2000,
-            "endpoint": "0x81",
-            "vendor_ID": "0xffff",
-            "product_ID": "0x0035"
-        },
-        "device4": {
-            "activado": 0,
-            "bufferSize": 20,
-            "timeout": 200,
-            "endpoint": "0x84",
-            "vendor_ID": "0x0c2e",
-            "product_ID": "0x0be1"
-        }
-    },
-    "display": {
-        "display1": {
-            "activado": 1,
-            "width": 20,
-            "address": "0x27"
-        },
-        "display2": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x26"
-        },
-        "display3": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x25"
-        },
-        "display4": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x24"
-        },
-        "display5": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x23"
-        },
-        "display6": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x22"
-        },
-        "display7": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x21"
-        },
-        "display8": {
-            "activado": 0,
-            "width": 20,
-            "address": "0x20"
-        }
-    },
-    "tcp": {
-        "serverDefault": {
-            "activado": 1,
-            "ip": "192.168.1.100",
-            "port": 5005,
-            "bufferRX": 10,
-            "intentosConexion": 10
-        }
-    },
-    "http": {
-        "server": {
-            "activado": 1,
-            "port": 8000,
-            "reles": 8,
-            "respuesta": 0
-        }
-    },
-    "mock": {
-        "activado": 1,
-        "url": "http://localhost/MockTrueFalse/validar.php"
-    },
     "request": {
         "seleccionURL": 3,
         "urlRequest1": "http://localhost/jphaccess/trp/alcoholemia.php?tarjeta=",
@@ -186,42 +48,7 @@
         "timerActivado": 0,
         "timeoutRequest": 10
     },
-    "logs": {
-        "pathBackup": "/backupLog/",
-        "tamanioRotator": 1024768,
-        "hblCore": "hblCore.log",
-        "hblConexiones": "hblConexiones.log",
-        "hblWiegand": "hblWiegand.log",
-        "hblTcp": "hblTcp.log",
-        "hblEntradas": "hblEntradas.log",
-        "hblHTTP": "hblHTTP.log",
-        "hblReporte": "hblReporte.log",
-        "hblhidDevice": "hblhidDevice.log",
-        "hbli2c": "hbli2c.log",
-        "hblFTP": "hblFTP.log",
-        "hblRedundancia": "hblRedundancia.log",
-        "hblSerial": "hblSerial.log",
-        "hblCacheo": "hblCacheo.log",
-        "hblKiosco": "hblKiosco.log"
-    },
-    "hblCore": {
-        "hblDisplay": {
-            "activado": 0,
-            "modo": 1
-        },
-        "serialNumber": "702487a0",
-        "revision": "00c03112",
-        "MAC_ethernet": "dc:a6:32:52:2d:b0",
-        "NTP": "time.cloudflare.com",
-        "reset": {
-            "resetActivado": 0,
-            "tiempoReset": 14400
-        },
-        "tamper": {
-            "activado": 0
-        },
-        "idHBL": "3"
-    },
+    
     "network": {
         "activado": 1,
         "eth0": {
@@ -266,15 +93,6 @@
             "dialAttempts": 1,
             "metric": 0
         },
-        "testConexion": {
-            "activado": 1,
-            "url": "http://8.8.8.8",
-            "timeoutUrl": 8,
-            "timeDelay": 5,
-            "timeRepeat": 5,
-            "intentosConexion": 25,
-            "resetActivado": 0
-        },
         "eth1": {
             "activado": 0,
             "dhcp": 1,
@@ -287,6 +105,107 @@
             "vendor_ID": "0x2357",
             "product_ID": "0x0600",
             "timeDelay": 5
+        },
+        "testConexion": {
+            "activado": 1,
+            "url": "http://8.8.8.8",
+            "timeoutUrl": 8,
+            "timeDelay": 5,
+            "timeRepeat": 5,
+            "intentosConexion": 25,
+            "resetActivado": 0
+        }
+    },
+    "wiegand": {
+        "W1": {
+            "activado": 1,
+            "esperaSenial": 0,
+            "bitsSalida": 0,
+            "delayPulso": 8e-05,
+            "delayIntervalo": 0.00024,
+            "primerBit": 1
+        },
+        "W2": {
+            "activado": 1,
+            "esperaSenial": 0,
+            "bitsSalida": 0,
+            "delayPulso": 5e-05,
+            "delayIntervalo": 0.002,
+            "primerBit": 9
+        },
+        "URL": "http://172.16.23.27/kiosco/login.4.php",
+        "URL_timeOutRequest": 5,
+        "ID": "0001"
+    },
+    "serial": {
+        "activado": 1,
+        "port": "/dev/ttyS0",
+        "baudrate": 9600,
+        "bytesize": 8,
+        "parity": "N",
+        "stopbits": 1
+    },
+    "display": {
+        "display1": {
+            "activado": 1,
+            "width": 20,
+            "address": "0x27"
+        },
+        "display2": {
+            "activado": 0,
+            "width": 20,
+            "address": "0x26"
+        },
+        "display3": {
+            "activado": 0,
+            "width": 20,
+            "address": "0x25"
+        },
+        "display4": {
+            "activado": 0,
+            "width": 20,
+            "address": "0x24"
+        },
+        "display5": {
+            "activado": 0,
+            "width": 20,
+            "address": "0x23"
+        },
+        "display6": {
+            "activado": 0,
+            "width": 20,
+            "address": "0x22"
+        },
+        "display7": {
+            "activado": 0,
+            "width": 20,
+            "address": "0x21"
+        },
+        "display8": {
+            "activado": 0,
+            "width": 20,
+            "address": "0x20"
+        }
+    },
+    "MQTT": {
+        "broker": "broker.mqttdashboard.com",
+        "port":1883,
+        "TopicSend": "RPI/JPH/HBL/Send",
+        "TopicRecv": "RPI/JPH/HBL/Recv"
+    },
+    "tcp": {
+        "serverDefault": {
+            "activado": 1,
+            "ip": "192.168.1.100",
+            "port": 5005,
+            "intentosConexion": 10
+        }
+    },
+    "http": {
+        "server": {
+            "activado": 1,
+            "port": 8000,
+            "respuesta": 0
         }
     },
     "ftp": {
@@ -296,37 +215,91 @@
         "pass": "Jphlions135",
         "directorio": "/usr/programas/hbl/ftp"
     },
-    "redundancia": {
-        "primeraLetraUnidad": "a",
-        "ultimaLetraUnidad": "b",
-        "primeraParticion": "1",
-        "ultimaParticion": "2"
-    },
-    "debug": 1,
-    "versionHBL": "1.0",
-    "cacheo": {
-        "activado": 0,
-        "cantidadCacheos": 10,
-        "cacheosPositivos": 2,
-        "tiempoRelePositivo": 1,
-        "repRelePositivo": 2,
-        "tiempoReleNegativo": 1,
-        "repReleNegativo": 1
-    },
-    "kiosco": {
-        "activado": 0,
-        "URL":"http://172.16.23.27/kiosco/login.4.php",
-        "width": "1280",
-        "height": "1080"
-    },
-    "MQTT": {
-        "broker": "broker.mqttdashboard.com",
-        "port":1883,
-        "TopicSend": "RPI/JPH/HBL/Send",
-        "TopicRecv": "RPI/JPH/HBL/Recv"
+    "logs": {
+        "pathBackup": "/backupLog/",
+        "tamanioRotator": 1024768,
+        "hblCore": "hblCore.log",
+        "hblConexiones": "hblConexiones.log",
+        "hblWiegand": "hblWiegand.log",
+        "hblTcp": "hblTcp.log",
+        "hblEntradas": "hblEntradas.log",
+        "hblHTTP": "hblHTTP.log",
+        "hblReporte": "hblReporte.log",
+        "hblhidDevice": "hblhidDevice.log",
+        "hbli2c": "hbli2c.log",
+        "hblFTP": "hblFTP.log",
+        "hblSerial": "hblSerial.log",
+        "hblCacheo": "hblCacheo.log",
+        "hblKiosco": "hblKiosco.log"
     },
     "Seguimiento": {
         "file_path": "Segumiento.txt"
+    },
+    "reporte": {
+        "activado": 1,
+        "idNitro4": 2112,
+        "name": "",
+        "client": "",
+        "lastUpdate": "2021/09/20 16:53:14",
+        "tiempoUpdate": 1,
+        "timeOutRequest": 5,
+        "encodeAutorization": "lions:Jph135",
+        "URLToken": "http://hbl.jphlions.com:3600/api/login-nitro4/",
+        "URLChequeoConfiguracion": "http://hbl.jphlions.com:3600/api/hbles/",
+        "URLReporteInicial": "http://hbl.jphlions.com:3600/api/hbles/",
+        "URLReporte": "http://hbl.jphlions.com:3600/api/hblstatuses/"
+    },
+    "hidDevices": {
+        "device1": {
+            "activado": 1,
+            "bufferSize": 20,
+            "timeout": 200,
+            "endpoint": "0x81",
+            "vendor_ID": "0xb6ce",
+            "product_ID": "0x0001"
+        },
+        "device2": {
+            "activado": 0,
+            "bufferSize": 20,
+            "timeout": 20000,
+            "endpoint": "0x81",
+            "vendor_ID": "0x05e0",
+            "product_ID": "0x1200"
+        },
+        "device3": {
+            "activado": 0,
+            "bufferSize": 20,
+            "timeout": 2000,
+            "endpoint": "0x81",
+            "vendor_ID": "0xffff",
+            "product_ID": "0x0035"
+        },
+        "device4": {
+            "activado": 0,
+            "bufferSize": 20,
+            "timeout": 200,
+            "endpoint": "0x84",
+            "vendor_ID": "0x0c2e",
+            "product_ID": "0x0be1"
+        }
+    },
+    "hblCore": {
+        "hblDisplay": {
+            "activado": 0,
+            "modo": 1
+        },
+        "serialNumber": "702487a0",
+        "revision": "00c03112",
+        "MAC_ethernet": "dc:a6:32:52:2d:b0",
+        "NTP": "time.cloudflare.com",
+        "reset": {
+            "resetActivado": 0,
+            "tiempoReset": 14400
+        },
+        "tamper": {
+            "activado": 0
+        },
+        "idHBL": "3"
     },
     "ActualizarGit": {
         "Activado": 1

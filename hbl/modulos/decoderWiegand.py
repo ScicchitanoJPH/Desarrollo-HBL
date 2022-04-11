@@ -101,15 +101,15 @@ class Decoder:
                try:
                   
                   numeroBinario = bin(numero)[2:].zfill(cantidadBits)   
-                  id = int(numeroBinario.format(numero)[hbl.WD_port0_primerBit:int(cantidadBits-1)],2)  
+                  id = int(numeroBinario.format(numero)[hbl.WD_W1_primerBit:int(cantidadBits-1)],2)  
                
 
                except: 
 
                   log.escribeLineaLog(hbl.LOGS_hblWiegand, "ERROR 100 : Wiegand IN")
                   # hardcode de valor de error
-                  numero = hbl.WD_errorCode
-                  id = hbl.WD_errorCode    
+                  numero = 99999
+                  id = numero    
 
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Fecha / Hora : " + str(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')))
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Cant. Bits : " + str(cantidadBits))
@@ -129,7 +129,7 @@ class Decoder:
                   # se active esa entrada digital por el reloj para leer los datos
                   # validos que llegan al puerto
 
-                  if hbl.WD_port0_esperaSenial == 1:
+                  if hbl.WD_W1_esperaSenial == 1:
                      valorPin = Entradas.readPin(self.pi, variablesGlobales.Pin_Entrada2)
 
                      # se activa la entrada
@@ -146,7 +146,7 @@ class Decoder:
 
                   self.procesarID_TCP(cantidadBits, numero, numeroBinario, id, self.pi) 
                
-               # 6 : decodificador wiegand port0 -> envio request a URL
+               # 6 : decodificador wiegand W1 -> envio request a URL
                elif hbl.FUNC_modo == 6:
 
                   self.procesarID_URL(cantidadBits, numero, numeroBinario, id, self.pi)
@@ -154,7 +154,7 @@ class Decoder:
                # 9 : decodificado wiegand - JSON
                elif hbl.FUNC_modo == 9:
                
-                  if id!=hbl.WD_errorCode:
+                  if id!=99999:
                      self.procesarID_JSON(cantidadBits, numero, numeroBinario, id, self.pi) 
 
                # 10 : Funcionamiento de Workpass
@@ -185,7 +185,7 @@ class Decoder:
       
       
       # codificacion y envio del valor wiegand
-      Encoder.encoderWiegand(numero, self.pi, variablesGlobales.Pin_Port1_WD0, variablesGlobales.Pin_Port1_WD1, cantidadBits)
+      Encoder.encoderWiegand(numero, self.pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1, cantidadBits)
 
       # indica status     
       log.escribeLineaLog(hbl.LOGS_hblWiegand, "Codigo Wiegand Retransmitido")    
@@ -221,27 +221,22 @@ class Decoder:
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "Retransmision activada sin request")
          # codifico el valor wiegand y envio por salida wiegand 
 
-         Encoder.encoderWiegand(numero, pi, variablesGlobales.Pin_Port1_WD0, variablesGlobales.Pin_Port1_WD1, cantidadBits)
+         Encoder.encoderWiegand(numero, pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1, cantidadBits)
 
       elif hbl.REQ_modoRequest == 2 : 
          
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "Retransmision chequeada segun request")
 
-         # Hago el request para que me diga si la tarjeta esta 
-         # autorizada para pasar, con verificacion de mock
-         if hbl.MOCK_activado == 1:
-            UrlCompletaReq = hbl.MOCK_url
-         else:
-            if hbl.REQ_seleccionURL == 1:
-               UrlCompletaReq = hbl.REQ_urlRequest1 + str(id)
-            elif hbl.REQ_seleccionURL == 2:
-               UrlCompletaReq = hbl.REQ_urlRequest2 + str(id)
-            elif hbl.REQ_seleccionURL == 3:
-               UrlCompletaReq = hbl.REQ_urlRequest3 + str(id)
-            elif hbl.REQ_seleccionURL == 4:
-               UrlCompletaReq = hbl.REQ_urlRequest4 + str(id)
-            elif hbl.REQ_seleccionURL == 5:
-               UrlCompletaReq = hbl.REQ_urlRequest5 + str(id) 
+         if hbl.REQ_seleccionURL == 1:
+            UrlCompletaReq = hbl.REQ_urlRequest1 + str(id)
+         elif hbl.REQ_seleccionURL == 2:
+            UrlCompletaReq = hbl.REQ_urlRequest2 + str(id)
+         elif hbl.REQ_seleccionURL == 3:
+            UrlCompletaReq = hbl.REQ_urlRequest3 + str(id)
+         elif hbl.REQ_seleccionURL == 4:
+            UrlCompletaReq = hbl.REQ_urlRequest4 + str(id)
+         elif hbl.REQ_seleccionURL == 5:
+            UrlCompletaReq = hbl.REQ_urlRequest5 + str(id) 
          
          # Guardo la url completa para el request
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "Url request : " + UrlCompletaReq)
@@ -305,7 +300,7 @@ class Decoder:
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Codigo Wiegand Retransmitido") 
 
                # codifico el valor wiegand y envio por salida wiegand 
-               Encoder.encoderWiegand(numero, self.pi, variablesGlobales.Pin_Port1_WD0, variablesGlobales.Pin_Port1_WD1, cantidadBits)
+               Encoder.encoderWiegand(numero, self.pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1, cantidadBits)
 
          except Exception as inst: 
 
@@ -365,7 +360,7 @@ class Decoder:
 
          Proceso ID wiegand + Request
 
-         6 : decodificador wiegand port0 -> envio request a URL
+         6 : decodificador wiegand W1 -> envio request a URL
 
    ----------------------------------------------------------|---------------------------------- """ 
 
@@ -485,7 +480,7 @@ class Decoder:
       elif hbl.REQ_seleccionURL == 5:
          TextoURL = hbl.REQ_urlRequest5 
       
-      TextoHBL=hbl.HBLCORE_idHBL
+      TextoHBL=hbl.IDHBL
 
       
       

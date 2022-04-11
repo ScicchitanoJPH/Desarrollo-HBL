@@ -48,15 +48,15 @@ class Encoder:
                        
             if int(Variable.format(valor)[i],2)  == 0: 
                 pi.write(gpio_0, 0) 
-                time.sleep(hbl.WD_port1_delayPulso) # sleep delay fall (std : 0.00008)
+                time.sleep(hbl.WD_W2_delayPulso) # sleep delay fall (std : 0.00008)
                 pi.write(gpio_0, 1) 
-                time.sleep(hbl.WD_port1_delayIntervalo) # sleep delay rise (std : 0.00024) 
+                time.sleep(hbl.WD_W2_delayIntervalo) # sleep delay rise (std : 0.00024) 
                 #print("0")
             else: 
                 pi.write(gpio_1, 0) 
-                time.sleep(hbl.WD_port1_delayPulso) # sleep delay fall (std : 0.00008)
+                time.sleep(hbl.WD_W2_delayPulso) # sleep delay fall (std : 0.00008)
                 pi.write(gpio_1, 1) 
-                time.sleep(hbl.WD_port1_delayIntervalo) # sleep delay rise (std : 0.00024)   
+                time.sleep(hbl.WD_W2_delayIntervalo) # sleep delay rise (std : 0.00024)   
                 #print("1")
             
             i = i + 1
@@ -78,15 +78,15 @@ class Encoder:
         
             if caracter == "0": 
                 pi.write(gpio_0, 0)
-                time.sleep(hbl.WD_port1_delayPulso) # sleep delay fall (std : 0.00008) 
+                time.sleep(hbl.WD_W2_delayPulso) # sleep delay fall (std : 0.00008) 
                 pi.write(gpio_0, 1)
-                time.sleep(hbl.WD_port1_delayIntervalo) # sleep delay rise (std : 0.00024)  
+                time.sleep(hbl.WD_W2_delayIntervalo) # sleep delay rise (std : 0.00024)  
                 #print("0")
             else:
                 pi.write(gpio_1, 0)
-                time.sleep(hbl.WD_port1_delayPulso) # sleep delay fall (std : 0.00008) 
+                time.sleep(hbl.WD_W2_delayPulso) # sleep delay fall (std : 0.00008) 
                 pi.write(gpio_1, 1)
-                time.sleep(hbl.WD_port1_delayIntervalo) # sleep delay rise (std : 0.00024)  
+                time.sleep(hbl.WD_W2_delayIntervalo) # sleep delay rise (std : 0.00024)  
                 #print("1") 
     
  

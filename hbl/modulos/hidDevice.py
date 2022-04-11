@@ -100,19 +100,10 @@ def detachResetHID(dispositivo, numero):
    
     if dispositivo[numero].is_kernel_driver_active(0):
         try:
-            if hbl.DEBUG == 1:  
-                print("Detaching kernel driver")
-
             dispositivo[numero].detach_kernel_driver(0)
-
-            if hbl.DEBUG == 1:  
-                print("kernel driver detached")
 
         except usb.core.USBError as e:
             sys.exit("Could not detach kernel driver: %s" % str(e))
-    else:
-        if hbl.DEBUG == 1:  
-            print("no kernel driver attached") 
     
     usb.util.dispose_resources(dispositivo[numero])
 
@@ -431,7 +422,7 @@ class dispositivosHID:
                                 log.escribeLineaLog(hbl.LOGS_hblhidDevice,"WIEGAND COMPLETO: " + str(dniToWiegand)) 
 
                                 # envio codigo wiegand
-                                Encoder.encoderWiegandBits(dniToWiegand, self.pi, variablesGlobales.Pin_Port1_WD0, variablesGlobales.Pin_Port1_WD1) 
+                                Encoder.encoderWiegandBits(dniToWiegand, self.pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1) 
 
                             except Exception as inst:
 
@@ -506,7 +497,7 @@ class dispositivosHID:
 
                     if DNICompletado == True:
  
-                        m = {"id" : hbl.HBLCORE_idHBL, "dni" : DNICompleto } 
+                        m = {"id" : hbl.IDHBL, "dni" : DNICompleto } 
                         jsonEnvio = json.dumps(m)
 
                         variablesGlobales.jsonEnvioDNI = jsonEnvio

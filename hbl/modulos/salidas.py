@@ -23,10 +23,10 @@ class Salidas:
         self.pi.write(variablesGlobales.Pin_Salida3, hbl.OFF) 
         self.pi.write(variablesGlobales.Pin_Salida4, hbl.OFF)
 
-        # si el port0 de wiegand esta desactivado, puedo usar los
+        # si el W1 de wiegand esta desactivado, puedo usar los
         # pines como salidas digitales, las inicializo
 
-        if hbl.WD_port0_activado == 0:
+        if hbl.WD_W1_activado == 0:
 
             self.pi.write(variablesGlobales.Pin_Salida5, hbl.OFF)   
             self.pi.write(variablesGlobales.Pin_Salida6, hbl.OFF) 

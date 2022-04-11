@@ -11,7 +11,6 @@ import sys
 
 from modulos import ftp as ftp
 from modulos import conexiones as conexiones
-from modulos import redundancia as redundancia
 from modulos import hblCore as hblCore
 from modulos import log as log
 from modulos import hbl as hbl
@@ -368,7 +367,6 @@ def ReporteHBL(token):
     usoHDD = float(hblCore.getDiskSpace())    
     rx_bytes_ppp0 = float(conexiones.bytesppp0('rx'))
     tx_bytes_ppp0 = float(conexiones.bytesppp0('tx')) 
-    redundancy = redundancia.leerRedundancia()
     bootVersion = hblCore.getBootloaderVersion()
     fechaActual = hblCore.timeNow()   
     

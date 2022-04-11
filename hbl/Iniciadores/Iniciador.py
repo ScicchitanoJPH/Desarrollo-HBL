@@ -110,12 +110,11 @@ def MenuLogs():
     print("8) HTPP \n")
     print("9) I2C \n")
     print("10) Kiosco \n")
-    print("11) Redundancia \n")
-    print("12) Reporte \n")
-    print("13) Serial \n")
-    print("14) TCP \n")
-    print("15) Wiegand \n")
-    print("16) Volver al Menu Principal \n")
+    print("11) Reporte \n")
+    print("12) Serial \n")
+    print("13) TCP \n")
+    print("14) Wiegand \n")
+    print("15) Volver al Menu Principal \n")
 
     LogInput=int(input())
 
@@ -142,8 +141,6 @@ def MenuLogs():
         os.system("sudo tail -f " + Folder_Logs_Path + "hbli2c.log")
     if LogInput==10:
         os.system("sudo tail -f " + Folder_Logs_Path + "hblKiosco.log")
-    if LogInput==11:
-        os.system("sudo tail -f " + Folder_Logs_Path + "hblRedundancia.log")
     if LogInput==12:
         os.system("sudo tail -f " + Folder_Logs_Path + "hblReporte.log")
     if LogInput==13:

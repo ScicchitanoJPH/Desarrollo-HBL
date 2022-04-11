@@ -44,6 +44,8 @@ HBLCORE_contadorReset = 0
 pressTick = 0
 jsonEnvioDNI = ""
 
+versionHBL = "3.0"
+
 
 ############################################################################
 #                                                                          #
@@ -77,10 +79,10 @@ Pin_Buzzer = 18
 
 """     WIEGAND      """
 
-Pin_Port0_WD0 = 23
-Pin_Port0_WD1 = 24
+Pin_W1_WD0 = 23
+Pin_W1_WD1 = 24
 
-Pin_Port1_WD0 = 17
-Pin_Port1_WD1 = 27
+Pin_W2_WD0 = 17
+Pin_W2_WD1 = 27
 
 

@@ -12,6 +12,8 @@ import sys
 -------------------------------------------------------------------------------------------- """
    
 def cargarParametros(archivo):
+
+    global ID_HBL
  
     global REPORTE_idNitro4       
     global REPORTE_lastUpdate 
@@ -22,64 +24,36 @@ def cargarParametros(archivo):
     global REPORTE_URLToken 
     global REPORTE_URLChequeoConfiguracion 
     global REPORTE_URLReporteInicial 
-    global REPORTE_URLReporte   
-    global REPORTE_versionFirmware 
-    global REPORTE_comandoBash  
-    global REPORTE_readLogs  
-    global REPORTE_borrarTemp
+    global REPORTE_URLReporte
 
-    global WD_port0_activado
-    global WD_port0_esperaSenial
-    global WD_port0_bits
-    global WD_port0_pin_WD0
-    global WD_port0_pin_WD1
-    global WD_port0_delayPulso
-    global WD_port0_delayIntervalo
-    global WD_port0_primerBit 
-    global WD_port0_mascara_activada 
-    global WD_port0_mascara_valor
+    global WD_W1_activado
+    global WD_W1_esperaSenial
+    global WD_W1_bits
+    global WD_W1_delayPulso
+    global WD_W1_delayIntervalo
+    global WD_W1_primerBit 
 
-    global WD_port1_activado
-    global WD_port1_esperaSenial
-    global WD_port1_bits
-    global WD_port1_pin_WD0
-    global WD_port1_pin_WD1
-    global WD_port1_delayPulso
-    global WD_port1_delayIntervalo
-    global WD_port1_primerBit 
-    global WD_port1_mascara_activada 
-    global WD_port1_mascara_valor
+    global WD_W2_activado
+    global WD_W2_esperaSenial
+    global WD_W2_bitsSalida
+    global WD_W2_delayPulso
+    global WD_W2_delayIntervalo
+    global WD_W2_primerBit 
      
-    global WD_errorCode
     global WD_URL 
     global WD_ID
 
     global DIG_in_pushDelay
 
     global DIG_in_in1_activado
-    global DIG_in_in1_pin
     global DIG_in_in1_id
 
     global DIG_in_in2_activado
-    global DIG_in_in2_pin
     global DIG_in_in2_id
   
     global DIG_out_activado 
     global DIG_out_tiempo
     global DIG_out_logica
-    global DIG_out_pin_out1
-    global DIG_out_pin_out2
-    global DIG_out_pin_out3
-    global DIG_out_pin_out4
-    global DIG_out_pin_out5
-    global DIG_out_pin_out6
-    global DIG_out_pin_out7
-    global DIG_out_pin_out8
-
-    global DIG_led1
-    global DIG_led2
-    global DIG_led3
-    global DIG_buzzer
 
     global ON
     global OFF
@@ -154,16 +128,12 @@ def cargarParametros(archivo):
     global TCP_serverDefault_ip 
     global TCP_serverDefault_port 
     global TCP_serverDefault_activado 
-    global TCP_serverDefault_bufferRX 
     global TCP_serverDefault_intentosConexion 
 
     global HTTP_server_activado
     global HTTP_server_port
-    global HTTP_server_reles 
     global HTTP_server_respuesta
-  
-    global MOCK_activado
-    global MOCK_url
+
     global FUNC_modo
  
     global REQ_seleccionURL
@@ -189,7 +159,6 @@ def cargarParametros(archivo):
     global LOGS_hblhidDevice
     global LOGS_hbli2c
     global LOGS_FTP
-    global LOGS_hblRedundancia
     global LOGS_hblSerial
     global LOGS_hblCacheo
     global LOGS_hblKiosco
@@ -203,10 +172,9 @@ def cargarParametros(archivo):
     global HBLCORE_reset_tiempoReset
     global HBLCORE_reset_resetActivado
     global HBLCORE_tamper_activado
-    global HBLCORE_idHBL
 
-    global DEBUG    
-    global versionHBL 
+    global IDHBL
+
 
     global NETWORK_activado
 
@@ -274,11 +242,6 @@ def cargarParametros(archivo):
     global FTP_user
     global FTP_pass 
 
-    global REDUNDANCIA_primeraLetraUnidad
-    global REDUNDANCIA_ultimaLetraUnidad
-    global REDUNDANCIA_primeraParticion
-    global REDUNDANCIA_ultimaParticion
-
     global CACHEO_activado
     global CACHEO_cantidadCacheos
     global CACHEO_cacheosPositivos
@@ -320,6 +283,11 @@ def cargarParametros(archivo):
     # Leo los parametros de configuracion en el JSON
     with open(os.path.join(__location__ , archivo), "r") as f:
         data = json.load(f)
+
+
+
+    
+    ID_HBL = data["IDHBL"]
   
     # reporte
     REPORTE_idNitro4=data["reporte"]["idNitro4"]       
@@ -333,45 +301,36 @@ def cargarParametros(archivo):
     REPORTE_URLReporteInicial=data["reporte"]["URLReporteInicial"]
     REPORTE_URLReporte=data["reporte"]["URLReporte"]
 
-    REPORTE_versionFirmware=data["reporte"]["versionFirmware"] 
-    REPORTE_comandoBash=data["reporte"]["comandoBash"]
-    REPORTE_readLogs=data["reporte"]["readLogs"]   
-    REPORTE_borrarTemp=data["reporte"]["borrarTemp"]
-
     #  Seleccion de funcionamiento hbl
     #
-    #   0  :  repetidor wiegand IN : port0 -> OUT : port1
-    #   1  :  funcionamiento supeditado al request - IN : port0 -> OUT : port1
-    #   2  :  decodificador wiegand port0 - TCP
-    #   3  :  decodificador wiegand port0 - decodificador wiegand port1
+    #   0  :  repetidor wiegand IN : W1 -> OUT : W2
+    #   1  :  funcionamiento supeditado al request - IN : W1 -> OUT : W2
+    #   2  :  decodificador wiegand W1 - TCP
+    #   3  :  decodificador wiegand W1 - decodificador wiegand W2
     #   4  :  hidDevice Teclado - Display LCD - TCP
     #   5  :  lector DNI HID -> wiegand 34
-    #   6  :  decodificador wiegand port0 -> envio ID con request a URL (test lector Tags RFID)
+    #   6  :  decodificador wiegand W1 -> envio ID con request a URL (test lector Tags RFID)
     #   7  :  conexion TCP con minipc para envio de datos del teclado
     #   8  :  lectura serial de lector de dni 2D -> envio wiegand 34 al reloj
-    #   9  :  decodificador wiegand port0 -> envio ID a dato.json
+    #   9  :  decodificador wiegand W1 -> envio ID a dato.json
     FUNC_modo=data["funcionamiento"]["modo"]  
     
     # wiegand
-    WD_port0_activado=data["wiegand"]["port0"]["activado"]
-    WD_port0_esperaSenial=data["wiegand"]["port0"]["esperaSenial"]
-    WD_port0_bits=data["wiegand"]["port0"]["bits"]
-    WD_port0_delayPulso=data["wiegand"]["port0"]["delayPulso"]
-    WD_port0_delayIntervalo=data["wiegand"]["port0"]["delayIntervalo"]
-    WD_port0_primerBit=data["wiegand"]["port0"]["primerBit"]
-    WD_port0_mascara_activada=data["wiegand"]["port0"]["mascara"]["activada"]
-    WD_port0_mascara_valor=data["wiegand"]["port0"]["mascara"]["valor"]
+    WD_W1_activado=data["wiegand"]["W1"]["activado"]
+    WD_W1_esperaSenial=data["wiegand"]["W1"]["esperaSenial"]
+    WD_W1_bits=data["wiegand"]["W1"]["bitsSalida"]
+    WD_W1_delayPulso=data["wiegand"]["W1"]["delayPulso"]
+    WD_W1_delayIntervalo=data["wiegand"]["W1"]["delayIntervalo"]
+    WD_W1_primerBit=data["wiegand"]["W1"]["primerBit"]
 
-    WD_port1_activado=data["wiegand"]["port1"]["activado"]
-    WD_port1_esperaSenial=data["wiegand"]["port1"]["esperaSenial"]
-    WD_port1_bits=data["wiegand"]["port1"]["bits"]
-    WD_port1_delayPulso=data["wiegand"]["port1"]["delayPulso"]
-    WD_port1_delayIntervalo=data["wiegand"]["port1"]["delayIntervalo"]
-    WD_port1_primerBit=data["wiegand"]["port1"]["primerBit"]
-    WD_port1_mascara_activada=data["wiegand"]["port1"]["mascara"]["activada"]
-    WD_port1_mascara_valor=data["wiegand"]["port1"]["mascara"]["valor"]
+    WD_W2_activado=data["wiegand"]["W2"]["activado"]
+    WD_W2_esperaSenial=data["wiegand"]["W2"]["esperaSenial"]
+    WD_W2_bitsSalida=data["wiegand"]["W2"]["bitsSalida"]
+    WD_W2_delayPulso=data["wiegand"]["W2"]["delayPulso"]
+    WD_W2_delayIntervalo=data["wiegand"]["W2"]["delayIntervalo"]
+    WD_W2_primerBit=data["wiegand"]["W2"]["primerBit"]
 
-    WD_errorCode=data["wiegand"]["errorCode"]
+
     WD_URL=data["wiegand"]["URL"]
     WD_ID=data["wiegand"]["ID"]
     WD_URL_timeOutRequest=data["wiegand"]["URL_timeOutRequest"]
@@ -470,18 +429,13 @@ def cargarParametros(archivo):
     TCP_serverDefault_ip=data["tcp"]["serverDefault"]["ip"]
     TCP_serverDefault_port=data["tcp"]["serverDefault"]["port"]
     TCP_serverDefault_activado=data["tcp"]["serverDefault"]["activado"]
-    TCP_serverDefault_bufferRX=data["tcp"]["serverDefault"]["bufferRX"]
     TCP_serverDefault_intentosConexion=data["tcp"]["serverDefault"]["intentosConexion"] 
 
     # http
     HTTP_server_activado=data["http"]["server"]["activado"]
     HTTP_server_port=data["http"]["server"]["port"]
-    HTTP_server_reles=data["http"]["server"]["reles"] 
     HTTP_server_respuesta=data["http"]["server"]["respuesta"] 
 
-    # mock
-    MOCK_activado=data["mock"]["activado"] 
-    MOCK_url=data["mock"]["url"] 
   
     # request
     REQ_seleccionURL=data["request"]["seleccionURL"] 
@@ -509,7 +463,6 @@ def cargarParametros(archivo):
     LOGS_hblhidDevice=data["logs"]["hblhidDevice"]  
     LOGS_hbli2c=data["logs"]["hbli2c"] 
     LOGS_FTP=data["logs"]["hblFTP"] 
-    LOGS_hblRedundancia=data["logs"]["hblRedundancia"] 
     LOGS_hblSerial=data["logs"]["hblSerial"]   
     LOGS_hblCacheo=data["logs"]["hblCacheo"]    
     LOGS_hblKiosco=data["logs"]["hblKiosco"]    
@@ -524,10 +477,9 @@ def cargarParametros(archivo):
     HBLCORE_reset_resetActivado=data["hblCore"]["reset"]["resetActivado"] 
     HBLCORE_reset_tiempoReset=data["hblCore"]["reset"]["tiempoReset"] 
     HBLCORE_tamper_activado=data["hblCore"]["tamper"]["activado"] 
-    HBLCORE_idHBL=data["hblCore"]["idHBL"] 
+
+    IDHBL=data["IDHBL"] 
  
-    DEBUG=data["debug"]  
-    versionHBL=data["versionHBL"]  
 
     # network
     NETWORK_activado=data["network"]["activado"]
@@ -595,11 +547,6 @@ def cargarParametros(archivo):
     FTP_server=data["ftp"]["server"] 
     FTP_user=data["ftp"]["user"] 
     FTP_pass=data["ftp"]["pass"]     
-
-    REDUNDANCIA_primeraLetraUnidad=data["redundancia"]["primeraLetraUnidad"] 
-    REDUNDANCIA_ultimaLetraUnidad=data["redundancia"]["ultimaLetraUnidad"] 
-    REDUNDANCIA_primeraParticion=data["redundancia"]["primeraParticion"] 
-    REDUNDANCIA_ultimaParticion=data["redundancia"]["ultimaParticion"] 
 
     CACHEO_activado=data["cacheo"]["activado"] 
     CACHEO_cantidadCacheos=data["cacheo"]["cantidadCacheos"]

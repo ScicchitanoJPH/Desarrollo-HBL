@@ -32,7 +32,6 @@ from modulos import conexiones as conexiones
 from modulos import reporte as reporte 
 from modulos import ftp as ftp 
 from modulos import tcp as tcp
-from modulos import redundancia as redundancia 
 from modulos import httpServer as httpServer  
 from modulos import serial as serial
 from modulos import kiosco as kiosco
@@ -90,12 +89,12 @@ if __name__ == "__main__":
    main.Entradas(pi, variablesGlobales.Pin_Entrada1, variablesGlobales.Pin_Entrada2, callback)
 
    # inicializa decoder wiegand
-   if hbl.WD_port0_activado == 1:
-      w = main.Decoder(pi, variablesGlobales.Pin_Port0_WD0, variablesGlobales.Pin_Port0_WD1, callback)
+   if hbl.WD_W1_activado == 1:
+      w = main.Decoder(pi, variablesGlobales.Pin_W1_WD0, variablesGlobales.Pin_W1_WD1, callback)
    
    # inicializa encoder wiegand
-   if hbl.WD_port1_activado == 1:
-      main.Encoder(pi, variablesGlobales.Pin_Port1_WD0, variablesGlobales.Pin_Port1_WD1)   
+   if hbl.WD_W2_activado == 1:
+      main.Encoder(pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1)   
  
    # inicializa displays LCD  
    i2cDevice.inicializacion(pi)  
@@ -121,9 +120,6 @@ if __name__ == "__main__":
 
    # inicia reporte HBL
    reporte.inicializacion()
-
-   # inicio Redundancia HBL
-   redundancia.inicializacion()
 
    # inicializacion modulo serial
    serial.inicializacion(pi)
