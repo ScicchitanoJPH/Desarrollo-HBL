@@ -1,6 +1,5 @@
 import json
 import os
-import log
 import sys
 
 """ --------------------------------------------------------------------------------------------
@@ -306,7 +305,6 @@ def cargarParametros(archivo):
 
 
     WD_ID=data["wiegand"]["ID"]
-    REPORTE_timeOutRequest=data["wiegand"]["URL_timeOutRequest"]
   
     # digital
     DIG_in_pushDelay=data["digital"]["in"]["pushDelay"] 

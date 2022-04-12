@@ -57,7 +57,8 @@ def receiveSignal(signalNumber, frame):
    print("Signal received: ", signalNumber) 
    print("Cleaning ...")
    hidDevice.threadCount()
-   w.cancel()                         # cancela el callback de wiegand
+   w1.cancel()                         # cancela el callback de wiegand
+   w2.cancel()                         # cancela el callback de wiegand
    pi.stop()                          # detiene el pigpiod
    os.system("sudo killall pigpiod")  # elimina el deamon del pigpiod
    os.system("sudo killall wvdial")   # eliminar proceso del modem  
