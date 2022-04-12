@@ -147,7 +147,7 @@
         "stopbits": 1
     },
     "display": {
-        "activado":"0"
+        "activado": 1
     },
     "MQTT": {
         "broker": "broker.mqttdashboard.com",

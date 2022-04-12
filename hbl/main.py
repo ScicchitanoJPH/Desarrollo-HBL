@@ -159,5 +159,6 @@ if __name__ == "__main__":
          Monitoreo.Control()
          b = datetime.datetime.now() 
 
-   w.cancel()
+   w1.cancel()
+   w2.cancel()
    pi.stop() 

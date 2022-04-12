@@ -26,6 +26,7 @@ def inicializacion(pi):
         if hbl.DISPLAY_activado == 1:
             lcd1 = lcd_i2c.lcd(pi, width=20, bus=variablesGlobales.BusDisplay) 
             delays.ms(100)
+            lcd1.put_line(0, "HBL") 
  
     except Exception as inst: 
 
