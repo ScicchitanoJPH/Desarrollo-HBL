@@ -109,8 +109,6 @@ if __name__ == "__main__":
    # inicializa dispositivos HID
    hidDevice.inicializacion(pi)     
      
-   # inicializa display oled
-   hblCore.inicializaoled()
 
    # inicializa httpServer
    httpServer.inicializacion(pi)
@@ -148,7 +146,6 @@ if __name__ == "__main__":
    while True:
 
       hblCore.heartBeat(pi)
-      hblCore.oledRefresh()   
       ##MQTT.publish(client)
       MQTT.subscribe(client,pi)
       a = datetime.datetime.now() 
