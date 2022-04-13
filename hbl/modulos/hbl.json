@@ -139,12 +139,22 @@
         "ID": "0001"
     },
     "serial": {
-        "activado": 1,
-        "port": "/dev/ttyS0",
-        "baudrate": 9600,
-        "bytesize": 8,
-        "parity": "N",
-        "stopbits": 1
+        "COM1":{
+            "activado": 1,
+            "port": "/dev/ttyS0",
+            "baudrate": 9600,
+            "bytesize": 8,
+            "parity": "N",
+            "stopbits": 1
+        },
+        "COM2":{
+            "activado": 1,
+            "port": "/dev/ttyAMA1",
+            "baudrate": 9600,
+            "bytesize": 8,
+            "parity": "N",
+            "stopbits": 1
+        }
     },
     "display": {
         "activado": 1
@@ -244,24 +254,6 @@
             "vendor_ID": "0x0c2e",
             "product_ID": "0x0be1"
         }
-    },
-    "hblCore": {
-        "hblDisplay": {
-            "activado": 0,
-            "modo": 1
-        },
-        "serialNumber": "702487a0",
-        "revision": "00c03112",
-        "MAC_ethernet": "dc:a6:32:52:2d:b0",
-        "NTP": "time.cloudflare.com",
-        "reset": {
-            "resetActivado": 0,
-            "tiempoReset": 14400
-        },
-        "tamper": {
-            "activado": 0
-        },
-        "idHBL": "3"
     },
     "ActualizarGit": {
         "Activado": 1

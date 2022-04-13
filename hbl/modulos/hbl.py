@@ -58,12 +58,19 @@ def cargarParametros(archivo):
     global ON
     global OFF
 
-    global SERIAL_activado
-    global SERIAL_port
-    global SERIAL_baudrate
-    global SERIAL_bytesize
-    global SERIAL_parity
-    global SERIAL_stopbits 
+    global SERIAL_COM1_activado
+    global SERIAL_COM1_port
+    global SERIAL_COM1_baudrate
+    global SERIAL_COM1_bytesize
+    global SERIAL_COM1_parity
+    global SERIAL_COM1_stopbits 
+
+    global SERIAL_COM2_activado
+    global SERIAL_COM2_port
+    global SERIAL_COM2_baudrate
+    global SERIAL_COM2_bytesize
+    global SERIAL_COM2_parity
+    global SERIAL_COM2_stopbits
  
     global HID_device1_activado
     global HID_device1_bufferSize 
@@ -131,16 +138,6 @@ def cargarParametros(archivo):
     global LOGS_hblSerial
     global LOGS_hblCacheo
     global LOGS_hblKiosco
- 
-    global HBLCORE_hblDisplay_activado
-    global HBLCORE_hblDisplay_modo 
-    global HBLCORE_serialNumber 
-    global HBLCORE_revision 
-    global HBLCORE_MAC_ethernet 
-    global HBLCORE_NTP 
-    global HBLCORE_reset_tiempoReset
-    global HBLCORE_reset_resetActivado
-    global HBLCORE_tamper_activado
 
     global IDHBL
 
@@ -327,12 +324,19 @@ def cargarParametros(archivo):
         OFF = 1
     
     # serial
-    SERIAL_activado=data["serial"]["activado"]
-    SERIAL_port=data["serial"]["port"]
-    SERIAL_baudrate=data["serial"]["baudrate"]
-    SERIAL_bytesize=data["serial"]["bytesize"]
-    SERIAL_parity=data["serial"]["parity"]
-    SERIAL_stopbits=data["serial"]["stopbits"]   
+    SERIAL_COM1_activado=data["serial"]["COM1"]["activado"]
+    SERIAL_COM1_port=data["serial"]["COM1"]["port"]
+    SERIAL_COM1_baudrate=data["serial"]["COM1"]["baudrate"]
+    SERIAL_COM1_bytesize=data["serial"]["COM1"]["bytesize"]
+    SERIAL_COM1_parity=data["serial"]["COM1"]["parity"]
+    SERIAL_COM1_stopbits=data["serial"]["COM1"]["stopbits"] 
+
+    SERIAL_COM2_activado=data["serial"]["COM2"]["activado"]
+    SERIAL_COM2_port=data["serial"]["COM2"]["port"]
+    SERIAL_COM2_baudrate=data["serial"]["COM2"]["baudrate"]
+    SERIAL_COM2_bytesize=data["serial"]["COM2"]["bytesize"]
+    SERIAL_COM2_parity=data["serial"]["COM2"]["parity"]
+    SERIAL_COM2_stopbits=data["serial"]["COM2"]["stopbits"]   
 
     # hidDevices   
     HID_device1_activado=data["hidDevices"]["device1"]["activado"]
@@ -406,16 +410,7 @@ def cargarParametros(archivo):
     LOGS_hblCacheo=data["logs"]["hblCacheo"]    
     LOGS_hblKiosco=data["logs"]["hblKiosco"]    
 
-    # hblCore
-    HBLCORE_hblDisplay_activado=data["hblCore"]["hblDisplay"]["activado"]
-    HBLCORE_hblDisplay_modo=data["hblCore"]["hblDisplay"]["modo"]
-    HBLCORE_serialNumber=data["hblCore"]["serialNumber"] 
-    HBLCORE_revision=data["hblCore"]["revision"] 
-    HBLCORE_MAC_ethernet=data["hblCore"]["MAC_ethernet"] 
-    HBLCORE_NTP=data["hblCore"]["NTP"] 
-    HBLCORE_reset_resetActivado=data["hblCore"]["reset"]["resetActivado"] 
-    HBLCORE_reset_tiempoReset=data["hblCore"]["reset"]["tiempoReset"] 
-    HBLCORE_tamper_activado=data["hblCore"]["tamper"]["activado"] 
+ 
 
     IDHBL=data["IDHBL"] 
 

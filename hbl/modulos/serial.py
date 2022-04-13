@@ -30,18 +30,24 @@ def startThreadSerial():
 
     global pi
 
-    ser = serial.Serial(port=hbl.SERIAL_port, baudrate=hbl.SERIAL_baudrate, bytesize=hbl.SERIAL_bytesize, parity=hbl.SERIAL_parity, stopbits=hbl.SERIAL_stopbits)
-    ser.flushInput()
+    ser1 = serial.Serial(port=hbl.SERIAL_COM1_port, baudrate=hbl.SERIAL_COM1_baudrate, bytesize=hbl.SERIAL_COM1_bytesize, parity=hbl.SERIAL_COM1_parity, stopbits=hbl.SERIAL_COM1_stopbits)
+    ser1.flushInput()
+
+    ser2 = serial.Serial(port=hbl.SERIAL_COM2_port, baudrate=hbl.SERIAL_COM2_baudrate, bytesize=hbl.SERIAL_COM2_bytesize, parity=hbl.SERIAL_COM2_parity, stopbits=hbl.SERIAL_COM2_stopbits)
+    ser2.flushInput()
               
     while True: 
 
         if hbl.FUNC_modo == 8:
 
             try: 
-                received_data = ser.readline()
+                received_data = ser1.readline()
+                received_data = ser2.readline()
                 time.sleep(0.03)
-                data_left = ser.inWaiting()
-                received_data +=ser.read(data_left) 
+                data_left = ser1.inWaiting()
+                data_left = ser2.inWaiting()
+                received_data +=ser1.read(data_left) 
+                data_left = ser2.inWaiting()
 
                 log.escribeSeparador(hbl.LOGS_hblSerial)
                 log.escribeLineaLog(hbl.LOGS_hblSerial, "Datos Serial recibidos : " + str(received_data)) 
@@ -85,7 +91,7 @@ def inicializacion(pi2):
  
     pi = pi2
 
-    if hbl.SERIAL_activado == 1:
+    if hbl.SERIAL_COM1_activado == 1:
  
         try:
 
@@ -103,4 +109,24 @@ def inicializacion(pi2):
             errorExcepcion = "ERROR : " + str(fname) + " - linea : " + str(sys.exc_info()[-1].tb_lineno) + " - mensaje : " + str(exc_obj) 
 
             log.escribeSeparador(hbl.LOGS_hblSerial)
-            log.escribeLineaLog(hbl.LOGS_hblSerial, "Error : " + str(errorExcepcion))         
+            log.escribeLineaLog(hbl.LOGS_hblSerial, "Error : " + str(errorExcepcion)) 
+
+    if hbl.SERIAL_COM2_activado == 1:
+ 
+        try:
+
+            serialHBL = threading.Thread(target=startThreadSerial, name='HBLSerial')
+            serialHBL.setDaemon(True)
+            serialHBL.start()   
+
+            log.escribeSeparador(hbl.LOGS_hblSerial)
+            log.escribeLineaLog(hbl.LOGS_hblSerial, "Serial Start")  
+        
+        except Exception as e:
+              
+            exc_type, exc_obj, exc_tb = sys.exc_info() 
+            fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1] 
+            errorExcepcion = "ERROR : " + str(fname) + " - linea : " + str(sys.exc_info()[-1].tb_lineno) + " - mensaje : " + str(exc_obj) 
+
+            log.escribeSeparador(hbl.LOGS_hblSerial)
+            log.escribeLineaLog(hbl.LOGS_hblSerial, "Error : " + str(errorExcepcion))        

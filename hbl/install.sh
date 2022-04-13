@@ -17,6 +17,7 @@ apt install libtiff5 -y
 apt install git -y
 apt-get install dialog -y
 apt install jq  #Instala libreria para parsear el json
+sudo apt-get install python3-paho-mqtt
 
 # Descargo AnyDesk si no existe
 if [ ! -e /home/pi/anydesk_6.1.1-1_armhf.deb ]; then

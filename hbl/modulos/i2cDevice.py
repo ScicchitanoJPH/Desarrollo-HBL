@@ -9,17 +9,11 @@ from modulos import variablesGlobales as variablesGlobales
 
 
 global lcd1
-global lcd2
-global lcd3
-global lcd4
 
 def inicializacion(pi):
     auxiliar.EscribirFuncion("inicializacion")
 
     global lcd1
-    global lcd2
-    global lcd3
-    global lcd4
 
     # inicializa displays LCD   
     try:

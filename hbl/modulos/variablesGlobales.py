@@ -1,3 +1,4 @@
+from modulos import hblCore
 
 """ ******************************************************************************************
 
@@ -49,6 +50,18 @@ versionHBL = "3.0"
 
 ############################################################################
 #                                                                          #
+#                                Reporte                                   #
+#                                                                          #
+############################################################################
+
+RPI_SerialNumber = hblCore.leer_numero_serie()
+RPI_Revision = hblCore.leer_revision()
+RPI_MacEthernet = hblCore.leer_MAC_Address('eth0')
+RPI_MacWlan = hblCore.leer_MAC_Address('wlan0')
+NTP_URL = "time.cloudflare.com"
+
+############################################################################
+#                                                                          #
 #                          Definicion de pines                             #
 #                                                                          #
 ############################################################################
@@ -86,5 +99,5 @@ Pin_W2_WD0 = 17
 Pin_W2_WD1 = 27
 
 """     I2C      """
-BusDisplay=3
+BusDisplay = 3
 
