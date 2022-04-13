@@ -204,9 +204,6 @@
         "hblCacheo": "hblCacheo.log",
         "hblKiosco": "hblKiosco.log"
     },
-    "Seguimiento": {
-        "file_path": "Segumiento.txt"
-    },
     "reporte": {
         "activado": 1,
         "idNitro4": 2112,

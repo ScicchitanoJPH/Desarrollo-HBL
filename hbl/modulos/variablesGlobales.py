@@ -44,6 +44,7 @@ listaAleatoria = []
 HBLCORE_contadorReset = 0
 pressTick = 0
 jsonEnvioDNI = ""
+Seguimiento_file_path = "Seguimiento.txt"
 
 versionHBL = "3.0"
 

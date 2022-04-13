@@ -228,8 +228,6 @@ def cargarParametros(archivo):
     global MQTT_TopicSend
     global MQTT_TopicRecv
 
-    global Seguimiento_file_path
-
 
     # ******************************************************************************************************************************************
     
@@ -503,8 +501,6 @@ def cargarParametros(archivo):
     MQTT_port=data["MQTT"]["port"]
     MQTT_TopicSend=data["MQTT"]["TopicSend"]
     MQTT_TopicRecv=data["MQTT"]["TopicRecv"]
-    
-    Seguimiento_file_path=data["Seguimiento"]["file_path"]
 
 
 
