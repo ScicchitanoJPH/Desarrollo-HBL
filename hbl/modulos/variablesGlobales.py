@@ -1,4 +1,45 @@
-from modulos import hblCore
+import os
+""" --------------------------------------------------------------------------------------------
+
+   leer los numeros de serie / revision / mac address de la RPI
+
+   ej:
+
+    # MAC Address del Ethernet adapter
+    ethtool --show-permaddr eth0    
+    # res : dc:a6:32:52:2d:ee
+
+    # otro metodo :
+    $ vcgencmd otp_dump | grep '65:' 
+    $ vcgencmd otp_dump | grep '64:' 
+
+    # MAC Address del WiFi adapter
+    ethtool --show-permaddr wlan0   
+
+    # averiguar el numero de serie de la RPI
+    $ vcgencmd otp_dump | grep '28:' 
+    # res : 28:f9976413
+
+    # averiguar la revision de la RPI (2G, 4G, etc)
+    $ vcgencmd otp_dump | grep '30:' 
+    # res : 30:00c03112
+
+-------------------------------------------------------------------------------------------- """
+
+def leer_numero_serie():
+    numeroSerie = os.popen("vcgencmd otp_dump | grep '28:'").readline()
+    numeroSerie = numeroSerie.replace("\n", "")
+    return (numeroSerie.replace("28:", ""))
+
+def leer_revision():
+    revision = os.popen("vcgencmd otp_dump | grep '30:'").readline()
+    revision = revision.replace("\n", "")
+    return (revision.replace("30:", ""))
+
+def leer_MAC_Address(interfase):
+    macAddress = os.popen("ethtool --show-permaddr " + interfase).readline()
+    macAddress = macAddress.replace("\n", "")
+    return (macAddress.replace("Permanent address: ", "")) 
 
 """ ******************************************************************************************
 
@@ -55,10 +96,10 @@ versionHBL = "3.0"
 #                                                                          #
 ############################################################################
 
-RPI_SerialNumber = hblCore.leer_numero_serie()
-RPI_Revision = hblCore.leer_revision()
-RPI_MacEthernet = hblCore.leer_MAC_Address('eth0')
-RPI_MacWlan = hblCore.leer_MAC_Address('wlan0')
+RPI_SerialNumber = leer_numero_serie()
+RPI_Revision = leer_revision()
+RPI_MacEthernet = leer_MAC_Address('eth0')
+RPI_MacWlan = leer_MAC_Address('wlan0')
 NTP_URL = "time.cloudflare.com"
 
 ############################################################################

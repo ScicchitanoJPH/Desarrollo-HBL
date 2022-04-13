@@ -1,9 +1,8 @@
 
 import os
 
-from modulos import log as log, variablesGlobales
-from modulos import hbl as hbl
-
+from modulos import log as log
+from modulos import variablesGlobales as variablesGlobales
 """ --------------------------------------------------------------------------------------------
  
     Funciones auxiliares del HBL

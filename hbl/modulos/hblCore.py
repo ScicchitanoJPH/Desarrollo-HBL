@@ -230,52 +230,7 @@ def sincronizarHora():
         log.escribeSeparador(hbl.LOGS_hblCore)
         log.escribeLineaLog(hbl.LOGS_hblCore, "Error : " + str(errorExcepcion))  
 
-""" --------------------------------------------------------------------------------------------
 
-   leer los numeros de serie / revision / mac address de la RPI
-
-   ej:
-
-    # MAC Address del Ethernet adapter
-    ethtool --show-permaddr eth0    
-    # res : dc:a6:32:52:2d:ee
-
-    # otro metodo :
-    $ vcgencmd otp_dump | grep '65:' 
-    $ vcgencmd otp_dump | grep '64:' 
-
-    # MAC Address del WiFi adapter
-    ethtool --show-permaddr wlan0   
-
-    # averiguar el numero de serie de la RPI
-    $ vcgencmd otp_dump | grep '28:' 
-    # res : 28:f9976413
-
-    # averiguar la revision de la RPI (2G, 4G, etc)
-    $ vcgencmd otp_dump | grep '30:' 
-    # res : 30:00c03112
-
--------------------------------------------------------------------------------------------- """
-
-def leer_numero_serie():
-    auxiliar.EscribirFuncion("leer_numero_serie")
-
-    numeroSerie = os.popen("vcgencmd otp_dump | grep '28:'").readline()
-    numeroSerie = numeroSerie.replace("\n", "")
-    return (numeroSerie.replace("28:", ""))
-
-def leer_revision():
-    auxiliar.EscribirFuncion("leer_revision")
-
-    revision = os.popen("vcgencmd otp_dump | grep '30:'").readline()
-    revision = revision.replace("\n", "")
-    return (revision.replace("30:", ""))
-
-def leer_MAC_Address(interfase):
-    auxiliar.EscribirFuncion("leer_MAC_Address")
-    macAddress = os.popen("ethtool --show-permaddr " + interfase).readline()
-    macAddress = macAddress.replace("\n", "")
-    return (macAddress.replace("Permanent address: ", "")) 
 
 """ --------------------------------------------------------------------------------------------
 
