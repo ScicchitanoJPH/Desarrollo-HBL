@@ -118,7 +118,6 @@ def cargarParametros(archivo):
     global REQ_urlRequest3
     global REQ_urlRequest4
     global REQ_urlRequest5
-    global REQ_modoRequest
     global REQ_urlError
     global REQ_timeoutRequest
     global REQ_timerActivado 
@@ -385,7 +384,6 @@ def cargarParametros(archivo):
     REQ_urlRequest3=data["request"]["urlRequest3"] 
     REQ_urlRequest4=data["request"]["urlRequest4"] 
     REQ_urlRequest5=data["request"]["urlRequest5"] 
-    REQ_modoRequest=data["request"]["modoRequest"]
 
     REQ_urlError=data["request"]["urlError"] 
     REQ_timeoutRequest=data["request"]["timeoutRequest"] 
