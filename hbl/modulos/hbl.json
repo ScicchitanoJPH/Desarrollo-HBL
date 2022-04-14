@@ -45,7 +45,6 @@
         "urlRequest4": "",
         "urlRequest5": "",
         "urlError": "http://localhost/jphaccess/error.php",
-        "modoRequest": 2,
         "timerActivado": 0,
         "timeoutRequest": 10
     },
@@ -120,7 +119,7 @@
     "wiegand": {
         "W1": {
             "activado": 1,
-            "modo":"Entrada",
+            "modo":"IN",
             "esperaSenial": 0,
             "bitsSalida": 0,
             "delayPulso": 8e-05,
@@ -129,7 +128,7 @@
         },
         "W2": {
             "activado": 1,
-            "modo":"Salida",
+            "modo":"OUT",
             "esperaSenial": 0,
             "bitsSalida": 0,
             "delayPulso": 5e-05,
