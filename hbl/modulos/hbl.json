@@ -3,6 +3,18 @@
     "funcionamiento": {
         "modo": 9
     },
+    "Tareas":{
+        "Tarea1":"",
+        "Tarea2":"",
+        "Tarea3":"",
+        "Tarea4":"",
+        "Tarea5":"",
+        "Tarea6":"",
+        "Tarea7":"",
+        "Tarea8":"",
+        "Tarea9":"",
+        "Tarea10":""
+    },
     "cacheo": {
         "activado": 1,
         "cantidadCacheos": 10,
@@ -31,9 +43,22 @@
             }
         },
         "out": {
-            "activado": 1,
-            "tiempo": 1,
-            "logica": 1
+            "out1":{
+                "activado": 1,
+                "tiempo": 1
+            },
+            "out2":{
+                "activado": 1,
+                "tiempo": 1
+            },
+            "out3":{
+                "activado": 1,
+                "tiempo": 1
+            },
+            "out4":{
+                "activado": 1,
+                "tiempo": 1
+            }
         }
     },
     "request": {
@@ -134,8 +159,7 @@
             "delayPulso": 5e-05,
             "delayIntervalo": 0.002,
             "primerBit": 9
-        },
-        "ID": "0001"
+        }
     },
     "serial": {
         "COM1":{
@@ -219,6 +243,7 @@
     },
     "hidDevices": {
         "device1": {
+            "nombre":"Teclado generico",
             "activado": 1,
             "bufferSize": 20,
             "timeout": 200,
@@ -227,6 +252,7 @@
             "product_ID": "0x0001"
         },
         "device2": {
+            "nombre":"Lector DNI",
             "activado": 0,
             "bufferSize": 20,
             "timeout": 20000,
@@ -235,6 +261,7 @@
             "product_ID": "0x1200"
         },
         "device3": {
+            "nombre":"Lector ZK",
             "activado": 0,
             "bufferSize": 20,
             "timeout": 2000,
@@ -243,6 +270,7 @@
             "product_ID": "0x0035"
         },
         "device4": {
+            "nombre":"Honeywell Imaging & Mobility 7580",
             "activado": 0,
             "bufferSize": 20,
             "timeout": 200,

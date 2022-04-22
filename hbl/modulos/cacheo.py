@@ -13,10 +13,10 @@ from modulos import auxiliar as auxiliar
 
     PINOUT 
 
-        luzVerde = DIG_out_pin_out1
-        sirena  = DIG_out_pin_out2
-        luzRoja = DIG_out_pin_out3
-        barrera = DIG_out_pin_out4
+        luzVerde = Pin_Salida1
+        sirena  = Pin_Salida2
+        luzRoja = Pin_Salida3
+        barrera = Pin_Salida4
 
 ****************************************************************************************** """  
 

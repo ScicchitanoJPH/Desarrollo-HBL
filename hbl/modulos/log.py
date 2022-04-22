@@ -75,7 +75,7 @@ def escribeCabecera(LogName, tipoEvento):
     logFile.write("/usr/programas/hbl/log/")
     logFile.write("\n")
     logFile.write("Tiempo act/des salidas (seg) : ")
-    logFile.write(str(hbl.DIG_out_tiempo))
+    logFile.write(str(hbl.DIG_out_out1_tiempo))
     logFile.write("\n")
     logFile.write("----------------------------------------------------------------------------------") 
     logFile.write("\n")

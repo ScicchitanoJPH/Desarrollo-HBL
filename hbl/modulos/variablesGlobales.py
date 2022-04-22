@@ -120,10 +120,6 @@ Pin_Salida1 = 5
 Pin_Salida2 = 6
 Pin_Salida3 = 26
 Pin_Salida4 = 16
-Pin_Salida5 = 27
-Pin_Salida6 = 17
-Pin_Salida7 = 24
-Pin_Salida8 = 23
 
 """     USER LEDS      """
 

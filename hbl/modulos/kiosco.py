@@ -7,8 +7,14 @@ def inicializacion():
     auxiliar.EscribirFuncion("inicializacion")
 
     if hbl.KIOSCO_activado:
+        URL = "XAUTHORITY=/root/Xauthority firefox -kiosk -printing -private-window " + "'" + hbl.KIOSCO_URL + "' "
 
-        URL = "XAUTHORITY=/root/Xauthority firefox -kiosk -printing -private-window " + "'" + hbl.KIOSCO_URL + "' " + "-width " + hbl.KIOSCO_width + " -height " + hbl.KIOSCO_height + " &"
+        if hbl.KIOSCO_width != "":
+            URL = URL + "-width " + hbl.KIOSCO_width 
+        if hbl.KIOSCO_height != "":
+            URL = URL + " -height " + hbl.KIOSCO_height
+
+        URL = URL + " &"    
 
         log.escribeLineaLog(hbl.LOGS_hblKiosco,"Abriendo: " + hbl.KIOSCO_URL)
         try:

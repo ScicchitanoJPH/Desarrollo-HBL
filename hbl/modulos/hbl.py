@@ -41,7 +41,7 @@ def cargarParametros(archivo):
     global WD_W2_delayIntervalo
     global WD_W2_primerBit 
      
-    global WD_ID
+
 
     global DIG_in_pushDelay
 
@@ -51,9 +51,21 @@ def cargarParametros(archivo):
     global DIG_in_in2_activado
     global DIG_in_in2_id
   
-    global DIG_out_activado 
-    global DIG_out_tiempo
-    global DIG_out_logica
+    global DIG_out_out1_activado 
+    global DIG_out_out1_tiempo
+    global DIG_out_out1_logica
+
+    global DIG_out_out2_activado 
+    global DIG_out_out2_tiempo
+    global DIG_out_out2_logica
+
+    global DIG_out_out3_activado 
+    global DIG_out_out3_tiempo
+    global DIG_out_out3_logica
+
+    global DIG_out_out4_activado 
+    global DIG_out_out4_tiempo
+    global DIG_out_out4_logica
 
     global ON
     global OFF
@@ -298,7 +310,6 @@ def cargarParametros(archivo):
     WD_W2_primerBit=data["wiegand"]["W2"]["primerBit"]
 
 
-    WD_ID=data["wiegand"]["ID"]
   
     # digital
     DIG_in_pushDelay=data["digital"]["in"]["pushDelay"] 
@@ -308,17 +319,27 @@ def cargarParametros(archivo):
     DIG_in_in2_activado=data["digital"]["in"]["in2"]["activado"]
     DIG_in_in2_id=data["digital"]["in"]["in2"]["id"]
  
-    DIG_out_activado=data["digital"]["out"]["activado"]
-    DIG_out_tiempo=data["digital"]["out"]["tiempo"]
-    DIG_out_logica=data["digital"]["out"]["logica"]
+    DIG_out_out1_activado=data["digital"]["out"]["out1"]["activado"]
+    DIG_out_out1_tiempo=data["digital"]["out"]["out1"]["tiempo"]
+    DIG_out_out1_logica=data["digital"]["out"]["out1"]["logica"]
+
+    DIG_out_out2_activado=data["digital"]["out"]["out2"]["activado"]
+    DIG_out_out2_tiempo=data["digital"]["out"]["out2"]["tiempo"]
+    DIG_out_out2_logica=data["digital"]["out"]["out2"]["logica"]
+
+    DIG_out_out3_activado=data["digital"]["out"]["out3"]["activado"]
+    DIG_out_out3_tiempo=data["digital"]["out"]["out3"]["tiempo"]
+    DIG_out_out3_logica=data["digital"]["out"]["out3"]["logica"]
+
+    DIG_out_out4_activado=data["digital"]["out"]["out4"]["activado"]
+    DIG_out_out4_tiempo=data["digital"]["out"]["out4"]["tiempo"]
+    DIG_out_out4_logica=data["digital"]["out"]["out4"]["logica"]
     
     # define la logica si es inversa o directa
-    if DIG_out_logica == 0:
-        ON = 1
-        OFF = 0
-    else :   
-        ON = 0
-        OFF = 1
+
+    ON = 1
+    OFF = 0
+
     
     # serial
     SERIAL_COM1_activado=data["serial"]["COM1"]["activado"]
