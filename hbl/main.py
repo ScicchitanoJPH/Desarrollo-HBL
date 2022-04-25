@@ -58,8 +58,15 @@ def receiveSignal(signalNumber, frame):
    print("Signal received: ", signalNumber) 
    print("Cleaning ...")
    hidDevice.threadCount()
-   w1.cancel()                         # cancela el callback de wiegand
-   w2.cancel()                         # cancela el callback de wiegand
+   try:
+      w1.cancel()                         # cancela el callback de wiegand
+   except Exception as e:
+      pass
+   try:
+      w2.cancel()                         # cancela el callback de wiegand
+   except Exception as e:
+      pass
+
    pi.stop()                          # detiene el pigpiod
    os.system("sudo killall pigpiod")  # elimina el deamon del pigpiod
    os.system("sudo killall wvdial")   # eliminar proceso del modem  
@@ -142,6 +149,7 @@ if __name__ == "__main__":
 
    b = datetime.datetime.now() 
 
+   NumeroTarea = 1
 
    # heartbeat hblCore
    while True:
@@ -150,7 +158,7 @@ if __name__ == "__main__":
       ##MQTT.publish(client)
       MQTT.subscribe(client,pi)
       a = datetime.datetime.now() 
-      funcionamiento.Tareas()
+      NumeroTarea = funcionamiento.Control(NumeroTarea)
       
       c = a-b
 

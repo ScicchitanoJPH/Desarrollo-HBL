@@ -4,12 +4,12 @@
         "modo": 9
     },
     "Tareas":{
-        "Tarea1":"",
-        "Tarea2":"",
-        "Tarea3":"",
-        "Tarea4":"",
-        "Tarea5":"",
-        "Tarea6":"",
+        "Tarea1":"Leer Serial",
+        "Tarea2":"Recibir Wiegand",
+        "Tarea3":"Enviar Wiegand",
+        "Tarea4":"Request",
+        "Tarea5":"Cacheo",
+        "Tarea6":"Activar Reles",
         "Tarea7":"",
         "Tarea8":"",
         "Tarea9":"",
