@@ -347,19 +347,15 @@ def cargarParametros(archivo):
  
     DIG_out_out1_activado=data["digital"]["out"]["out1"]["activado"]
     DIG_out_out1_tiempo=data["digital"]["out"]["out1"]["tiempo"]
-    DIG_out_out1_logica=data["digital"]["out"]["out1"]["logica"]
 
     DIG_out_out2_activado=data["digital"]["out"]["out2"]["activado"]
     DIG_out_out2_tiempo=data["digital"]["out"]["out2"]["tiempo"]
-    DIG_out_out2_logica=data["digital"]["out"]["out2"]["logica"]
 
     DIG_out_out3_activado=data["digital"]["out"]["out3"]["activado"]
     DIG_out_out3_tiempo=data["digital"]["out"]["out3"]["tiempo"]
-    DIG_out_out3_logica=data["digital"]["out"]["out3"]["logica"]
 
     DIG_out_out4_activado=data["digital"]["out"]["out4"]["activado"]
     DIG_out_out4_tiempo=data["digital"]["out"]["out4"]["tiempo"]
-    DIG_out_out4_logica=data["digital"]["out"]["out4"]["logica"]
     
     # define la logica si es inversa o directa
 
