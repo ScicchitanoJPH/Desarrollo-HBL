@@ -91,7 +91,7 @@
             "dhcp": 1,
             "static_ip_address": "192.168.1.1/24",
             "static_routers": "192.168.1.1",
-            "ssid": "JPH Labo 2",
+            "ssid": "tecnica",
             "password": "Jphlions135",
             "metric": 201
         },

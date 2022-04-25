@@ -37,6 +37,7 @@ from modulos import serial as serial
 from modulos import kiosco as kiosco
 from modulos import MQTT as MQTT
 from modulos import Monitoreo as Monitoreo
+from modulos import funcionamiento as funcionamiento
 
 from modulos.decoderWiegand import Decoder
 from modulos.encoderWiegand import Encoder
@@ -149,6 +150,7 @@ if __name__ == "__main__":
       ##MQTT.publish(client)
       MQTT.subscribe(client,pi)
       a = datetime.datetime.now() 
+      funcionamiento.Tareas()
       
       c = a-b
 

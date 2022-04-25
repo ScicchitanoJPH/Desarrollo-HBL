@@ -2,6 +2,7 @@ import json
 import os
 import sys
 
+
 """ --------------------------------------------------------------------------------------------
 
 
@@ -24,6 +25,18 @@ def cargarParametros(archivo):
     global REPORTE_URLChequeoConfiguracion 
     global REPORTE_URLReporteInicial 
     global REPORTE_URLReporte
+
+
+    global TAREAS_Tarea1
+    global TAREAS_Tarea2
+    global TAREAS_Tarea3
+    global TAREAS_Tarea4
+    global TAREAS_Tarea5
+    global TAREAS_Tarea6
+    global TAREAS_Tarea7
+    global TAREAS_Tarea8
+    global TAREAS_Tarea9
+    global TAREAS_Tarea10
 
     global WD_W1_activado
     global WD_W1_modo
@@ -53,19 +66,15 @@ def cargarParametros(archivo):
   
     global DIG_out_out1_activado 
     global DIG_out_out1_tiempo
-    global DIG_out_out1_logica
 
     global DIG_out_out2_activado 
     global DIG_out_out2_tiempo
-    global DIG_out_out2_logica
 
     global DIG_out_out3_activado 
     global DIG_out_out3_tiempo
-    global DIG_out_out3_logica
 
     global DIG_out_out4_activado 
     global DIG_out_out4_tiempo
-    global DIG_out_out4_logica
 
     global ON
     global OFF
@@ -239,6 +248,9 @@ def cargarParametros(archivo):
     global MQTT_TopicSend
     global MQTT_TopicRecv
 
+    global data
+
+
 
     # ******************************************************************************************************************************************
     
@@ -277,6 +289,20 @@ def cargarParametros(archivo):
     REPORTE_URLChequeoConfiguracion=data["reporte"]["URLChequeoConfiguracion"] 
     REPORTE_URLReporteInicial=data["reporte"]["URLReporteInicial"]
     REPORTE_URLReporte=data["reporte"]["URLReporte"]
+
+
+
+
+    TAREAS_Tarea1=data['Tareas']['Tarea1']
+    TAREAS_Tarea2=data['Tareas']['Tarea2']
+    TAREAS_Tarea3=data['Tareas']['Tarea3']
+    TAREAS_Tarea4=data['Tareas']['Tarea4']
+    TAREAS_Tarea5=data['Tareas']['Tarea5']
+    TAREAS_Tarea6=data['Tareas']['Tarea6']
+    TAREAS_Tarea7=data['Tareas']['Tarea7']
+    TAREAS_Tarea8=data['Tareas']['Tarea8']
+    TAREAS_Tarea9=data['Tareas']['Tarea9']
+    TAREAS_Tarea10=data['Tareas']['Tarea10']
 
     #  Seleccion de funcionamiento hbl
     #
