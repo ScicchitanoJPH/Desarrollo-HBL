@@ -37,6 +37,8 @@ def cargarParametros(archivo):
     global TAREAS_Tarea8
     global TAREAS_Tarea9
     global TAREAS_Tarea10
+    global TareasJSON
+    global CantidadTareas
 
     global WD_W1_activado
     global WD_W1_modo
@@ -303,6 +305,13 @@ def cargarParametros(archivo):
     TAREAS_Tarea8=data['Tareas']['Tarea8']
     TAREAS_Tarea9=data['Tareas']['Tarea9']
     TAREAS_Tarea10=data['Tareas']['Tarea10']
+
+    TareasJSON = data['Tareas']
+    CantidadTareas = 0
+
+    for key in TareasJSON:
+        if TareasJSON[key] != "":
+            CantidadTareas = CantidadTareas + 1
 
     #  Seleccion de funcionamiento hbl
     #
