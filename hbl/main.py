@@ -149,8 +149,6 @@ if __name__ == "__main__":
 
    b = datetime.datetime.now() 
 
-   NumeroTarea = 1
-
    # heartbeat hblCore
    while True:
 
@@ -158,7 +156,7 @@ if __name__ == "__main__":
       ##MQTT.publish(client)
       MQTT.subscribe(client,pi)
       a = datetime.datetime.now() 
-      NumeroTarea = funcionamiento.Control(NumeroTarea)
+      funcionamiento.Control()
       
       c = a-b
 

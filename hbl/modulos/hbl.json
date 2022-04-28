@@ -4,12 +4,12 @@
         "modo": 9
     },
     "Tareas":{
-        "Tarea1":"Leer Serial",
-        "Tarea2":"Recibir Wiegand",
-        "Tarea3":"Enviar Wiegand",
-        "Tarea4":"Request",
-        "Tarea5":"Cacheo",
-        "Tarea6":"Activar Reles",
+        "Tarea1":"Leer Serial", 
+        "Tarea2":"Enviar Wiegand",
+        "Tarea3":"",
+        "Tarea4":"",
+        "Tarea5":"",
+        "Tarea6":"",
         "Tarea7":"",
         "Tarea8":"",
         "Tarea9":"",
@@ -225,7 +225,8 @@
         "hblFTP": "hblFTP.log",
         "hblSerial": "hblSerial.log",
         "hblCacheo": "hblCacheo.log",
-        "hblKiosco": "hblKiosco.log"
+        "hblKiosco": "hblKiosco.log",
+        "hblTareas": "hblTareas.log"
     },
     "reporte": {
         "activado": 1,

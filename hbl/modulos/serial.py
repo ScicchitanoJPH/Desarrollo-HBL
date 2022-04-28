@@ -11,9 +11,8 @@ from serial import SerialException
 
 from modulos import hbl as hbl 
 from modulos import log as log
-from modulos.encoderWiegand import Encoder
 from modulos import hblCore as hblCore
-from modulos import variablesGlobales as variablesGlobales
+from modulos import variablesGlobales as VG
 from modulos import auxiliar as auxiliar
 
 global pi
@@ -35,40 +34,28 @@ def startThreadSerial1():
               
     while True: 
 
-        if hbl.FUNC_modo == 8:
+        if hbl.SERIAL_COM1_activado == 1:
+            if VG.TareaAcutal == "Leer Serial":
 
-            try: 
-                received_data = ser1.readline()
-                time.sleep(0.03)
-                data_left = ser1.inWaiting()
-                received_data +=ser1.read(data_left) 
+                try: 
+                    VG.Serial_COM1_Rx_Data = ser1.readline()
+                    time.sleep(0.03)
+                    data_left = ser1.inWaiting()
+                    VG.Serial_COM1_Rx_Data +=ser1.read(data_left) 
 
-                log.escribeSeparador(hbl.LOGS_hblSerial)
-                log.escribeLineaLog(hbl.LOGS_hblSerial, "Datos Serial recibidos : " + str(received_data)) 
+                    log.escribeSeparador(hbl.LOGS_hblSerial)
+                    log.escribeLineaLog(hbl.LOGS_hblSerial, "Datos Serial recibidos : " + str(VG.Serial_COM1_Rx_Data)) 
 
-                ### Extraccion del DNI y envio por Wiegand 34
-                valorDNI = auxiliar.splitDNI(str(received_data), hbl.LOGS_hblSerial)
-                log.escribeLineaLog(hbl.LOGS_hblSerial, "Valor DNI extraido: " + str(valorDNI)) 
 
-                ### Conversion del DNI a wiegand
-                DNIWiegand = auxiliar.dniToWiegandConverter(valorDNI, 34, hbl.LOGS_hblSerial)
     
-                ### Envio codigo wiegand
-                Encoder.encoderWiegandBits(DNIWiegand, pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1) 
+                except Exception as e:
+                
+                    exc_type, exc_obj, exc_tb = sys.exc_info() 
+                    fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1] 
+                    errorExcepcion = "ERROR : " + str(fname) + " - linea : " + str(sys.exc_info()[-1].tb_lineno) + " - mensaje : " + str(exc_obj) 
 
-                ### Enciende led indicador
-                hblCore.encenderLed(pi, 1, int(50))
-
-                log.escribeLineaLog(hbl.LOGS_hblSerial, "Wiegand enviado")  
- 
-            except Exception as e:
-              
-                exc_type, exc_obj, exc_tb = sys.exc_info() 
-                fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1] 
-                errorExcepcion = "ERROR : " + str(fname) + " - linea : " + str(sys.exc_info()[-1].tb_lineno) + " - mensaje : " + str(exc_obj) 
-
-                log.escribeSeparador(hbl.LOGS_hblSerial)
-                log.escribeLineaLog(hbl.LOGS_hblSerial, "Error : " + str(errorExcepcion)) 
+                    log.escribeSeparador(hbl.LOGS_hblSerial)
+                    log.escribeLineaLog(hbl.LOGS_hblSerial, "Error : " + str(errorExcepcion)) 
         
         time.sleep(0.01)
 
@@ -82,40 +69,28 @@ def startThreadSerial2():
               
     while True: 
 
-        if hbl.FUNC_modo == 8:
+        if hbl.SERIAL_COM2_activado == 1:
+            if VG.TareaAcutal == "Leer Serial":
 
-            try: 
-                received_data = ser2.readline()
-                time.sleep(0.03)
-                data_left = ser2.inWaiting()
-                received_data +=ser2.read(data_left) 
+                try: 
+                    VG.Serial_COM2_Rx_Data = ser2.readline()
+                    time.sleep(0.03)
+                    data_left = ser2.inWaiting()
+                    VG.Serial_COM2_Rx_Data +=ser2.read(data_left) 
 
-                log.escribeSeparador(hbl.LOGS_hblSerial)
-                log.escribeLineaLog(hbl.LOGS_hblSerial, "Datos Serial recibidos : " + str(received_data)) 
+                    log.escribeSeparador(hbl.LOGS_hblSerial)
+                    log.escribeLineaLog(hbl.LOGS_hblSerial, "Datos Serial recibidos : " + str(VG.Serial_COM2_Rx_Data)) 
 
-                ### Extraccion del DNI y envio por Wiegand 34
-                valorDNI = auxiliar.splitDNI(str(received_data), hbl.LOGS_hblSerial)
-                log.escribeLineaLog(hbl.LOGS_hblSerial, "Valor DNI extraido: " + str(valorDNI)) 
-
-                ### Conversion del DNI a wiegand
-                DNIWiegand = auxiliar.dniToWiegandConverter(valorDNI, 34, hbl.LOGS_hblSerial)
+                      
     
-                ### Envio codigo wiegand
-                Encoder.encoderWiegandBits(DNIWiegand, pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1) 
+                except Exception as e:
+                
+                    exc_type, exc_obj, exc_tb = sys.exc_info() 
+                    fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1] 
+                    errorExcepcion = "ERROR : " + str(fname) + " - linea : " + str(sys.exc_info()[-1].tb_lineno) + " - mensaje : " + str(exc_obj) 
 
-                ### Enciende led indicador
-                hblCore.encenderLed(pi, 1, int(50))
-
-                log.escribeLineaLog(hbl.LOGS_hblSerial, "Wiegand enviado")  
- 
-            except Exception as e:
-              
-                exc_type, exc_obj, exc_tb = sys.exc_info() 
-                fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1] 
-                errorExcepcion = "ERROR : " + str(fname) + " - linea : " + str(sys.exc_info()[-1].tb_lineno) + " - mensaje : " + str(exc_obj) 
-
-                log.escribeSeparador(hbl.LOGS_hblSerial)
-                log.escribeLineaLog(hbl.LOGS_hblSerial, "Error : " + str(errorExcepcion)) 
+                    log.escribeSeparador(hbl.LOGS_hblSerial)
+                    log.escribeLineaLog(hbl.LOGS_hblSerial, "Error : " + str(errorExcepcion)) 
         
         time.sleep(0.01)
     
