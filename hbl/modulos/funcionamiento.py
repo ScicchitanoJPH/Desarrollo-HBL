@@ -13,7 +13,7 @@ def TareaLeerSerial(data):
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Serial") 
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Datos Serial recibidos : " + str(data)) 
-    VG.NumeroTarea+1    ##Esto solo deberia estar cuando se finalice esta tarea
+    VG.NumeroTarea = VG.NumeroTarea+1    ##Esto solo deberia estar cuando se finalice esta tarea
     return str(data)
 
 
@@ -43,7 +43,7 @@ def TareaEnviarWD(data):
         log.escribeSeparador(hbl.LOGS_hblTareas)
         log.escribeLineaLog(hbl.LOGS_hblTareas, "ERROR : Ninugno de los dos WD estan activados y/o en modo salida") 
 
-    VG.NumeroTarea+1
+    VG.NumeroTarea = VG.NumeroTarea + 1
 
 def Control():
     if VG.NumeroTarea >= hbl.CantidadTareas:
