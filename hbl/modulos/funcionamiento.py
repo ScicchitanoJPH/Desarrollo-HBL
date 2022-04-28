@@ -53,8 +53,10 @@ def Control():
         VG.TareaAcutal = hbl.TareasJSON['Tarea1']
         if VG.Serial_COM1_Rx_Data != "":
             DNI_data = TareaLeerSerial(VG.Serial_COM1_Rx_Data)
+            VG.Serial_COM1_Rx_Data = ""
         if VG.Serial_COM2_Rx_Data != "":
             DNI_data = TareaLeerSerial(VG.Serial_COM2_Rx_Data)         
+            VG.Serial_COM2_Rx_Data = ""
                 
     if VG.NumeroTarea == 2:
         VG.TareaAcutal = hbl.TareasJSON['Tarea2']
