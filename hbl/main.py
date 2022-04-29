@@ -156,7 +156,7 @@ if __name__ == "__main__":
       ##MQTT.publish(client)
       MQTT.subscribe(client,pi)
       a = datetime.datetime.now() 
-      funcionamiento.Control()
+      funcionamiento.Control(pi)
       
       c = a-b
 
