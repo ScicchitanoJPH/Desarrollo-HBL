@@ -123,16 +123,24 @@ def TareaLeerWD():
         w1 = decoderWiegand.Decoder(pi, VG.Pin_W1_WD0, VG.Pin_W1_WD1, callback)
     if hbl.WD_W2_activado and hbl.WD_W2_modo == "IN":
         w2 = decoderWiegand.Decoder(pi, VG.Pin_W2_WD0, VG.Pin_W2_WD1, callback)
-    log.escribeLineaLog(hbl.LOGS_hblTareas, "ID = " + num_IN) 
-    VG.NumeroTarea = VG.NumeroTarea + 1
+    
+    if num_IN =="":
+        pass
+    else:
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "ID = " + num_IN) 
+        VG.NumeroTarea = VG.NumeroTarea + 1
+
+    
 
 
 
 
 def Control(pi2):
     global pi
+    global num_IN
+    num_IN = ""
     pi = pi2
-    if VG.NumeroTarea >= hbl.CantidadTareas:
+    if VG.NumeroTarea > hbl.CantidadTareas:
         VG.NumeroTarea = 1
 
     if VG.NumeroTarea == 1:
