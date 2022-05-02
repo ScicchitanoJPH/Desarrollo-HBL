@@ -99,9 +99,11 @@ def TareaRequest():
 
         req = requests.get(UrlCompletaReq, timeout=int(hbl.REQ_timeoutRequest))
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Respuesta Request: " + req)
+        VG.NumeroTarea = VG.NumeroTarea + 1
 
     except Exception as e:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "ERROR Request: ")
+        VG.NumeroTarea = VG.NumeroTarea + 1
 
 
 
@@ -120,6 +122,7 @@ def TareaLeerWD():
         w2 = decoderWiegand.Decoder(pi, VG.Pin_W2_WD0, VG.Pin_W2_WD1, callback)
         id = w2._cb(pi)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "ID = " + id) 
+    VG.NumeroTarea = VG.NumeroTarea + 1
 
 
 
@@ -141,33 +144,33 @@ def Control(pi2):
 
     if VG.NumeroTarea == 3:
         VG.TareaAcutal = hbl.TareasJSON['Tarea3']
-        VG.NumeroTarea+1
+        Tareas(hbl.TareasJSON['Tarea3'])
 
     if VG.NumeroTarea == 4:
         VG.TareaAcutal = hbl.TareasJSON['Tarea4']
-        VG.NumeroTarea+1
+        Tareas(hbl.TareasJSON['Tarea4'])
 
     if VG.NumeroTarea == 5:
         VG.TareaAcutal = hbl.TareasJSON['Tarea5']
-        VG.NumeroTarea+1
+        Tareas(hbl.TareasJSON['Tarea5'])
 
     if VG.NumeroTarea == 6:
         VG.TareaAcutal = hbl.TareasJSON['Tarea6']
-        VG.NumeroTarea+1
+        Tareas(hbl.TareasJSON['Tarea6'])
 
     if VG.NumeroTarea == 7:
         VG.TareaAcutal = hbl.TareasJSON['Tarea7']
-        VG.NumeroTarea+1
+        Tareas(hbl.TareasJSON['Tarea7'])
 
     if VG.NumeroTarea == 8:
         VG.TareaAcutal = hbl.TareasJSON['Tarea8']
-        VG.NumeroTarea+1
+        Tareas(hbl.TareasJSON['Tarea8'])
 
     if VG.NumeroTarea == 9:
         VG.TareaAcutal = hbl.TareasJSON['Tarea9']
-        VG.NumeroTarea+1
+        Tareas(hbl.TareasJSON['Tarea9'])
 
     if VG.NumeroTarea == 10:
         VG.TareaAcutal = hbl.TareasJSON['Tarea10']
-        VG.NumeroTarea+1                       
+        Tareas(hbl.TareasJSON['Tarea10'])          
     
