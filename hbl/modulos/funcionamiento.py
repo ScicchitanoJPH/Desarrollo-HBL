@@ -4,10 +4,11 @@ from modulos import variablesGlobales as VG
 from modulos import log as log
 from modulos import auxiliar as auxiliar
 from modulos.encoderWiegand import Encoder
+from modulos import decoderWiegand
 from modulos import hblCore as hblCore
+import requests
 
 global DNI_data
-
 
 def Tareas(RunTask):
     global DNI_data
@@ -20,6 +21,10 @@ def Tareas(RunTask):
             VG.Serial_COM2_Rx_Data = ""
     if RunTask == "Enviar Wiegand":
         TareaEnviarWD(DNI_data,pi)
+    if RunTask == "Leer Wiegand":
+        TareaLeerWD()
+    if RunTask == "Request":
+        TareaRequest()
 
 
 
@@ -31,6 +36,8 @@ def TareaLeerSerial(data):
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Datos Serial recibidos : " + str(data)) 
     VG.NumeroTarea = VG.NumeroTarea+1    ##Esto solo deberia estar cuando se finalice esta tarea
     return str(data)
+
+
 
 
 def TareaEnviarWD(data,pi):
@@ -68,6 +75,53 @@ def TareaEnviarWD(data,pi):
         log.escribeLineaLog(hbl.LOGS_hblTareas, "ERROR : Ninugno de los dos WD estan activados y/o en modo salida") 
 
     VG.NumeroTarea = VG.NumeroTarea + 1
+
+
+
+
+def TareaRequest():
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Request") 
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    try:
+        if hbl.REQ_seleccionURL == 1:
+            UrlCompletaReq = hbl.REQ_urlRequest1 + str(id)
+        elif hbl.REQ_seleccionURL == 2:
+            UrlCompletaReq = hbl.REQ_urlRequest2 + str(id)
+        elif hbl.REQ_seleccionURL == 3:
+            UrlCompletaReq = hbl.REQ_urlRequest3 + str(id)
+        elif hbl.REQ_seleccionURL == 4:
+            UrlCompletaReq = hbl.REQ_urlRequest4 + str(id)
+        elif hbl.REQ_seleccionURL == 5:
+            UrlCompletaReq = hbl.REQ_urlRequest5 + str(id)
+
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "URL Request: " + UrlCompletaReq)
+
+        req = requests.get(UrlCompletaReq, timeout=int(hbl.REQ_timeoutRequest))
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "Respuesta Request: " + req)
+
+    except Exception as e:
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "ERROR Request: ")
+
+
+
+
+def callback():
+      pass
+def TareaLeerWD():
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Wiegand") 
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+
+    if hbl.WD_W1_activado and hbl.WD_W1_modo == "IN":
+        w1 = decoderWiegand.Decoder(pi, VG.Pin_W1_WD0, VG.Pin_W1_WD1, callback)
+        id = w1._cb(pi)
+    if hbl.WD_W2_activado and hbl.WD_W2_modo == "IN":
+        w2 = decoderWiegand.Decoder(pi, VG.Pin_W2_WD0, VG.Pin_W2_WD1, callback)
+        id = w2._cb(pi)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "ID = " + id) 
+
+
 
 
 def Control(pi2):

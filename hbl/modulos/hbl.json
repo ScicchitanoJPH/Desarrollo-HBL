@@ -6,8 +6,8 @@
     "Tareas":{
         "Tarea1":"Leer Serial", 
         "Tarea2":"Enviar Wiegand",
-        "Tarea3":"",
-        "Tarea4":"",
+        "Tarea3":"Leer Wiegand",
+        "Tarea4":"Request",
         "Tarea5":"",
         "Tarea6":"",
         "Tarea7":"",

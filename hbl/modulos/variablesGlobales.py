@@ -76,6 +76,11 @@ global pressTick
 global jsonEnvioDNI
 
 
+#   Wiegand
+global w1
+global w2
+
+
 
 
 # inicializacion variables globales

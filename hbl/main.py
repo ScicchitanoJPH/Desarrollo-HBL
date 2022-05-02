@@ -46,6 +46,8 @@ from modulos.entradas import Entradas
 from modulos import variablesGlobales as variablesGlobales
 
 global pi
+global w1
+global w2
 
 
 """ --------------------------------------------------------------------------------------------
@@ -96,21 +98,7 @@ if __name__ == "__main__":
 
    # inicializa las entradas de la hbl
    main.Entradas(pi, variablesGlobales.Pin_Entrada1, variablesGlobales.Pin_Entrada2, callback)
-
-   # inicializa decoder wiegand
-   if hbl.WD_W1_activado == 1:
-      if hbl.WD_W1_modo == "IN":
-         w1 = main.Decoder(pi, variablesGlobales.Pin_W1_WD0, variablesGlobales.Pin_W1_WD1, callback)
-      if hbl.WD_W1_modo == "OUT":
-         main.Encoder(pi, variablesGlobales.Pin_W1_WD0, variablesGlobales.Pin_W1_WD1)   
    
-   # inicializa encoder wiegand
-   if hbl.WD_W2_activado == 1:
-      if hbl.WD_W2_modo == "IN":
-         w2 = main.Decoder(pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1, callback)
-      if hbl.WD_W2_modo == "OUT":
-         main.Encoder(pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1)   
- 
    # inicializa displays LCD  
    i2cDevice.inicializacion(pi)  
    
@@ -157,7 +145,6 @@ if __name__ == "__main__":
       MQTT.subscribe(client,pi)
       a = datetime.datetime.now() 
       funcionamiento.Control(pi)
-      
       c = a-b
 
       if c.total_seconds() >= 500:
