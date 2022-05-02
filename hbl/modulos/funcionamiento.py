@@ -108,20 +108,22 @@ def TareaRequest():
 
 
 
-def callback():
-      pass
+def callback(bits, code):
+  global num_IN
+  #print("code={}".format(code))
+  num_IN=code
+
 def TareaLeerWD():
+    global num_IN
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Wiegand") 
     log.escribeSeparador(hbl.LOGS_hblTareas)
 
     if hbl.WD_W1_activado and hbl.WD_W1_modo == "IN":
         w1 = decoderWiegand.Decoder(pi, VG.Pin_W1_WD0, VG.Pin_W1_WD1, callback)
-        id = w1._cb(pi)
     if hbl.WD_W2_activado and hbl.WD_W2_modo == "IN":
         w2 = decoderWiegand.Decoder(pi, VG.Pin_W2_WD0, VG.Pin_W2_WD1, callback)
-        id = w2._cb(pi)
-    log.escribeLineaLog(hbl.LOGS_hblTareas, "ID = " + id) 
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "ID = " + num_IN) 
     VG.NumeroTarea = VG.NumeroTarea + 1
 
 
