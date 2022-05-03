@@ -4,7 +4,6 @@ import time
 import datetime 
 import json
 import os
-from hbl.modulos.variablesGlobales import Pin_W1_WD0
 
 from modulos import hbl as hbl
 from modulos import log as log

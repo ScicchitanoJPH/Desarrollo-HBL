@@ -8,10 +8,10 @@ from modulos import decoderWiegand
 from modulos import hblCore as hblCore
 import requests
 
-global DNI_data
+global DNI_data_serial
 
 def Tareas(RunTask):
-    global DNI_data
+    global DNI_data_serial
     if RunTask == "Leer Serial":
         if VG.Serial_COM1_Rx_Data != "":
             DNI_data_serial = TareaLeerSerial(VG.Serial_COM1_Rx_Data)
@@ -24,8 +24,10 @@ def Tareas(RunTask):
     if RunTask == "Leer Wiegand":
         if VG.WD1_Data != "":
             ID_data_WD = TareaLeerWD(VG.WD1_Data ,1)
+            VG.WD1_Data = ""
         if VG.WD2_Data != "":
             ID_data_WD = TareaLeerWD(VG.WD2_Data ,2)
+            VG.WD2_Data = ""
     if RunTask == "Request":
         TareaRequest()
 
@@ -118,7 +120,7 @@ def TareaLeerWD(id,WD_number):
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Wiegand") 
     log.escribeSeparador(hbl.LOGS_hblTareas)
 
-    log.escribeLineaLog(hbl.LOGS_hblTareas, "ID WD" + str(WD_number) + " = " + id) 
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "ID WD" + str(WD_number) + " = " + str(id)) 
     VG.NumeroTarea = VG.NumeroTarea + 1
     
     
