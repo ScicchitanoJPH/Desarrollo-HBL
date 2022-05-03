@@ -14,15 +14,18 @@ def Tareas(RunTask):
     global DNI_data
     if RunTask == "Leer Serial":
         if VG.Serial_COM1_Rx_Data != "":
-            DNI_data = TareaLeerSerial(VG.Serial_COM1_Rx_Data)
+            DNI_data_serial = TareaLeerSerial(VG.Serial_COM1_Rx_Data)
             VG.Serial_COM1_Rx_Data = ""
         if VG.Serial_COM2_Rx_Data != "":
-            DNI_data = TareaLeerSerial(VG.Serial_COM2_Rx_Data)         
+            DNI_data_serial = TareaLeerSerial(VG.Serial_COM2_Rx_Data)         
             VG.Serial_COM2_Rx_Data = ""
     if RunTask == "Enviar Wiegand":
-        TareaEnviarWD(DNI_data,pi)
+        TareaEnviarWD(DNI_data_serial,pi)
     if RunTask == "Leer Wiegand":
-        TareaLeerWD()
+        if VG.WD1_Data != "":
+            ID_data_WD = TareaLeerWD(VG.WD1_Data ,1)
+        if VG.WD2_Data != "":
+            ID_data_WD = TareaLeerWD(VG.WD2_Data ,2)
     if RunTask == "Request":
         TareaRequest()
 
@@ -108,27 +111,17 @@ def TareaRequest():
 
 
 
-def callback(bits, code):
-  global num_IN
-  #print("code={}".format(code))
-  num_IN=code
 
-def TareaLeerWD():
-    global num_IN
+def TareaLeerWD(id,WD_number):
+    flag_data=0
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Wiegand") 
     log.escribeSeparador(hbl.LOGS_hblTareas)
 
-    if hbl.WD_W1_activado and hbl.WD_W1_modo == "IN":
-        w1 = decoderWiegand.Decoder(pi, VG.Pin_W1_WD0, VG.Pin_W1_WD1, callback)
-    if hbl.WD_W2_activado and hbl.WD_W2_modo == "IN":
-        w2 = decoderWiegand.Decoder(pi, VG.Pin_W2_WD0, VG.Pin_W2_WD1, callback)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "ID WD" + str(WD_number) + " = " + id) 
+    VG.NumeroTarea = VG.NumeroTarea + 1
     
-    if num_IN =="":
-        pass
-    else:
-        log.escribeLineaLog(hbl.LOGS_hblTareas, "ID = " + num_IN) 
-        VG.NumeroTarea = VG.NumeroTarea + 1
+    
 
     
 
@@ -137,8 +130,6 @@ def TareaLeerWD():
 
 def Control(pi2):
     global pi
-    global num_IN
-    num_IN = ""
     pi = pi2
     if VG.NumeroTarea > hbl.CantidadTareas:
         VG.NumeroTarea = 1

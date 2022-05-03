@@ -76,9 +76,7 @@ global pressTick
 global jsonEnvioDNI
 
 
-#   Wiegand
-global w1
-global w2
+
 
 
 
@@ -105,6 +103,9 @@ TareaAcutal = ""
 NumeroTarea = 1
 Serial_COM1_Rx_Data = ""
 Serial_COM2_Rx_Data = ""
+WD1_Data = ""
+WD2_Data = ""
+
 
 
 ############################################################################

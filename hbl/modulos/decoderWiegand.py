@@ -4,6 +4,7 @@ import time
 import datetime 
 import json
 import os
+from hbl.modulos.variablesGlobales import Pin_W1_WD0
 
 from modulos import hbl as hbl
 from modulos import log as log
@@ -99,10 +100,13 @@ class Decoder:
                numero = self.num 
                
                try:
-                  
                   numeroBinario = bin(numero)[2:].zfill(cantidadBits)   
-                  id = int(numeroBinario.format(numero)[hbl.WD_W1_primerBit:int(cantidadBits-1)],2)  
-               
+                  if self.gpio_0 == variablesGlobales.Pin_W1_WD0:
+                     id = int(numeroBinario.format(numero)[hbl.WD_W1_primerBit:int(cantidadBits-1)],2) 
+                     variablesGlobales.WD1_Data = id
+                  else:
+                     id = int(numeroBinario.format(numero)[hbl.WD_W2_primerBit:int(cantidadBits-1)],2) 
+                     variablesGlobales.WD2_Data = id
 
                except: 
 
