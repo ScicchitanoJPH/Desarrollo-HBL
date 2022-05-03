@@ -1,4 +1,3 @@
-from cmath import pi
 from modulos import hbl as hbl
 from modulos import variablesGlobales as VG
 from modulos import log as log
@@ -7,11 +6,13 @@ from modulos.encoderWiegand import Encoder
 from modulos import decoderWiegand
 from modulos import hblCore as hblCore
 import requests
+import pigpio 
 
 global DNI_data_serial
 
 def Tareas(RunTask):
     global DNI_data_serial
+    global pi
     if RunTask == "Leer Serial":
         if VG.Serial_COM1_Rx_Data != "":
             DNI_data_serial = TareaLeerSerial(VG.Serial_COM1_Rx_Data)
@@ -30,6 +31,8 @@ def Tareas(RunTask):
             VG.WD2_Data = ""
     if RunTask == "Request":
         TareaRequest()
+    if RunTask == "Confirmacion Reloj":
+        TareaConfirmacionReloj()
 
 
 
@@ -37,7 +40,6 @@ def Tareas(RunTask):
 def TareaLeerSerial(data):
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Serial") 
-    log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Datos Serial recibidos : " + str(data)) 
     VG.NumeroTarea = VG.NumeroTarea+1    ##Esto solo deberia estar cuando se finalice esta tarea
     return str(data)
@@ -87,7 +89,6 @@ def TareaEnviarWD(data,pi):
 def TareaRequest():
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Request") 
-    log.escribeSeparador(hbl.LOGS_hblTareas)
     try:
         if hbl.REQ_seleccionURL == 1:
             UrlCompletaReq = hbl.REQ_urlRequest1 + str(id)
@@ -118,7 +119,6 @@ def TareaLeerWD(id,WD_number):
     flag_data=0
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Wiegand") 
-    log.escribeSeparador(hbl.LOGS_hblTareas)
 
     log.escribeLineaLog(hbl.LOGS_hblTareas, "ID WD" + str(WD_number) + " = " + str(id)) 
     VG.NumeroTarea = VG.NumeroTarea + 1
@@ -128,6 +128,17 @@ def TareaLeerWD(id,WD_number):
     
 
 
+def TareaConfirmacionReloj():
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Corfirmacion de Reloj") 
+    pi = pigpio.pi()
+    pin = auxiliar.Id2Pin("Reloj")
+    data = pi.read(pin)
+    if data > 26:
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "Confirmacion de Reloj Recibida") 
+        VG.NumeroTarea = VG.NumeroTarea + 1
+
+    
 
 
 def Control(pi2):

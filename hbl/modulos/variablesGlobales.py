@@ -1,4 +1,5 @@
 import os
+import pigpio 
 
 """ --------------------------------------------------------------------------------------------
 
@@ -126,10 +127,16 @@ NTP_URL = "time.cloudflare.com"
 #                                                                          #
 ############################################################################
 
+"""       GPIO       """
+
+pi = pigpio.pi()
+
 """       ENTRADAS       """
 
 Pin_Entrada1 = 21
 Pin_Entrada2 = 20
+Pin_Entrada3 = 25
+Pin_Entrada4 = 22
 
 
 """       SALIDAS       """

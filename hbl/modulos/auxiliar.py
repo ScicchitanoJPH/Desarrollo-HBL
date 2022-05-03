@@ -3,6 +3,7 @@ import os
 
 from modulos import log as log
 from modulos import variablesGlobales as variablesGlobales
+from modulos import hbl as hbl
 """ --------------------------------------------------------------------------------------------
  
     Funciones auxiliares del HBL
@@ -197,3 +198,16 @@ def dniToWiegandConverter(dni, bits, logueo):
 
     return dniToWiegand
 
+
+
+def Id2Pin(id):
+    if hbl.DIG_in_in1_id == id:
+        return variablesGlobales.Pin_Entrada1
+    elif hbl.DIG_in_in2_id == id:
+        return variablesGlobales.Pin_Entrada2
+    elif hbl.DIG_in_in3_id == id:
+        return variablesGlobales.Pin_Entrada3
+    elif hbl.DIG_in_in4_id == id:
+        return variablesGlobales.Pin_Entrada4
+    else:
+        return 99 #ERROR

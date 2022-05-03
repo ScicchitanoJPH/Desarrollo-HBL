@@ -65,6 +65,12 @@ def cargarParametros(archivo):
 
     global DIG_in_in2_activado
     global DIG_in_in2_id
+
+    global DIG_in_in3_activado
+    global DIG_in_in3_id
+
+    global DIG_in_in4_activado
+    global DIG_in_in4_id
   
     global DIG_out_out1_activado 
     global DIG_out_out1_tiempo
@@ -354,6 +360,12 @@ def cargarParametros(archivo):
 
     DIG_in_in2_activado=data["digital"]["in"]["in2"]["activado"]
     DIG_in_in2_id=data["digital"]["in"]["in2"]["id"]
+    
+    DIG_in_in3_activado=data["digital"]["in"]["in3"]["activado"]
+    DIG_in_in3_id=data["digital"]["in"]["in3"]["id"]
+
+    DIG_in_in4_activado=data["digital"]["in"]["in4"]["activado"]
+    DIG_in_in4_id=data["digital"]["in"]["in4"]["id"]
  
     DIG_out_out1_activado=data["digital"]["out"]["out1"]["activado"]
     DIG_out_out1_tiempo=data["digital"]["out"]["out1"]["tiempo"]
