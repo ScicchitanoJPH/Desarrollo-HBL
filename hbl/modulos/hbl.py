@@ -61,16 +61,28 @@ def cargarParametros(archivo):
     global DIG_in_pushDelay
 
     global DIG_in_in1_activado
+    global DIG_in_in1_logica
     global DIG_in_in1_id
+    global DIG_in_in1_ON
+    global DIG_in_in1_OFF
 
     global DIG_in_in2_activado
+    global DIG_in_in2_logica
     global DIG_in_in2_id
+    global DIG_in_in2_ON
+    global DIG_in_in2_OFF
 
     global DIG_in_in3_activado
+    global DIG_in_in3_logica
     global DIG_in_in3_id
+    global DIG_in_in3_ON
+    global DIG_in_in3_OFF
 
     global DIG_in_in4_activado
+    global DIG_in_in4_logica
     global DIG_in_in4_id
+    global DIG_in_in4_ON
+    global DIG_in_in4_OFF
   
     global DIG_out_out1_activado 
     global DIG_out_out1_tiempo
@@ -356,16 +368,40 @@ def cargarParametros(archivo):
     # digital
     DIG_in_pushDelay=data["digital"]["in"]["pushDelay"] 
     DIG_in_in1_activado=data["digital"]["in"]["in1"]["activado"]
-    DIG_in_in1_id=data["digital"]["in"]["in1"]["id"]
+    DIG_in_in1_logica=data["digital"]["in"]["in1"]["logica"]
+    DIG_in_in1_id=data["digital"]["in"]["in1"]["id"]    
 
     DIG_in_in2_activado=data["digital"]["in"]["in2"]["activado"]
+    DIG_in_in2_logica=data["digital"]["in"]["in2"]["logica"]
     DIG_in_in2_id=data["digital"]["in"]["in2"]["id"]
     
     DIG_in_in3_activado=data["digital"]["in"]["in3"]["activado"]
+    DIG_in_in3_logica=data["digital"]["in"]["in3"]["logica"]
     DIG_in_in3_id=data["digital"]["in"]["in3"]["id"]
 
     DIG_in_in4_activado=data["digital"]["in"]["in4"]["activado"]
+    DIG_in_in4_logica=data["digital"]["in"]["in4"]["logica"]
     DIG_in_in4_id=data["digital"]["in"]["in4"]["id"]
+
+    if DIG_in_in1_logica == "NA":
+        DIG_in_in1_ON = 0
+        DIG_in_in1_OFF = 1
+    if DIG_in_in2_logica == "NA":
+        DIG_in_in2_ON = 0
+        DIG_in_in2_OFF = 1
+    if DIG_in_in3_logica == "NA":
+        DIG_in_in3_ON = 0
+        DIG_in_in3_OFF = 1
+    if DIG_in_in4_logica == "NA":
+        DIG_in_in4_ON = 0
+        DIG_in_in4_OFF = 1
+
+
+
+
+
+
+
  
     DIG_out_out1_activado=data["digital"]["out"]["out1"]["activado"]
     DIG_out_out1_tiempo=data["digital"]["out"]["out1"]["tiempo"]

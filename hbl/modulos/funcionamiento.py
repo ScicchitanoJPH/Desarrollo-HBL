@@ -9,6 +9,7 @@ import requests
 import pigpio 
 
 global DNI_data_serial
+global pi
 
 def Tareas(RunTask):
     global DNI_data_serial
@@ -129,14 +130,19 @@ def TareaLeerWD(id,WD_number):
 
 
 def TareaConfirmacionReloj():
+    global pi
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Corfirmacion de Reloj") 
-    pi = pigpio.pi()
-    pin = auxiliar.Id2Pin("Reloj")
-    data = pi.read(pin)
-    if data > 26:
-        log.escribeLineaLog(hbl.LOGS_hblTareas, "Confirmacion de Reloj Recibida") 
-        VG.NumeroTarea = VG.NumeroTarea + 1
+    pin,on,off = auxiliar.Id2Pin("Reloj")
+    if pin == 99:
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "ERROR : PIN INVALIDO") 
+        VG.NumeroTarea = 1
+    else:
+        data = pi.read(pin)
+        print("DATA = " + str(data))
+        if data == on:
+            log.escribeLineaLog(hbl.LOGS_hblTareas, "Confirmacion de Reloj Recibida") 
+            VG.NumeroTarea = VG.NumeroTarea + 1
 
     
 

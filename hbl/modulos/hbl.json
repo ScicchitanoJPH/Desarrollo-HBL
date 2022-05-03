@@ -35,18 +35,22 @@
             "pushDelay": 500000,
             "in1": {
                 "activado": 0,
+                "logica":"NA",
                 "id": "Reloj"
             },
             "in2": {
                 "activado": 0,
+                "logica":"NA",
                 "id": "Entrada 2"
             },
             "in3": {
                 "activado": 0,
+                "logica":"NA",
                 "id": "Entrada 3"
             },
             "in4": {
                 "activado": 0,
+                "logica":"NA",
                 "id": "Entrada 4"
             }
         },
