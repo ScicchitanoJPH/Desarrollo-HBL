@@ -155,11 +155,20 @@ def TareaConfirmacionReloj():
 
 def TareaCacheo():
     global pi
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Cacheo") 
     resultado_cacheo = cacheo.procesoCacheo(pi)
     if resultado_cacheo:
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "Resultado Cacheo : POSITIVO") 
         pin = auxiliar.GetInfoID("Sirena","OUT")
         pi.write(pin,1)
+    else:
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "Resultado Cacheo : NEGATIVO") 
+    
+
+    VG.NumeroTarea = VG.NumeroTarea + 1
         
+
 
 
 

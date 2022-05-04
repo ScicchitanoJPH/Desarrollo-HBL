@@ -235,6 +235,7 @@ def procesoCacheo(pi):
     auxiliar.EscribirFuncion("procesoCacheo")
 
     try:
+        flag = 0
         
         if variablesGlobales.ubicacionCacheo >= hbl.CACHEO_cantidadCacheos: # Una vez que recorrida la lista la cantidad de veces necesaria (CantidadCacheos), genero una lista nueva
             variablesGlobales.ubicacionCacheo = 0
@@ -259,15 +260,17 @@ def procesoCacheo(pi):
         if variablesGlobales.valorEncontrado == 1:
             #NoPasa(pi)
             log.escribeLineaLog(hbl.LOGS_hblCacheo, "NoPasa :" + str(variablesGlobales.ubicacionCacheo)) 
+            flag = 1
         else:
             #Pasa(pi)
             log.escribeLineaLog(hbl.LOGS_hblCacheo, "Pasa :" + str(variablesGlobales.ubicacionCacheo))            
+            flag = 0
          
         # incrementa la variable en 1
         variablesGlobales.ubicacionCacheo = variablesGlobales.ubicacionCacheo + 1
         # reinicia la variable 
         variablesGlobales.valorEncontrado = 0 
-        return variablesGlobales.valorEncontrado
+        return flag
     
     except Exception as e:  
 
