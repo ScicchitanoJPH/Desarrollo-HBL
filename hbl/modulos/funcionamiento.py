@@ -160,8 +160,8 @@ def TareaCacheo():
     resultado_cacheo = cacheo.procesoCacheo(pi)
     if resultado_cacheo:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Resultado Cacheo : POSITIVO") 
-        pin = auxiliar.GetInfoID("Sirena","OUT")
-        pi.write(pin,1)
+        auxiliar.EscribirSalida(pi,"Sirena")
+        
     else:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Resultado Cacheo : NEGATIVO") 
     

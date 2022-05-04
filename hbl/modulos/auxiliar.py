@@ -4,6 +4,7 @@ import os
 from modulos import log as log
 from modulos import variablesGlobales as variablesGlobales
 from modulos import hbl as hbl
+import time
 """ --------------------------------------------------------------------------------------------
  
     Funciones auxiliares del HBL
@@ -214,12 +215,20 @@ def GetInfoID(id,modo):
             return 99 #ERROR
     else:
         if hbl.DIG_out_out1_id == id:
-            return variablesGlobales.Pin_Salida1
+            return variablesGlobales.Pin_Salida1 , hbl.DIG_out_out1_repeticion , hbl.DIG_out_out1_tiempo
         elif hbl.DIG_out_out2_id == id:
-            return variablesGlobales.Pin_Entrada2
+            return variablesGlobales.Pin_Salida2 , hbl.DIG_out_out2_repeticion , hbl.DIG_out_out2_tiempo
         elif hbl.DIG_out_out3_id == id:
-            return variablesGlobales.Pin_Entrada3
+            return variablesGlobales.Pin_Salida3 , hbl.DIG_out_out3_repeticion , hbl.DIG_out_out3_tiempo
         elif hbl.DIG_out_out4_id == id:
-            return variablesGlobales.Pin_Entrada4
+            return variablesGlobales.Pin_Salida4 , hbl.DIG_out_out4_repeticion , hbl.DIG_out_out4_tiempo
         else:
             return 99 #ERROR
+
+def EscribirSalida(pi,id):
+    pin,rep,tiempo = GetInfoID(id,"OUT")
+    for x in range(rep):
+        pi.write(pin,1)
+        time.sleep(tiempo)
+        pi.write(pin,0)
+        time.sleep(tiempo)

@@ -86,18 +86,22 @@ def cargarParametros(archivo):
   
     global DIG_out_out1_activado 
     global DIG_out_out1_id 
+    global DIG_out_out1_repeticion 
     global DIG_out_out1_tiempo
 
     global DIG_out_out2_activado 
     global DIG_out_out2_id 
+    global DIG_out_out2_repeticion 
     global DIG_out_out2_tiempo
 
     global DIG_out_out3_activado 
-    global DIG_out_out3_id 
+    global DIG_out_out3_id
+    global DIG_out_out3_repeticion  
     global DIG_out_out3_tiempo
 
     global DIG_out_out4_activado 
     global DIG_out_out4_id 
+    global DIG_out_out4_repeticion
     global DIG_out_out4_tiempo
 
     global ON
@@ -409,18 +413,22 @@ def cargarParametros(archivo):
  
     DIG_out_out1_activado=data["digital"]["out"]["out1"]["activado"]
     DIG_out_out1_id=data["digital"]["out"]["out1"]["id"]
+    DIG_out_out1_repeticion=data["digital"]["out"]["out1"]["repeticion"]
     DIG_out_out1_tiempo=data["digital"]["out"]["out1"]["tiempo"]
 
     DIG_out_out2_activado=data["digital"]["out"]["out2"]["activado"]
     DIG_out_out2_id=data["digital"]["out"]["out2"]["id"]
+    DIG_out_out2_repeticion=data["digital"]["out"]["out2"]["repeticion"]
     DIG_out_out2_tiempo=data["digital"]["out"]["out2"]["tiempo"]
 
     DIG_out_out3_activado=data["digital"]["out"]["out3"]["activado"]
     DIG_out_out3_id=data["digital"]["out"]["out3"]["id"]
+    DIG_out_out3_repeticion=data["digital"]["out"]["out3"]["repeticion"]
     DIG_out_out3_tiempo=data["digital"]["out"]["out3"]["tiempo"]
 
     DIG_out_out4_activado=data["digital"]["out"]["out4"]["activado"]
     DIG_out_out4_id=data["digital"]["out"]["out4"]["id"]
+    DIG_out_out4_repeticion=data["digital"]["out"]["out4"]["repeticion"]
     DIG_out_out4_tiempo=data["digital"]["out"]["out4"]["tiempo"]
     
     # define la logica si es inversa o directa

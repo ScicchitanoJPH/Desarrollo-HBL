@@ -58,21 +58,25 @@
             "out1":{
                 "activado": 1,
                 "id": "Sirena",
+                "repeticion": 3,
                 "tiempo": 1
             },
             "out2":{
                 "activado": 1,
                 "id": "Salida 2",
+                "repeticion": 3,
                 "tiempo": 1
             },
             "out3":{
                 "activado": 1,
                 "id": "Salida 3",
+                "repeticion": 3,
                 "tiempo": 1
             },
             "out4":{
                 "activado": 1,
                 "id": "Salida 4",
+                "repeticion": 3,
                 "tiempo": 1
             }
         }
