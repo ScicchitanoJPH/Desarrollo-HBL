@@ -200,14 +200,26 @@ def dniToWiegandConverter(dni, bits, logueo):
 
 
 
-def Id2Pin(id):
-    if hbl.DIG_in_in1_id == id:
-        return variablesGlobales.Pin_Entrada1 , hbl.DIG_in_in1_ON, hbl.DIG_in_in1_OFF
-    elif hbl.DIG_in_in2_id == id:
-        return variablesGlobales.Pin_Entrada2 , hbl.DIG_in_in2_ON, hbl.DIG_in_in2_OFF
-    elif hbl.DIG_in_in3_id == id:
-        return variablesGlobales.Pin_Entrada3 , hbl.DIG_in_in3_ON, hbl.DIG_in_in3_OFF
-    elif hbl.DIG_in_in4_id == id:
-        return variablesGlobales.Pin_Entrada4 , hbl.DIG_in_in4_ON, hbl.DIG_in_in4_OFF
+def GetInfoID(id,modo):
+    if modo == "IN":
+        if hbl.DIG_in_in1_id == id:
+            return variablesGlobales.Pin_Entrada1 , hbl.DIG_in_in1_ON, hbl.DIG_in_in1_OFF
+        elif hbl.DIG_in_in2_id == id:
+            return variablesGlobales.Pin_Entrada2 , hbl.DIG_in_in2_ON, hbl.DIG_in_in2_OFF
+        elif hbl.DIG_in_in3_id == id:
+            return variablesGlobales.Pin_Entrada3 , hbl.DIG_in_in3_ON, hbl.DIG_in_in3_OFF
+        elif hbl.DIG_in_in4_id == id:
+            return variablesGlobales.Pin_Entrada4 , hbl.DIG_in_in4_ON, hbl.DIG_in_in4_OFF
+        else:
+            return 99 #ERROR
     else:
-        return 99 #ERROR
+        if hbl.DIG_out_out1_id == id:
+            return variablesGlobales.Pin_Salida1
+        elif hbl.DIG_out_out2_id == id:
+            return variablesGlobales.Pin_Entrada2
+        elif hbl.DIG_out_out3_id == id:
+            return variablesGlobales.Pin_Entrada3
+        elif hbl.DIG_out_out4_id == id:
+            return variablesGlobales.Pin_Entrada4
+        else:
+            return 99 #ERROR

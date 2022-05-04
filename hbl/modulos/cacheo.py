@@ -257,16 +257,17 @@ def procesoCacheo(pi):
                 variablesGlobales.valorEncontrado = 1
 
         if variablesGlobales.valorEncontrado == 1:
-            NoPasa(pi)
+            #NoPasa(pi)
             log.escribeLineaLog(hbl.LOGS_hblCacheo, "NoPasa :" + str(variablesGlobales.ubicacionCacheo)) 
         else:
-            Pasa(pi)
+            #Pasa(pi)
             log.escribeLineaLog(hbl.LOGS_hblCacheo, "Pasa :" + str(variablesGlobales.ubicacionCacheo))            
          
         # incrementa la variable en 1
         variablesGlobales.ubicacionCacheo = variablesGlobales.ubicacionCacheo + 1
         # reinicia la variable 
         variablesGlobales.valorEncontrado = 0 
+        return variablesGlobales.valorEncontrado
     
     except Exception as e:  
 
@@ -276,3 +277,5 @@ def procesoCacheo(pi):
 
         log.escribeSeparador(hbl.LOGS_hblCacheo)
         log.escribeLineaLog(hbl.LOGS_hblCacheo, "Error : " + str(errorExcepcion))  
+
+        return 99

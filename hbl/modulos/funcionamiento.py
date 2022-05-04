@@ -5,6 +5,7 @@ from modulos import auxiliar as auxiliar
 from modulos.encoderWiegand import Encoder
 from modulos import decoderWiegand
 from modulos import hblCore as hblCore
+from modulos import cacheo as cacheo
 import requests
 import pigpio 
 
@@ -34,6 +35,8 @@ def Tareas(RunTask):
         TareaRequest()
     if RunTask == "Confirmacion Reloj":
         TareaConfirmacionReloj()
+    if RunTask == "Cacheo":
+        TareaCacheo()
 
 
 
@@ -133,7 +136,7 @@ def TareaConfirmacionReloj():
     global pi
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Corfirmacion de Reloj") 
-    pin,on,off = auxiliar.Id2Pin("Reloj")
+    pin,on,off = auxiliar.GetInfoID("Reloj","IN")
     if pin == 99:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "ERROR : PIN INVALIDO") 
         VG.NumeroTarea = 1
@@ -145,6 +148,23 @@ def TareaConfirmacionReloj():
             VG.NumeroTarea = VG.NumeroTarea + 1
 
     
+
+
+
+
+
+def TareaCacheo():
+    global pi
+    resultado_cacheo = cacheo.procesoCacheo(pi)
+    if resultado_cacheo:
+        pin = auxiliar.GetInfoID("Sirena","OUT")
+        pi.write(pin,1)
+        
+
+
+
+
+
 
 
 def Control(pi2):
