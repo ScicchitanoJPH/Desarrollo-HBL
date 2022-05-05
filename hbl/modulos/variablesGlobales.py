@@ -106,6 +106,7 @@ Serial_COM1_Rx_Data = ""
 Serial_COM2_Rx_Data = ""
 WD1_Data = ""
 WD2_Data = ""
+LastID = "" # Este es el ultimo ID que se recibio, ya sea del Wiegand, del Serial o lo que sea
 
 
 

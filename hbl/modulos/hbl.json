@@ -8,7 +8,7 @@
         "Tarea2":"Enviar Wiegand",
         "Tarea3":"Leer Wiegand",
         "Tarea4":"Request",
-        "Tarea5":"",
+        "Tarea5":"Generar txt",
         "Tarea6":"",
         "Tarea7":"",
         "Tarea8":"",
@@ -92,6 +92,11 @@
         "urlError": "http://localhost/jphaccess/error.php",
         "timerActivado": 0,
         "timeoutRequest": 10
+    },
+
+    "GenerarTXT": {
+        "activado":1,
+        "path":"/home/pi/Desktop/Request.txt"
     },
     
     "network": {

@@ -171,6 +171,9 @@ def cargarParametros(archivo):
     global REQ_timeoutRequest
     global REQ_timerActivado 
 
+    global TXT_activado
+    global TXT_path
+
     global LOGS_pathBackup 
     global LOGS_tamanioRotator 
     global LOGS_hblCore  
@@ -505,6 +508,10 @@ def cargarParametros(archivo):
     REQ_urlError=data["request"]["urlError"] 
     REQ_timeoutRequest=data["request"]["timeoutRequest"] 
     REQ_timerActivado=data["request"]["timerActivado"]
+
+
+    TXT_activado=data["GenerarTXT"]["activado"]
+    TXT_path=data["GenerarTXT"]["path"]
 
     # log   
     LOGS_pathBackup=data["logs"]["pathBackup"] 

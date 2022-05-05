@@ -17,19 +17,19 @@ def Tareas(RunTask):
     global pi
     if RunTask == "Leer Serial":
         if VG.Serial_COM1_Rx_Data != "":
-            DNI_data_serial = TareaLeerSerial(VG.Serial_COM1_Rx_Data)
+            VG.LastID = TareaLeerSerial(VG.Serial_COM1_Rx_Data)
             VG.Serial_COM1_Rx_Data = ""
         if VG.Serial_COM2_Rx_Data != "":
-            DNI_data_serial = TareaLeerSerial(VG.Serial_COM2_Rx_Data)         
+            VG.LastID = TareaLeerSerial(VG.Serial_COM2_Rx_Data)         
             VG.Serial_COM2_Rx_Data = ""
     if RunTask == "Enviar Wiegand":
-        TareaEnviarWD(DNI_data_serial,pi)
+        TareaEnviarWD(VG.LastID,pi)
     if RunTask == "Leer Wiegand":
         if VG.WD1_Data != "":
-            ID_data_WD = TareaLeerWD(VG.WD1_Data ,1)
+            VG.LastID = TareaLeerWD(VG.WD1_Data ,1)
             VG.WD1_Data = ""
         if VG.WD2_Data != "":
-            ID_data_WD = TareaLeerWD(VG.WD2_Data ,2)
+            VG.LastID = TareaLeerWD(VG.WD2_Data ,2)
             VG.WD2_Data = ""
     if RunTask == "Request":
         TareaRequest()
@@ -37,6 +37,8 @@ def Tareas(RunTask):
         TareaConfirmacionReloj()
     if RunTask == "Cacheo":
         TareaCacheo()
+    if RunTask == "Generar txt":
+        TareaGenerarTXT(VG.LastID)
 
 
 
@@ -147,9 +149,15 @@ def TareaConfirmacionReloj():
             log.escribeLineaLog(hbl.LOGS_hblTareas, "Confirmacion de Reloj Recibida") 
             VG.NumeroTarea = VG.NumeroTarea + 1
 
-    
 
 
+
+def TareaGenerarTXT(id):
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Generar txt") 
+    myFile = open(hbl.TXT_path, 'w')
+    with myFile:
+        myFile.write("ID = " + str(id))
 
 
 
