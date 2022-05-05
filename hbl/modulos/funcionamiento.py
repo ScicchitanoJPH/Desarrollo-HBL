@@ -158,6 +158,7 @@ def TareaGenerarTXT(id):
     myFile = open(hbl.TXT_path, 'w')
     with myFile:
         myFile.write("ID = " + str(id))
+    VG.NumeroTarea = VG.NumeroTarea + 1
 
 
 
