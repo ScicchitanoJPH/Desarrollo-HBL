@@ -194,18 +194,22 @@ def TareaAbrirBarrera():
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Abrir Barrera")
     
-    if auxiliar.CheckTarea("Cacheo"):
-        if VG.ResultadoCacheo == 0: #Cacheo Negativo
-            if auxiliar.CheckID("Cacheo Manual"):
-                if auxiliar.CheckFlag("Cacheo Manual"):
-                    log.escribeLineaLog(hbl.LOGS_hblTareas, "Cacheo Manual : Activado") 
-                    auxiliar.EscribirSalida(pi,"Sirena")
+    if hbl.CACHEO_activado:#auxiliar.CheckTarea("Cacheo"):
+        if auxiliar.CheckTarea("Cacheo"):
+            if VG.ResultadoCacheo == 0: #Cacheo Negativo
+                if auxiliar.CheckID("Cacheo Manual"):
+                    if auxiliar.CheckFlag("Cacheo Manual"):
+                        log.escribeLineaLog(hbl.LOGS_hblTareas, "Cacheo Manual : Activado") 
+                        auxiliar.EscribirSalida(pi,"Sirena")
+                    else:
+                        log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
+                        auxiliar.EscribirSalida(pi,"Barrera")
                 else:
                     log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
                     auxiliar.EscribirSalida(pi,"Barrera")
-            else:
-                log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
-                auxiliar.EscribirSalida(pi,"Barrera")
+        else:
+            log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
+            auxiliar.EscribirSalida(pi,"Barrera")
     else:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
         auxiliar.EscribirSalida(pi,"Barrera")
