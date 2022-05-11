@@ -253,3 +253,10 @@ def CheckID(id):
         return False
     else:
         return True
+
+def CheckTarea(id):
+    flag = False
+    for x in hbl.TareasJSON:
+        if hbl.TareasJSON[x] != id:
+            flag = True
+    return flag

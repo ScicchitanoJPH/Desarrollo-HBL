@@ -194,7 +194,7 @@ def TareaAbrirBarrera():
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Abrir Barrera")
     
-    if hbl.CACHEO_activado:
+    if auxiliar.CheckTarea("Cacheo"):
         if VG.ResultadoCacheo == 0: #Cacheo Negativo
             if auxiliar.CheckID("Cacheo Manual"):
                 if auxiliar.CheckFlag("Cacheo Manual"):
