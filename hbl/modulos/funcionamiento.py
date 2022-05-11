@@ -1,3 +1,4 @@
+from hbl.modulos import variablesGlobales
 from modulos import hbl as hbl
 from modulos import variablesGlobales as VG
 from modulos import log as log
@@ -20,7 +21,7 @@ def Tareas(RunTask):
             VG.LastID = TareaLeerSerial(VG.Serial_COM1_Rx_Data)
             VG.Serial_COM1_Rx_Data = ""
         if VG.Serial_COM2_Rx_Data != "":
-            VG.LastID = TareaLeerSerial(VG.Serial_COM2_Rx_Data)         
+            VG.LastID = TareaLeerSerial(VG.Serial_COM2_Rx_Data)
             VG.Serial_COM2_Rx_Data = ""
     if RunTask == "Enviar Wiegand":
         TareaEnviarWD(VG.LastID,pi)
@@ -39,6 +40,8 @@ def Tareas(RunTask):
         TareaCacheo()
     if RunTask == "Generar txt":
         TareaGenerarTXT(VG.LastID)
+    if RunTask == "Abrir barrera":
+        TareaAbrirBarrera()
 
 
 
@@ -49,6 +52,7 @@ def TareaLeerSerial(data):
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Datos Serial recibidos : " + str(data)) 
     VG.NumeroTarea = VG.NumeroTarea+1    ##Esto solo deberia estar cuando se finalice esta tarea
     return str(data)
+
 
 
 
@@ -92,6 +96,7 @@ def TareaEnviarWD(data,pi):
 
 
 
+
 def TareaRequest():
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Request") 
@@ -128,10 +133,10 @@ def TareaLeerWD(id,WD_number):
 
     log.escribeLineaLog(hbl.LOGS_hblTareas, "ID WD" + str(WD_number) + " = " + str(id)) 
     VG.NumeroTarea = VG.NumeroTarea + 1
+    return id
     
     
 
-    
 
 
 def TareaConfirmacionReloj():
@@ -152,6 +157,7 @@ def TareaConfirmacionReloj():
 
 
 
+
 def TareaGenerarTXT(id):
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Generar txt") 
@@ -162,12 +168,14 @@ def TareaGenerarTXT(id):
 
 
 
+
+
 def TareaCacheo():
     global pi
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Cacheo") 
-    resultado_cacheo = cacheo.procesoCacheo(pi)
-    if resultado_cacheo:
+    VG.ResultadoCacheo = cacheo.procesoCacheo(pi)
+    if VG.ResultadoCacheo:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Resultado Cacheo : POSITIVO") 
         auxiliar.EscribirSalida(pi,"Sirena")
         
@@ -177,6 +185,33 @@ def TareaCacheo():
 
     VG.NumeroTarea = VG.NumeroTarea + 1
         
+
+
+
+
+
+def TareaAbrirBarrera():
+    global pi
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Salidas")
+    
+    if hbl.CACHEO_activado:
+        if VG.ResultadoCacheo == 0: #Cacheo Negativo
+            if auxiliar.CheckID("Cacheo Manual"):
+                if auxiliar.CheckFlag("Cacheo Manual"):
+                    log.escribeLineaLog(hbl.LOGS_hblTareas, "Cacheo Manual : Activado") 
+                    auxiliar.EscribirSalida(pi,"Sirena")
+                else:
+                    log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
+                    auxiliar.EscribirSalida(pi,"Barrera")
+            else:
+                log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
+                auxiliar.EscribirSalida(pi,"Barrera")
+    else:
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
+        auxiliar.EscribirSalida(pi,"Barrera")
+
+    VG.NumeroTarea = VG.NumeroTarea + 1
 
 
 
@@ -198,7 +233,6 @@ def Control(pi2):
     if VG.NumeroTarea == 2:
         VG.TareaAcutal = hbl.TareasJSON['Tarea2']
         Tareas(hbl.TareasJSON['Tarea2'])
-        
 
     if VG.NumeroTarea == 3:
         VG.TareaAcutal = hbl.TareasJSON['Tarea3']

@@ -1,5 +1,6 @@
 
 import os
+from pickle import TRUE
 
 from modulos import log as log
 from modulos import variablesGlobales as variablesGlobales
@@ -212,7 +213,7 @@ def GetInfoID(id,modo):
         elif hbl.DIG_in_in4_id == id:
             return variablesGlobales.Pin_Entrada4 , hbl.DIG_in_in4_ON, hbl.DIG_in_in4_OFF
         else:
-            return 99 #ERROR
+            return 99,99,99 #ERROR
     else:
         if hbl.DIG_out_out1_id == id:
             return variablesGlobales.Pin_Salida1 , hbl.DIG_out_out1_repeticion , hbl.DIG_out_out1_tiempo
@@ -232,3 +233,23 @@ def EscribirSalida(pi,id):
         time.sleep(tiempo)
         pi.write(pin,0)
         time.sleep(tiempo)
+
+def CheckFlag(id):
+    pin,on,off = GetInfoID(id,"IN")
+    if pin == variablesGlobales.Pin_Entrada1:
+        return variablesGlobales.Pulso_Anterior_IN1
+    elif pin == variablesGlobales.Pin_Entrada2:
+        return variablesGlobales.Pulso_Anterior_IN2
+    elif pin == variablesGlobales.Pin_Entrada3:
+        return variablesGlobales.Pulso_Anterior_IN3
+    elif pin == variablesGlobales.Pin_Entrada4:
+        return variablesGlobales.Pulso_Anterior_IN4
+    else:
+        return 99 #ERROR
+
+def CheckID(id):
+    pin,on,off = GetInfoID(id,"IN")
+    if pin == 99:
+        return False
+    else:
+        return True

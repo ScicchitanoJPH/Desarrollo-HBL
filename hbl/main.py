@@ -82,7 +82,7 @@ if __name__ == "__main__":
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
    def callback():
       pass
-                                                                                                                                        
+                                                                                           
    pi = pigpio.pi()
 
    # cargar parametros del archivo de configuracion
@@ -95,7 +95,7 @@ if __name__ == "__main__":
    main.Salidas(pi)
 
    # inicializa las entradas de la hbl
-   main.Entradas(pi, variablesGlobales.Pin_Entrada1, variablesGlobales.Pin_Entrada2, callback)
+   main.Entradas(pi, variablesGlobales.Pin_Entrada1, variablesGlobales.Pin_Entrada2, variablesGlobales.Pin_Entrada3, variablesGlobales.Pin_Entrada4, callback)
 
    # inicializa decoder wiegand
    if hbl.WD_W1_activado == 1:

@@ -1,6 +1,6 @@
 import os
 import pigpio 
-
+import datetime 
 """ --------------------------------------------------------------------------------------------
 
    leer los numeros de serie / revision / mac address de la RPI
@@ -107,7 +107,21 @@ Serial_COM2_Rx_Data = ""
 WD1_Data = ""
 WD2_Data = ""
 LastID = "" # Este es el ultimo ID que se recibio, ya sea del Wiegand, del Serial o lo que sea
+#TimerSalidas = 
+ResultadoCacheo = 0
 
+
+
+############################################################################
+#                                                                          #
+#                                Entradas                                  #
+#                                                                          #
+############################################################################
+
+Pulso_Anterior_IN1 = 0
+Pulso_Anterior_IN2 = 0
+Pulso_Anterior_IN3 = 0
+Pulso_Anterior_IN4 = 0
 
 
 ############################################################################

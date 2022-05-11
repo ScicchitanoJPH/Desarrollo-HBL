@@ -9,7 +9,7 @@
         "Tarea3":"Leer Wiegand",
         "Tarea4":"Request",
         "Tarea5":"Generar txt",
-        "Tarea6":"",
+        "Tarea6":"Abrir barrera",
         "Tarea7":"",
         "Tarea8":"",
         "Tarea9":"",
@@ -63,7 +63,7 @@
             },
             "out2":{
                 "activado": 1,
-                "id": "Salida 2",
+                "id": "Barrera",
                 "repeticion": 3,
                 "tiempo": 1
             },
