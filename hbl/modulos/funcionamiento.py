@@ -1,4 +1,3 @@
-from hbl.modulos import variablesGlobales
 from modulos import hbl as hbl
 from modulos import variablesGlobales as VG
 from modulos import log as log
@@ -193,7 +192,7 @@ def TareaCacheo():
 def TareaAbrirBarrera():
     global pi
     log.escribeSeparador(hbl.LOGS_hblTareas)
-    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Salidas")
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Abrir Barrera")
     
     if hbl.CACHEO_activado:
         if VG.ResultadoCacheo == 0: #Cacheo Negativo
