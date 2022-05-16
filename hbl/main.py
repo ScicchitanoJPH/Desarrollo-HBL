@@ -145,7 +145,12 @@ if __name__ == "__main__":
 
    kiosco.inicializacion()
 
-   client = MQTT.inicializacion()
+   try:
+      client = MQTT.inicializacion()
+      MQTT_Connected = 1
+   except Exception as e:
+      print("No se pudo iniciar la conexion MQTT")
+      MQTT_Connected = 0
 
    b = datetime.datetime.now() 
 
@@ -153,8 +158,9 @@ if __name__ == "__main__":
    while True:
 
       hblCore.heartBeat(pi)
-      ##MQTT.publish(client)
-      MQTT.subscribe(client,pi)
+      if MQTT_Connected:
+         ##MQTT.publish(client)
+         MQTT.subscribe(client,pi)
       a = datetime.datetime.now() 
       funcionamiento.Control(pi)
       
