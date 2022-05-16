@@ -109,7 +109,8 @@
             "metric": 0,
             "netmask": "255.255.255.0",
             "network": "172.16.23.30",
-            "broadcast": "8.8.8.8"
+            "broadcast": "8.8.8.8",
+            "gateway": "172.16.232.1"
         },
         "wlan0": {
             "activado": 1,

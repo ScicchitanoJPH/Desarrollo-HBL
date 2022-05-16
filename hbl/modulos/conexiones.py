@@ -405,8 +405,10 @@ def escribeParametros():
             #     netmask 255.255.255.0
             #     network 192.168.1.0
             #     broadcast 192.168.1.255
-
-            parametrosNet = ['allow-hotplug eth0' , 'iface eth0 inet static', '    address ' + str(hbl.NETWORK_eth0_static_ip_address), '    netmask ' + str(hbl.NETWORK_eth0_netmask), '    network ' + str(hbl.NETWORK_eth0_network), '    broadcast '+ str(hbl.NETWORK_eth0_broadcast)] 
+            if str(hbl.NETWORK_eth0_gateway) == "":
+                parametrosNet = ['allow-hotplug eth0' , 'iface eth0 inet static', '    address ' + str(hbl.NETWORK_eth0_static_ip_address), '    netmask ' + str(hbl.NETWORK_eth0_netmask), '    network ' + str(hbl.NETWORK_eth0_network), '    broadcast '+ str(hbl.NETWORK_eth0_broadcast)] 
+            else:
+                parametrosNet = ['allow-hotplug eth0' , 'iface eth0 inet static', '    address ' + str(hbl.NETWORK_eth0_static_ip_address), '    netmask ' + str(hbl.NETWORK_eth0_netmask), '    network ' + str(hbl.NETWORK_eth0_network), '    broadcast '+ str(hbl.NETWORK_eth0_broadcast), '    gateway '+ str(hbl.NETWORK_eth0_gateway)] 
             auxiliar.append_multiple_lines('/etc/network/interfaces', parametrosNet, "a+") 
         
         parametrosNet = [' ']

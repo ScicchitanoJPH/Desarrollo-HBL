@@ -206,6 +206,7 @@ def cargarParametros(archivo):
     global NETWORK_eth0_network
     global NETWORK_eth0_broadcast 
     global NETWORK_eth0_metric
+    global NETWORK_eth0_gateway
 
     global NETWORK_eth1_activado
     global NETWORK_eth1_dhcp
@@ -550,6 +551,7 @@ def cargarParametros(archivo):
     NETWORK_eth0_network=data["network"]["eth0"]["network"]
     NETWORK_eth0_broadcast=data["network"]["eth0"]["broadcast"]  
     NETWORK_eth0_metric=data["network"]["eth0"]["metric"]
+    NETWORK_eth0_gateway=data["network"]["eth0"]["gateway"]
 
     NETWORK_eth1_activado=data["network"]["eth1"]["activado"]
     NETWORK_eth1_dhcp=data["network"]["eth1"]["dhcp"]
