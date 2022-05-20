@@ -10,10 +10,13 @@ import requests
 import pigpio 
 
 global DNI_data_serial
+global WordTeclado
+WordTeclado = ""
 global pi
 
 def Tareas(RunTask):
     global DNI_data_serial
+    global WordTeclado
     global pi
     if RunTask == "Leer Serial":
         if VG.Serial_COM1_Rx_Data != "":
@@ -41,6 +44,8 @@ def Tareas(RunTask):
         TareaGenerarTXT(VG.LastID)
     if RunTask == "Abrir barrera":
         TareaAbrirBarrera()
+    if RunTask == "Leer Teclado":
+        TareaLeerTecladoUSB()
 
 
 
@@ -220,6 +225,19 @@ def TareaAbrirBarrera():
 
 
 
+def TareaLeerTecladoUSB():
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Teclado")
+    global WordTeclado
+    if VG.CharTeclado != "":
+        if VG.CharTeclado != "Enter":
+            WordTeclado += VG.CharTeclado
+        elif VG.CharTeclado != "Cancel":
+            WordTeclado[-1]
+        else:
+            VG.LastID = WordTeclado
+            VG.NumeroTarea += 1
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "Palabra Teclado : " + WordTeclado)
 
 
 

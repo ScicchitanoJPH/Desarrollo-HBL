@@ -23,7 +23,6 @@ for key in data:
     if key in data2:
         if type(aux) == type(data2[key]):
             for key_key in data[key]:
-                print("-----",key_key)
                 if key_key in data2[key]:
                     if type(aux) == type(data2[key][key_key]):
                         for key_key_key in data[key][key_key]:
@@ -35,7 +34,6 @@ for key in data:
                                 else:
                                     data2[key][key_key][key_key_key]=data[key][key_key][key_key_key]
                     else:
-                        print("Except")
                         data2[key][key_key]=data[key][key_key]
         else:
             try:
