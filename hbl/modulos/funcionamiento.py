@@ -231,13 +231,16 @@ def TareaLeerTecladoUSB():
     global WordTeclado
     if VG.CharTeclado != "":
         if VG.CharTeclado != "Enter":
-            WordTeclado += VG.CharTeclado
-        elif VG.CharTeclado != "Cancel":
-            WordTeclado[-1]
+            if VG.CharTeclado == "Cancel":
+                WordTeclado =  WordTeclado[:-1]
+            else:
+                WordTeclado += str(VG.CharTeclado)
         else:
             VG.LastID = WordTeclado
+            WordTeclado = ""
             VG.NumeroTarea += 1
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Palabra Teclado : " + WordTeclado)
+        VG.CharTeclado = ""
 
 
 
