@@ -14,6 +14,9 @@ global WordTeclado
 WordTeclado = ""
 global pi
 
+global flagTeclado
+flagTeclado = 0
+
 def Tareas(RunTask):
     global DNI_data_serial
     global WordTeclado
@@ -226,8 +229,11 @@ def TareaAbrirBarrera():
 
 
 def TareaLeerTecladoUSB():
-    log.escribeSeparador(hbl.LOGS_hblTareas)
-    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Teclado")
+    global flagTeclado
+    if not(flagTeclado):
+        flagTeclado = 1
+        log.escribeSeparador(hbl.LOGS_hblTareas)
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Leer Teclado")
     global WordTeclado
     if VG.CharTeclado != "":
         if VG.CharTeclado != "Enter":
@@ -238,6 +244,7 @@ def TareaLeerTecladoUSB():
         else:
             VG.LastID = WordTeclado
             WordTeclado = ""
+            flagTeclado = 0
             VG.NumeroTarea += 1
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Palabra Teclado : " + WordTeclado)
         VG.CharTeclado = ""
