@@ -8,7 +8,7 @@ from modulos import hblCore as hblCore
 from modulos import cacheo as cacheo
 import requests
 import pigpio 
-import pygame
+
 
 global DNI_data_serial
 global WordTeclado
@@ -50,8 +50,6 @@ def Tareas(RunTask):
         TareaAbrirBarrera()
     if RunTask == "Leer Teclado":
         TareaLeerTecladoUSB()
-    if RunTask == "Parlante":
-        TareaParlante()
 
 
 
@@ -159,7 +157,6 @@ def TareaConfirmacionReloj():
         VG.NumeroTarea = 1
     else:
         data = pi.read(pin)
-        print("DATA = " + str(data))
         if data == on:
             log.escribeLineaLog(hbl.LOGS_hblTareas, "Confirmacion de Reloj Recibida") 
             VG.NumeroTarea = VG.NumeroTarea + 1
@@ -188,7 +185,8 @@ def TareaCacheo():
     if VG.ResultadoCacheo:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Resultado Cacheo : POSITIVO") 
         auxiliar.EscribirSalida(pi,"Sirena")
-        
+        if hbl.Audio_activado:
+            auxiliar.PlayAudio(hbl.Audio_path_NoPasa)
     else:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Resultado Cacheo : NEGATIVO") 
     
@@ -211,19 +209,29 @@ def TareaAbrirBarrera():
                 if auxiliar.CheckFlag("Cacheo Manual"):
                     log.escribeLineaLog(hbl.LOGS_hblTareas, "Cacheo Manual : Activado") 
                     auxiliar.EscribirSalida(pi,"Sirena")
+                    if hbl.Audio_activado:
+                        auxiliar.PlayAudio(hbl.Audio_path_NoPasa)
                     VG.ResultadoCacheo = 0
                 else:
                     log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
                     auxiliar.EscribirSalida(pi,"Barrera")
+                    if hbl.Audio_activado:
+                        auxiliar.PlayAudio(hbl.Audio_path_Pasa)
             else:
                 log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
                 auxiliar.EscribirSalida(pi,"Barrera")
+                if hbl.Audio_activado:
+                    auxiliar.PlayAudio(hbl.Audio_path_Pasa)
         else:
             log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
             auxiliar.EscribirSalida(pi,"Barrera")
+            if hbl.Audio_activado:
+                    auxiliar.PlayAudio(hbl.Audio_path_Pasa)
     else:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
         auxiliar.EscribirSalida(pi,"Barrera")
+        if hbl.Audio_activado:
+            auxiliar.PlayAudio(hbl.Audio_path_Pasa)
 
     VG.NumeroTarea = VG.NumeroTarea + 1
 
@@ -259,18 +267,7 @@ def TareaLeerTecladoUSB():
 
 
 
-def TareaParlante():
-    log.escribeSeparador(hbl.LOGS_hblTareas)
-    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Parlante")
-    
-    pygame.mixer.init()
-    pygame.mixer.music.load("/usr/programas/Audios/acceso-denegado.mp3")
-    pygame.mixer.music.play()
-    while pygame.mixer.music.get_busy() == True:
-        continue
 
-
-    VG.NumeroTarea = VG.NumeroTarea + 1
 
 
 

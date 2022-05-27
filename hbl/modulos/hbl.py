@@ -281,6 +281,11 @@ def cargarParametros(archivo):
     global MQTT_TopicSend
     global MQTT_TopicRecv
 
+    global Audio_activado
+    global Audio_path_Pasa
+    global Audio_path_NoPasa
+    global Audio_path_ErrorDNI
+
     global data
 
 
@@ -626,6 +631,12 @@ def cargarParametros(archivo):
     MQTT_port=data["MQTT"]["port"]
     MQTT_TopicSend=data["MQTT"]["TopicSend"]
     MQTT_TopicRecv=data["MQTT"]["TopicRecv"]
+
+
+    Audio_activado=data["Audio"]["activado"]
+    Audio_path_Pasa=data["Audio"]["path"]["Pasa"]
+    Audio_path_NoPasa=data["Audio"]["path"]["NoPasa"]
+    Audio_path_ErrorDNI=data["Audio"]["path"]["ErrorDNI"]
 
 
 

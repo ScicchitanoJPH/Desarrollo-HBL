@@ -308,5 +308,13 @@
     },
     "ActualizarGit": {
         "Activado": 1
+    },
+    "Audio":{
+        "activado": 1,
+        "path":{
+            "Pasa": "/usr/programas/Audios/acceso-denegado.mp3",
+            "NoPasa":"/usr/programas/Audios/acceso-habilitado.mp3",
+            "ErrorDNI":""
+        }
     }
 }

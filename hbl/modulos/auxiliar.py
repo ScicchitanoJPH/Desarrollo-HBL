@@ -6,6 +6,7 @@ from modulos import log as log
 from modulos import variablesGlobales as variablesGlobales
 from modulos import hbl as hbl
 import time
+import pygame
 """ --------------------------------------------------------------------------------------------
  
     Funciones auxiliares del HBL
@@ -260,3 +261,16 @@ def CheckTarea(id):
         if hbl.TareasJSON[x] == id:
             flag = True
     return flag
+
+
+
+
+def PlayAudio(AudioPath):
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Parlante")
+    
+    pygame.mixer.init()
+    pygame.mixer.music.load(AudioPath)
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy() == True:
+        continue
