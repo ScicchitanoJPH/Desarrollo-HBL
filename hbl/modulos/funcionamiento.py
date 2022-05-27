@@ -8,6 +8,7 @@ from modulos import hblCore as hblCore
 from modulos import cacheo as cacheo
 import requests
 import pigpio 
+import pygame
 
 global DNI_data_serial
 global WordTeclado
@@ -49,6 +50,8 @@ def Tareas(RunTask):
         TareaAbrirBarrera()
     if RunTask == "Leer Teclado":
         TareaLeerTecladoUSB()
+    if RunTask == "Parlante":
+        TareaParlante()
 
 
 
@@ -248,6 +251,37 @@ def TareaLeerTecladoUSB():
             VG.NumeroTarea += 1
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Palabra Teclado : " + WordTeclado)
         VG.CharTeclado = ""
+
+
+
+
+
+
+
+
+def TareaParlante():
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Parlante")
+    
+    pygame.mixer.init()
+    pygame.mixer.music.load("/usr/programas/Audios/acceso-denegado.mp3")
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy() == True:
+        continue
+
+
+    VG.NumeroTarea = VG.NumeroTarea + 1
+
+
+
+
+
+
+
+
+
+
+
 
 
 
