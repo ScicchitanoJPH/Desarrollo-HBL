@@ -266,8 +266,6 @@ def CheckTarea(id):
 
 
 def PlayAudio(AudioPath):
-    log.escribeSeparador(hbl.LOGS_hblTareas)
-    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Parlante")
     
     pygame.mixer.init()
     pygame.mixer.music.load(AudioPath)

@@ -392,7 +392,19 @@ def escribeParametros():
             parametrosNet = ['allow-hotplug eth0' , 'iface eth0 inet dhcp', '#    address ' + str(hbl.NETWORK_eth0_static_ip_address), '#    netmask ' + str(hbl.NETWORK_eth0_netmask), '#    network ' + str(hbl.NETWORK_eth0_network), '#    broadcast '+ str(hbl.NETWORK_eth0_broadcast)] 
             auxiliar.append_multiple_lines('/etc/network/interfaces', parametrosNet, "a+")
         else:
-            parametrosNet = ['interface eth0', 'metric ' + str(hbl.NETWORK_eth0_metric), 'static ip_address=' + str(hbl.NETWORK_eth0_static_ip_address), 'static routers=' + str(hbl.NETWORK_eth0_static_routers)] 
+            parametrosNet = ['interface eth0']
+            if str(hbl.NETWORK_eth0_metric) != "":
+                parametrosNet.append('metric ' + str(hbl.NETWORK_eth0_metric))
+            
+            if str(hbl.NETWORK_eth0_static_ip_address) != "":
+                parametrosNet.append('static ip_address=' + str(hbl.NETWORK_eth0_static_ip_address))
+                
+            if str(hbl.NETWORK_eth0_static_routers) != "":
+                parametrosNet.append('static routers=' + str(hbl.NETWORK_eth0_static_routers))
+            
+            if str(hbl.NETWORK_eth0_gateway) == "":
+                parametrosNet.append('static routers=' + str(hbl.NETWORK_eth0_static_routers))
+
             auxiliar.append_multiple_lines('/etc/dhcpcd.conf', parametrosNet, "a+")
 
             # se agregan los parametros de IP estatica al archivo interfaces
@@ -405,10 +417,19 @@ def escribeParametros():
             #     netmask 255.255.255.0
             #     network 192.168.1.0
             #     broadcast 192.168.1.255
-            if str(hbl.NETWORK_eth0_gateway) == "":
-                parametrosNet = ['allow-hotplug eth0' , 'iface eth0 inet static', '    address ' + str(hbl.NETWORK_eth0_static_ip_address), '    netmask ' + str(hbl.NETWORK_eth0_netmask), '    network ' + str(hbl.NETWORK_eth0_network), '    broadcast '+ str(hbl.NETWORK_eth0_broadcast)] 
-            else:
-                parametrosNet = ['allow-hotplug eth0' , 'iface eth0 inet static', '    address ' + str(hbl.NETWORK_eth0_static_ip_address), '    netmask ' + str(hbl.NETWORK_eth0_netmask), '    network ' + str(hbl.NETWORK_eth0_network), '    broadcast '+ str(hbl.NETWORK_eth0_broadcast), '    gateway '+ str(hbl.NETWORK_eth0_gateway)] 
+            parametrosNet = ['allow-hotplug eth0' , 'iface eth0 inet static'] 
+            if str(hbl.NETWORK_eth0_static_ip_address) != "":
+                parametrosNet.append('    address ' + str(hbl.NETWORK_eth0_static_ip_address))
+            
+            if str(hbl.NETWORK_eth0_netmask) != "":
+                parametrosNet.append('    netmask ' + str(hbl.NETWORK_eth0_netmask))
+            
+            if str(hbl.NETWORK_eth0_network) != "":
+                parametrosNet.append('    network ' + str(hbl.NETWORK_eth0_network))
+            
+            if str(hbl.NETWORK_eth0_broadcast) != "":
+                parametrosNet.append('    broadcast ' + str(hbl.NETWORK_eth0_broadcast))
+
             auxiliar.append_multiple_lines('/etc/network/interfaces', parametrosNet, "a+") 
         
         parametrosNet = [' ']
@@ -458,7 +479,17 @@ def escribeParametros():
             auxiliar.append_multiple_lines('/etc/network/interfaces', parametrosNet, "a+")
  
         else:
-            parametrosNet = ['interface eth1', 'metric ' + str(hbl.NETWORK_eth1_metric), 'static ip_address=' + str(hbl.NETWORK_eth1_static_ip_address), 'static routers=' + str(hbl.NETWORK_eth1_static_routers)] 
+            parametrosNet = ['interface eth1']
+            if str(hbl.NETWORK_eth1_metric) != "":
+                parametrosNet.append('metric ' + str(hbl.NETWORK_eth1_metric))
+            
+            if str(hbl.NETWORK_eth1_static_ip_address) != "":
+                parametrosNet.append('static ip_address=' + str(hbl.NETWORK_eth1_static_ip_address))
+                
+            if str(hbl.NETWORK_eth1_static_routers) != "":
+                parametrosNet.append('static routers=' + str(hbl.NETWORK_eth1_static_routers)) 
+
+
             auxiliar.append_multiple_lines('/etc/dhcpcd.conf', parametrosNet, "a+")
     else:
         os.system("sudo ifconfig eth1 down")## Deshabilita el puerto ethernet
@@ -477,7 +508,15 @@ def escribeParametros():
             auxiliar.append_multiple_lines('/etc/network/interfaces', parametrosNet, "a+")
         else:
             # se agregan los parametros de IP estatica al archivo dhcpcf.conf
-            parametrosNet = [' ' , 'interface wlan0', 'metric ' + str(hbl.NETWORK_wlan0_metric), 'static ip_address=' + str(hbl.NETWORK_wlan0_static_ip_address), 'static routers=' + str(hbl.NETWORK_wlan0_static_routers)] 
+            parametrosNet = [' ' , 'interface wlan0']
+            if str(hbl.NETWORK_wlan0_metric) != "":
+                parametrosNet.append('metric ' + str(hbl.NETWORK_wlan0_metric))
+            
+            if str(hbl.NETWORK_wlan0_static_ip_address) != "":
+                parametrosNet.append('static ip_address=' + str(hbl.NETWORK_wlan0_static_ip_address))
+                
+            if str(hbl.NETWORK_wlan0_static_routers) != "":
+                parametrosNet.append('static routers=' + str(hbl.NETWORK_wlan0_static_routers)) 
             auxiliar.append_multiple_lines('/etc/dhcpcd.conf', parametrosNet, "a+")
     
         # archivo wpa_supplicant.conf

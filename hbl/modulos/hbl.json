@@ -312,8 +312,8 @@
     "Audio":{
         "activado": 1,
         "path":{
-            "Pasa": "/usr/programas/Audios/acceso-denegado.mp3",
-            "NoPasa":"/usr/programas/Audios/acceso-habilitado.mp3",
+            "Pasa": "/usr/programas/Audios/acceso-habilitado.mp3",
+            "NoPasa":"/usr/programas/Audios/acceso-denegado.mp3",
             "ErrorDNI":""
         }
     }
