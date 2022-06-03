@@ -402,7 +402,7 @@ def escribeParametros():
             if str(hbl.NETWORK_eth0_DNS) != "":
                 parametrosNet.append('static domain_name-servers=' + str(hbl.NETWORK_eth0_DNS))
             
-            if str(hbl.NETWORK_eth0_gateway) == "":
+            if str(hbl.NETWORK_eth0_gateway) != "":
                 parametrosNet.append('static routers=' + str(hbl.NETWORK_eth0_gateway))
 
             auxiliar.append_multiple_lines('/etc/dhcpcd.conf', parametrosNet, "a+")
@@ -495,7 +495,7 @@ def escribeParametros():
             if str(hbl.NETWORK_eth1_DNS) != "":
                 parametrosNet.append('static domain_name-servers=' + str(hbl.NETWORK_eth1_DNS))
             
-            if str(hbl.NETWORK_eth1_gateway) == "":
+            if str(hbl.NETWORK_eth1_gateway) != "":
                 parametrosNet.append('static routers=' + str(hbl.NETWORK_eth1_gateway))
 
             auxiliar.append_multiple_lines('/etc/dhcpcd.conf', parametrosNet, "a+")
@@ -558,7 +558,7 @@ def escribeParametros():
             if str(hbl.NETWORK_wlan0_DNS) != "":
                 parametrosNet.append('static domain_name-servers=' + str(hbl.NETWORK_wlan0_DNS))
             
-            if str(hbl.NETWORK_wlan0_gateway) == "":
+            if str(hbl.NETWORK_wlan0_gateway) != "":
                 parametrosNet.append('static routers=' + str(hbl.NETWORK_wlan0_gateway))
 
             auxiliar.append_multiple_lines('/etc/dhcpcd.conf', parametrosNet, "a+")
