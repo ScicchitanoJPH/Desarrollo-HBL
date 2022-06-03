@@ -398,12 +398,12 @@ def escribeParametros():
             
             if str(hbl.NETWORK_eth0_static_ip_address) != "":
                 parametrosNet.append('static ip_address=' + str(hbl.NETWORK_eth0_static_ip_address))
-                
-            if str(hbl.NETWORK_eth0_static_routers) != "":
-                parametrosNet.append('static routers=' + str(hbl.NETWORK_eth0_static_routers))
+
+            if str(hbl.NETWORK_eth0_DNS) != "":
+                parametrosNet.append('static domain_name-servers=' + str(hbl.NETWORK_eth0_DNS))
             
             if str(hbl.NETWORK_eth0_gateway) == "":
-                parametrosNet.append('static routers=' + str(hbl.NETWORK_eth0_static_routers))
+                parametrosNet.append('static routers=' + str(hbl.NETWORK_eth0_gateway))
 
             auxiliar.append_multiple_lines('/etc/dhcpcd.conf', parametrosNet, "a+")
 
@@ -429,6 +429,12 @@ def escribeParametros():
             
             if str(hbl.NETWORK_eth0_broadcast) != "":
                 parametrosNet.append('    broadcast ' + str(hbl.NETWORK_eth0_broadcast))
+            
+            if str(hbl.NETWORK_eth0_DNS) != "":
+                parametrosNet.append('    dns-nameservers ' + str(hbl.NETWORK_eth0_DNS))
+
+            if str(hbl.NETWORK_eth0_gateway) != "":
+                parametrosNet.append('    gateway ' + str(hbl.NETWORK_eth0_gateway))
 
             auxiliar.append_multiple_lines('/etc/network/interfaces', parametrosNet, "a+") 
         
@@ -485,12 +491,43 @@ def escribeParametros():
             
             if str(hbl.NETWORK_eth1_static_ip_address) != "":
                 parametrosNet.append('static ip_address=' + str(hbl.NETWORK_eth1_static_ip_address))
-                
-            if str(hbl.NETWORK_eth1_static_routers) != "":
-                parametrosNet.append('static routers=' + str(hbl.NETWORK_eth1_static_routers)) 
 
+            if str(hbl.NETWORK_eth1_DNS) != "":
+                parametrosNet.append('static domain_name-servers=' + str(hbl.NETWORK_eth1_DNS))
+            
+            if str(hbl.NETWORK_eth1_gateway) == "":
+                parametrosNet.append('static routers=' + str(hbl.NETWORK_eth1_gateway))
 
             auxiliar.append_multiple_lines('/etc/dhcpcd.conf', parametrosNet, "a+")
+
+            # se agregan los parametros de IP estatica al archivo interfaces
+            # source-directory /etc/network/interfaces.d
+
+            # ex : 
+            # allow-hotplug eth1
+            # iface eth1 inet static
+            #     address 192.168.1.1
+            #     netmask 255.255.255.0
+            #     network 192.168.1.0
+            #     broadcast 192.168.1.255
+            parametrosNet = ['allow-hotplug eth1' , 'iface eth1 inet static'] 
+            if str(hbl.NETWORK_eth1_static_ip_address) != "":
+                parametrosNet.append('    address ' + str(hbl.NETWORK_eth1_static_ip_address))
+            
+            if str(hbl.NETWORK_eth1_netmask) != "":
+                parametrosNet.append('    netmask ' + str(hbl.NETWORK_eth1_netmask))
+            
+            if str(hbl.NETWORK_eth1_network) != "":
+                parametrosNet.append('    network ' + str(hbl.NETWORK_eth1_network))
+            
+            if str(hbl.NETWORK_eth1_broadcast) != "":
+                parametrosNet.append('    broadcast ' + str(hbl.NETWORK_eth1_broadcast))
+            
+            if str(hbl.NETWORK_eth1_DNS) != "":
+                parametrosNet.append('    dns-nameservers ' + str(hbl.NETWORK_eth1_DNS))
+
+            if str(hbl.NETWORK_eth1_gateway) != "":
+                parametrosNet.append('    gateway ' + str(hbl.NETWORK_eth1_gateway))
     else:
         os.system("sudo ifconfig eth1 down")## Deshabilita el puerto ethernet
         time.sleep(1)
@@ -517,6 +554,13 @@ def escribeParametros():
                 
             if str(hbl.NETWORK_wlan0_static_routers) != "":
                 parametrosNet.append('static routers=' + str(hbl.NETWORK_wlan0_static_routers)) 
+
+            if str(hbl.NETWORK_wlan0_DNS) != "":
+                parametrosNet.append('static domain_name-servers=' + str(hbl.NETWORK_wlan0_DNS))
+            
+            if str(hbl.NETWORK_wlan0_gateway) == "":
+                parametrosNet.append('static routers=' + str(hbl.NETWORK_wlan0_gateway))
+
             auxiliar.append_multiple_lines('/etc/dhcpcd.conf', parametrosNet, "a+")
     
         # archivo wpa_supplicant.conf

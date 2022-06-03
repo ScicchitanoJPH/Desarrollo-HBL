@@ -201,12 +201,12 @@ def cargarParametros(archivo):
     global NETWORK_eth0_activado
     global NETWORK_eth0_dhcp
     global NETWORK_eth0_static_ip_address
-    global NETWORK_eth0_static_routers
     global NETWORK_eth0_netmask
     global NETWORK_eth0_network
     global NETWORK_eth0_broadcast 
     global NETWORK_eth0_metric
     global NETWORK_eth0_gateway
+    global NETWORK_eth0_DNS
 
     global NETWORK_eth1_activado
     global NETWORK_eth1_dhcp
@@ -216,6 +216,8 @@ def cargarParametros(archivo):
     global NETWORK_eth1_network
     global NETWORK_eth1_broadcast 
     global NETWORK_eth1_metric
+    global NETWORK_eth1_gateway
+    global NETWORK_eth1_DNS
     global NETWORK_eth1_vendor_ID 
     global NETWORK_eth1_product_ID 
     global NETWORK_eth1_timeDelay
@@ -225,6 +227,11 @@ def cargarParametros(archivo):
     global NETWORK_wlan0_static_ip_address
     global NETWORK_wlan0_static_routers
     global NETWORK_wlan0_metric 
+    global NETWORK_wlan0_netmask
+    global NETWORK_wlan0_network
+    global NETWORK_wlan0_broadcast 
+    global NETWORK_wlan0_gateway
+    global NETWORK_wlan0_DNS
     global NETWORK_wlan0_ssid
     global NETWORK_wlan0_password  
  
@@ -551,17 +558,19 @@ def cargarParametros(archivo):
     NETWORK_eth0_activado=data["network"]["eth0"]["activado"]
     NETWORK_eth0_dhcp=data["network"]["eth0"]["dhcp"]
     NETWORK_eth0_static_ip_address=data["network"]["eth0"]["static_ip_address"]
-    NETWORK_eth0_static_routers=data["network"]["eth0"]["static_routers"]
+    NETWORK_eth0_gateway=data["network"]["eth0"]["gateway"]
+    NETWORK_eth0_DNS=data["network"]["eth0"]["DNS"]
     NETWORK_eth0_netmask=data["network"]["eth0"]["netmask"]
     NETWORK_eth0_network=data["network"]["eth0"]["network"]
     NETWORK_eth0_broadcast=data["network"]["eth0"]["broadcast"]  
     NETWORK_eth0_metric=data["network"]["eth0"]["metric"]
-    NETWORK_eth0_gateway=data["network"]["eth0"]["gateway"]
 
     NETWORK_eth1_activado=data["network"]["eth1"]["activado"]
     NETWORK_eth1_dhcp=data["network"]["eth1"]["dhcp"]
     NETWORK_eth1_static_ip_address=data["network"]["eth1"]["static_ip_address"]
     NETWORK_eth1_static_routers=data["network"]["eth1"]["static_routers"]
+    NETWORK_eth1_gateway=data["network"]["eth1"]["gateway"]
+    NETWORK_eth1_DNS=data["network"]["eth1"]["DNS"]
     NETWORK_eth1_netmask=data["network"]["eth1"]["netmask"]
     NETWORK_eth1_network=data["network"]["eth1"]["network"]
     NETWORK_eth1_broadcast=data["network"]["eth1"]["broadcast"]  
@@ -574,6 +583,11 @@ def cargarParametros(archivo):
     NETWORK_wlan0_dhcp=data["network"]["wlan0"]["dhcp"]
     NETWORK_wlan0_static_ip_address=data["network"]["wlan0"]["static_ip_address"]
     NETWORK_wlan0_static_routers=data["network"]["wlan0"]["static_routers"]
+    NETWORK_wlan0_gateway=data["network"]["wlan0"]["gateway"]
+    NETWORK_wlan0_DNS=data["network"]["wlan0"]["DNS"]
+    NETWORK_wlan0_netmask=data["network"]["wlan0"]["netmask"]
+    NETWORK_wlan0_network=data["network"]["wlan0"]["network"]
+    NETWORK_wlan0_broadcast=data["network"]["wlan0"]["broadcast"] 
     NETWORK_wlan0_metric=data["network"]["wlan0"]["metric"]
     NETWORK_wlan0_ssid=data["network"]["wlan0"]["ssid"]
     NETWORK_wlan0_password=data["network"]["wlan0"]["password"] 
