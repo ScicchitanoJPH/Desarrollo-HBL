@@ -105,6 +105,7 @@
             "activado": 1,
             "dhcp": 1,
             "static_ip_address": "172.16.232.148/24",
+            "static_routers": "192.168.1.1",
             "gateway": "172.16.0.1",
             "DNS":"172.19.201.17 172.19.201.18",
             "metric": 0,
