@@ -1,4 +1,4 @@
-from modulos import hbl as hbl
+from modulos import PlantillasImpresora, hbl as hbl
 from modulos import variablesGlobales as VG
 from modulos import log as log
 from modulos import auxiliar as auxiliar
@@ -6,6 +6,7 @@ from modulos.encoderWiegand import Encoder
 from modulos import decoderWiegand
 from modulos import hblCore as hblCore
 from modulos import cacheo as cacheo
+from modulos import PlantillasImpresora
 import requests
 import pigpio 
 
@@ -50,6 +51,8 @@ def Tareas(RunTask):
         TareaAbrirBarrera()
     if RunTask == "Leer Teclado":
         TareaLeerTecladoUSB()
+    if RunTask == "Imprimir":
+        TareaImprimir()
 
 
 
@@ -238,7 +241,8 @@ def TareaAbrirBarrera():
 
 
 
-
+"""La tarea teclado usb tiene que checkear en el JSON si el LCD esta activado. De ser asi, tiene que cada vez que recibe un digito, mandarlo a una funcion 'LCD' que se va a encargar
+de ver en el JSON a que funcion tiene que mandar ese dato para mostrarlo en el display, ya que voy a tener una manera de mostrar el dato para TRP, otra para LOMAX, etc"""
 def TareaLeerTecladoUSB():
     global flagTeclado
     if not(flagTeclado):
@@ -263,6 +267,13 @@ def TareaLeerTecladoUSB():
 
 
 
+"""La tarea de imprimir va a recibir como parametro la funcion a la que tiene que llamar para imprimir, ya que voy a tener una funcion que imprima como se imprime en TRP, otra que
+imprima como se imprime en LOMAX, etc"""
+def TareaImprimir():
+    global pi
+    log.escribeSeparador(hbl.LOGS_hblTareas)
+    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Imprimir")
+    PlantillasImpresora.ImpresionTest()
 
 
 
