@@ -16,8 +16,16 @@ global WordTeclado
 WordTeclado = ""
 global pi
 
+
+global flagLog
+flagLog = 0
+
+
 global flagTeclado
 flagTeclado = 0
+
+
+
 
 def Tareas(RunTask):
     global DNI_data_serial
@@ -72,20 +80,20 @@ def TareaEnviarWD(data,pi):
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Enviar Wiegand") 
 
-    try:
+    #try:
         ### Extraccion del DNI y envio por Wiegand 34
-        valorDNI = auxiliar.splitDNI(data, hbl.LOGS_hblTareas)
-        log.escribeLineaLog(hbl.LOGS_hblTareas, "Valor DNI extraido: " + str(valorDNI)) 
+        #valorDNI = auxiliar.splitDNI(data, hbl.LOGS_hblTareas)
+        #log.escribeLineaLog(hbl.LOGS_hblTareas, "Valor DNI extraido: " + str(valorDNI)) 
 
         ### Conversion del DNI a wiegand
-        DNIWiegand = auxiliar.dniToWiegandConverter(valorDNI, 34, hbl.LOGS_hblTareas)
-    except Exception as e:
-        print(e)
+        #DNIWiegand = auxiliar.dniToWiegandConverter(valorDNI, 34, hbl.LOGS_hblTareas)
+    #except Exception as e:
+    #    print(e)
 
     if hbl.WD_W1_activado and hbl.WD_W1_modo == "OUT":
         ### Envio codigo wiegand
         try:
-            Encoder.encoderWiegandBits(DNIWiegand, pi, VG.Pin_W1_WD0, VG.Pin_W1_WD1) 
+            Encoder.encoderWiegand(data, pi, VG.Pin_W1_WD0, VG.Pin_W1_WD1,34) 
             hblCore.encenderLed(pi, 1, int(50))
             log.escribeLineaLog(hbl.LOGS_hblTareas, "Wiegand enviado")
         except Exception as inst:
@@ -93,7 +101,7 @@ def TareaEnviarWD(data,pi):
     elif hbl.WD_W2_activado and hbl.WD_W2_modo == "OUT":
         try:
             ### Envio codigo wiegand
-            Encoder.encoderWiegandBits(DNIWiegand, pi, VG.Pin_W2_WD0, VG.Pin_W2_WD1) 
+            Encoder.encoderWiegand(data, pi, VG.Pin_W2_WD0, VG.Pin_W2_WD1,34) 
             hblCore.encenderLed(pi, 1, int(50))
             log.escribeLineaLog(hbl.LOGS_hblTareas, "Wiegand enviado")
         except Exception as inst:
@@ -152,8 +160,11 @@ def TareaLeerWD(id,WD_number):
 
 def TareaConfirmacionReloj():
     global pi
-    log.escribeSeparador(hbl.LOGS_hblTareas)
-    log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Corfirmacion de Reloj") 
+    global flagLog
+    if not(flagLog):
+        log.escribeSeparador(hbl.LOGS_hblTareas)
+        log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Corfirmacion de Reloj") 
+        flagLog = 1
     pin,on,off = auxiliar.GetInfoID("Reloj","IN")
     if pin == 99:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "ERROR : PIN INVALIDO") 
@@ -163,6 +174,7 @@ def TareaConfirmacionReloj():
         if data == on:
             log.escribeLineaLog(hbl.LOGS_hblTareas, "Confirmacion de Reloj Recibida") 
             VG.NumeroTarea = VG.NumeroTarea + 1
+            flagLog = 0
 
 
 
@@ -274,6 +286,7 @@ def TareaImprimir():
     log.escribeSeparador(hbl.LOGS_hblTareas)
     log.escribeLineaLog(hbl.LOGS_hblTareas, "Tarea : Imprimir")
     PlantillasImpresora.ImpresionTest()
+    VG.NumeroTarea += 1
 
 
 
