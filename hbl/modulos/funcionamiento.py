@@ -269,7 +269,7 @@ def TareaLeerTecladoUSB():
             else:
                 WordTeclado += str(VG.CharTeclado)
         else:
-            VG.LastID = WordTeclado
+            VG.LastID = int(WordTeclado)
             WordTeclado = ""
             flagTeclado = 0
             VG.NumeroTarea += 1
