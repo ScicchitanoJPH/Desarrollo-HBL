@@ -230,9 +230,9 @@ def GetInfoID(id,modo):
 def EscribirSalida(pi,id):
     pin,rep,tiempo = GetInfoID(id,"OUT")
     for x in range(rep):
-        pi.write(pin,1)
+        pi.write(pin,hbl.ON)
         time.sleep(tiempo)
-        pi.write(pin,0)
+        pi.write(pin,hbl.OFF)
         time.sleep(tiempo)
 
 def CheckFlag(id):
