@@ -190,6 +190,7 @@ def cargarParametros(archivo):
     global LOGS_hblCacheo
     global LOGS_hblKiosco
     global LOGS_hblTareas
+    global LOGS_hblPrograma
 
     global IDHBL
 
@@ -543,7 +544,8 @@ def cargarParametros(archivo):
     LOGS_hblSerial=data["logs"]["hblSerial"]   
     LOGS_hblCacheo=data["logs"]["hblCacheo"]    
     LOGS_hblKiosco=data["logs"]["hblKiosco"]    
-    LOGS_hblTareas=data["logs"]["hblTareas"]    
+    LOGS_hblTareas=data["logs"]["hblTareas"]
+    LOGS_hblPrograma=data["logs"]["hblPrograma"]    
 
  
 

@@ -18,7 +18,7 @@ import pygame
 
 def EscribirFuncion(Funcion):
     myFile = open(variablesGlobales.Seguimiento_file_path, 'w')
-    myFile.write(Funcion)
+    myFile.write(Funcion + "  -  " + time.strftime("%d/%m/%y") + "  -  " + time.strftime("%H:%M:%S"))
     myFile.close()
 
 """ --------------------------------------------------------------------------------------------
