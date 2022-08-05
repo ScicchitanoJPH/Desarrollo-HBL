@@ -225,28 +225,28 @@ def TareaAbrirBarrera():
                     log.escribeLineaLog(hbl.LOGS_hblTareas, "Cacheo Manual : Activado") 
                     auxiliar.EscribirSalida(pi,"Sirena")
                     if hbl.Audio_activado:
-                        auxiliar.PlayAudio(hbl.Audio_path_NoPasa)
+                        auxiliar.PlayAudio(hbl.Audio_path_NoPasa,pi)
                     VG.ResultadoCacheo = 0
                 else:
                     log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
                     auxiliar.EscribirSalida(pi,"Barrera")
                     if hbl.Audio_activado:
-                        auxiliar.PlayAudio(hbl.Audio_path_Pasa)
+                        auxiliar.PlayAudio(hbl.Audio_path_Pasa,pi)
             else:
                 log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
                 auxiliar.EscribirSalida(pi,"Barrera")
                 if hbl.Audio_activado:
-                    auxiliar.PlayAudio(hbl.Audio_path_Pasa)
+                    auxiliar.PlayAudio(hbl.Audio_path_Pasa,pi)
         else:
             log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
             auxiliar.EscribirSalida(pi,"Barrera")
             if hbl.Audio_activado:
-                    auxiliar.PlayAudio(hbl.Audio_path_Pasa)
+                    auxiliar.PlayAudio(hbl.Audio_path_Pasa,pi)
     else:
         log.escribeLineaLog(hbl.LOGS_hblTareas, "Barrera Abierta")
         auxiliar.EscribirSalida(pi,"Barrera")
         if hbl.Audio_activado:
-            auxiliar.PlayAudio(hbl.Audio_path_Pasa)
+            auxiliar.PlayAudio(hbl.Audio_path_Pasa,pi)
 
     VG.NumeroTarea = VG.NumeroTarea + 1
 

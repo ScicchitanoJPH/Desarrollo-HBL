@@ -265,10 +265,12 @@ def CheckTarea(id):
 
 
 
-def PlayAudio(AudioPath):
-    
+def PlayAudio(AudioPath,pi):
+    pi.write(variablesGlobales.Pin_Salida1, hbl.ON)
     pygame.mixer.init()
     pygame.mixer.music.load(AudioPath)
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy() == True:
         continue
+    time.sleep(0.5)
+    pi.write(variablesGlobales.Pin_Salida1, hbl.OFF)
