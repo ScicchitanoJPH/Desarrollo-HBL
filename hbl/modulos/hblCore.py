@@ -369,7 +369,7 @@ def getVolumeNames(drive):
 -------------------------------------------------------------------------------------------- """
 
 def heartBeat(pi):
-    auxiliar.EscribirFuncion("heartBeat")
+    ##auxiliar.EscribirFuncion("heartBeat")
 
     try:
         
