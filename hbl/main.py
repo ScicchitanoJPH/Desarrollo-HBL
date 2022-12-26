@@ -155,7 +155,6 @@ if __name__ == "__main__":
    b = datetime.datetime.now() 
 
 
-   SendMail.send()
    # heartbeat hblCore
    while True:
 

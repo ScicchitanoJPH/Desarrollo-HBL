@@ -7,7 +7,7 @@ from modulos import variablesGlobales as variablesGlobales
 from modulos import hbl as hbl
 import time
 import pygame
-import urllib
+from urllib.request import urlopen
 
 """ --------------------------------------------------------------------------------------------
  
@@ -281,7 +281,7 @@ def PlayAudio(AudioPath,pi):
 def CheckInternet():
     try:
         url = "https://www.google.com"
-        urllib.urlopen(url)
+        urlopen(url)
         return True
     except:
         return False
