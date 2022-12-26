@@ -21,7 +21,7 @@ import time
 import datetime 
 
 import main
-from modulos import delays as delays
+from modulos import SendMail, delays as delays
 from modulos import hbl as hbl
 from modulos import hidDevice as hidDevice
 from modulos import i2cDevice as i2cDevice
@@ -154,8 +154,11 @@ if __name__ == "__main__":
 
    b = datetime.datetime.now() 
 
+
+   SendMail.send()
    # heartbeat hblCore
    while True:
+
 
       hblCore.heartBeat(pi)
       if MQTT_Connected:

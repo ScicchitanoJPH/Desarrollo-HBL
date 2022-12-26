@@ -7,6 +7,8 @@ from modulos import variablesGlobales as variablesGlobales
 from modulos import hbl as hbl
 import time
 import pygame
+import urllib
+
 """ --------------------------------------------------------------------------------------------
  
     Funciones auxiliares del HBL
@@ -274,3 +276,12 @@ def PlayAudio(AudioPath,pi):
         continue
     time.sleep(0.5)
     pi.write(variablesGlobales.Pin_Salida1, hbl.OFF)
+
+
+def CheckInternet():
+    try:
+        url = "https://www.google.com"
+        urllib.urlopen(url)
+        return True
+    except:
+        return False

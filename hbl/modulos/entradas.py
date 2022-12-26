@@ -7,6 +7,7 @@ from modulos import variablesGlobales as VG
 from modulos import hbl as hbl
 from modulos import cacheo as cacheo
 from modulos import auxiliar as auxiliar
+from modulos import Control_Personal as Control_Personal
  
 """ --------------------------------------------------------------------------------------------
 
@@ -62,6 +63,12 @@ class Entradas:
             log.escribeLineaLog(hbl.LOGS_hblEntradas, hbl.DIG_in_in1_id) 
 
             VG.Pulso_Anterior_IN1 = 1
+
+            Control_Personal.intruso_detectado()
+
+
+
+
 
              
     
