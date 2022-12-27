@@ -100,7 +100,7 @@
     "network": {
         "activado": 1,
         "eth0": {
-            "activado": 1,
+            "activado": 0,
             "dhcp": 1,
             "static_ip_address": "172.16.232.148/24",
             "static_routers": "192.168.1.1",
@@ -121,7 +121,7 @@
             "netmask": "",
             "network": "",
             "broadcast": "",
-            "ssid": "tecnica",
+            "ssid": "administracion 2.4G",
             "password": "Jphlions135",
             "metric": 201
         },

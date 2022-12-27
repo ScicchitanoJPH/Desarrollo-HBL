@@ -14,7 +14,7 @@ def add_intruso(date):
 def intruso_detectado():
     if auxiliar.CheckInternet():
         print("Envio el mail \n")
-        SendMail.send(str(datetime.datetime.now()))
+        SendMail.send(str(datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")))
     else:
         print("Agrego intruso \n")
-        add_intruso(str(datetime.datetime.now()))
+        add_intruso(str(datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")))
