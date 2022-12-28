@@ -204,7 +204,7 @@
         },
         "COM2": {
             "activado": 1,
-            "port": "/dev/ttyAMA1",
+            "port": "/dev/ttyAMA0",
             "baudrate": 9600,
             "bytesize": 8,
             "parity": "N",
@@ -313,7 +313,7 @@
         }
     },
     "ActualizarGit": {
-        "Activado": 1
+        "Activado": 0
     },
     "Audio": {
         "activado": 1,

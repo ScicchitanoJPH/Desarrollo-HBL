@@ -8,6 +8,7 @@ from modulos import hbl as hbl
 from modulos import cacheo as cacheo
 from modulos import auxiliar as auxiliar
 from modulos import Control_Personal as Control_Personal
+from modulos import serial as serial
  
 """ --------------------------------------------------------------------------------------------
 
@@ -65,6 +66,8 @@ class Entradas:
             VG.Pulso_Anterior_IN1 = 1
 
             Control_Personal.intruso_detectado()
+
+            serial.serial_write()
 
 
 

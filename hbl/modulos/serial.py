@@ -16,7 +16,9 @@ from modulos import variablesGlobales as VG
 from modulos import auxiliar as auxiliar
 
 global pi
- 
+
+global ser1
+global ser2
 
 """ --------------------------------------------------------------------------------------------
 
@@ -29,7 +31,10 @@ def startThreadSerial1():
 
     global pi
 
+    global ser1
+
     ser1 = serial.Serial(port=hbl.SERIAL_COM1_port, baudrate=hbl.SERIAL_COM1_baudrate, bytesize=hbl.SERIAL_COM1_bytesize, parity=hbl.SERIAL_COM1_parity, stopbits=hbl.SERIAL_COM1_stopbits)
+    ser1.write(b"Serial start")
     ser1.flushInput()
               
     while True: 
@@ -45,6 +50,7 @@ def startThreadSerial1():
 
                     log.escribeSeparador(hbl.LOGS_hblSerial)
                     log.escribeLineaLog(hbl.LOGS_hblSerial, "Datos Serial recibidos : " + str(VG.Serial_COM1_Rx_Data)) 
+
 
 
     
@@ -63,8 +69,10 @@ def startThreadSerial2():
     auxiliar.EscribirFuncion("startThreadSerial2")
 
     global pi
+    global ser2
 
     ser2 = serial.Serial(port=hbl.SERIAL_COM2_port, baudrate=hbl.SERIAL_COM2_baudrate, bytesize=hbl.SERIAL_COM2_bytesize, parity=hbl.SERIAL_COM2_parity, stopbits=hbl.SERIAL_COM2_stopbits)
+    ser2.write(b"Serial start")
     ser2.flushInput()
               
     while True: 
@@ -145,4 +153,12 @@ def inicializacion(pi2):
             errorExcepcion = "ERROR : " + str(fname) + " - linea : " + str(sys.exc_info()[-1].tb_lineno) + " - mensaje : " + str(exc_obj) 
 
             log.escribeSeparador(hbl.LOGS_hblSerial)
-            log.escribeLineaLog(hbl.LOGS_hblSerial, "Error : " + str(errorExcepcion))        
+            log.escribeLineaLog(hbl.LOGS_hblSerial, "Error : " + str(errorExcepcion))  
+
+
+def serial_write():
+    global ser1
+    global ser2
+
+    ser1.write(b"XXX")
+    ser2.write(b"XXX")
