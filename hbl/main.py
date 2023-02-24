@@ -21,7 +21,7 @@ import time
 import datetime 
 
 import main
-from modulos import delays as delays
+from modulos import SendMail, delays as delays
 from modulos import hbl as hbl
 from modulos import hidDevice as hidDevice
 from modulos import i2cDevice as i2cDevice
@@ -37,6 +37,7 @@ from modulos import serial as serial
 from modulos import kiosco as kiosco
 from modulos import MQTT as MQTT
 from modulos import Monitoreo as Monitoreo
+from modulos import funcionamiento as funcionamiento
 
 from modulos.decoderWiegand import Decoder
 from modulos.encoderWiegand import Encoder
@@ -57,8 +58,15 @@ def receiveSignal(signalNumber, frame):
    print("Signal received: ", signalNumber) 
    print("Cleaning ...")
    hidDevice.threadCount()
-   w1.cancel()                         # cancela el callback de wiegand
-   w2.cancel()                         # cancela el callback de wiegand
+   try:
+      w1.cancel()                         # cancela el callback de wiegand
+   except Exception as e:
+      pass
+   try:
+      w2.cancel()                         # cancela el callback de wiegand
+   except Exception as e:
+      pass
+
    pi.stop()                          # detiene el pigpiod
    os.system("sudo killall pigpiod")  # elimina el deamon del pigpiod
    os.system("sudo killall wvdial")   # eliminar proceso del modem  
@@ -74,7 +82,7 @@ if __name__ == "__main__":
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
    def callback():
       pass
-                                                                                                                                        
+                                                                                           
    pi = pigpio.pi()
 
    # cargar parametros del archivo de configuracion
@@ -87,20 +95,20 @@ if __name__ == "__main__":
    main.Salidas(pi)
 
    # inicializa las entradas de la hbl
-   main.Entradas(pi, variablesGlobales.Pin_Entrada1, variablesGlobales.Pin_Entrada2, callback)
+   main.Entradas(pi, variablesGlobales.Pin_Entrada1, variablesGlobales.Pin_Entrada2, variablesGlobales.Pin_Entrada3, variablesGlobales.Pin_Entrada4, callback)
 
    # inicializa decoder wiegand
    if hbl.WD_W1_activado == 1:
-      if hbl.WD_W1_modo == "Entrada":
+      if hbl.WD_W1_modo == "IN":
          w1 = main.Decoder(pi, variablesGlobales.Pin_W1_WD0, variablesGlobales.Pin_W1_WD1, callback)
-      else:
+      if hbl.WD_W1_modo == "OUT":
          main.Encoder(pi, variablesGlobales.Pin_W1_WD0, variablesGlobales.Pin_W1_WD1)   
    
    # inicializa encoder wiegand
    if hbl.WD_W2_activado == 1:
-      if hbl.WD_W2_modo == "Entrada":
+      if hbl.WD_W2_modo == "IN":
          w2 = main.Decoder(pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1, callback)
-      else:
+      if hbl.WD_W2_modo == "OUT":
          main.Encoder(pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1)   
  
    # inicializa displays LCD  
@@ -109,8 +117,6 @@ if __name__ == "__main__":
    # inicializa dispositivos HID
    hidDevice.inicializacion(pi)     
      
-   # inicializa display oled
-   hblCore.inicializaoled()
 
    # inicializa httpServer
    httpServer.inicializacion(pi)
@@ -139,7 +145,12 @@ if __name__ == "__main__":
 
    kiosco.inicializacion()
 
-   client = MQTT.inicializacion()
+   try:
+      client = MQTT.inicializacion()
+      MQTT_Connected = 1
+   except Exception as e:
+      print("No se pudo iniciar la conexion MQTT")
+      MQTT_Connected = 0
 
    b = datetime.datetime.now() 
 
@@ -147,11 +158,13 @@ if __name__ == "__main__":
    # heartbeat hblCore
    while True:
 
+
       hblCore.heartBeat(pi)
-      hblCore.oledRefresh()   
-      ##MQTT.publish(client)
-      MQTT.subscribe(client,pi)
+      if MQTT_Connected:
+         ##MQTT.publish(client)
+         MQTT.subscribe(client,pi)
       a = datetime.datetime.now() 
+      funcionamiento.Control(pi)
       
       c = a-b
 

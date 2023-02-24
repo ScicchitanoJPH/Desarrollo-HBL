@@ -99,10 +99,13 @@ class Decoder:
                numero = self.num 
                
                try:
-                  
                   numeroBinario = bin(numero)[2:].zfill(cantidadBits)   
-                  id = int(numeroBinario.format(numero)[hbl.WD_W1_primerBit:int(cantidadBits-1)],2)  
-               
+                  if self.gpio_0 == variablesGlobales.Pin_W1_WD0:
+                     id = int(numeroBinario.format(numero)[hbl.WD_W1_primerBit:int(cantidadBits-1)],2) 
+                     variablesGlobales.WD1_Data = id
+                  else:
+                     id = int(numeroBinario.format(numero)[hbl.WD_W2_primerBit:int(cantidadBits-1)],2) 
+                     variablesGlobales.WD2_Data = id
 
                except: 
 
@@ -264,7 +267,7 @@ class Decoder:
                self.pi.write(variablesGlobales.Pin_Salida2, hbl.ON)  
 
                # delay mantener encendido el rele                       
-               time.sleep(int(hbl.DIG_out_tiempo))
+               time.sleep(int(hbl.DIG_out_out1_tiempo))
 
                # escribe que salidas se desactivan y su uso    
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Apaga Rele 1 (Luz) - Rele 2 (Sirena)")    
@@ -283,10 +286,10 @@ class Decoder:
                log.escribeLineaLog(hbl.LOGS_hblWiegand, "Enciende Rele 4 (Molinete)") 
 
                # Abre el molinete
-               self.pi.write(variablesGlobales.Pin_Salida4, hbl.ON)   
+               self.pi.write(variablesGlobales.Pin_Salida4, hbl.ON4)   
 
                # delay mantener encendido el rele
-               time.sleep(int(hbl.DIG_out_tiempo))
+               time.sleep(int(hbl.DIG_out_out1_tiempo))
 
                # cierra molinete
                self.pi.write(variablesGlobales.Pin_Salida4, hbl.OFF)
@@ -374,7 +377,7 @@ class Decoder:
          # Creo un diccionario con el dato wiegand y el id del dispositivo 
          Dict = {  
             "wiegand" : str(id), 
-            "deviceid" : str(hbl.WD_ID)         
+            "deviceid" : str(hbl.ID_HBL)         
          }    
 
          log.escribeLineaLog(hbl.LOGS_hblWiegand, "JSON envio : " + str(Dict))  

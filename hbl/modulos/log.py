@@ -5,7 +5,6 @@ import shutil
 import zipfile  
 
 from modulos import hbl as hbl
-from modulos import auxiliar as auxiliar
 
 """ --------------------------------------------------------------------------------------------
 
@@ -15,11 +14,10 @@ from modulos import auxiliar as auxiliar
 
 -------------------------------------------------------------------------------------------- """
    
-def configuracionHBL(log):
-    auxiliar.EscribirFuncion("configuracionHBL")
+def configuracionHBL(LogName):
  
     # escribe configuracion HBL  
-    logFile = open(os.getcwd() + '/log/' + log, "a") 
+    logFile = open(os.getcwd() + '/log/' + LogName, "a") 
     logFile.write("\n")
     logFile.write("Configuracion HBL :")
     logFile.write("\n")
@@ -39,10 +37,9 @@ def configuracionHBL(log):
 
     logFile.close() 
    
-def escribeCabecera(log, tipoEvento):
-    auxiliar.EscribirFuncion("escribeCabecera")
+def escribeCabecera(LogName, tipoEvento):
 
-    logFile = open(log, "a") 
+    logFile = open(LogName, "a") 
     logFile.write("***********************************************************************************") 
     logFile.write("\n")
     logFile.write("Configuracion HBL :")
@@ -78,7 +75,7 @@ def escribeCabecera(log, tipoEvento):
     logFile.write("/usr/programas/hbl/log/")
     logFile.write("\n")
     logFile.write("Tiempo act/des salidas (seg) : ")
-    logFile.write(str(hbl.DIG_out_tiempo))
+    logFile.write(str(hbl.DIG_out_out1_tiempo))
     logFile.write("\n")
     logFile.write("----------------------------------------------------------------------------------") 
     logFile.write("\n")
@@ -98,10 +95,9 @@ def escribeCabecera(log, tipoEvento):
 
 -------------------------------------------------------------------------------------------- """
 
-def escribeSeparador(log):
-    auxiliar.EscribirFuncion("escribeSeparador")
+def escribeSeparador(LogName):
 
-    logFile = open(os.getcwd() + '/log/' + log, "a")
+    logFile = open(os.getcwd() + '/log/' + LogName, "a")
     logFile.write("***********************************************************************************")
     logFile.write("\n")
     logFile.write("Fecha / Hora : " + str(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S')))
@@ -118,12 +114,11 @@ def escribeSeparador(log):
 
 -------------------------------------------------------------------------------------------- """
 
-def escribeLineaLog(log, texto):
-    auxiliar.EscribirFuncion("escribeLineaLog")
+def escribeLineaLog(LogName, texto):
 
     try:
 
-        ruta = os.getcwd() + '/log/' + log 
+        ruta = os.getcwd() + '/log/' + LogName 
 
         #print(os.getcwd() + hbl.LOGS_pathBackup + log)
 
@@ -164,5 +159,5 @@ def escribeLineaLog(log, texto):
  
     except Exception as inst: 
 
-        log.escribeSeparador(hbl.LOGS_hblCore) 
-        log.escribeLineaLog(hbl.LOGS_hblCore, "Error : " + str(inst))
+        escribeSeparador(hbl.LOGS_hblCore) 
+        escribeLineaLog(hbl.LOGS_hblCore, "Error : " + str(inst))

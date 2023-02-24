@@ -296,16 +296,6 @@ class dispositivosHID:
     
     def run(self, dispositivo, numero, bufferSize, timeout, endpoint):
         auxiliar.EscribirFuncion("dispositivosHID - run")
-
-        stringLeido = "" 
-
-        posicionCaracter = 5        
-        cantidadCaracteres = 0
-        DNICompleto = ""
-        DNICompletado = False
-
-        i2cDevice.lcd1.put_line(0, "   Ingrese el DNI   ")
-
         while self._running == True:
     
             try:
@@ -318,205 +308,15 @@ class dispositivosHID:
                  
                 log.escribeLineaLog(hbl.LOGS_hblhidDevice, "USB Port : " + str(dispositivo[numero].port_number) + "  /  Caracter leido : " + str(caracterLeido))   
                 
-                if hbl.FUNC_modo == 5: 
-
-                    if caracterLeido != "Err":   
-                        if caracterLeido != "Enter":     
-                            stringLeido += str(caracterLeido) 
-                            print(stringLeido)
-                        else:
-                            stringLeido = stringLeido + "@" + str(dispositivo[numero].port_number)
-
-                            # escribe separador + fecha + hora
-                            log.escribeSeparador(hbl.LOGS_hblhidDevice) 
-                            log.escribeLineaLog(hbl.LOGS_hblhidDevice,"Valor : " + str(stringLeido)) 
-
-                            # recarga los parametros de hbl.json por actualizacion
-                            # hbl.cargarParametros('hbl.json')                    
-                            
-                            #  Funcionamiento del hbl segun modo seleccionado
-                            #
-                            #   5 : lector DNI HID -> wiegand 34
-                            # 
-                            #   dni nuevo ej:
-                            #                00542631492"OCHOA DE EGUILEOR CALIGIURI"AGUSTINA SOFIA"F"41780151"C"29-05-1999"04-04-2018"276 
-                            #   dni viejo ej:
-                            #                "38464428    "A"1"PAN PERALTA"NICOLAS"ARGENTINA"19-08-1994"M"22-06-2011"00056089158"7059 "22-06-2026"378"0"
-                            #                ILRÑ2.01 CÑ110613.02 )No Cap.="UNIDAD ·09 ÇÇ S-NÑ 0040:2008::0009
-                      
-                            # Parseo valor del dni en el string completo
-                            stringSplit=stringLeido.split('@')
-                        
-                            log.escribeLineaLog(hbl.LOGS_hblhidDevice,"SPLIT : " + str(stringSplit)) 
-
-                            tamanioLista = len(stringSplit)
-
-                            log.escribeLineaLog(hbl.LOGS_hblhidDevice,"Tamaño lista : " + str(tamanioLista))  
-
-                            # extraigo DNI
-                            if tamanioLista > 12 :
-                                dni = stringSplit[1]
-                            else:
-                                dni = stringSplit[4]  
-
-                            # Dni binario completo en 32 bits
-                            # convierte el valor del dni a binario
-                            # y completa con 0 hasta llegar a 32 bits
-                            try:
-
-                                dniBinario = bin(int(dni))[2:].zfill(32) 
-                                
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice,"DNI bin : " + str(dniBinario))  
-    
-                                # parte alta del binario 
-                                dinBinarioAlta = dniBinario[:-16]
-                                
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice,"DNI Alta bin : " + str(dinBinarioAlta)) 
-
-                                dinIntegerAlta = int(dinBinarioAlta, 2) 
-
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice,"DNI Alta int : " + str(dinIntegerAlta)) 
-
-                                # cuenta cantidad de bits en 1 en esta parte para calcular la paridad Par (EVEN)
-                                cantBitsParteAlta = 0
-
-                                while (dinIntegerAlta): 
-                                    cantBitsParteAlta += dinIntegerAlta & 1
-                                    dinIntegerAlta >>= 1
-                                
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice,"Cant. 1 parte alta : " + str(cantBitsParteAlta))     
-
-                                # parte baja del binario
-                                dinBinarioBaja = dniBinario[16:]   
-                                
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice,"DNI Baja : " + str(dinBinarioBaja)) 
-
-                                dinIntegerBaja = int(dinBinarioBaja, 2)
-                                
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice,"DNI Baja int : " + str(dinIntegerBaja)) 
-
-                                # cuenta cantidad de bits en 1 en esta parte para calcular la paridad Impar (ODD)
-                                cantBitsParteBaja = 0
-
-                                while (dinIntegerBaja): 
-                                    cantBitsParteBaja += dinIntegerBaja & 1
-                                    dinIntegerBaja >>= 1
-                                                                
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice,"Cant. 1 parte baja : " + str(cantBitsParteBaja))
-
-                                # agrego los bits de paridad al binario del dni para completar el codigo wiegand antes de enviarlo
-                                dniToWiegand = ""
-
-                                # si el numero es par
-                                if (cantBitsParteAlta % 2) == 0:   
-                                    dniToWiegand = "0" + dniBinario
-                                else:  
-                                    dniToWiegand = "1" + dniBinario 
-                                
-                                # si el numero es impar
-                                if (cantBitsParteBaja % 2) == 1:   
-                                    dniToWiegand = dniToWiegand + "0" 
-                                else:  
-                                    dniToWiegand = dniToWiegand + "1"  
-                                
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice,"WIEGAND COMPLETO: " + str(dniToWiegand)) 
-
-                                # envio codigo wiegand
-                                Encoder.encoderWiegandBits(dniToWiegand, self.pi, variablesGlobales.Pin_W2_WD0, variablesGlobales.Pin_W2_WD1) 
-
-                            except Exception as inst:
-
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice, "Error : " + str(inst))
-
-                # 
-                #                      
-                #   En el caso del modo 7, va a tomar el valor del DNI, lo valida y lo envia por TCP
-                #
-                #
-
-                elif hbl.FUNC_modo == 7:
-
-                    # Enciende el backlight - muestra el texto en la primer linea
-                    i2cDevice.lcd1.put_line(0, "   Ingrese el DNI   ")
-                                                  
-                    if caracterLeido != "Enter" and caracterLeido != "Cancel" and caracterLeido != "Err":
-                      
-                        if cantidadCaracteres < 9:
-
-                            if cantidadCaracteres == 0 and caracterLeido == "0":
-                                # si el primer caracter es un 0 no lo toma
-                                # sino hace el flujo del programa
-                                log.escribeLineaLog(hbl.LOGS_hblhidDevice, "Msg : primer caracter del DNI no puede ser 0")
-                                pass
-                            else:
-                                i2cDevice.lcd1.move_to(2, posicionCaracter)
-                                i2cDevice.lcd1.put_str(str(caracterLeido))
-                                DNICompleto += str(caracterLeido)
-                                cantidadCaracteres = cantidadCaracteres + 1 
-                                posicionCaracter = posicionCaracter + 1    
-
-                    elif caracterLeido == "Enter":
-
-                        if cantidadCaracteres < 7:
-                            log.escribeLineaLog(hbl.LOGS_hblhidDevice, "Msg : error en el DNI - " + str(DNICompleto))
-                            i2cDevice.lcd1.move_to(3, 0)
-                            i2cDevice.lcd1.put_str("   Error en el DNI  ")
-                            time.sleep(3)
-                            i2cDevice.lcd1.move_to(2, 0)
-                            i2cDevice.lcd1.put_str("                    ")
-                            i2cDevice.lcd1.move_to(3, 0)
-                            i2cDevice.lcd1.put_str("                    ")
-                            cantidadCaracteres = 0
-                            posicionCaracter = 5    
-                            DNICompleto = ""                       
-
-                        if cantidadCaracteres > 6 and cantidadCaracteres < 10:
-                            log.escribeLineaLog(hbl.LOGS_hblhidDevice, "Msg : enviando DNI...")
-                            i2cDevice.lcd1.move_to(3, 0)
-                            i2cDevice.lcd1.put_str("  Enviando DNI ...  ")
-                            time.sleep(3)
-                            i2cDevice.lcd1.move_to(2, 0)
-                            i2cDevice.lcd1.put_str("                    ")
-                            i2cDevice.lcd1.move_to(3, 0)
-                            i2cDevice.lcd1.put_str("                    ")
-                            cantidadCaracteres = 0
-                            posicionCaracter = 5
-                            print(DNICompleto)
-                            DNICompletado = True                                                  
-                                            
-                    elif caracterLeido == "Cancel":
-                        if cantidadCaracteres > 0:
-                            posicionCaracter = posicionCaracter - 1
-                            i2cDevice.lcd1.move_to(2, posicionCaracter)
-                            i2cDevice.lcd1.put_str(" ")
-                            cantidadCaracteres = cantidadCaracteres - 1
-                            DNICompleto = DNICompleto[:-1]
-                   
-                    elif caracterLeido == "Err":
-                        pass
-
-                    if DNICompletado == True:
- 
-                        m = {"id" : hbl.IDHBL, "dni" : DNICompleto } 
-                        jsonEnvio = json.dumps(m)
-
-                        variablesGlobales.jsonEnvioDNI = jsonEnvio
-
-                        log.escribeLineaLog(hbl.LOGS_hblhidDevice, "jsonEnvio : " + str(jsonEnvio))
-                        DNICompletado = False
-                        DNICompleto = ""
-                           
-                            
-                # blanqueo de string
-                stringLeido = ""                                                
-
-                byteRecibido = None    
+                variablesGlobales.CharTeclado = caracterLeido
                             
             except usb.core.USBError as e: 
                 
                 if e.args == ('Operation timed out',):
                     log.escribeLineaLog(hbl.LOGS_hblhidDevice,"Error : Operation timed out")
                     continue
+                
+                
 
 """ --------------------------------------------------------------------------------------------
 

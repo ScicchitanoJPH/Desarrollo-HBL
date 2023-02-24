@@ -19,6 +19,7 @@ from modulos import log as log
 from modulos import hbl as hbl 
 from modulos import auxiliar as auxiliar
 from modulos import auxiliar as auxiliar
+from modulos import variablesGlobales
 
 global ftp
 
@@ -71,7 +72,7 @@ def uploadLogs():
 
         # crea un directorio dentro de la carpeta del hbl/logs
         fechaHora = str(datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')) 
-        directorio = hbl.HBLCORE_serialNumber + '_' + fechaHora  
+        directorio = variablesGlobales.RPI_SerialNumber + '_' + fechaHora  
 
         # crea el directorio
         ftpObject.mkd(directorio)   

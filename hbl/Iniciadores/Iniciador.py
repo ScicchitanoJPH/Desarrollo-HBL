@@ -3,6 +3,7 @@ from tkinter import Menu
 from colorama import Fore , Style
 import time
 import json
+import VerEstado
 
 Folder_Iniciadores_Path  = "/usr/programas/hbl/Iniciadores/"
 Folder_Logs_Path  = "/usr/programas/hbl/log/"
@@ -28,7 +29,8 @@ def MenuInformacion():
     print("5) Informacion de particiones \n")
     print("6) Informacion de RAM \n")
     print("7) Ver Fecha \n")
-    print("8) Volver al Menu Principal \n")
+    print("8) Ver estado de programa \n")
+    print("9) Volver al Menu Principal \n")
 
     InfoInput=int(input())
 
@@ -48,6 +50,9 @@ def MenuInformacion():
     if InfoInput==7:
         os.system("sudo sh " + Folder_Iniciadores_Path + "VerFecha.sh")
     if InfoInput==8:
+        VerEstado.EstadoPrograma()
+        #os.system("sudo sh " + Folder_Iniciadores_Path + "VerEstado.sh")
+    if InfoInput==9:
         os.system("clear")
         return 0
     

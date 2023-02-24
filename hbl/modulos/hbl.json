@@ -3,6 +3,18 @@
     "funcionamiento": {
         "modo": 9
     },
+    "Tareas": {
+        "Tarea1": "Leer Serial",
+        "Tarea2": "",
+        "Tarea3": "",
+        "Tarea4": "",
+        "Tarea5": "",
+        "Tarea6": "",
+        "Tarea7": "",
+        "Tarea8": "",
+        "Tarea9": "",
+        "Tarea10": ""
+    },
     "cacheo": {
         "activado": 1,
         "cantidadCacheos": 10,
@@ -23,17 +35,50 @@
             "pushDelay": 500000,
             "in1": {
                 "activado": 0,
+                "logica": "NA",
                 "id": "Entrada 1"
             },
             "in2": {
                 "activado": 0,
-                "id": "Entrada 2"
+                "logica": "NA",
+                "id": "Reloj"
+            },
+            "in3": {
+                "activado": 0,
+                "logica": "NA",
+                "id": "Entrada 3"
+            },
+            "in4": {
+                "activado": 0,
+                "logica": "NA",
+                "id": "Entrada 4"
             }
         },
         "out": {
-            "activado": 1,
-            "tiempo": 1,
-            "logica": 1
+            "out1": {
+                "activado": 1,
+                "id": "Sirena",
+                "repeticion": 3,
+                "tiempo": 1
+            },
+            "out2": {
+                "activado": 1,
+                "id": "Barrera",
+                "repeticion": 1,
+                "tiempo": 1
+            },
+            "out3": {
+                "activado": 1,
+                "id": "Salida 3",
+                "repeticion": 3,
+                "tiempo": 1
+            },
+            "out4": {
+                "activado": 1,
+                "id": "Salida 4",
+                "repeticion": 3,
+                "tiempo": 1
+            }
         }
     },
     "request": {
@@ -45,17 +90,30 @@
         "urlRequest4": "",
         "urlRequest5": "",
         "urlError": "http://localhost/jphaccess/error.php",
-        "modoRequest": 2,
         "timerActivado": 0,
         "timeoutRequest": 10
     },
+<<<<<<< HEAD
+=======
+    "GenerarTXT": {
+        "activado": 1,
+        "path": "/home/pi/Desktop/Request.txt"
+    },
+>>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
     "network": {
         "activado": 1,
         "eth0": {
-            "activado": 1,
+            "activado": 0,
             "dhcp": 1,
+<<<<<<< HEAD
             "static_ip_address": "172.16.232.16/24",
             "static_routers": "",
+=======
+            "static_ip_address": "172.16.232.148/24",
+            "static_routers": "192.168.1.1",
+            "gateway": "172.16.0.1",
+            "DNS": "172.19.201.17 172.19.201.18",
+>>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
             "metric": 0,
             "netmask": "",
             "network": "",
@@ -66,7 +124,12 @@
             "dhcp": 1,
             "static_ip_address": "192.168.1.1/24",
             "static_routers": "192.168.1.1",
-            "ssid": "JPH Labo 2",
+            "gateway": "",
+            "DNS": "",
+            "netmask": "",
+            "network": "",
+            "broadcast": "",
+            "ssid": "administracion 2.4G",
             "password": "Jphlions135",
             "metric": 201
         },
@@ -98,6 +161,8 @@
             "dhcp": 1,
             "static_ip_address": "192.168.1.1/24",
             "static_routers": "192.168.1.1",
+            "gateway": "172.16.0.1",
+            "DNS": "172.19.201.17 172.19.201.18",
             "netmask": "255.255.255.0",
             "network": "192.168.1.0",
             "broadcast": "192.168.1.255",
@@ -119,31 +184,49 @@
     "wiegand": {
         "W1": {
             "activado": 1,
+<<<<<<< HEAD
             "modo": "Entrada",
+=======
+            "modo": "IN",
+>>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
             "esperaSenial": 0,
             "bitsSalida": 0,
-            "delayPulso": 8e-05,
-            "delayIntervalo": 0.00024,
+            "delayPulso": 5e-05,
+            "delayIntervalo": 0.002,
             "primerBit": 1
         },
         "W2": {
+<<<<<<< HEAD
             "activado": 1,
             "modo": "Salida",
+=======
+            "activado": 0,
+            "modo": "OUT",
+>>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
             "esperaSenial": 0,
             "bitsSalida": 0,
             "delayPulso": 5e-05,
             "delayIntervalo": 0.002,
             "primerBit": 9
-        },
-        "ID": "0001"
+        }
     },
     "serial": {
-        "activado": 1,
-        "port": "/dev/ttyS0",
-        "baudrate": 9600,
-        "bytesize": 8,
-        "parity": "N",
-        "stopbits": 1
+        "COM1": {
+            "activado": 1,
+            "port": "/dev/ttyS0",
+            "baudrate": 9600,
+            "bytesize": 8,
+            "parity": "N",
+            "stopbits": 1
+        },
+        "COM2": {
+            "activado": 1,
+            "port": "/dev/ttyAMA0",
+            "baudrate": 9600,
+            "bytesize": 8,
+            "parity": "N",
+            "stopbits": 1
+        }
     },
     "display": {
         "activado": 1
@@ -191,10 +274,8 @@
         "hblFTP": "hblFTP.log",
         "hblSerial": "hblSerial.log",
         "hblCacheo": "hblCacheo.log",
-        "hblKiosco": "hblKiosco.log"
-    },
-    "Seguimiento": {
-        "file_path": "Segumiento.txt"
+        "hblKiosco": "hblKiosco.log",
+        "hblTareas": "hblTareas.log"
     },
     "reporte": {
         "activado": 1,
@@ -212,6 +293,7 @@
     },
     "hidDevices": {
         "device1": {
+            "nombre": "Teclado generico",
             "activado": 1,
             "bufferSize": 20,
             "timeout": 200,
@@ -220,6 +302,7 @@
             "product_ID": "0x0001"
         },
         "device2": {
+            "nombre": "Lector DNI",
             "activado": 0,
             "bufferSize": 20,
             "timeout": 20000,
@@ -228,6 +311,7 @@
             "product_ID": "0x1200"
         },
         "device3": {
+            "nombre": "Lector ZK",
             "activado": 0,
             "bufferSize": 20,
             "timeout": 2000,
@@ -236,6 +320,7 @@
             "product_ID": "0x0035"
         },
         "device4": {
+            "nombre": "Honeywell Imaging & Mobility 7580",
             "activado": 0,
             "bufferSize": 20,
             "timeout": 200,
@@ -244,6 +329,7 @@
             "product_ID": "0x0be1"
         }
     },
+<<<<<<< HEAD
     "hblCore": {
         "hblDisplay": {
             "activado": 0,
@@ -262,7 +348,17 @@
         },
         "idHBL": "3"
     },
+=======
+>>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
     "ActualizarGit": {
-        "Activado": 1
+        "Activado": 0
+    },
+    "Audio": {
+        "activado": 1,
+        "path": {
+            "Pasa": "/usr/programas/Audios/acceso-habilitado.mp3",
+            "NoPasa": "/usr/programas/Audios/acceso-denegado.mp3",
+            "ErrorDNI": ""
+        }
     }
 }

@@ -9,21 +9,20 @@ __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file
 with open(os.path.join(__location__ , file_path_JSON_aux), "r") as f:
     data = json.load(f)
     f.close()
-    print("data : ",json.JSONEncoder(indent=2).encode(data))
+    #print("data : ",json.JSONEncoder(indent=2).encode(data))
 
-print("\n\n\n\n\n")
+#print("\n\n\n\n\n")
 
 with open(os.path.join(__location__ , file_path_JSON_new), "r") as f2:
     data2 = json.load(f2)
     f2.close()
-    print("data2 : ",json.JSONEncoder(indent=2).encode(data2))
+    #print("data2 : ",json.JSONEncoder(indent=2).encode(data2))
 
 aux = {'Test':'Test'}
 for key in data:
     if key in data2:
         if type(aux) == type(data2[key]):
             for key_key in data[key]:
-                print("-----",key_key)
                 if key_key in data2[key]:
                     if type(aux) == type(data2[key][key_key]):
                         for key_key_key in data[key][key_key]:
@@ -35,7 +34,6 @@ for key in data:
                                 else:
                                     data2[key][key_key][key_key_key]=data[key][key_key][key_key_key]
                     else:
-                        print("Except")
                         data2[key][key_key]=data[key][key_key]
         else:
             try:
@@ -49,7 +47,7 @@ for key in data:
 
 
 
-print(json.JSONEncoder(indent=2).encode(data2))
+#print(json.JSONEncoder(indent=2).encode(data2))
 myFile = open(file_path_JSON_final, 'w')
 with myFile:
     myFile.write(json.JSONEncoder(indent=2).encode(data2))

@@ -1,8 +1,13 @@
 
 import os
+from pickle import TRUE
 
 from modulos import log as log
+from modulos import variablesGlobales as variablesGlobales
 from modulos import hbl as hbl
+import time
+import pygame
+from urllib.request import urlopen
 
 """ --------------------------------------------------------------------------------------------
  
@@ -14,8 +19,8 @@ from modulos import hbl as hbl
 -------------------------------------------------------------------------------------------- """  
 
 def EscribirFuncion(Funcion):
-    myFile = open(hbl.Seguimiento_file_path, 'w')
-    myFile.write(Funcion)
+    myFile = open(variablesGlobales.Seguimiento_file_path, 'w')
+    myFile.write(Funcion + "  -  " + time.strftime("%d/%m/%y") + "  -  " + time.strftime("%H:%M:%S"))
     myFile.close()
 
 """ --------------------------------------------------------------------------------------------
@@ -198,3 +203,85 @@ def dniToWiegandConverter(dni, bits, logueo):
 
     return dniToWiegand
 
+
+
+def GetInfoID(id,modo):
+    if modo == "IN":
+        if hbl.DIG_in_in1_id == id:
+            return variablesGlobales.Pin_Entrada1 , hbl.DIG_in_in1_ON, hbl.DIG_in_in1_OFF
+        elif hbl.DIG_in_in2_id == id:
+            return variablesGlobales.Pin_Entrada2 , hbl.DIG_in_in2_ON, hbl.DIG_in_in2_OFF
+        elif hbl.DIG_in_in3_id == id:
+            return variablesGlobales.Pin_Entrada3 , hbl.DIG_in_in3_ON, hbl.DIG_in_in3_OFF
+        elif hbl.DIG_in_in4_id == id:
+            return variablesGlobales.Pin_Entrada4 , hbl.DIG_in_in4_ON, hbl.DIG_in_in4_OFF
+        else:
+            return 99,99,99 #ERROR
+    else:
+        if hbl.DIG_out_out1_id == id:
+            return variablesGlobales.Pin_Salida1 , hbl.DIG_out_out1_repeticion , hbl.DIG_out_out1_tiempo
+        elif hbl.DIG_out_out2_id == id:
+            return variablesGlobales.Pin_Salida2 , hbl.DIG_out_out2_repeticion , hbl.DIG_out_out2_tiempo
+        elif hbl.DIG_out_out3_id == id:
+            return variablesGlobales.Pin_Salida3 , hbl.DIG_out_out3_repeticion , hbl.DIG_out_out3_tiempo
+        elif hbl.DIG_out_out4_id == id:
+            return variablesGlobales.Pin_Salida4 , hbl.DIG_out_out4_repeticion , hbl.DIG_out_out4_tiempo
+        else:
+            return 99 #ERROR
+
+def EscribirSalida(pi,id):
+    pin,rep,tiempo = GetInfoID(id,"OUT")
+    for x in range(rep):
+        pi.write(pin,hbl.ON)
+        time.sleep(tiempo)
+        pi.write(pin,hbl.OFF)
+        time.sleep(tiempo)
+
+def CheckFlag(id):
+    pin,on,off = GetInfoID(id,"IN")
+    if pin == variablesGlobales.Pin_Entrada1:
+        return variablesGlobales.Pulso_Anterior_IN1
+    elif pin == variablesGlobales.Pin_Entrada2:
+        return variablesGlobales.Pulso_Anterior_IN2
+    elif pin == variablesGlobales.Pin_Entrada3:
+        return variablesGlobales.Pulso_Anterior_IN3
+    elif pin == variablesGlobales.Pin_Entrada4:
+        return variablesGlobales.Pulso_Anterior_IN4
+    else:
+        return 99 #ERROR
+
+def CheckID(id):
+    pin,on,off = GetInfoID(id,"IN")
+    if pin == 99:
+        return False
+    else:
+        return True
+
+def CheckTarea(id):
+    flag = False
+    for x in hbl.TareasJSON:
+        if hbl.TareasJSON[x] == id:
+            flag = True
+    return flag
+
+
+
+
+def PlayAudio(AudioPath,pi):
+    pi.write(variablesGlobales.Pin_Salida1, hbl.ON)
+    pygame.mixer.init()
+    pygame.mixer.music.load(AudioPath)
+    pygame.mixer.music.play()
+    while pygame.mixer.music.get_busy() == True:
+        continue
+    time.sleep(0.5)
+    pi.write(variablesGlobales.Pin_Salida1, hbl.OFF)
+
+
+def CheckInternet():
+    try:
+        url = "https://www.google.com"
+        urlopen(url)
+        return True
+    except:
+        return False

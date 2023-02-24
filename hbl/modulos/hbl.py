@@ -2,6 +2,7 @@ import json
 import os
 import sys
 
+
 """ --------------------------------------------------------------------------------------------
 
 
@@ -25,6 +26,20 @@ def cargarParametros(archivo):
     global REPORTE_URLReporteInicial 
     global REPORTE_URLReporte
 
+
+    global TAREAS_Tarea1
+    global TAREAS_Tarea2
+    global TAREAS_Tarea3
+    global TAREAS_Tarea4
+    global TAREAS_Tarea5
+    global TAREAS_Tarea6
+    global TAREAS_Tarea7
+    global TAREAS_Tarea8
+    global TAREAS_Tarea9
+    global TAREAS_Tarea10
+    global TareasJSON
+    global CantidadTareas
+
     global WD_W1_activado
     global WD_W1_modo
     global WD_W1_esperaSenial
@@ -41,29 +56,70 @@ def cargarParametros(archivo):
     global WD_W2_delayIntervalo
     global WD_W2_primerBit 
      
-    global WD_ID
+
 
     global DIG_in_pushDelay
 
     global DIG_in_in1_activado
+    global DIG_in_in1_logica
     global DIG_in_in1_id
+    global DIG_in_in1_ON
+    global DIG_in_in1_OFF
 
     global DIG_in_in2_activado
+    global DIG_in_in2_logica
     global DIG_in_in2_id
+    global DIG_in_in2_ON
+    global DIG_in_in2_OFF
+
+    global DIG_in_in3_activado
+    global DIG_in_in3_logica
+    global DIG_in_in3_id
+    global DIG_in_in3_ON
+    global DIG_in_in3_OFF
+
+    global DIG_in_in4_activado
+    global DIG_in_in4_logica
+    global DIG_in_in4_id
+    global DIG_in_in4_ON
+    global DIG_in_in4_OFF
   
-    global DIG_out_activado 
-    global DIG_out_tiempo
-    global DIG_out_logica
+    global DIG_out_out1_activado 
+    global DIG_out_out1_id 
+    global DIG_out_out1_repeticion 
+    global DIG_out_out1_tiempo
+
+    global DIG_out_out2_activado 
+    global DIG_out_out2_id 
+    global DIG_out_out2_repeticion 
+    global DIG_out_out2_tiempo
+
+    global DIG_out_out3_activado 
+    global DIG_out_out3_id
+    global DIG_out_out3_repeticion  
+    global DIG_out_out3_tiempo
+
+    global DIG_out_out4_activado 
+    global DIG_out_out4_id 
+    global DIG_out_out4_repeticion
+    global DIG_out_out4_tiempo
 
     global ON
     global OFF
 
-    global SERIAL_activado
-    global SERIAL_port
-    global SERIAL_baudrate
-    global SERIAL_bytesize
-    global SERIAL_parity
-    global SERIAL_stopbits 
+    global SERIAL_COM1_activado
+    global SERIAL_COM1_port
+    global SERIAL_COM1_baudrate
+    global SERIAL_COM1_bytesize
+    global SERIAL_COM1_parity
+    global SERIAL_COM1_stopbits 
+
+    global SERIAL_COM2_activado
+    global SERIAL_COM2_port
+    global SERIAL_COM2_baudrate
+    global SERIAL_COM2_bytesize
+    global SERIAL_COM2_parity
+    global SERIAL_COM2_stopbits
  
     global HID_device1_activado
     global HID_device1_bufferSize 
@@ -111,10 +167,12 @@ def cargarParametros(archivo):
     global REQ_urlRequest3
     global REQ_urlRequest4
     global REQ_urlRequest5
-    global REQ_modoRequest
     global REQ_urlError
     global REQ_timeoutRequest
     global REQ_timerActivado 
+
+    global TXT_activado
+    global TXT_path
 
     global LOGS_pathBackup 
     global LOGS_tamanioRotator 
@@ -131,16 +189,7 @@ def cargarParametros(archivo):
     global LOGS_hblSerial
     global LOGS_hblCacheo
     global LOGS_hblKiosco
- 
-    global HBLCORE_hblDisplay_activado
-    global HBLCORE_hblDisplay_modo 
-    global HBLCORE_serialNumber 
-    global HBLCORE_revision 
-    global HBLCORE_MAC_ethernet 
-    global HBLCORE_NTP 
-    global HBLCORE_reset_tiempoReset
-    global HBLCORE_reset_resetActivado
-    global HBLCORE_tamper_activado
+    global LOGS_hblTareas
 
     global IDHBL
 
@@ -157,6 +206,8 @@ def cargarParametros(archivo):
     global NETWORK_eth0_network
     global NETWORK_eth0_broadcast 
     global NETWORK_eth0_metric
+    global NETWORK_eth0_gateway
+    global NETWORK_eth0_DNS
 
     global NETWORK_eth1_activado
     global NETWORK_eth1_dhcp
@@ -166,6 +217,8 @@ def cargarParametros(archivo):
     global NETWORK_eth1_network
     global NETWORK_eth1_broadcast 
     global NETWORK_eth1_metric
+    global NETWORK_eth1_gateway
+    global NETWORK_eth1_DNS
     global NETWORK_eth1_vendor_ID 
     global NETWORK_eth1_product_ID 
     global NETWORK_eth1_timeDelay
@@ -175,6 +228,11 @@ def cargarParametros(archivo):
     global NETWORK_wlan0_static_ip_address
     global NETWORK_wlan0_static_routers
     global NETWORK_wlan0_metric 
+    global NETWORK_wlan0_netmask
+    global NETWORK_wlan0_network
+    global NETWORK_wlan0_broadcast 
+    global NETWORK_wlan0_gateway
+    global NETWORK_wlan0_DNS
     global NETWORK_wlan0_ssid
     global NETWORK_wlan0_password  
  
@@ -231,7 +289,13 @@ def cargarParametros(archivo):
     global MQTT_TopicSend
     global MQTT_TopicRecv
 
-    global Seguimiento_file_path
+    global Audio_activado
+    global Audio_path_Pasa
+    global Audio_path_NoPasa
+    global Audio_path_ErrorDNI
+
+    global data
+
 
 
     # ******************************************************************************************************************************************
@@ -272,6 +336,27 @@ def cargarParametros(archivo):
     REPORTE_URLReporteInicial=data["reporte"]["URLReporteInicial"]
     REPORTE_URLReporte=data["reporte"]["URLReporte"]
 
+
+
+
+    TAREAS_Tarea1=data['Tareas']['Tarea1']
+    TAREAS_Tarea2=data['Tareas']['Tarea2']
+    TAREAS_Tarea3=data['Tareas']['Tarea3']
+    TAREAS_Tarea4=data['Tareas']['Tarea4']
+    TAREAS_Tarea5=data['Tareas']['Tarea5']
+    TAREAS_Tarea6=data['Tareas']['Tarea6']
+    TAREAS_Tarea7=data['Tareas']['Tarea7']
+    TAREAS_Tarea8=data['Tareas']['Tarea8']
+    TAREAS_Tarea9=data['Tareas']['Tarea9']
+    TAREAS_Tarea10=data['Tareas']['Tarea10']
+
+    TareasJSON = data['Tareas']
+    CantidadTareas = 0
+
+    for key in TareasJSON:
+        if TareasJSON[key] != "":
+            CantidadTareas = CantidadTareas + 1
+
     #  Seleccion de funcionamiento hbl
     #
     #   0  :  repetidor wiegand IN : W1 -> OUT : W2
@@ -304,35 +389,85 @@ def cargarParametros(archivo):
     WD_W2_primerBit=data["wiegand"]["W2"]["primerBit"]
 
 
-    WD_ID=data["wiegand"]["ID"]
   
     # digital
     DIG_in_pushDelay=data["digital"]["in"]["pushDelay"] 
     DIG_in_in1_activado=data["digital"]["in"]["in1"]["activado"]
-    DIG_in_in1_id=data["digital"]["in"]["in1"]["id"]
+    DIG_in_in1_logica=data["digital"]["in"]["in1"]["logica"]
+    DIG_in_in1_id=data["digital"]["in"]["in1"]["id"]    
 
     DIG_in_in2_activado=data["digital"]["in"]["in2"]["activado"]
+    DIG_in_in2_logica=data["digital"]["in"]["in2"]["logica"]
     DIG_in_in2_id=data["digital"]["in"]["in2"]["id"]
+    
+    DIG_in_in3_activado=data["digital"]["in"]["in3"]["activado"]
+    DIG_in_in3_logica=data["digital"]["in"]["in3"]["logica"]
+    DIG_in_in3_id=data["digital"]["in"]["in3"]["id"]
+
+    DIG_in_in4_activado=data["digital"]["in"]["in4"]["activado"]
+    DIG_in_in4_logica=data["digital"]["in"]["in4"]["logica"]
+    DIG_in_in4_id=data["digital"]["in"]["in4"]["id"]
+
+    if DIG_in_in1_logica == "NA":
+        DIG_in_in1_ON = 0
+        DIG_in_in1_OFF = 1
+    if DIG_in_in2_logica == "NA":
+        DIG_in_in2_ON = 0
+        DIG_in_in2_OFF = 1
+    if DIG_in_in3_logica == "NA":
+        DIG_in_in3_ON = 0
+        DIG_in_in3_OFF = 1
+    if DIG_in_in4_logica == "NA":
+        DIG_in_in4_ON = 0
+        DIG_in_in4_OFF = 1
+
+
+
+
+
+
+
  
-    DIG_out_activado=data["digital"]["out"]["activado"]
-    DIG_out_tiempo=data["digital"]["out"]["tiempo"]
-    DIG_out_logica=data["digital"]["out"]["logica"]
+    DIG_out_out1_activado=data["digital"]["out"]["out1"]["activado"]
+    DIG_out_out1_id=data["digital"]["out"]["out1"]["id"]
+    DIG_out_out1_repeticion=data["digital"]["out"]["out1"]["repeticion"]
+    DIG_out_out1_tiempo=data["digital"]["out"]["out1"]["tiempo"]
+
+    DIG_out_out2_activado=data["digital"]["out"]["out2"]["activado"]
+    DIG_out_out2_id=data["digital"]["out"]["out2"]["id"]
+    DIG_out_out2_repeticion=data["digital"]["out"]["out2"]["repeticion"]
+    DIG_out_out2_tiempo=data["digital"]["out"]["out2"]["tiempo"]
+
+    DIG_out_out3_activado=data["digital"]["out"]["out3"]["activado"]
+    DIG_out_out3_id=data["digital"]["out"]["out3"]["id"]
+    DIG_out_out3_repeticion=data["digital"]["out"]["out3"]["repeticion"]
+    DIG_out_out3_tiempo=data["digital"]["out"]["out3"]["tiempo"]
+
+    DIG_out_out4_activado=data["digital"]["out"]["out4"]["activado"]
+    DIG_out_out4_id=data["digital"]["out"]["out4"]["id"]
+    DIG_out_out4_repeticion=data["digital"]["out"]["out4"]["repeticion"]
+    DIG_out_out4_tiempo=data["digital"]["out"]["out4"]["tiempo"]
     
     # define la logica si es inversa o directa
-    if DIG_out_logica == 0:
-        ON = 1
-        OFF = 0
-    else :   
-        ON = 0
-        OFF = 1
+
+    ON = 0
+    OFF = 1
+
     
     # serial
-    SERIAL_activado=data["serial"]["activado"]
-    SERIAL_port=data["serial"]["port"]
-    SERIAL_baudrate=data["serial"]["baudrate"]
-    SERIAL_bytesize=data["serial"]["bytesize"]
-    SERIAL_parity=data["serial"]["parity"]
-    SERIAL_stopbits=data["serial"]["stopbits"]   
+    SERIAL_COM1_activado=data["serial"]["COM1"]["activado"]
+    SERIAL_COM1_port=data["serial"]["COM1"]["port"]
+    SERIAL_COM1_baudrate=data["serial"]["COM1"]["baudrate"]
+    SERIAL_COM1_bytesize=data["serial"]["COM1"]["bytesize"]
+    SERIAL_COM1_parity=data["serial"]["COM1"]["parity"]
+    SERIAL_COM1_stopbits=data["serial"]["COM1"]["stopbits"] 
+
+    SERIAL_COM2_activado=data["serial"]["COM2"]["activado"]
+    SERIAL_COM2_port=data["serial"]["COM2"]["port"]
+    SERIAL_COM2_baudrate=data["serial"]["COM2"]["baudrate"]
+    SERIAL_COM2_bytesize=data["serial"]["COM2"]["bytesize"]
+    SERIAL_COM2_parity=data["serial"]["COM2"]["parity"]
+    SERIAL_COM2_stopbits=data["serial"]["COM2"]["stopbits"]   
 
     # hidDevices   
     HID_device1_activado=data["hidDevices"]["device1"]["activado"]
@@ -383,11 +518,14 @@ def cargarParametros(archivo):
     REQ_urlRequest3=data["request"]["urlRequest3"] 
     REQ_urlRequest4=data["request"]["urlRequest4"] 
     REQ_urlRequest5=data["request"]["urlRequest5"] 
-    REQ_modoRequest=data["request"]["modoRequest"]
 
     REQ_urlError=data["request"]["urlError"] 
     REQ_timeoutRequest=data["request"]["timeoutRequest"] 
     REQ_timerActivado=data["request"]["timerActivado"]
+
+
+    TXT_activado=data["GenerarTXT"]["activado"]
+    TXT_path=data["GenerarTXT"]["path"]
 
     # log   
     LOGS_pathBackup=data["logs"]["pathBackup"] 
@@ -405,17 +543,9 @@ def cargarParametros(archivo):
     LOGS_hblSerial=data["logs"]["hblSerial"]   
     LOGS_hblCacheo=data["logs"]["hblCacheo"]    
     LOGS_hblKiosco=data["logs"]["hblKiosco"]    
+    LOGS_hblTareas=data["logs"]["hblTareas"]
 
-    # hblCore
-    HBLCORE_hblDisplay_activado=data["hblCore"]["hblDisplay"]["activado"]
-    HBLCORE_hblDisplay_modo=data["hblCore"]["hblDisplay"]["modo"]
-    HBLCORE_serialNumber=data["hblCore"]["serialNumber"] 
-    HBLCORE_revision=data["hblCore"]["revision"] 
-    HBLCORE_MAC_ethernet=data["hblCore"]["MAC_ethernet"] 
-    HBLCORE_NTP=data["hblCore"]["NTP"] 
-    HBLCORE_reset_resetActivado=data["hblCore"]["reset"]["resetActivado"] 
-    HBLCORE_reset_tiempoReset=data["hblCore"]["reset"]["tiempoReset"] 
-    HBLCORE_tamper_activado=data["hblCore"]["tamper"]["activado"] 
+ 
 
     IDHBL=data["IDHBL"] 
 
@@ -430,6 +560,8 @@ def cargarParametros(archivo):
     NETWORK_eth0_dhcp=data["network"]["eth0"]["dhcp"]
     NETWORK_eth0_static_ip_address=data["network"]["eth0"]["static_ip_address"]
     NETWORK_eth0_static_routers=data["network"]["eth0"]["static_routers"]
+    NETWORK_eth0_gateway=data["network"]["eth0"]["gateway"]
+    NETWORK_eth0_DNS=data["network"]["eth0"]["DNS"]
     NETWORK_eth0_netmask=data["network"]["eth0"]["netmask"]
     NETWORK_eth0_network=data["network"]["eth0"]["network"]
     NETWORK_eth0_broadcast=data["network"]["eth0"]["broadcast"]  
@@ -439,6 +571,8 @@ def cargarParametros(archivo):
     NETWORK_eth1_dhcp=data["network"]["eth1"]["dhcp"]
     NETWORK_eth1_static_ip_address=data["network"]["eth1"]["static_ip_address"]
     NETWORK_eth1_static_routers=data["network"]["eth1"]["static_routers"]
+    NETWORK_eth1_gateway=data["network"]["eth1"]["gateway"]
+    NETWORK_eth1_DNS=data["network"]["eth1"]["DNS"]
     NETWORK_eth1_netmask=data["network"]["eth1"]["netmask"]
     NETWORK_eth1_network=data["network"]["eth1"]["network"]
     NETWORK_eth1_broadcast=data["network"]["eth1"]["broadcast"]  
@@ -451,6 +585,11 @@ def cargarParametros(archivo):
     NETWORK_wlan0_dhcp=data["network"]["wlan0"]["dhcp"]
     NETWORK_wlan0_static_ip_address=data["network"]["wlan0"]["static_ip_address"]
     NETWORK_wlan0_static_routers=data["network"]["wlan0"]["static_routers"]
+    NETWORK_wlan0_gateway=data["network"]["wlan0"]["gateway"]
+    NETWORK_wlan0_DNS=data["network"]["wlan0"]["DNS"]
+    NETWORK_wlan0_netmask=data["network"]["wlan0"]["netmask"]
+    NETWORK_wlan0_network=data["network"]["wlan0"]["network"]
+    NETWORK_wlan0_broadcast=data["network"]["wlan0"]["broadcast"] 
     NETWORK_wlan0_metric=data["network"]["wlan0"]["metric"]
     NETWORK_wlan0_ssid=data["network"]["wlan0"]["ssid"]
     NETWORK_wlan0_password=data["network"]["wlan0"]["password"] 
@@ -508,8 +647,12 @@ def cargarParametros(archivo):
     MQTT_port=data["MQTT"]["port"]
     MQTT_TopicSend=data["MQTT"]["TopicSend"]
     MQTT_TopicRecv=data["MQTT"]["TopicRecv"]
-    
-    Seguimiento_file_path=data["Seguimiento"]["file_path"]
+
+
+    Audio_activado=data["Audio"]["activado"]
+    Audio_path_Pasa=data["Audio"]["path"]["Pasa"]
+    Audio_path_NoPasa=data["Audio"]["path"]["NoPasa"]
+    Audio_path_ErrorDNI=data["Audio"]["path"]["ErrorDNI"]
 
 
 

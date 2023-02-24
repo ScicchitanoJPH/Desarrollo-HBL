@@ -13,10 +13,10 @@ from modulos import auxiliar as auxiliar
 
     PINOUT 
 
-        luzVerde = DIG_out_pin_out1
-        sirena  = DIG_out_pin_out2
-        luzRoja = DIG_out_pin_out3
-        barrera = DIG_out_pin_out4
+        luzVerde = Pin_Salida1
+        sirena  = Pin_Salida2
+        luzRoja = Pin_Salida3
+        barrera = Pin_Salida4
 
 ****************************************************************************************** """  
 
@@ -235,6 +235,7 @@ def procesoCacheo(pi):
     auxiliar.EscribirFuncion("procesoCacheo")
 
     try:
+        flag = 0
         
         if variablesGlobales.ubicacionCacheo >= hbl.CACHEO_cantidadCacheos: # Una vez que recorrida la lista la cantidad de veces necesaria (CantidadCacheos), genero una lista nueva
             variablesGlobales.ubicacionCacheo = 0
@@ -257,16 +258,19 @@ def procesoCacheo(pi):
                 variablesGlobales.valorEncontrado = 1
 
         if variablesGlobales.valorEncontrado == 1:
-            NoPasa(pi)
+            #NoPasa(pi)
             log.escribeLineaLog(hbl.LOGS_hblCacheo, "NoPasa :" + str(variablesGlobales.ubicacionCacheo)) 
+            flag = 1
         else:
-            Pasa(pi)
+            #Pasa(pi)
             log.escribeLineaLog(hbl.LOGS_hblCacheo, "Pasa :" + str(variablesGlobales.ubicacionCacheo))            
+            flag = 0
          
         # incrementa la variable en 1
         variablesGlobales.ubicacionCacheo = variablesGlobales.ubicacionCacheo + 1
         # reinicia la variable 
         variablesGlobales.valorEncontrado = 0 
+        return flag
     
     except Exception as e:  
 
@@ -276,3 +280,5 @@ def procesoCacheo(pi):
 
         log.escribeSeparador(hbl.LOGS_hblCacheo)
         log.escribeLineaLog(hbl.LOGS_hblCacheo, "Error : " + str(errorExcepcion))  
+
+        return 99

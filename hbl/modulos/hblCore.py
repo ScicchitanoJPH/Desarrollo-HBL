@@ -35,10 +35,10 @@ def inicializacionHBL():
     # escribe inicializacion HBL
     log.escribeSeparador(hbl.LOGS_hblCore)
     log.escribeLineaLog(hbl.LOGS_hblCore, "Inicio HBL - " + " v." + variablesGlobales.versionHBL) 
-    log.escribeLineaLog(hbl.LOGS_hblCore, "Num. Serie : " +  leer_numero_serie()) 
-    log.escribeLineaLog(hbl.LOGS_hblCore, "Revision : " +  leer_revision()) 
-    log.escribeLineaLog(hbl.LOGS_hblCore, "MAC address eth0 : " + leer_MAC_Address('eth0'))  
-    log.escribeLineaLog(hbl.LOGS_hblCore, "MAC address eth0 : " + leer_MAC_Address('wlan0'))  
+    log.escribeLineaLog(hbl.LOGS_hblCore, "Num. Serie : " +  variablesGlobales.RPI_SerialNumber) 
+    log.escribeLineaLog(hbl.LOGS_hblCore, "Revision : " +  variablesGlobales.RPI_Revision) 
+    log.escribeLineaLog(hbl.LOGS_hblCore, "MAC address eth0 : " + variablesGlobales.RPI_MacEthernet)  
+    log.escribeLineaLog(hbl.LOGS_hblCore, "MAC address wlan0 : " + variablesGlobales.RPI_MacWlan)  
     log.escribeLineaLog(hbl.LOGS_hblCore, "Temperatura : " + measure_temp()) 
     get_throttled()
    
@@ -50,10 +50,10 @@ def inicializacionHBL():
     print("   |_| |_|____/|_____|   ")  
     print("")
     print(" v.", variablesGlobales.versionHBL)  
-    print(" Num. Serie : ", leer_numero_serie())
-    print(" Revision : ", leer_revision())
-    print(" MAC eth0 : ", leer_MAC_Address('eth0'))
-    print(" MAC wlan0 : ", leer_MAC_Address('wlan0')) 
+    print(" Num. Serie : ", variablesGlobales.RPI_SerialNumber)
+    print(" Revision : ", variablesGlobales.RPI_Revision)
+    print(" MAC eth0 : ", variablesGlobales.RPI_MacEthernet)
+    print(" MAC wlan0 : ", variablesGlobales.RPI_MacWlan) 
     print("")
     print("*****************************************************\n\n")
 
@@ -159,10 +159,6 @@ def lecturaParametrosHBL():
     with open(os.path.join(__location__ , 'hbl.json'), "r") as f:
         data = json.load(f)
 
-    data["hblCore"]["serialNumber"] = leer_numero_serie()
-    data["hblCore"]["revision"] = leer_revision()
-    data["hblCore"]["MAC_ethernet"] = leer_MAC_Address('eth0')
-
     # actualizo los parametros en el JSON y le da formato al mismo
     with open(os.path.join(__location__ , 'hbl.json'), "w") as f:
         json.dump(data, f, indent=4)   
@@ -214,7 +210,7 @@ def sincronizarHora():
     
     try:
         # escribe en el archivo de seleccion del servidor el indicado en el json del HBL
-        parametrosNet = ['# Server para sincronizacion del reloj', ' ' , '[Time]', 'NTP=' + hbl.HBLCORE_NTP, ' ']
+        parametrosNet = ['# Server para sincronizacion del reloj', ' ' , '[Time]', 'NTP=' + variablesGlobales.NTP_URL, ' ']
         auxiliar.append_multiple_lines('/etc/systemd/timesyncd.conf', parametrosNet, "w+") 
 
         # activa la sincronizacion con el servidor NTP y hace un reload del daemon
@@ -234,52 +230,7 @@ def sincronizarHora():
         log.escribeSeparador(hbl.LOGS_hblCore)
         log.escribeLineaLog(hbl.LOGS_hblCore, "Error : " + str(errorExcepcion))  
 
-""" --------------------------------------------------------------------------------------------
 
-   leer los numeros de serie / revision / mac address de la RPI
-
-   ej:
-
-    # MAC Address del Ethernet adapter
-    ethtool --show-permaddr eth0    
-    # res : dc:a6:32:52:2d:ee
-
-    # otro metodo :
-    $ vcgencmd otp_dump | grep '65:' 
-    $ vcgencmd otp_dump | grep '64:' 
-
-    # MAC Address del WiFi adapter
-    ethtool --show-permaddr wlan0   
-
-    # averiguar el numero de serie de la RPI
-    $ vcgencmd otp_dump | grep '28:' 
-    # res : 28:f9976413
-
-    # averiguar la revision de la RPI (2G, 4G, etc)
-    $ vcgencmd otp_dump | grep '30:' 
-    # res : 30:00c03112
-
--------------------------------------------------------------------------------------------- """
-
-def leer_numero_serie():
-    auxiliar.EscribirFuncion("leer_numero_serie")
-
-    numeroSerie = os.popen("vcgencmd otp_dump | grep '28:'").readline()
-    numeroSerie = numeroSerie.replace("\n", "")
-    return (numeroSerie.replace("28:", ""))
-
-def leer_revision():
-    auxiliar.EscribirFuncion("leer_revision")
-
-    revision = os.popen("vcgencmd otp_dump | grep '30:'").readline()
-    revision = revision.replace("\n", "")
-    return (revision.replace("30:", ""))
-
-def leer_MAC_Address(interfase):
-    auxiliar.EscribirFuncion("leer_MAC_Address")
-    macAddress = os.popen("ethtool --show-permaddr " + interfase).readline()
-    macAddress = macAddress.replace("\n", "")
-    return (macAddress.replace("Permanent address: ", "")) 
 
 """ --------------------------------------------------------------------------------------------
 
@@ -411,149 +362,6 @@ def getVolumeNames(drive):
 
 """ --------------------------------------------------------------------------------------------
 
-   inicializa Oled
-
--------------------------------------------------------------------------------------------- """
-
-def inicializaoled():
-    auxiliar.EscribirFuncion("inicializaoled")
-
-    global device
-    global canvas
-
-    if hbl.HBLCORE_hblDisplay_activado == 1:
-
-        from modulos.luma.core.interface.serial import i2c
-        from modulos.luma.oled.device import sh1106
-        from modulos.luma.core.render import canvas 
-
-        try:
-
-            serial = i2c(port=1, address=0x3C)
-            device = sh1106(serial)
-
-        except Exception as e:  
-    
-            exc_type, exc_obj, exc_tb = sys.exc_info() 
-            fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1] 
-            errorExcepcion = "ERROR - archivo : " + str(fname) + " - linea : " + str(sys.exc_info()[-1].tb_lineno) + " - mensaje : " + str(exc_obj) 
-        
-            log.escribeSeparador(hbl.LOGS_hblCore)
-            log.escribeLineaLog(hbl.LOGS_hblCore, "Error : " + str(errorExcepcion)) 
-  
-""" --------------------------------------------------------------------------------------------
-
-   oledRefresh
-
--------------------------------------------------------------------------------------------- """
- 
-def oledRefresh():
-    auxiliar.EscribirFuncion("oledRefresh")
-
-    global device
-    global canvas
-
-    if hbl.HBLCORE_hblDisplay_activado == 1:
-
-        try:
-
-            if hbl.HBLCORE_hblDisplay_modo == 1: 
-
-                if hbl.pantallaOled == 1:                
-                    hbl.pantallaOled = 2
-
-                    fechaHora = str(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'))
-                    temperatura = "T: " + measure_temp()
-                        
-                    ip_eth0 = "eth0: " + conexiones.get_ip_address('eth0') 
-                    ip_wlan0 = "wlan0: " + conexiones.get_ip_address('wlan0')  
-
-                    # lee la cantidad de bytes transferidos en la interfase eth0, lo convierte a Mb luego 
-                    # convierte ese valor a float con 2 decimales y luego a string
-                    tx_bytes_eth0 = str(format(int(conexiones.get_bytes_interface_tx('eth0')) / 1024768, ".2f")) 
-                    rx_bytes_eth0 = str(format(int(conexiones.get_bytes_interface_rx('eth0')) / 1024768, ".2f")) 
-
-                    # lee la cantidad de bytes transferidos en la interfase wlan0, lo convierte a Mb luego 
-                    # convierte ese valor a float con 2 decimales y luego a string
-                    tx_bytes_wlan0 = str(format(int(conexiones.get_bytes_interface_tx('wlan0')) / 1024768, ".2f")) 
-                    rx_bytes_wlan0 = str(format(int(conexiones.get_bytes_interface_rx('wlan0')) / 1024768, ".2f"))  
-
-                    with canvas(device) as draw:  
-                        
-                        # fecha / hora
-                        size = draw.textsize(fechaHora) 
-                        draw.text(((device.width - size[0])/2, 0), fechaHora, fill="white") 
-
-                        # temperatura
-                        size = draw.textsize(temperatura) 
-                        draw.text(((device.width - size[0])/2, 10), temperatura, fill="white")  
-
-                        # ip eth0
-                        size = draw.textsize(ip_eth0) 
-                        draw.text(((device.width - size[0])/2, 25), ip_eth0, fill="white") 
-
-                        size = draw.textsize(tx_bytes_eth0) 
-                        draw.text((0, 35), tx_bytes_eth0, fill="white") 
-                        
-                        size = draw.textsize(rx_bytes_eth0) 
-                        draw.text((60, 35), rx_bytes_eth0 , fill="white") 
-
-                        # ip wlan0
-                        size = draw.textsize(ip_wlan0) 
-                        draw.text(((device.width - size[0])/2, 45), ip_wlan0, fill="white")
-
-                        size = draw.textsize(tx_bytes_wlan0) 
-                        draw.text((0, 55), tx_bytes_wlan0, fill="white") 
-                        
-                        size = draw.textsize(rx_bytes_wlan0) 
-                        draw.text((60, 55), rx_bytes_wlan0, fill="white")   
-                    
-                elif hbl.pantallaOled == 2:
-                    hbl.pantallaOled = 1 
-
-                    fechaHora = str(datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S'))
-                    temperatura = "T: " + measure_temp()
-
-                    usoProcesador = "CPU : " + usoCPU(9) + "%" 
-                    usoRAM = "RAM : " + getRAMinfo() + "%" 
-                    spaceDisk = "DSK: " + getDiskSpace() + "%"
-                    
-                    with canvas(device) as draw:  
-                        
-                        # fecha / hora
-                        size = draw.textsize(fechaHora) 
-                        draw.text(((device.width - size[0])/2, 0), fechaHora, fill="white") 
-
-                        # temperatura
-                        size = draw.textsize(temperatura) 
-                        draw.text(((device.width - size[0])/2, 10), temperatura, fill="white")  
-
-                        # % CPU
-                        size = draw.textsize(usoProcesador) 
-                        draw.text(((device.width - size[0])/2, 35), usoProcesador, fill="white")  
-
-                        # RAM
-                        size = draw.textsize(usoRAM) 
-                        draw.text(((device.width - size[0])/2, 45), usoRAM, fill="white") 
-
-                        # DISK
-                        size = draw.textsize(spaceDisk) 
-                        draw.text(((device.width - size[0])/2, 55), spaceDisk, fill="white") 
-            
-            elif hbl.HBLCORE_hblDisplay_modo == 2: 
-                pass
-        
-        except Exception as e:  
-    
-            exc_type, exc_obj, exc_tb = sys.exc_info() 
-            fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1] 
-            errorExcepcion = "ERROR - archivo : " + str(fname) + " - linea : " + str(sys.exc_info()[-1].tb_lineno) + " - mensaje : " + str(exc_obj) 
-        
-            log.escribeSeparador(hbl.LOGS_hblCore)
-            log.escribeLineaLog(hbl.LOGS_hblCore, "Error : " + str(errorExcepcion)) 
-
-""" --------------------------------------------------------------------------------------------
-
    * heartBeat
 
    * reset programado del hbl
@@ -561,7 +369,7 @@ def oledRefresh():
 -------------------------------------------------------------------------------------------- """
 
 def heartBeat(pi):
-    auxiliar.EscribirFuncion("heartBeat")
+    ##auxiliar.EscribirFuncion("heartBeat")
 
     try:
         
@@ -570,20 +378,6 @@ def heartBeat(pi):
         delays.ms(500)      
         pi.write(variablesGlobales.Pin_LED2, hbl.ON)  
         delays.ms(500)
-
-        # chequea el valor del tamper si esta activado
-        if hbl.HBLCORE_tamper_activado == 1: 
-            pass
-
-        # reset programado del hbl
-        if hbl.HBLCORE_reset_resetActivado == 1:
-
-            variablesGlobales.HBLCORE_contadorReset = variablesGlobales.HBLCORE_contadorReset + 1 
-            log.escribeLineaLog(hbl.LOGS_hblCore , "Reset Programado Activado : Valor contador reset : " + str(variablesGlobales.HBLCORE_contadorReset))
-
-            if variablesGlobales.HBLCORE_contadorReset >= hbl.HBLCORE_reset_tiempoReset: 
-                log.escribeLineaLog(hbl.LOGS_hblCore ,"Reset HBL...")
-                os.system("sudo reboot")
        
     except Exception as e:  
 
