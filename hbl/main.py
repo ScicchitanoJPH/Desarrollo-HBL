@@ -44,6 +44,7 @@ from modulos.encoderWiegand import Encoder
 from modulos.salidas import Salidas
 from modulos.entradas import Entradas 
 from modulos import variablesGlobales as variablesGlobales
+from modulos import BioStar2_WebSocket as BioStar2_WebSocket
 
 global pi
 
@@ -91,6 +92,12 @@ if __name__ == "__main__":
    # escribe inicializacion HBL
    hblCore.inicializacionHBL()   
 
+   # configuracion de interfaces de red ETH/WLAN
+   conexiones.NetworkConfig() 
+
+   # iniciaizacion GSM Modem ppp0
+   conexiones.GSM_Modem_Init()
+
    # inicializa las salidas de la hbl
    main.Salidas(pi)
 
@@ -125,11 +132,7 @@ if __name__ == "__main__":
    signal.signal(signal.SIGINT, receiveSignal)  
    signal.signal(signal.SIGTERM, receiveSignal)
  
-   # configuracion de interfaces de red ETH/WLAN
-   conexiones.NetworkConfig() 
-
-   # iniciaizacion GSM Modem ppp0
-   conexiones.GSM_Modem_Init()
+   
 
    # inicia reporte HBL
    reporte.inicializacion()
@@ -144,6 +147,10 @@ if __name__ == "__main__":
    tcp.inicializacion(pi)
 
    kiosco.inicializacion()
+
+   BioStar2_WebSocket.inicializacion()
+
+   
 
    try:
       client = MQTT.inicializacion()

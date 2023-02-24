@@ -93,27 +93,19 @@
         "timerActivado": 0,
         "timeoutRequest": 10
     },
-<<<<<<< HEAD
-=======
     "GenerarTXT": {
         "activado": 1,
         "path": "/home/pi/Desktop/Request.txt"
     },
->>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
     "network": {
         "activado": 1,
         "eth0": {
-            "activado": 0,
+            "activado": 1,
             "dhcp": 1,
-<<<<<<< HEAD
-            "static_ip_address": "172.16.232.16/24",
-            "static_routers": "",
-=======
             "static_ip_address": "172.16.232.148/24",
             "static_routers": "192.168.1.1",
             "gateway": "172.16.0.1",
             "DNS": "172.19.201.17 172.19.201.18",
->>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
             "metric": 0,
             "netmask": "",
             "network": "",
@@ -184,11 +176,7 @@
     "wiegand": {
         "W1": {
             "activado": 1,
-<<<<<<< HEAD
-            "modo": "Entrada",
-=======
             "modo": "IN",
->>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
             "esperaSenial": 0,
             "bitsSalida": 0,
             "delayPulso": 5e-05,
@@ -196,13 +184,8 @@
             "primerBit": 1
         },
         "W2": {
-<<<<<<< HEAD
-            "activado": 1,
-            "modo": "Salida",
-=======
             "activado": 0,
             "modo": "OUT",
->>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
             "esperaSenial": 0,
             "bitsSalida": 0,
             "delayPulso": 5e-05,
@@ -275,7 +258,8 @@
         "hblSerial": "hblSerial.log",
         "hblCacheo": "hblCacheo.log",
         "hblKiosco": "hblKiosco.log",
-        "hblTareas": "hblTareas.log"
+        "hblTareas": "hblTareas.log",
+        "hblBioStar2_WebSocket": "hblBioStar2_WebSocket.log"
     },
     "reporte": {
         "activado": 1,
@@ -329,27 +313,6 @@
             "product_ID": "0x0be1"
         }
     },
-<<<<<<< HEAD
-    "hblCore": {
-        "hblDisplay": {
-            "activado": 0,
-            "modo": 1
-        },
-        "serialNumber": "c6b11a5a",
-        "revision": "00c03112",
-        "MAC_ethernet": "dc:a6:32:52:9a:5d",
-        "NTP": "time.cloudflare.com",
-        "reset": {
-            "resetActivado": 0,
-            "tiempoReset": 14400
-        },
-        "tamper": {
-            "activado": 0
-        },
-        "idHBL": "3"
-    },
-=======
->>>>>>> fe8d0113df44088e4aeeb400bc7bf002bcfdfcb7
     "ActualizarGit": {
         "Activado": 0
     },
@@ -360,5 +323,8 @@
             "NoPasa": "/usr/programas/Audios/acceso-denegado.mp3",
             "ErrorDNI": ""
         }
+    },
+    "BioStar2_WebSocket": {
+        "activado": 1
     }
 }

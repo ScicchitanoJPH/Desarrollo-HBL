@@ -2306,3 +2306,1971 @@ Chequear configuracion...
 ***********************************************************************************
 Fecha / Hora : 2023/02/24 14:52:40
 Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:53:40
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:53:41
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb586cf50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:53:41
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:53:41
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:54:41
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:54:41
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890ef0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:54:41
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:54:41
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:55:41
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:55:41
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58ac4d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:55:41
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:55:41
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:56:41
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:56:41
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58905b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:56:41
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:56:41
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:57:41
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:57:42
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890070>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:57:42
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:57:42
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:58:42
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:58:42
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb586c950>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:58:42
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:58:42
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:59:42
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:59:42
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58ac730>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:59:42
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 14:59:42
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:00:42
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:00:42
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb586ccd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:00:42
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:00:43
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:01:43
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:01:43
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890ef0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:01:43
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:01:43
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:02:43
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:02:43
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58ac990>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:02:43
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:02:43
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:03:43
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:03:43
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890630>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:03:43
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:03:43
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:04:43
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:04:44
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890070>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:04:44
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:04:44
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:05:44
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:05:44
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb586cf30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:05:44
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:05:44
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:06:44
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:06:44
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58ac670>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:06:44
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:06:44
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:07:44
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:07:45
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb586cb30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:07:45
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:07:45
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:08:45
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:08:45
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890ef0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:08:45
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:08:45
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:09:45
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:09:45
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58ac130>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:09:45
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:09:45
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:10:45
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:10:45
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890130>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:10:45
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:10:45
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:11:45
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:11:46
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58904f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:11:46
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:11:46
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:12:46
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:12:46
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb586c2b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:12:46
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:12:46
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:13:46
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:13:46
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58ac4d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:13:46
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:13:46
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:14:46
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:14:46
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb586c1f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:14:46
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:14:46
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:15:47
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:15:47
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890f10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:15:47
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:15:47
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:16:47
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:16:47
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58ac2d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:16:47
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:16:47
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:17:47
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:17:47
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890f70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:17:47
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:17:47
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:18:47
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:18:48
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890e50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:18:48
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:18:48
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:19:48
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:19:48
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb586ced0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:19:48
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:19:48
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:20:48
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:20:48
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58ac730>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:20:48
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:20:48
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:21:48
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:21:49
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb586cad0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:21:49
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:21:50
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:22:50
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:22:50
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58900d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:22:50
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:22:50
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:23:50
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:23:50
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb58ac670>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:23:50
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:23:50
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:24:50
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:24:50
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:24:50
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:24:50
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:25:51
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:25:52
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890410>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:25:52
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:25:52
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:26:52
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:26:53
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb5890570>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:26:53
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:26:53
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:30:35
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:30:35
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a79130>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:30:35
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:30:35
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:32:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:32:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23b4e70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:32:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:32:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:33:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:33:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2342130>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:33:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:33:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:34:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:34:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23ba810>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:34:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:34:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:35:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:35:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2342e10>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:35:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:35:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:36:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:36:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2342190>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:36:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:36:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:37:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:37:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23baad0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:37:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:37:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:38:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:38:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2342cd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:38:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:38:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:39:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:39:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23429f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:39:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:39:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:40:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:40:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23baa70>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:40:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:40:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:41:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:41:02
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2342e50>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:41:02
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:41:02
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:41:44
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:41:45
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb19fe050>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:41:45
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:41:45
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:42:45
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:42:45
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb237edb0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:42:45
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:42:45
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:43:45
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:43:45
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb230c150>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:43:45
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:43:45
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:44:45
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:44:45
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23848b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:44:45
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:44:45
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:45:46
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:45:46
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb230cf30>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:45:46
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:45:46
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:46:33
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:46:34
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23b4cd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:46:34
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:46:34
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:48:24
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:48:25
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee0b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:48:25
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:48:25
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:49:25
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:49:25
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2f50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:49:25
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:49:25
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:50:25
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:50:26
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee970>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:50:26
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:50:26
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:51:26
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:51:26
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47770>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:51:26
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:51:26
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:52:26
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:52:27
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2ff0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:52:27
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:52:27
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:53:27
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:53:27
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee5d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:53:27
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:53:27
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:54:27
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:54:27
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47570>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:54:27
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:54:27
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:55:27
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:55:27
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb08a3030>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:55:27
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:55:27
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:56:27
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:56:28
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee810>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:56:28
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:56:28
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:57:28
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:57:28
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:57:28
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:57:28
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:58:28
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:58:28
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47c70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:58:28
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:58:28
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:59:28
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:59:28
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb231f310>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:59:28
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 15:59:28
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:00:28
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:00:29
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a477d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:00:29
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:00:29
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:01:29
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:01:29
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeefd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:01:29
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:01:29
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:02:29
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:02:29
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeecb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:02:29
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:02:29
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:03:29
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:03:29
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee530>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:03:29
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:03:29
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:04:29
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:04:30
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a477b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:04:30
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:04:30
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:05:30
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:05:30
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47710>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:05:30
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:05:30
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:06:30
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:06:31
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2750>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:06:31
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:06:31
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:07:31
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:07:31
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47ad0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:07:31
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:07:31
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:08:31
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:08:32
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee570>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:08:32
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:08:32
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:09:32
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:09:33
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee7d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:09:33
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:09:33
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:10:33
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:10:33
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeeb30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:10:33
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:10:33
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:11:33
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:11:33
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47070>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:11:33
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:11:33
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:12:33
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:12:34
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47d90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:12:34
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:12:34
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:13:34
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:13:34
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2ef0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:13:34
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:13:34
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:14:34
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:14:34
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47250>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:14:34
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:14:34
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:15:34
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:15:34
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeebd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:15:34
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:15:34
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:16:34
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:16:35
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee4b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:16:35
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:16:35
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:17:35
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:17:35
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:17:35
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:17:35
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:18:35
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:18:35
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a470b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:18:35
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:18:35
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:19:35
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:19:35
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47b70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:19:35
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:19:35
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:20:35
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:20:36
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2f30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:20:36
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:20:36
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:21:36
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:21:36
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a477b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:21:36
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:21:36
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:22:36
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:22:36
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee550>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:22:36
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:22:36
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:23:36
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:23:36
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeeab0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:23:36
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:23:36
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:24:36
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:24:37
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:24:37
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:24:37
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:25:37
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:25:38
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a473f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:25:38
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:25:38
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:26:38
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:26:38
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a472b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:26:38
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:26:38
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:27:38
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:27:38
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad27d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:27:38
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:27:38
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:28:38
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:28:39
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a478f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:28:39
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:28:39
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:29:39
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:29:39
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeeaf0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:29:39
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:29:39
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:30:39
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:30:39
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeeef0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:30:39
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:30:39
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:31:39
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:31:44
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0xb1aee650>, 'Connection to hbl.jphlions.com timed out. (connect timeout=5)'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:31:44
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:31:44
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:32:44
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:32:46
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47390>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:32:46
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:32:46
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:33:46
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:33:46
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47c30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:33:46
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:33:46
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:34:46
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:34:46
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2710>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:34:46
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:34:46
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:35:46
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:35:46
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47910>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:35:46
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:35:46
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:36:46
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:36:47
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeeff0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:36:47
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:36:47
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:37:47
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:37:47
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeef30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:37:47
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:37:47
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:38:47
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:38:47
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee4f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:38:47
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:38:47
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:39:47
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:39:48
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47530>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:39:48
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:39:48
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:40:48
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:40:49
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47db0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:40:49
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:40:49
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:41:49
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:41:49
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2ed0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:41:49
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:41:49
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:42:49
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:42:49
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a471f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:42:49
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:42:49
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:43:49
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:43:49
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeefb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:43:49
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:43:49
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:44:49
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:44:50
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeeed0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:44:50
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:44:50
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:45:50
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:45:50
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee910>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:45:50
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:45:50
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:46:50
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:46:51
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47670>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:46:51
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:46:51
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:47:51
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:47:52
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:47:52
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:47:52
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:48:52
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:48:52
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2ff0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:48:52
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:48:52
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:49:52
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:49:53
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a476f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:49:53
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:49:53
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:50:53
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:50:53
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee690>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:50:53
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:50:53
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:51:53
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:51:53
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeeb30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:51:53
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:51:53
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:52:53
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:52:53
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeea90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:52:53
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:52:53
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:53:53
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:53:54
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47370>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:53:54
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:53:54
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:54:54
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:54:54
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47d30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:54:54
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:54:54
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:55:54
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:55:54
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2fb0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:55:54
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:55:54
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:56:54
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:56:54
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47450>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:56:54
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:56:54
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:57:54
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:57:55
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee510>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:57:55
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:57:55
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:58:55
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:58:55
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee9d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:58:55
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:58:55
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:59:55
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:59:55
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee9b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:59:55
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 16:59:55
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:00:56
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:00:56
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47890>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:00:56
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:00:56
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:01:56
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:01:56
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47c70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:01:56
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:01:56
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:02:56
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:02:56
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:02:56
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:02:56
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:03:56
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:03:56
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:03:56
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:03:56
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:04:57
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:04:57
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:04:57
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:04:57
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:05:57
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:05:57
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aeed10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:05:57
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:05:57
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:06:57
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:06:57
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee970>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:06:57
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:06:57
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:07:57
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:07:57
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a477d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:07:57
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:07:57
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:08:58
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:08:58
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47b10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:08:58
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:08:58
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:09:58
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:09:58
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1ad2910>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:09:58
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:09:58
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:10:58
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:10:58
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1a47290>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:10:58
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:10:58
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:11:58
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:11:58
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee4f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:11:58
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:11:58
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:12:59
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:12:59
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb1aee610>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:12:59
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:12:59
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:14:02
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:14:03
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23d4e30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:14:03
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:14:03
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:15:03
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:15:03
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23da190>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:15:03
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:15:03
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:16:03
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:16:03
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23dadf0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:16:03
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:16:03
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:17:03
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:17:03
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23da9d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:17:03
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:17:03
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:18:03
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:18:04
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2362210>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:18:04
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:18:04
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:19:04
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:19:04
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2362b10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:19:04
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:19:04
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:20:04
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:20:04
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23d4370>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:20:04
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:20:04
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:21:04
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:21:04
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2362b30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:21:04
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:21:04
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:22:04
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:22:05
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23da970>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:22:05
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:22:05
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:23:05
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:23:05
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23dadf0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:23:05
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:23:05
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:24:05
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:24:05
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2362590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:24:05
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:24:05
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:25:05
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:25:05
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2362d50>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:25:05
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:25:05
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:26:05
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:26:06
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23d40d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:26:06
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:26:06
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:27:06
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:27:06
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23d4f90>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:27:06
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:27:06
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:28:06
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:28:06
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2362850>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:28:06
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:28:06
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:29:06
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:29:06
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2362230>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:29:06
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:29:06
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:30:07
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:30:07
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb23dac10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:30:07
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:30:07
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:31:07
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:31:07
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb2362bf0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:31:07
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:31:07
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:31:42
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:31:42
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb19f70b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:31:42
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:31:42
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:32:42
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:32:43
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb19dbf70>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:32:43
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:32:43
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:33:43
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:33:43
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb19f7970>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:33:43
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:33:43
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:34:43
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:34:43
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xb0964730>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:34:43
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:34:43
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:34:46
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:34:47
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xae6a4590>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:34:47
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:34:47
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:35:24
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:35:24
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xae781730>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:35:24
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:35:24
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:36:24
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:36:24
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xabd9a730>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:36:24
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:36:24
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:37:57
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:37:58
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xae7835f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:37:58
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:37:58
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:38:55
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:38:55
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xae75a530>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:38:55
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:38:55
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:39:26
+Leyendo token...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:39:26
+Error : ERROR - archivo : reporte.py - linea : 53 - mensaje : HTTPConnectionPool(host='hbl.jphlions.com', port=3600): Max retries exceeded with url: /api/login-nitro4/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xae5a54b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:39:26
+Chequear configuracion...
+***********************************************************************************
+Fecha / Hora : 2023/02/24 17:39:27
+Error : ERROR - archivo : reporte.py - linea : 105 - mensaje : Value for header {Token: 0} must be of type str or bytes, not <class 'int'>

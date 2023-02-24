@@ -190,10 +190,13 @@ def cargarParametros(archivo):
     global LOGS_hblCacheo
     global LOGS_hblKiosco
     global LOGS_hblTareas
+    global LOGS_hblBioStar2_WebSocket
 
     global IDHBL
 
     global DISPLAY_activado
+
+    
 
 
     global NETWORK_activado
@@ -293,6 +296,11 @@ def cargarParametros(archivo):
     global Audio_path_Pasa
     global Audio_path_NoPasa
     global Audio_path_ErrorDNI
+
+    global BioStar2_WebSocket_activado
+
+    
+    
 
     global data
 
@@ -544,6 +552,7 @@ def cargarParametros(archivo):
     LOGS_hblCacheo=data["logs"]["hblCacheo"]    
     LOGS_hblKiosco=data["logs"]["hblKiosco"]    
     LOGS_hblTareas=data["logs"]["hblTareas"]
+    LOGS_hblBioStar2_WebSocket=data["logs"]["hblBioStar2_WebSocket"]
 
  
 
@@ -653,6 +662,10 @@ def cargarParametros(archivo):
     Audio_path_Pasa=data["Audio"]["path"]["Pasa"]
     Audio_path_NoPasa=data["Audio"]["path"]["NoPasa"]
     Audio_path_ErrorDNI=data["Audio"]["path"]["ErrorDNI"]
+
+
+
+    BioStar2_WebSocket_activado=data["BioStar2_WebSocket"]["activado"]
 
 
 

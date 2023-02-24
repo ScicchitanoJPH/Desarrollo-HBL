@@ -160,4 +160,4 @@ def escribeLineaLog(LogName, texto):
     except Exception as inst: 
 
         escribeSeparador(hbl.LOGS_hblCore) 
-        escribeLineaLog(hbl.LOGS_hblCore, "Error : " + str(inst))
+        #escribeLineaLog(hbl.LOGS_hblCore, "Error : " + str(inst))
