@@ -14,7 +14,7 @@
     },
     "kiosco": {
         "activado": 0,
-        "URL":"http://172.16.23.27/kiosco/login.4.php",
+        "URL": "http://172.16.23.27/kiosco/login.4.php",
         "width": "1280",
         "height": "1080"
     },
@@ -37,7 +37,7 @@
         }
     },
     "request": {
-        "activado":1,
+        "activado": 1,
         "seleccionURL": 3,
         "urlRequest1": "http://localhost/jphaccess/trp/alcoholemia.php?tarjeta=",
         "urlRequest2": "http://localhost/jphaccess/trp/validar.php?tarjeta=",
@@ -49,21 +49,20 @@
         "timerActivado": 0,
         "timeoutRequest": 10
     },
-    
     "network": {
         "activado": 1,
         "eth0": {
             "activado": 1,
             "dhcp": 1,
-            "static_ip_address": "172.16.232.148/24",
-            "static_routers": "172.16.0.1",
+            "static_ip_address": "172.16.232.16/24",
+            "static_routers": "",
             "metric": 0,
-            "netmask": "255.255.255.0",
-            "network": "172.16.23.30",
-            "broadcast": "8.8.8.8"
+            "netmask": "",
+            "network": "",
+            "broadcast": ""
         },
         "wlan0": {
-            "activado": 1,
+            "activado": 0,
             "dhcp": 1,
             "static_ip_address": "192.168.1.1/24",
             "static_routers": "192.168.1.1",
@@ -120,7 +119,7 @@
     "wiegand": {
         "W1": {
             "activado": 1,
-            "modo":"Entrada",
+            "modo": "Entrada",
             "esperaSenial": 0,
             "bitsSalida": 0,
             "delayPulso": 8e-05,
@@ -129,7 +128,7 @@
         },
         "W2": {
             "activado": 1,
-            "modo":"Salida",
+            "modo": "Salida",
             "esperaSenial": 0,
             "bitsSalida": 0,
             "delayPulso": 5e-05,
@@ -151,7 +150,7 @@
     },
     "MQTT": {
         "broker": "broker.mqttdashboard.com",
-        "port":1883,
+        "port": 1883,
         "TopicSend": "RPI/JPH/HBL/Send",
         "TopicRecv": "RPI/JPH/HBL/Recv"
     },
@@ -250,9 +249,9 @@
             "activado": 0,
             "modo": 1
         },
-        "serialNumber": "702487a0",
+        "serialNumber": "c6b11a5a",
         "revision": "00c03112",
-        "MAC_ethernet": "dc:a6:32:52:2d:b0",
+        "MAC_ethernet": "dc:a6:32:52:9a:5d",
         "NTP": "time.cloudflare.com",
         "reset": {
             "resetActivado": 0,

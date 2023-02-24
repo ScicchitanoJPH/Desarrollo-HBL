@@ -12,6 +12,7 @@ apt-get install wvdial -y
 pip3 install cbor2 
 pip3 install smbus2
 pip3 install Pillow
+pip3 install websocket-client
 apt-get install libopenjp2-7 -y
 apt install libtiff5 -y
 apt install git -y
