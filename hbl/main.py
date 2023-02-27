@@ -21,7 +21,7 @@ import time
 import datetime 
 
 import main
-from modulos import SendMail, delays as delays
+from modulos import delays as delays
 from modulos import hbl as hbl
 from modulos import hidDevice as hidDevice
 from modulos import i2cDevice as i2cDevice
@@ -38,13 +38,14 @@ from modulos import kiosco as kiosco
 from modulos import MQTT as MQTT
 from modulos import Monitoreo as Monitoreo
 from modulos import funcionamiento as funcionamiento
+from modulos import BioStar2_WebSocket as BioStar2_WebSocket
 
 from modulos.decoderWiegand import Decoder
 from modulos.encoderWiegand import Encoder
 from modulos.salidas import Salidas
 from modulos.entradas import Entradas 
 from modulos import variablesGlobales as variablesGlobales
-from modulos import BioStar2_WebSocket as BioStar2_WebSocket
+
 
 global pi
 

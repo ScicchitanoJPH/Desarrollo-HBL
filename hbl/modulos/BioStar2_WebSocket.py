@@ -15,21 +15,16 @@ from modulos import log as log
         pip uninstall websocket
         pip uninstall websocket-client
         pip install websocket-client
+
+    *Hay dos tipos de eventos:
+        # IDENTIFY_SUCCESS_FINGERPRINT
+        # VERIFY_SUCCESS_CARD
 """
-
-WS_HOST = 'wss://172.16.23.25:443'
-BIOSTAR2_WS_URL = WS_HOST + '/wsapi'
-API_HOST = 'https://172.16.23.25'
-BIOSTAR2_LOGIN_API_URL = API_HOST + '/api/login'
-BIOSTAR2_WS_EVENT_START_URL = API_HOST + '/api/events/start'
-
-EVENT_TYPE_WANTED  = "IDENTIFY_SUCCESS_FINGERPRINT"
-DEVICE_ID_WANTED  = "538849673"
 
 
 def Get_bs_session_id():
-    url = BIOSTAR2_LOGIN_API_URL
-    payload = "{\r\n    \"User\": {\r\n        \"login_id\": \"admin\",\r\n        \"password\": \"Jphlions135\"\r\n    }\r\n}"
+    url = hbl.BioStar2_WebSocket_Api_Host + '/api/login'
+    payload = "{\r\n    \"User\": {\r\n        \"login_id\": \"" + hbl.BioStar2_WebSocket_BioStar2_User + "\",\r\n        \"password\": \"" + hbl.BioStar2_WebSocket_BioStar2_Password + "\"\r\n    }\r\n}"
     headers = {}
     response = requests.request("POST", url, headers=headers, data=payload,verify=False)
     bs_session_id = response.headers['bs-session-id']
@@ -42,8 +37,8 @@ def Get_bs_session_id():
 
 
 def Inicializar_Eventos(bs_session_id):
-    url = BIOSTAR2_WS_EVENT_START_URL
-    payload = "{\r\n    \"User\": {\r\n        \"login_id\": \"admin\",\r\n        \"password\": \"Jphlions135\"\r\n    }\r\n}"
+    url = hbl.BioStar2_WebSocket_Api_Host + '/api/events/start'
+    payload = "{\r\n    \"User\": {\r\n        \"login_id\": \"" + hbl.BioStar2_WebSocket_BioStar2_User + "\",\r\n        \"password\": \"" + hbl.BioStar2_WebSocket_BioStar2_Password + "\"\r\n    }\r\n}"
     headers = {"bs-session-id" : bs_session_id}
     response = requests.request("POST", url, headers=headers, data=payload,verify=False)
     print(response.text)
@@ -57,14 +52,15 @@ def Inicializar_Eventos(bs_session_id):
 def on_message(ws, message):
     message_json = json.loads(message)
 
-    #print("\n")
-    #print("**************************************************************************")
+    print(message_json)
+    print("\n")
+    print("**************************************************************************")
     
     event_type_name = message_json["Event"]["event_type_id"]["name"]
     device_id = message_json["Event"]["device_id"]["id"]
     #print("Tipo de evento : " + event_type_name)
     #print("Device ID : " + device_id)
-    if event_type_name == EVENT_TYPE_WANTED and device_id == DEVICE_ID_WANTED:
+    if event_type_name == hbl.BioStar2_WebSocket_Tipo_Evento and device_id == hbl.BioStar2_WebSocket_Device_ID:
         log.escribeSeparador(hbl.LOGS_hblBioStar2_WebSocket)
         log.escribeLineaLog(hbl.LOGS_hblBioStar2_WebSocket,"Tipo de evento : " + event_type_name)
         log.escribeLineaLog(hbl.LOGS_hblBioStar2_WebSocket,"Device ID : " + device_id)
@@ -114,7 +110,7 @@ def on_open(ws):
 def inicializacion():
     if hbl.BioStar2_WebSocket_activado:
         #websocket.enableTrace(True)
-        ws = websocket.WebSocketApp(BIOSTAR2_WS_URL,
+        ws = websocket.WebSocketApp(hbl.BioStar2_WebSocket_WebSocket_Host + '/wsapi',
                                 on_open=on_open,
                                 on_message=on_message,
                                 on_error=on_error,

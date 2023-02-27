@@ -292,12 +292,21 @@ def cargarParametros(archivo):
     global MQTT_TopicSend
     global MQTT_TopicRecv
 
+    global BioStar2_WebSocket_activado
+    global BioStar2_WebSocket_WebSocket_Host
+    global BioStar2_WebSocket_Api_Host
+    global BioStar2_WebSocket_Tipo_Evento
+    global BioStar2_WebSocket_Device_ID
+    global BioStar2_WebSocket_BioStar2_User
+    global BioStar2_WebSocket_BioStar2_Password
+
     global Audio_activado
     global Audio_path_Pasa
     global Audio_path_NoPasa
     global Audio_path_ErrorDNI
 
-    global BioStar2_WebSocket_activado
+    
+    
 
     
     
@@ -666,7 +675,12 @@ def cargarParametros(archivo):
 
 
     BioStar2_WebSocket_activado=data["BioStar2_WebSocket"]["activado"]
-
+    BioStar2_WebSocket_WebSocket_Host=data["BioStar2_WebSocket"]["WebSocket_Host"]
+    BioStar2_WebSocket_Api_Host=data["BioStar2_WebSocket"]["Api_Host"]
+    BioStar2_WebSocket_Tipo_Evento=data["BioStar2_WebSocket"]["Tipo_Evento"]
+    BioStar2_WebSocket_Device_ID=data["BioStar2_WebSocket"]["Device_ID"]
+    BioStar2_WebSocket_BioStar2_User=data["BioStar2_WebSocket"]["BioStar2_User"]
+    BioStar2_WebSocket_BioStar2_Password=data["BioStar2_WebSocket"]["BioStar2_Password"]
 
 
  

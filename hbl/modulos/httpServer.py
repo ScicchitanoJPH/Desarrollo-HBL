@@ -7,7 +7,6 @@ import socketserver
 from urllib.parse import urlparse
 from urllib.parse import parse_qs
 import signal
-import main
 import datetime 
 
 from modulos import hbl as hbl

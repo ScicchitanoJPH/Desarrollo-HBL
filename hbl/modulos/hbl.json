@@ -325,6 +325,12 @@
         }
     },
     "BioStar2_WebSocket": {
-        "activado": 1
+        "activado": 1,
+        "WebSocket_Host": "wss://172.16.23.25:443",
+        "Api_Host": "https://172.16.23.25",
+        "Tipo_Evento": "VERIFY_SUCCESS_CARD",
+        "Device_ID": "538849673",
+        "BioStar2_User": "admin",
+        "BioStar2_Password": "Jphlions135"
     }
 }
